@@ -1,0 +1,54 @@
+{
+    "folders": {},
+    "connections": {
+            "postgresql-template-1": {
+                    "provider": "postgresql",
+                    "driver": "postgres-jdbc",
+                    "name": "Postgres Docker",
+                    "template": true,
+                    "read-only": true,
+                    "configuration": {
+                            "host": "postgres",
+                            "port": "5432",
+                            "database": "postgres",
+                            "url": "jdbc:postgresql://postgres:5432/postgres",
+                            "configurationType": "MANUAL",
+                            "type": "dev",
+                            "provider-properties": {
+                                    "@dbeaver-show-non-default-db@": "false"
+                            },
+                            "auth-model": "native"
+                    }
+            },
+            "postgres-fullstack-fintech": {
+                    "provider": "postgresql",
+                    "driver": "postgres-jdbc",
+                    "name": "PostgreSQL@postgres",
+                    "save-password": true,
+                    "configuration": {
+                            "host": "postgres",
+                            "port": "5432",
+                            "database": "postgres",
+                            "url": "jdbc:postgresql://postgres:5432/postgres",
+                            "configurationType": "MANUAL",
+                            "type": "dev",
+                            "auth-model": "native",
+                            "password": "postgres"
+                    }
+            }
+    },
+    "connection-types": {
+            "dev": {
+                    "name": "Development",
+                    "color": "255,255,255",
+                    "description": "Regular development database",
+                    "auto-commit": true,
+                    "confirm-execute": false,
+                    "confirm-data-change": false,
+                    "smart-commit": false,
+                    "smart-commit-recover": false,
+                    "auto-close-transactions": true,
+                    "close-transactions-period": 1800
+            }
+    }
+}

@@ -1,0 +1,13 @@
+{
+    "request": {
+        "method": "GET",
+        "urlPathTemplate": "/api/v1/files/{fileId}/batches"
+    },
+    "response": {
+        "status": 200,
+        "headers": {
+            "Content-Type": "application/json"
+        },
+        "bodyFileName": "ach_files_batches_{{request.path.fileId}}.json"
+    }
+}
