@@ -1,0 +1,13 @@
+@startsalt
+{+
+{* File | Edit | Reports }
+{/ ACH Files | Companies | Exceptions }
+{
+{ Available Files: | ^sample.ach^^company_payroll.ach^ }
+[X] Reject on File Exception
+[X] Reject on Batch Exception
+[ ] Verify Totals
+}
+[Process] | [Close]
+}
+@endsalt
