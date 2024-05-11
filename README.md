@@ -18,6 +18,8 @@ In _Build Financial Software with Generative AI_ you’ll build working software
 
 _Build Financial Software with Generative AI_ teaches you how to build a real-world FinTech application, accelerating your development with ChatGPT, Copilot, and other generative AI tools. The book follows a real software project from design to deployment. You’ll learn basic FinTech concepts as you iterate on your app chapter-by-chapter until you have an Automated Clearing House application built to real-world industry standards. You’ll be amazed how much time and typing you save using AI to help you build a React-based dashboard, containerize your app with Docker, set up automated testing, and even design your own database.
 
+Access the book [here](https://www.manning.com/books/build-financial-software-with-generative-ai)
+
 ## About the reader
 
 Examples are in Python. No experience with generative AI or financial services development required.
