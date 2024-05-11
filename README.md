@@ -2,7 +2,7 @@
 
 This repository contains references and code for the book _Build Financial Software with Generative AI_ from [Manning Publications](https://www.manning.com/) by Christopher Kardell and Mark Brouwer.
 
-![Build Financial Software](https://freecontent.manning.com/wp-content/uploads/DOTD_NewMEAP_Kardell1.png)
+![Build Financial Software](https://github.com/scttech/Build_Financial_Software/blob/main/images/meap_image.png)
 
 In Build Financial Software with Generative AI you will:
 
