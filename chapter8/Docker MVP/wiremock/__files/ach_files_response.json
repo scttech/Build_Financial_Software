@@ -1,0 +1,37 @@
+[
+    {
+        "id": "45bc2000-0a14-4c0a-ae7f-938b3fdab575",
+        "date": "2024-03-01T00:00:00",
+        "filename": "sample.ach",
+        "creditTotal": 312.40,
+        "debitTotal": 100.20
+    },
+    {
+        "id": "49434d39-1e4a-4b26-a986-17c73f241936",
+        "date": "2024-03-01T00:00:00",
+        "filename": "chris1.ach",
+        "creditTotal": 1866.90,
+        "debitTotal": 1234.10
+    },
+    {
+        "id": "689c6abe-b92d-45e1-a861-7b7f38b34bb5",
+        "date": "2024-03-01T00:00:00",
+        "filename": "bad.ach",
+        "creditTotal": 100.81,
+        "debitTotal": 500.50
+    },
+    {
+        "id": "c96309b7-9966-48ac-acca-6c96535c2234",
+        "date": "2024-03-01T00:00:00",
+        "filename": "sample2.ach",
+        "creditTotal": 654.39,
+        "debitTotal": 400.00
+    },
+    {
+        "id": "17bcf491-7874-4e4e-84a5-c05920a8c7e1",
+        "date": "2024-03-01T00:00:00",
+        "filename": "sample2.ach",
+        "creditTotal": 212.79,
+        "debitTotal": 140.95
+    }    
+]

@@ -1,0 +1,100 @@
+{
+    "batches": [
+        {
+            "companyName": "Mavericksports",
+            "companyBatches": [
+                {
+                    "batchId": "de444a20-d303-4b72-8d8d-48af7a58630d",
+                    "batchNumber": "1",
+                    "recordCount": 500,
+                    "totalDebitAmount": 1917.55,
+                    "totalCreditAmount": 3253.48
+                }
+            ]
+        },
+        {
+            "companyName": "Zapack",
+            "companyBatches": [
+                {
+                    "batchId": "43c33d2a-47a6-4476-900d-83bdfee0b594",
+                    "batchNumber": "2",
+                    "recordCount": 313,
+                    "totalDebitAmount": 8200.72,
+                    "totalCreditAmount": 4855.38
+                }
+            ]
+        },
+        {
+            "companyName": "Sportog",
+            "companyBatches": [
+                {
+                    "batchId": "b8a9e1e1-af4c-4d3b-99ab-bbe086db6375",
+                    "batchNumber": "3",
+                    "recordCount": 260,
+                    "totalDebitAmount": 6340.11,
+                    "totalCreditAmount": 2455.25
+                }
+            ]
+        },
+        {
+            "companyName": "EffectWear",
+            "companyBatches": [
+                {
+                    "batchId": "f31da928-d93d-405c-99ef-b040409b98c2",
+                    "batchNumber": "4",
+                    "recordCount": 157,
+                    "totalDebitAmount": 1343.00,
+                    "totalCreditAmount": 4632.84
+                }
+            ]
+        },
+        {
+            "companyName": "Maxsports",
+            "companyBatches": [
+                {
+                    "batchId": "95fdc0a2-6e3d-4559-9e7b-4da201142132",
+                    "batchNumber": "5",
+                    "recordCount": 805,
+                    "totalDebitAmount": 9659.76,
+                    "totalCreditAmount": 8857.46
+                }
+            ]
+        },
+        {
+            "companyName": "Noirunner",
+            "companyBatches": [
+                {
+                    "batchId": "9f966054-3f73-41e5-bfcd-e3baf77126ff",
+                    "batchNumber": "6",
+                    "recordCount": 384,
+                    "totalDebitAmount": 9533.45,
+                    "totalCreditAmount": 2359.74
+                }
+            ]
+        },
+        {
+            "companyName": "VisorBeams",
+            "companyBatches": [
+                {
+                    "batchId": "7fa29d4d-35dd-4753-bda8-717a56e94e7a",
+                    "batchNumber": "7",
+                    "recordCount": 262,
+                    "totalDebitAmount": 67113.15,
+                    "totalCreditAmount": 15416.98
+                }
+            ]
+        },
+        {
+            "companyName": "SneakerGarb",
+            "companyBatches": [
+                {
+                    "batchId": "b8a9e1e1-af4c-4d3b-99ab-bbe086db6375",
+                    "batchNumber": "8",
+                    "recordCount": 260,
+                    "totalDebitAmount": 6340.11,
+                    "totalCreditAmount": 2455.25
+                }
+            ]            
+        }
+    ]
+}
