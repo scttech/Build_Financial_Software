@@ -1,0 +1,20 @@
+@startgantt
+saturday are closed
+sunday are closed
+
+header ACH Dashboard Enhancements - Round 1
+
+Project starts 2024-08-01
+-- Exceptions Enhancement --
+[Database Design] starts 2024-08-01 and lasts 2 days
+[Exception API Design] starts at [Database Design]'s end and lasts 2 days
+[ACH Processor] starts at [Exception API Design]'s end and lasts 3 days
+[UI Exception Changes] starts at [ACH Processor]'s end and lasts 3 days
+
+-- UI Enhancement --
+[Update fields screen] starts at 2024-08-01 and lasts 3 days
+[Update batch screen] starts at [Update fields screen]'s end and lasts 3 days
+
+[Sprint Complete] happens at [UI Exception Changes]'s end
+
+@endgantt
