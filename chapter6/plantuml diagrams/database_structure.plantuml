@@ -1,0 +1,74 @@
+@startuml
+
+object ach_file_uploads {
+    ach_files_id: UUID
+    filename: VARCHAR(255)
+    file_hash: VARCHAR(32)
+    credit_total: NUMERIC(12,2)
+    debit_total: NUMERIC(12,2)
+}
+
+object ach_files {
+    ach_files_id: UUID
+    record_type: VARCHAR(1)
+    record_id: UUID
+    parsed: BOOLEAN    
+    sequence: NUMERIC
+    unparsed_record: VARCHAR(94)
+}
+
+object ach_file_header_records {
+    record_id: UUID
+    fields for record type
+}
+
+object ach_batch_header_records {
+    record_id: UUID
+    file_header_id: UUID
+    fields for record type  
+}
+
+object ach_entry_detail_ppd_records {
+    record_id: UUID
+    batch_header_id: UUID
+    fields for record type
+}
+
+object ach_addenda_ppd_records {
+    record_id: UUID
+    entry_detail_id: UUID
+    fields for record type
+}
+
+object ach_batch_control_records {
+    record_id: UUID
+    batch_header_id: UUID
+    fields for record type
+}
+
+object ach_file_control_records {
+    record_id: UUID
+    file_header_id: UUID
+    fields for record type
+}
+
+legend top left
+    Arrows represent foreign key relationships
+endlegend
+
+ach_file_uploads::ach_files_id <-- ach_files::ach_files_id
+
+ach_files::record_id <-- ach_file_header_records::record_id
+ach_files::record_id <-- ach_batch_header_records::record_id
+ach_files::record_id <-- ach_entry_detail_ppd_records::record_id
+ach_files::record_id <-- ach_addenda_ppd_records::record_id
+ach_files::record_id <-- ach_batch_control_records::record_id
+ach_files::record_id <-- ach_file_control_records::record_id
+
+ach_batch_header_records::file_header_id -> ach_file_header_records::record_id
+ach_entry_detail_ppd_records::batch_header_id -> ach_batch_header_records::record_id
+ach_addenda_ppd_records::entry_detail_id -> ach_entry_detail_ppd_records::record_id
+ach_batch_control_records::batch_header_id --> ach_batch_header_records::record_id
+ach_file_control_records::file_header_id --> ach_file_header_records::record_id
+
+@enduml

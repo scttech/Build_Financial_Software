@@ -1,0 +1,12 @@
+@startuml
+skinparam monochrome true
+skinparam componentStyle rectangle
+
+[<b>Create database table</b>\nListing 6.10] as A
+[<b>Update the code to store data in the new table</b>\nListing 6.11\nListing 6.12] as B
+[<b>Update the unit test</b>\nListing 6.13] as C
+
+A -> B
+B -> C
+
+@enduml
