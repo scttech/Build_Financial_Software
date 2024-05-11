@@ -1,0 +1,21 @@
+@startuml
+skinparam ConditionEndStyle hline
+start
+repeat
+    :Read ACH Record;
+    if (Type 1\nFile Header Record) then (yes)
+        :Process File Header;
+        (no) elseif (Type 5\nBatch Header Record) then (yes)
+        :Process Batch Header;
+        (no) elseif (Type 6\Entry Detail Record) then (yes)
+        :Process Entry Detail;
+        (no) elseif (Type 7\nAddenda Record) then (yes)
+        :Process Addenda;
+        (no) elseif (Type 8\nBatch Control Record) then (yes)
+        :Process Batch Control;
+    else (no)
+        :Process File Control Record;
+    endif
+repeat while (More ACH records?) is (yes)
+stop
+@enduml
