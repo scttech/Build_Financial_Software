@@ -1,0 +1,63 @@
+{
+	"info": {
+		"_postman_id": "e073eb9f-4feb-44af-b144-22ee50b3c7cf",
+		"name": "Fullstack Fintech",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "15659211"
+	},
+	"item": [
+		{
+			"name": "Get Files",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"// Check if the response is JSON and has a 200 status code\r",
+							"pm.test(\"Response should be JSON and have a 200 status code\", function () {\r",
+							"    pm.response.to.be.json; // check if response format is json\r",
+							"    pm.response.to.have.status(200); // check if response status is 200\r",
+							"});\r",
+							"\r",
+							"// Parse the JSON response to an object\r",
+							"var jsonData = pm.response.json();\r",
+							"\r",
+							"// Check if the response contains expected attributes\r",
+							"pm.test(\"Response should have a file attribute\", function () {\r",
+							"    pm.expect(jsonData[0]).to.have.property('file');\r",
+							"});\r",
+							"\r",
+							"// You can also check the value of the attributes\r",
+							"pm.test(\"file attribute should be 'File_1'\", function () {\r",
+							"    pm.expect(jsonData[0].file).to.eql('File_1');\r",
+							"});\r",
+							"\r",
+							"// Check for at least 2 items\r",
+							"pm.test(\"Response has at least 2 items\", function () {\r",
+							"    pm.expect(jsonData).to.be.an('array').that.has.lengthOf(2);\r",
+							"});\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/files",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"files"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

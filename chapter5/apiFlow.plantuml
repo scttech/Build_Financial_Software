@@ -1,0 +1,11 @@
+@startuml
+autonumber
+actor User as user
+participant API as api
+user -> api : Upload ACH file ""/files""
+api -> user: Return File ID ""fileId""
+user -> api: Get file information ""/files/{fileId}""
+api -> user: Return file information with record ids (""recordId"")
+user -> api: Get record information ""/files/{fileId}/records/{recordId}""
+api -> user: Return record information
+@enduml
