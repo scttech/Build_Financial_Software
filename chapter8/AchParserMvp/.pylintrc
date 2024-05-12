@@ -1,0 +1,2 @@
+[MASTER]
+load-plugins=psycopg_import_checker

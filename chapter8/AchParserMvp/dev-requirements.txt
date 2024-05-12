@@ -1,0 +1,5 @@
+-r requirements.txt
+pytest==8.0.1
+pytest-bdd==7.0.1
+iniconfig==2.0.0
+pluggy==1.4.0
