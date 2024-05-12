@@ -1,0 +1,2 @@
+[pylint.plugins]
+psycopg_import_checker = pylint_postgres_plugin.psycopg_import_checker:register
