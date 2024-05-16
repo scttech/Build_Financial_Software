@@ -2,8 +2,8 @@
 from uuid import UUID
 from psycopg.rows import class_row
 
-from ach_processor.database.db_utils import get_db_connection
-from ach_processor.schemas.bank.bank_routing_numbers_schema import BankRoutingNumbersSchema
+from chapter10.AchParserV1.ach_processor.database.db_utils import get_db_connection
+from chapter10.AchParserV1.ach_processor.schemas.bank.bank_routing_numbers_schema import BankRoutingNumbersSchema
 
 
 class BankRoutingSql:
