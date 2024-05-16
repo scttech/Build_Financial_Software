@@ -1,8 +1,9 @@
 import pytest
+from pprint import pprint
 
-from ach_processor.database.ach_addenda_ppd_sql import AchAddendaPpdSql
-from ach_processor.schemas.database.ach_addenda_ppd_schema import AchAddendaPpdSchema
-from tests.ach_processor.sql_utils import SqlUtils
+from chapter10.AchParserV1.ach_processor.database.ach_addenda_ppd_sql import AchAddendaPpdSql
+from chapter10.AchParserV1.ach_processor.schemas.database.ach_addenda_ppd_schema import AchAddendaPpdSchema
+from chapter10.AchParserV1.tests.ach_processor.sql_utils import SqlUtils
 
 
 class TestAchAddendaPpdSql:
@@ -13,7 +14,7 @@ class TestAchAddendaPpdSql:
 
     def test_insert_record(self):
         sample_addenda_ppd_record = "705Test 2                                                                          00020003001"
-        ach_records_type_6_id, ach_records_type_7_id = SqlUtils.setup_addenda_ppd_test(
+        _, ach_records_type_7_id = SqlUtils.setup_addenda_ppd_test(
             sample_addenda_ppd_record
         )
 
@@ -32,5 +33,5 @@ class TestAchAddendaPpdSql:
             SqlUtils.get_row_count_of_1("ach_addenda_ppd_records") is True
         ), "Expected 1 record"
         assert (
-            retrieved_record == ach_addenda_ppd_record
+            retrieved_record.dict() == ach_addenda_ppd_record.dict()
         ), f"Expected {ach_addenda_ppd_record}, but got {retrieved_record}"

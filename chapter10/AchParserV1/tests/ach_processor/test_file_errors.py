@@ -3,9 +3,9 @@ from typing import Generator
 
 import pytest
 
-from ach_processor.ach_exceptions import AchExceptions
-from ach_processor.ach_file_processor import AchFileProcessor
-from tests.ach_processor.sql_utils import SqlUtils
+from chapter10.AchParserV1.ach_processor.ach_exceptions import AchExceptions
+from chapter10.AchParserV1.ach_processor.ach_file_processor import AchFileProcessor
+from chapter10.AchParserV1.tests.ach_processor.sql_utils import SqlUtils
 
 
 @pytest.fixture()

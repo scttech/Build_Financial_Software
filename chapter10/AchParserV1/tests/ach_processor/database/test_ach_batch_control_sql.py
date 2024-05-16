@@ -2,11 +2,9 @@ from decimal import Decimal
 
 import pytest
 
-from ach_processor.database.ach_batch_control_sql import AchBatchControlSql
-from ach_processor.schemas.database.ach_batch_control_schema import (
-    AchBatchControlSchema,
-)
-from tests.ach_processor.sql_utils import SqlUtils
+from chapter10.AchParserV1.ach_processor.database.ach_batch_control_sql import AchBatchControlSql
+from chapter10.AchParserV1.ach_processor.schemas.database.ach_batch_control_schema import AchBatchControlSchema
+from chapter10.AchParserV1.tests.ach_processor.sql_utils import SqlUtils
 
 
 class TestAchBatchHeaderSql:
@@ -44,5 +42,5 @@ class TestAchBatchHeaderSql:
             SqlUtils.get_row_count_of_1("ach_batch_control_records") is True
         ), "Expected 1 record"
         assert (
-            retrieved_record == ach_batch_control_record
+            retrieved_record.dict() == ach_batch_control_record.dict()
         ), f"Expected {ach_batch_control_record}, but got {retrieved_record}"

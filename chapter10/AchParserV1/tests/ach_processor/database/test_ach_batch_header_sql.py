@@ -1,7 +1,8 @@
 import pytest
-from ach_processor.database.ach_batch_header_sql import AchBatchHeaderSql
-from ach_processor.schemas.database.ach_batch_header_schema import AchBatchHeaderSchema
-from tests.ach_processor.sql_utils import SqlUtils
+
+from chapter10.AchParserV1.ach_processor.database.ach_batch_header_sql import AchBatchHeaderSql
+from chapter10.AchParserV1.ach_processor.schemas.database.ach_batch_header_schema import AchBatchHeaderSchema
+from chapter10.AchParserV1.tests.ach_processor.sql_utils import SqlUtils
 
 
 class TestAchBatchHeaderSql:
@@ -41,5 +42,5 @@ class TestAchBatchHeaderSql:
             SqlUtils.get_row_count_of_1("ach_batch_headers") is True
         ), "Expected 1 record"
         assert (
-            retrieved_record == ach_batch_header_record
+            retrieved_record.dict() == ach_batch_header_record.dict()
         ), f"Expected {ach_batch_header_record}, but got {retrieved_record}"
