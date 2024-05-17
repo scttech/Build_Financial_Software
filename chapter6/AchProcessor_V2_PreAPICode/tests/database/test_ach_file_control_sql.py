@@ -1,8 +1,8 @@
 import pytest
 
-from ach_processor.database.ach_file_control_sql import AchFileControlSql
-from ach_processor.schemas.ach_file_control_schema import AchFileControlSchema
-from tests.sql_utils import SqlUtils
+from chapter6.AchProcessor_V2_PreAPICode.ach_processor.database.ach_file_control_sql import AchFileControlSql
+from chapter6.AchProcessor_V2_PreAPICode.ach_processor.schemas.ach_file_control_schema import AchFileControlSchema
+from chapter6.AchProcessor_V2_PreAPICode.tests.sql_utils import SqlUtils
 
 
 class TestAchFileControlSql:

@@ -1,8 +1,8 @@
 import pytest
 
-from ach_processor.database.ach_addenda_ppd_sql import AchAddendaPpdSql
-from ach_processor.schemas.ach_addenda_ppd_schema import AchAddendaPpdSchema
-from tests.ach_processor.sql_utils import SqlUtils
+from chapter7.AchProcessor.ach_processor.database.ach_addenda_ppd_sql import AchAddendaPpdSql
+from chapter7.AchProcessor.ach_processor.schemas.ach_addenda_ppd_schema import AchAddendaPpdSchema
+from chapter7.AchProcessor.tests.ach_processor.sql_utils import SqlUtils
 
 
 class TestAchAddendaPpdSql:

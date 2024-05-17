@@ -1,8 +1,8 @@
 import os
 import pytest
 
-from ach_processor.ach_file_processor import AchFileProcessor
-from tests.ach_processor.sql_utils import SqlUtils
+from chapter9.AchParserV1.ach_processor.ach_file_processor import AchFileProcessor
+from chapter9.AchParserV1.tests.ach_processor.sql_utils import SqlUtils
 
 
 @pytest.fixture(autouse=True)

@@ -1,7 +1,8 @@
-from ach_processor.AchFileProcessor import AchFileProcessor
 import pytest
-from tests.SqlUtils import SqlUtils
 from psycopg.rows import dict_row
+from chapter6.AchProcessor_V1.tests.SqlUtils import SqlUtils
+from chapter6.AchProcessor_V1.ach_processor.AchFileProcessor import AchFileProcessor
+
 
 TABLE_NAME: str = "ach_addenda_ppd_records"
 

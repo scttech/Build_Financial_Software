@@ -1,7 +1,7 @@
 import tempfile
 from uuid import UUID
 
-from fastapi import APIRouter, Request, status, UploadFile, File
+from fastapi import APIRouter, status, UploadFile, File
 
 from chapter7.AchProcessor.ach_processor.ach_file_processor import AchFileProcessor
 from chapter7.AchProcessor.ach_processor.database.ach_file_sql import AchFileSql

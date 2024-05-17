@@ -2,7 +2,7 @@ import os
 
 import pytest
 
-from AchFileProcessor import AchFileProcessor
+from chapter3.ACH_Parser_v3.ach_processor.AchFileProcessor import AchFileProcessor
 
 
 @pytest.fixture()

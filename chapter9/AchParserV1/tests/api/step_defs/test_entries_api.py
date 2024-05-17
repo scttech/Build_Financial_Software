@@ -5,9 +5,9 @@ import pytest
 from pytest_bdd import given, scenarios, parsers, when, then
 from starlette.testclient import TestClient
 
-from ach_processor.ach_file_processor import AchFileProcessor
-from app.main import app
-from tests.ach_processor.sql_utils import SqlUtils
+from chapter9.AchParserV1.ach_processor.ach_file_processor import AchFileProcessor
+from chapter9.AchParserV1.app.main import app
+from chapter9.AchParserV1.tests.ach_processor.sql_utils import SqlUtils
 
 client = TestClient(app)
 

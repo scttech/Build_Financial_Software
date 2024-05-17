@@ -1,7 +1,7 @@
 import pytest
 from pytest_bdd import scenarios, when, then, parsers
 
-from chapter3.ACH_Parser_v2.AchFileProcessor import AchFileProcessor
+from chapter3.ACH_Parser_v2.ach_processor.AchFileProcessor import AchFileProcessor
 
 # Load scenarios
 scenarios("../features/batch_header.feature")

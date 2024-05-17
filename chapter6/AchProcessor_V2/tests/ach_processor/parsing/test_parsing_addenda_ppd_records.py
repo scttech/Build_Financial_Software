@@ -1,8 +1,9 @@
-from ach_processor.ach_file_processor import AchFileProcessor
 import pytest
 
-from ach_processor.database.ach_addenda_ppd_sql import AchAddendaPpdSql
-from tests.ach_processor.sql_utils import SqlUtils
+from chapter6.AchProcessor_V2.ach_processor.database.ach_addenda_ppd_sql import AchAddendaPpdSql
+from chapter6.AchProcessor_V2.tests.ach_processor.sql_utils import SqlUtils
+from chapter6.AchProcessor_V2.ach_processor.ach_file_processor import AchFileProcessor
+
 
 TABLE_NAME: str = "ach_addenda_ppd_records"
 

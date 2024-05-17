@@ -1,6 +1,6 @@
 import os
 
-from AchFileProcessor import AchFileProcessor
+from chapter3.ACH_Parser_v3.ach_processor.AchFileProcessor import AchFileProcessor
 
 
 def test_record_count():
