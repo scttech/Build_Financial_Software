@@ -1,4 +1,28 @@
 # Write a class to parse an ACH file with separate functions for each NACHA record type and return a list of transactions
+def ACHFileControl(line):
+    # Temp function just to clear error within IDE
+    pass
+
+
+def ACHBatchHeader(line):
+    # Temp function just to clear error within IDE
+    pass
+
+
+def ACHBatchControl(line):
+    # Temp function just to clear error within IDE
+    pass
+
+
+def ACHEntryDetail(line):
+    # Temp function just to clear error within IDE
+    pass
+
+
+def ACHAddendaRecord(line):
+    # Temp function just to clear error within IDE
+    pass
+
 class ACHParser:
     def __init__(self, ach_file):
         self.ach_file = ach_file

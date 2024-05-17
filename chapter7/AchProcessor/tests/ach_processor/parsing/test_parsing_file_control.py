@@ -1,8 +1,8 @@
 import pytest
 from typing import Dict
-from ach_processor.ach_file_processor import AchFileProcessor
-from ach_processor.database.ach_file_control_sql import AchFileControlSql
-from tests.ach_processor.sql_utils import SqlUtils
+from chapter7.AchProcessor.ach_processor.ach_file_processor import AchFileProcessor
+from chapter7.AchProcessor.ach_processor.database.ach_file_control_sql import AchFileControlSql
+from chapter7.AchProcessor.tests.ach_processor.sql_utils import SqlUtils
 
 TABLE_NAME: str = "ach_file_control_records"
 

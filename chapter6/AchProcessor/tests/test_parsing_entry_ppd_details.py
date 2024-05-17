@@ -1,6 +1,6 @@
-from ach_processor.AchFileProcessor import AchFileProcessor
+from chapter6.AchProcessor.ach_processor.AchFileProcessor import AchFileProcessor
 import pytest
-from tests.SqlUtils import SqlUtils
+from chapter6.AchProcessor.tests.SqlUtils import SqlUtils
 from psycopg.rows import dict_row
 
 TABLE_NAME: str = "ach_entry_ppd_details"

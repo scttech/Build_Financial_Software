@@ -1,7 +1,7 @@
 import pytest
-from ach_processor.ach_file_processor import AchFileProcessor
-from ach_processor.database.ach_entry_ppd_details_sql import AchEntryPpdDetailsSql
-from tests.sql_utils import SqlUtils
+from chapter6.AchProcessor_V2_PreAPICode.ach_processor.ach_file_processor import AchFileProcessor
+from chapter6.AchProcessor_V2_PreAPICode.ach_processor.database.ach_entry_ppd_details_sql import AchEntryPpdDetailsSql
+from chapter6.AchProcessor_V2_PreAPICode.tests.sql_utils import SqlUtils
 
 TABLE_NAME: str = "ach_entry_ppd_details"
 

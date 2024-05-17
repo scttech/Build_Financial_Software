@@ -1,4 +1,7 @@
 # Define a test function to test parsing an ACH batch header record using AchFileProcessor._parse_batch_header()
+from chapter3.ACH_Parser_v1.ach_processor.AchFileProcessor import AchFileProcessor
+
+
 def test_parse_batch_header():
     # Define a sample ACH batch header record
     sample_batch_header = "5225Sample Company Name          Sample Company Discretionary DataSample Company IdentificationPPDCompany Entry DescriptionSample Company Descriptive DateSample Effective Entry Date"

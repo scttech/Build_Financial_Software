@@ -1,7 +1,7 @@
 import pytest
-from ach_processor.database.ach_batch_header_sql import AchBatchHeaderSql
-from ach_processor.schemas.ach_batch_header_schema import AchBatchHeaderSchema
-from tests.ach_processor.sql_utils import SqlUtils
+from chapter6.AchProcessor_V2.ach_processor.database.ach_batch_header_sql import AchBatchHeaderSql
+from chapter6.AchProcessor_V2.ach_processor.schemas.ach_batch_header_schema import AchBatchHeaderSchema
+from chapter6.AchProcessor_V2.tests.ach_processor.sql_utils import SqlUtils
 
 
 class TestAchBatchHeaderSql:

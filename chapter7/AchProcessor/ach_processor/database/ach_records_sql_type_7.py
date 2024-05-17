@@ -1,8 +1,8 @@
 """AchRecordsSql is a class that handles the sql queries for ach_records"""
 from uuid import UUID
 
-from ach_processor.database.db_utils import get_db_connection
-from ach_processor.schemas.ach_record.ach_record_type_7_schema import AchRecordType7Schema
+from chapter7.AchProcessor.ach_processor.database.db_utils import get_db_connection
+from chapter7.AchProcessor.ach_processor.schemas.ach_record.ach_record_type_7_schema import AchRecordType7Schema
 
 
 class AchRecordsSqlType7:

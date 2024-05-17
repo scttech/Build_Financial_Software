@@ -1,7 +1,7 @@
 import pytest
-from ach_processor.ach_file_processor import AchFileProcessor
-from ach_processor.database.ach_batch_header_sql import AchBatchHeaderSql
-from tests.ach_processor.sql_utils import SqlUtils
+from chapter8.AchParserMvp.ach_processor.ach_file_processor import AchFileProcessor
+from chapter8.AchParserMvp.ach_processor.database.ach_batch_header_sql import AchBatchHeaderSql
+from chapter8.AchParserMvp.tests.ach_processor.sql_utils import SqlUtils
 
 TABLE_NAME: str = "ach_batch_headers"
 

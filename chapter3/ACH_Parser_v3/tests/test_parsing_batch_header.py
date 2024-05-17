@@ -1,4 +1,4 @@
-from AchFileProcessor import AchFileProcessor
+from chapter3.ACH_Parser_v3.ach_processor.AchFileProcessor import AchFileProcessor
 
 
 # Define a test function to test parsing an ACH batch header record using AchFileProcessor._parse_batch_header()

@@ -1,3 +1,6 @@
+from typing import Dict
+
+
 def _parse_addenda(self, line: str) -> Dict[str, str]:
     return {
         "record_type_code": line[0],

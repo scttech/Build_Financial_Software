@@ -1,7 +1,7 @@
 import pytest
-from ach_processor.database.ach_batch_header_sql import AchBatchHeaderSql
-from ach_processor.schemas.database.ach_batch_header_schema import AchBatchHeaderSchema
-from tests.ach_processor.sql_utils import SqlUtils
+from chapter8.AchParserMvpNoSignOnScreen.ach_processor.database.ach_batch_header_sql import AchBatchHeaderSql
+from chapter8.AchParserMvpNoSignOnScreen.ach_processor.schemas.database.ach_batch_header_schema import AchBatchHeaderSchema
+from chapter8.AchParserMvpNoSignOnScreen.tests.ach_processor.sql_utils import SqlUtils
 
 
 class TestAchBatchHeaderSql:

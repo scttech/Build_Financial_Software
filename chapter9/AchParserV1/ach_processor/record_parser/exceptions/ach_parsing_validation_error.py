@@ -1,6 +1,6 @@
 from typing import Any
 
-from ach_processor.ach_exceptions import AchExceptions
+from chapter9.AchParserV1.ach_processor.ach_exceptions import AchExceptions
 
 
 class AchParsingValidationError(Exception):

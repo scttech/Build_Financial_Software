@@ -1,6 +1,6 @@
 from typing import Optional
 
-from ach_processor.schemas.ach_record.ach_record_base_schema import AchRecordBaseSchema
+from chapter6.AchProcessor_V2.ach_processor.schemas.ach_record.ach_record_base_schema import AchRecordBaseSchema
 from pydantic import UUID4
 
 

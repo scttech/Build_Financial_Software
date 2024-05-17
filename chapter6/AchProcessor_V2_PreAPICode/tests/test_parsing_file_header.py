@@ -1,9 +1,9 @@
 from typing import Dict
 
 import pytest
-from ach_processor.ach_file_processor import AchFileProcessor
-from ach_processor.database.ach_file_header_sql import AchFileHeaderSql
-from tests.sql_utils import SqlUtils
+from chapter6.AchProcessor_V2_PreAPICode.ach_processor.ach_file_processor import AchFileProcessor
+from chapter6.AchProcessor_V2_PreAPICode.ach_processor.database.ach_file_header_sql import AchFileHeaderSql
+from chapter6.AchProcessor_V2_PreAPICode.tests.sql_utils import SqlUtils
 
 
 @pytest.fixture(autouse=True)
