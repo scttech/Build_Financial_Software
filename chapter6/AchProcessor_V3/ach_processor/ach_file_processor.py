@@ -1,24 +1,23 @@
-from typing import Dict, List, Any
+from typing import List
 import os
 from uuid import UUID
 
 import psycopg
-from psycopg import Connection
 
-from ach_processor.database.ach_addenda_ppd_sql import AchAddendaPpdSql
-from ach_processor.database.ach_batch_control_sql import AchBatchControlSql
-from ach_processor.database.ach_batch_header_sql import AchBatchHeaderSql
-from ach_processor.database.ach_entry_ppd_details_sql import AchEntryPpdDetailsSql
-from ach_processor.database.ach_file_control_sql import AchFileControlSql
-from ach_processor.database.ach_file_header_sql import AchFileHeaderSql
-from ach_processor.database.ach_records_sql import AchRecordsSql
-from ach_processor.schemas.ach_addenda_ppd_schema import AchAddendaPpdSchema
-from ach_processor.schemas.ach_batch_control_schema import AchBatchControlSchema
-from ach_processor.schemas.ach_batch_header_schema import AchBatchHeaderSchema
-from ach_processor.schemas.ach_entry_ppd_details_schema import AchEntryPpdDetailsSchema
-from ach_processor.schemas.ach_file_control_schema import AchFileControlSchema
-from ach_processor.schemas.ach_file_header_schema import AchFileHeaderSchema
-from ach_processor.schemas.ach_record_schema import AchRecordSchema
+from chapter6.AchProcessor_V3.ach_processor.database.ach_addenda_ppd_sql import AchAddendaPpdSql
+from chapter6.AchProcessor_V3.ach_processor.database.ach_batch_control_sql import AchBatchControlSql
+from chapter6.AchProcessor_V3.ach_processor.database.ach_batch_header_sql import AchBatchHeaderSql
+from chapter6.AchProcessor_V3.ach_processor.database.ach_entry_ppd_details_sql import AchEntryPpdDetailsSql
+from chapter6.AchProcessor_V3.ach_processor.database.ach_file_control_sql import AchFileControlSql
+from chapter6.AchProcessor_V3.ach_processor.database.ach_file_header_sql import AchFileHeaderSql
+from chapter6.AchProcessor_V3.ach_processor.database.ach_records_sql import AchRecordsSql
+from chapter6.AchProcessor_V3.ach_processor.schemas.ach_addenda_ppd_schema import AchAddendaPpdSchema
+from chapter6.AchProcessor_V3.ach_processor.schemas.ach_batch_control_schema import AchBatchControlSchema
+from chapter6.AchProcessor_V3.ach_processor.schemas.ach_batch_header_schema import AchBatchHeaderSchema
+from chapter6.AchProcessor_V3.ach_processor.schemas.ach_entry_ppd_details_schema import AchEntryPpdDetailsSchema
+from chapter6.AchProcessor_V3.ach_processor.schemas.ach_file_control_schema import AchFileControlSchema
+from chapter6.AchProcessor_V3.ach_processor.schemas.ach_file_header_schema import AchFileHeaderSchema
+from chapter6.AchProcessor_V3.ach_processor.schemas.ach_record_schema import AchRecordSchema
 
 
 class AchFileProcessor:
