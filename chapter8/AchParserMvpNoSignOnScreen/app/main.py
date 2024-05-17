@@ -1,10 +1,11 @@
 import uvicorn
-from fastapi import FastAPI, Request, status, HTTPException
-from fastapi.responses import JSONResponse
+from fastapi import FastAPI, Request, status
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.openapi.utils import get_openapi
-from .routers import files
+from fastapi.responses import JSONResponse
 from pydantic import ValidationError
+
+from .routers import files
 
 origins = ["http://localhost:3000", "http://localhost:4000", "*"]
 

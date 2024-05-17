@@ -1,8 +1,5 @@
-from uuid import UUID
-
-from ach_processor.ach_file_processor import AchFileProcessor
 import pytest
-
+from ach_processor.ach_file_processor import AchFileProcessor
 from ach_processor.database.ach_batch_control_sql import AchBatchControlSql
 from tests.sql_utils import SqlUtils
 

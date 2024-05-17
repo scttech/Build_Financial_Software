@@ -1,9 +1,8 @@
 import os
-import psycopg
-import pytest
-from tests.SqlUtils import SqlUtils
 
+import pytest
 from ach_processor.AchFileProcessor import AchFileProcessor
+from tests.SqlUtils import SqlUtils
 
 
 @pytest.fixture

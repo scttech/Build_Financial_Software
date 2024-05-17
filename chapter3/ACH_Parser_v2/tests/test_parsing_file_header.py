@@ -1,6 +1,6 @@
 from typing import Dict
 
-from AchFileProcessor import AchFileProcessor
+from chapter3.ACH_Parser_v2.ach_processor.AchFileProcessor import AchFileProcessor
 
 
 def test_parse_file_header():

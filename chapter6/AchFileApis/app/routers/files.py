@@ -1,7 +1,7 @@
-from fastapi import APIRouter, Request, status, File, UploadFile
 import hashlib
-import psycopg
-from app.database import DbUtils
+
+from chapter6.AchFileApis.app.database import DbUtils
+from fastapi import APIRouter, status, File, UploadFile
 
 router = APIRouter(prefix="/api/v1/files")
 

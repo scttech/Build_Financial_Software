@@ -1,9 +1,9 @@
 import os
-import psycopg
+
 import pytest
+from ach_processor.AchFileProcessor import AchFileProcessor
 from tests.SqlUtils import SqlUtils
 
-from ach_processor.AchFileProcessor import AchFileProcessor
 
 @pytest.fixture
 def setup_teardown_method():

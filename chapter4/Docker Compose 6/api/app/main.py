@@ -1,7 +1,5 @@
-from typing import Union
-
-from fastapi import FastAPI
 import psycopg
+from fastapi import FastAPI
 
 DATABASE_URL = "dbname=postgres user=postgres password=secret host=postgres port=5432"
 

@@ -2,9 +2,9 @@ from uuid import UUID
 
 from fastapi import APIRouter, Request, status
 
-from ach_processor.database.ach_file_sql import AchFileSql
-from ach_processor.database.combined_ach_records import CombinedAchRecordsSql
-from ach_processor.schemas.ach_file_schema import AchFileSchema
+from chapter6.AchProcessor_V2.ach_processor.database.ach_file_sql import AchFileSql
+from chapter6.AchProcessor_V2.ach_processor.database.combined_ach_records import CombinedAchRecordsSql
+from chapter6.AchProcessor_V2.ach_processor.schemas.ach_file_schema import AchFileSchema
 
 router = APIRouter(prefix="/api/v1/files")
 

@@ -1,8 +1,7 @@
 from typing import Annotated
 
-from pydantic import BaseModel, UUID4, StringConstraints, field_validator, ValidationError
-
-from ach_processor.database.bank.bank_routing_sql import BankRoutingSql
+from chapter9.AchParserV1.ach_processor.database.bank.bank_routing_sql import BankRoutingSql
+from pydantic import BaseModel, UUID4, StringConstraints, field_validator
 
 
 class AchFileHeaderSchema(BaseModel):

@@ -1,16 +1,16 @@
 from decimal import Decimal
 from uuid import UUID
 
-from ach_processor.schemas.database.ach_addenda_ppd_schema import AchAddendaPpdSchema
-from ach_processor.schemas.database.ach_batch_control_schema import (
+from chapter8.AchParserMvp.ach_processor.schemas.database.ach_addenda_ppd_schema import AchAddendaPpdSchema
+from chapter8.AchParserMvp.ach_processor.schemas.database.ach_batch_control_schema import (
     AchBatchControlSchema,
 )
-from ach_processor.schemas.database.ach_batch_header_schema import AchBatchHeaderSchema
-from ach_processor.schemas.database.ach_entry_ppd_details_schema import (
+from chapter8.AchParserMvp.ach_processor.schemas.database.ach_batch_header_schema import AchBatchHeaderSchema
+from chapter8.AchParserMvp.ach_processor.schemas.database.ach_entry_ppd_details_schema import (
     AchEntryPpdDetailsSchema,
 )
-from ach_processor.schemas.database.ach_file_control_schema import AchFileControlSchema
-from ach_processor.schemas.database.ach_file_header_schema import AchFileHeaderSchema
+from chapter8.AchParserMvp.ach_processor.schemas.database.ach_file_control_schema import AchFileControlSchema
+from chapter8.AchParserMvp.ach_processor.schemas.database.ach_file_header_schema import AchFileHeaderSchema
 
 
 class AchRecordProcessor:

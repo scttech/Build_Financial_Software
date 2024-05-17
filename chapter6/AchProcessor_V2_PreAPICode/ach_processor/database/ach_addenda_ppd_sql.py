@@ -2,8 +2,8 @@ from uuid import UUID
 
 from psycopg.rows import class_row
 
-from ach_processor.database.db_utils import get_db_connection
-from ach_processor.schemas.ach_addenda_ppd_schema import AchAddendaPpdSchema
+from chapter6.AchProcessor_V2_PreAPICode.ach_processor.database.db_utils import get_db_connection
+from chapter6.AchProcessor_V2_PreAPICode.ach_processor.schemas.ach_addenda_ppd_schema import AchAddendaPpdSchema
 
 
 class AchAddendaPpdSql:

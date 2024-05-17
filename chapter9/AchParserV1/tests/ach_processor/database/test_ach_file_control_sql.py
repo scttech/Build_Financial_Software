@@ -2,9 +2,9 @@ from decimal import Decimal
 
 import pytest
 
-from ach_processor.database.ach_file_control_sql import AchFileControlSql
-from ach_processor.schemas.database.ach_file_control_schema import AchFileControlSchema
-from tests.ach_processor.sql_utils import SqlUtils
+from chapter9.AchParserV1.ach_processor.database.ach_file_control_sql import AchFileControlSql
+from chapter9.AchParserV1.ach_processor.schemas.database.ach_file_control_schema import AchFileControlSchema
+from chapter9.AchParserV1.tests.ach_processor.sql_utils import SqlUtils
 
 
 class TestAchFileControlSql:

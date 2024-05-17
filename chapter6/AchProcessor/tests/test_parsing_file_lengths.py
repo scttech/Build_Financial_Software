@@ -1,7 +1,7 @@
 import os
 import pytest
-from tests.SqlUtils import SqlUtils
-from ach_processor.AchFileProcessor import AchFileProcessor
+from chapter6.AchProcessor.tests.SqlUtils import SqlUtils
+from chapter6.AchProcessor.ach_processor.AchFileProcessor import AchFileProcessor
 
 
 @pytest.fixture()

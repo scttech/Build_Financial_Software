@@ -1,8 +1,6 @@
 import pytest
 
-from ach_processor.database.ach_batch_control_sql import AchBatchControlSql
 from ach_processor.database.ach_file_control_sql import AchFileControlSql
-from ach_processor.schemas.ach_batch_control_schema import AchBatchControlSchema
 from ach_processor.schemas.ach_file_control_schema import AchFileControlSchema
 from tests.ach_processor.sql_utils import SqlUtils
 

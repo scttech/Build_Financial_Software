@@ -1,9 +1,7 @@
-from ach_processor.ach_file_processor import AchFileProcessor
 import pytest
-
+from ach_processor.ach_file_processor import AchFileProcessor
 from ach_processor.database.ach_batch_header_sql import AchBatchHeaderSql
 from tests.ach_processor.sql_utils import SqlUtils
-from psycopg.rows import dict_row
 
 TABLE_NAME: str = "ach_batch_headers"
 

@@ -1,8 +1,8 @@
 import pytest
 
-from ach_processor.database.ach_file_control_sql import AchFileControlSql
-from ach_processor.schemas.database.ach_file_control_schema import AchFileControlSchema
-from tests.ach_processor.sql_utils import SqlUtils
+from chapter8.AchParserMvpNoSignOnScreen.ach_processor.database.ach_file_control_sql import AchFileControlSql
+from chapter8.AchParserMvpNoSignOnScreen.ach_processor.schemas.database.ach_file_control_schema import AchFileControlSchema
+from chapter8.AchParserMvpNoSignOnScreen.tests.ach_processor.sql_utils import SqlUtils
 
 
 class TestAchFileControlSql:

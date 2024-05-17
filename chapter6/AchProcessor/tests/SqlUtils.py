@@ -1,5 +1,4 @@
 import psycopg
-from psycopg.rows import dict_row
 
 POSTGRES_USER = "someuser"
 POSTGRES_PASSWORD = "supersecret"

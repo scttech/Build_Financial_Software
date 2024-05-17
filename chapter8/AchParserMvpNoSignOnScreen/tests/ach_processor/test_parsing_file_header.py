@@ -1,8 +1,8 @@
 import pytest
 from typing import Dict
-from ach_processor.ach_file_processor import AchFileProcessor
-from ach_processor.database.ach_file_header_sql import AchFileHeaderSql
-from tests.ach_processor.sql_utils import SqlUtils
+from chapter8.AchParserMvpNoSignOnScreen.ach_processor.ach_file_processor import AchFileProcessor
+from chapter8.AchParserMvpNoSignOnScreen.ach_processor.database.ach_file_header_sql import AchFileHeaderSql
+from chapter8.AchParserMvpNoSignOnScreen.tests.ach_processor.sql_utils import SqlUtils
 
 
 @pytest.fixture(autouse=True)

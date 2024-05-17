@@ -1,5 +1,4 @@
 import pytest
-from pprint import pprint
 
 from chapter10.AchParserV1.ach_processor.database.ach_addenda_ppd_sql import AchAddendaPpdSql
 from chapter10.AchParserV1.ach_processor.schemas.database.ach_addenda_ppd_schema import AchAddendaPpdSchema

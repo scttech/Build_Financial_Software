@@ -1,8 +1,6 @@
-from typing import Union
-
+import psycopg
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
-import psycopg
 
 DATABASE_URL = "dbname=postgres user=postgres password=secret host=postgres port=5432"
 

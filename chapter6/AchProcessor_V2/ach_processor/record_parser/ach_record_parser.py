@@ -1,11 +1,11 @@
 from uuid import UUID
 
-from ach_processor.schemas.ach_addenda_ppd_schema import AchAddendaPpdSchema
-from ach_processor.schemas.ach_batch_control_schema import AchBatchControlSchema
-from ach_processor.schemas.ach_batch_header_schema import AchBatchHeaderSchema
-from ach_processor.schemas.ach_entry_ppd_details_schema import AchEntryPpdDetailsSchema
-from ach_processor.schemas.ach_file_control_schema import AchFileControlSchema
-from ach_processor.schemas.ach_file_header_schema import AchFileHeaderSchema
+from chapter6.AchProcessor_V2.ach_processor.schemas.ach_addenda_ppd_schema import AchAddendaPpdSchema
+from chapter6.AchProcessor_V2.ach_processor.schemas.ach_batch_control_schema import AchBatchControlSchema
+from chapter6.AchProcessor_V2.ach_processor.schemas.ach_batch_header_schema import AchBatchHeaderSchema
+from chapter6.AchProcessor_V2.ach_processor.schemas.ach_entry_ppd_details_schema import AchEntryPpdDetailsSchema
+from chapter6.AchProcessor_V2.ach_processor.schemas.ach_file_control_schema import AchFileControlSchema
+from chapter6.AchProcessor_V2.ach_processor.schemas.ach_file_header_schema import AchFileHeaderSchema
 
 
 class AchRecordProcessor:

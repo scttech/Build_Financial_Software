@@ -1,6 +1,6 @@
 from datetime import datetime
 from pathlib import Path
-from random import random, randint, choice
+from random import randint, choice
 
 import pytest
 from pytest_bdd import scenarios, given, parsers, when, then

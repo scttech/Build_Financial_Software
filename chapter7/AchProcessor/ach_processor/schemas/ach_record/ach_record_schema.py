@@ -1,8 +1,7 @@
 from typing import Optional
-from datetime import datetime
-from pydantic import BaseModel, UUID4
 
-from ach_processor.schemas.ach_record.ach_record_base_schema import AchRecordBaseSchema
+from chapter7.AchProcessor.ach_processor.schemas.ach_record.ach_record_base_schema import AchRecordBaseSchema
+from pydantic import UUID4
 
 
 class AchRecordSchema(AchRecordBaseSchema):

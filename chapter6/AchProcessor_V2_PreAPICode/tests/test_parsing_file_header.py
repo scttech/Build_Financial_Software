@@ -1,7 +1,6 @@
-import pytest
-import psycopg
-from psycopg.rows import dict_row
 from typing import Dict
+
+import pytest
 from ach_processor.ach_file_processor import AchFileProcessor
 from ach_processor.database.ach_file_header_sql import AchFileHeaderSql
 from tests.sql_utils import SqlUtils

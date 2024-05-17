@@ -1,10 +1,8 @@
 from uuid import UUID
 
+from chapter6.AchProcessor_V3.ach_processor.database.db_utils import get_db_connection
+from chapter6.AchProcessor_V3.ach_processor.schemas.ach_file_header_schema import AchFileHeaderSchema
 from psycopg.rows import class_row
-
-from ach_processor.database.db_utils import get_db_connection
-from ach_processor.schemas.ach_file_header_schema import AchFileHeaderSchema
-from ach_processor.schemas.ach_record_schema import AchRecordSchema
 
 
 class AchFileHeaderSql:
