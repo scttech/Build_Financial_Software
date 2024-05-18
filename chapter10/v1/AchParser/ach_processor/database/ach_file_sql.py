@@ -6,7 +6,7 @@ from psycopg.rows import dict_row, class_row
 from chapter10.AchParserV1.ach_processor.database.db_utils import get_db_connection
 from chapter10.AchParserV1.ach_processor.schemas.api.ach_batch_entries_response import AchBatchEntriesResponse
 from chapter10.AchParserV1.ach_processor.schemas.api.ach_batches_response import AchBatchesResponse
-from chapter10.AchParserV1.ach_processor.schemas.api.ach_files_response import AchFilesResponse
+from chapter10.v1.AchParser.ach_processor.schemas.api.ach_files_response import AchFilesResponse
 from chapter10.AchParserV1.ach_processor.schemas.database.ach_file_schema import AchFileSchema
 
 

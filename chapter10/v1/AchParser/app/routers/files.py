@@ -22,7 +22,7 @@ from chapter10.AchParserV1.ach_processor.schemas.api.ach_batch_entries_response 
 from chapter10.AchParserV1.ach_processor.schemas.api.ach_batches_response import AchBatchesResponse
 from chapter10.AchParserV1.ach_processor.schemas.api.ach_exception_details_response import AchExceptionDetailsResponse
 from chapter10.AchParserV1.ach_processor.schemas.api.ach_exceptions_response import AchExceptionsResponse
-from chapter10.AchParserV1.ach_processor.schemas.api.ach_files_response import AchFilesResponse
+from chapter10.v1.AchParser.ach_processor.schemas.api.ach_files_response import AchFilesResponse
 from chapter10.AchParserV1.ach_processor.schemas.database.ach_file_schema import AchFileSchema
 from chapter10.AchParserV1.ach_processor.schemas.database.ach_record.ach_record_schema import AchRecordSchema
 from chapter10.AchParserV1.ach_processor.ach_file_processor import AchFileProcessor
