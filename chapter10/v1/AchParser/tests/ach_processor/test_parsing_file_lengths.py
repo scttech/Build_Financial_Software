@@ -2,8 +2,8 @@ import os
 from typing import Generator
 
 import pytest
-from chapter10.AchParserV1.tests.ach_processor.sql_utils import SqlUtils
-from chapter10.AchParserV1.ach_processor.ach_file_processor import AchFileProcessor
+from chapter10.v1.AchParser.tests.ach_processor.sql_utils import SqlUtils
+from chapter10.v1.AchParser.ach_processor.ach_file_processor import AchFileProcessor
 
 
 @pytest.fixture()

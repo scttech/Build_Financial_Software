@@ -3,7 +3,6 @@ from pathlib import Path
 from random import randint, choice
 
 import pytest
-from _pytest.outcomes import fail
 from pytest_bdd import scenarios, given, parsers, when, then
 
 # Load scenarios
@@ -11,7 +10,10 @@ scenarios("../features/ach_file_creation.feature")
 scenarios("../features/ach_file_exceptions.feature")
 
 # Get the directory of our file
-current_file_dir = Path(__file__)
+current_file_dir = Path(__file__).resolve().parent
+
+def get_absolute_path(relative_path):
+    return current_file_dir / relative_path
 
 def create_file_header(setup_info):
     yymmdd = datetime.now().strftime("%y%m%d")
@@ -220,7 +222,7 @@ def create_ach_file(setup_info):
     total_debits_in_file = 0
     total_credits_in_file = 0
     file_control_entry_hash = 0
-    absolute_path = current_file_dir / Path(f"ach_processor/output/{setup_info['filename']}").resolve()
+    absolute_path = get_absolute_path(Path(f"../output/{setup_info['filename']}"))
     with open(absolute_path, "w", encoding="utf8") as f:
         f.write(create_file_header(setup_info))
         for batch_number in range(1, setup_info["batch_count"] + 1):
@@ -253,16 +255,16 @@ def validate_file_exists(expected_file_name):
 
 @then("I should have a file of the same name")
 def validate_file_exists_with_same_name(setup_info):
-    file_path = current_file_dir / Path(f"ach_processor/output/{setup_info['filename']}").resolve()
-    if not file_path.exists():
-        raise AssertionError(f"File {file_path} does not exist")
+    absolute_path = get_absolute_path(Path(f"../output/{setup_info['filename']}"))
+    if not absolute_path.exists():
+        raise AssertionError(f"File {absolute_path} does not exist")
 
 
 @then(parsers.parse("there should be {expected_batch_count:d} batch in the file"))
 def validate_batch_count(setup_info, expected_batch_count):
     count = 0
-    file_name = current_file_dir / Path(f"ach_processor/output/{setup_info['filename']}").resolve()
-    with open(file_name, "r", encoding="utf8") as f:
+    absolute_path = get_absolute_path(Path(f"../output/{setup_info['filename']}"))
+    with open(absolute_path, "r", encoding="utf8") as f:
         for line in f:
             if line.startswith("5"):
                 count += 1
@@ -274,8 +276,8 @@ def validate_batch_count(setup_info, expected_batch_count):
 @then(parsers.parse("there should be {expected_entry_count:d} entries in the file"))
 def validate_entry_count(setup_info, expected_entry_count):
     count = 0
-    file_name = current_file_dir / Path(f"ach_processor/output/{setup_info['filename']}").resolve()
-    with open(file_name, "r", encoding="utf8") as f:
+    absolute_path = get_absolute_path(Path(f"../output/{setup_info['filename']}"))
+    with open(absolute_path, "r", encoding="utf8") as f:
         for line in f:
             if line.startswith("6"):
                 count += 1
@@ -302,12 +304,12 @@ def individual_name_length(setup_info):
 
 @then(parsers.parse('there should be a \"{expected_file_id}\" in the File ID field of the file header'))
 def validate_file_id(setup_info, expected_file_id):
-    file_name = current_file_dir / Path(f"ach_processor/output/{setup_info['filename']}").resolve()
-    with open(file_name, "r", encoding="utf8") as f:
+    absolute_path = get_absolute_path(Path(f"../output/{setup_info['filename']}"))
+    with open(absolute_path, "r", encoding="utf8") as f:
         for line in f:
             if line.startswith("1") and line[33:34] == expected_file_id:
                 return
-    fail(f"Expected '{expected_file_id}' in the File ID field, but it was not found")
+    raise ValueError(f"Expected '{expected_file_id}' in the File ID field, but it was not found")
 
 
 @given(parsers.parse('I want to override the field \"{field_name}\" to be \"{new_value}\"'))
@@ -317,21 +319,21 @@ def override_field_with_value(setup_info, field_name, new_value):
 
 @then(parsers.parse('there should be a \"{expected_blocking_factor}\" in the blocking factor field of the file header'))
 def validate_blocking_factor(setup_info, expected_blocking_factor):
-    file_name = current_file_dir / Path(f"ach_processor/output/{setup_info['filename']}").resolve()
-    with open(file_name, "r", encoding="utf8") as f:
+    absolute_path = get_absolute_path(Path(f"../output/{setup_info['filename']}"))
+    with open(absolute_path, "r", encoding="utf8") as f:
         for line in f:
             if line.startswith("1") and line[37:39] == expected_blocking_factor:
                 return
-    fail(f"Expected '{expected_blocking_factor}' in the blocking factor field, but it was not found")
+    raise ValueError(f"Expected '{expected_blocking_factor}' in the blocking factor field, but it was not found")
 
 
 @then(parsers.parse(
     'there should be a \"{expected_value}\" in the record type {record_type:d} in field '
     'starting at {start:d} and ending at {end:d}'))
 def validate_field(setup_info, expected_value, record_type, start, end):
-    file_name = current_file_dir / Path(f"ach_processor/output/{setup_info['filename']}").resolve()
-    with open(file_name, "r", encoding="utf8") as f:
+    absolute_path = get_absolute_path(Path(f"../output/{setup_info['filename']}"))
+    with open(absolute_path, "r", encoding="utf8") as f:
         for line in f:
             if line.startswith(f"{record_type}") and line[start:end] == expected_value:
                 return
-    fail(f"Expected '{expected_value}' in the blocking factor field, but it was not found")
+    raise ValueError(f"Expected '{expected_value}' in the blocking factor field, but it was not found")

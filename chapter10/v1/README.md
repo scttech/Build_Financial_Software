@@ -10,7 +10,5 @@ For JetBrains PyCharm, you can run the FastAPI server by running the `main.py` f
 
 ## UI 
 
-To run the ACH Parser UI, run the following command:
-
-```bash
-```
+For JetBbrains WebStorm, you can run the UI by setting up an `npm` configuration with the command `run` and 
+the script `dev`. 

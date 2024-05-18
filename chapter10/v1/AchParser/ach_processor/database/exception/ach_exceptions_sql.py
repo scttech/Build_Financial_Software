@@ -2,10 +2,10 @@ from uuid import UUID
 
 from psycopg.rows import class_row
 
-from chapter10.AchParserV1.ach_processor.database.db_utils import get_db_connection
-from chapter10.AchParserV1.ach_processor.schemas.api.ach_exception_details_response import AchExceptionDetailsResponse
-from chapter10.AchParserV1.ach_processor.schemas.api.ach_exceptions_response import AchExceptionsResponse
-from chapter10.AchParserV1.ach_processor.schemas.database.exception.ach_exception_schema import AchExceptionSchema
+from chapter10.v1.AchParser.ach_processor.database.db_utils import get_db_connection
+from chapter10.v1.AchParser.ach_processor.schemas.api.ach_exception_details_response import AchExceptionDetailsResponse
+from chapter10.v1.AchParser.ach_processor.schemas.api.ach_exceptions_response import AchExceptionsResponse
+from chapter10.v1.AchParser.ach_processor.schemas.database.exception.ach_exception_schema import AchExceptionSchema
 
 
 class AchExceptionsSql:

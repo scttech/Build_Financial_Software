@@ -2,9 +2,9 @@ from decimal import Decimal
 
 import pytest
 
-from chapter10.AchParserV1.ach_processor.database.ach_batch_control_sql import AchBatchControlSql
-from chapter10.AchParserV1.ach_processor.schemas.database.ach_batch_control_schema import AchBatchControlSchema
-from chapter10.AchParserV1.tests.ach_processor.sql_utils import SqlUtils
+from chapter10.v1.AchParser.ach_processor.database.ach_batch_control_sql import AchBatchControlSql
+from chapter10.v1.AchParser.ach_processor.schemas.database.ach_batch_control_schema import AchBatchControlSchema
+from chapter10.v1.AchParser.tests.ach_processor.sql_utils import SqlUtils
 
 
 class TestAchBatchHeaderSql:

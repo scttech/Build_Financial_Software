@@ -1,43 +1,43 @@
 from typing import List
 from uuid import UUID
 
-from chapter10.AchParserV1.ach_processor.ach_exceptions import AchExceptions
-from chapter10.AchParserV1.ach_processor.database.ach_addenda_ppd_sql import AchAddendaPpdSql
-from chapter10.AchParserV1.ach_processor.database.ach_batch_control_sql import AchBatchControlSql
-from chapter10.AchParserV1.ach_processor.database.ach_batch_header_sql import AchBatchHeaderSql
-from chapter10.AchParserV1.ach_processor.database.ach_entry_ppd_details_sql import AchEntryPpdDetailsSql
-from chapter10.AchParserV1.ach_processor.database.ach_file_control_sql import AchFileControlSql
-from chapter10.AchParserV1.ach_processor.database.ach_file_header_sql import AchFileHeaderSql
-from chapter10.AchParserV1.ach_processor.database.ach_records_sql_type_1 import AchRecordsSqlType1
-from chapter10.AchParserV1.ach_processor.database.ach_records_sql_type_5 import AchRecordsSqlType5
-from chapter10.AchParserV1.ach_processor.database.ach_records_sql_type_6 import AchRecordsSqlType6
-from chapter10.AchParserV1.ach_processor.database.ach_records_sql_type_7 import AchRecordsSqlType7
-from chapter10.AchParserV1.ach_processor.database.ach_records_sql_type_8 import AchRecordsSqlType8
-from chapter10.AchParserV1.ach_processor.database.ach_records_sql_type_9 import AchRecordsSqlType9
-from chapter10.AchParserV1.ach_processor.database.ach_records_sql_type_invalid import AchRecordsSqlTypeInvalid
-from chapter10.AchParserV1.ach_processor.database.exception.ach_exceptions_sql import AchExceptionsSql
-from chapter10.AchParserV1.ach_processor.record_parser.ach_record_parser import AchRecordProcessor
-from chapter10.AchParserV1.ach_processor.record_parser.exceptions.ach_parsing_validation_error import AchParsingValidationError
-from chapter10.AchParserV1.ach_processor.schemas.database.ach_record.ach_record_type_1_schema import (
+from chapter10.v1.AchParser.ach_processor.ach_exceptions import AchExceptions
+from chapter10.v1.AchParser.ach_processor.database.ach_addenda_ppd_sql import AchAddendaPpdSql
+from chapter10.v1.AchParser.ach_processor.database.ach_batch_control_sql import AchBatchControlSql
+from chapter10.v1.AchParser.ach_processor.database.ach_batch_header_sql import AchBatchHeaderSql
+from chapter10.v1.AchParser.ach_processor.database.ach_entry_ppd_details_sql import AchEntryPpdDetailsSql
+from chapter10.v1.AchParser.ach_processor.database.ach_file_control_sql import AchFileControlSql
+from chapter10.v1.AchParser.ach_processor.database.ach_file_header_sql import AchFileHeaderSql
+from chapter10.v1.AchParser.ach_processor.database.ach_records_sql_type_1 import AchRecordsSqlType1
+from chapter10.v1.AchParser.ach_processor.database.ach_records_sql_type_5 import AchRecordsSqlType5
+from chapter10.v1.AchParser.ach_processor.database.ach_records_sql_type_6 import AchRecordsSqlType6
+from chapter10.v1.AchParser.ach_processor.database.ach_records_sql_type_7 import AchRecordsSqlType7
+from chapter10.v1.AchParser.ach_processor.database.ach_records_sql_type_8 import AchRecordsSqlType8
+from chapter10.v1.AchParser.ach_processor.database.ach_records_sql_type_9 import AchRecordsSqlType9
+from chapter10.v1.AchParser.ach_processor.database.ach_records_sql_type_invalid import AchRecordsSqlTypeInvalid
+from chapter10.v1.AchParser.ach_processor.database.exception.ach_exceptions_sql import AchExceptionsSql
+from chapter10.v1.AchParser.ach_processor.record_parser.ach_record_parser import AchRecordProcessor
+from chapter10.v1.AchParser.ach_processor.record_parser.exceptions.ach_parsing_validation_error import AchParsingValidationError
+from chapter10.v1.AchParser.ach_processor.schemas.database.ach_record.ach_record_type_1_schema import (
     AchRecordType1Schema,
 )
-from chapter10.AchParserV1.ach_processor.schemas.database.ach_record.ach_record_type_5_schema import (
+from chapter10.v1.AchParser.ach_processor.schemas.database.ach_record.ach_record_type_5_schema import (
     AchRecordType5Schema,
 )
-from chapter10.AchParserV1.ach_processor.schemas.database.ach_record.ach_record_type_6_schema import (
+from chapter10.v1.AchParser.ach_processor.schemas.database.ach_record.ach_record_type_6_schema import (
     AchRecordType6Schema,
 )
-from chapter10.AchParserV1.ach_processor.schemas.database.ach_record.ach_record_type_7_schema import (
+from chapter10.v1.AchParser.ach_processor.schemas.database.ach_record.ach_record_type_7_schema import (
     AchRecordType7Schema,
 )
-from chapter10.AchParserV1.ach_processor.schemas.database.ach_record.ach_record_type_8_schema import (
+from chapter10.v1.AchParser.ach_processor.schemas.database.ach_record.ach_record_type_8_schema import (
     AchRecordType8Schema,
 )
-from chapter10.AchParserV1.ach_processor.schemas.database.ach_record.ach_record_type_9_schema import (
+from chapter10.v1.AchParser.ach_processor.schemas.database.ach_record.ach_record_type_9_schema import (
     AchRecordType9Schema,
 )
-from chapter10.AchParserV1.ach_processor.schemas.database.ach_record.ach_record_type_invalid_schema import AchRecordTypeInvalidSchema
-from chapter10.AchParserV1.ach_processor.schemas.database.exception.ach_exception_schema import AchExceptionSchema
+from chapter10.v1.AchParser.ach_processor.schemas.database.ach_record.ach_record_type_invalid_schema import AchRecordTypeInvalidSchema
+from chapter10.v1.AchParser.ach_processor.schemas.database.exception.ach_exception_schema import AchExceptionSchema
 
 
 class AchFileProcessor:

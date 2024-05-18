@@ -3,17 +3,17 @@ from uuid import UUID
 
 from pydantic import ValidationError
 
-from chapter10.AchParserV1.ach_processor.record_parser.exceptions.ach_parsing_validation_error import AchParsingValidationError
-from chapter10.AchParserV1.ach_processor.schemas.database.ach_addenda_ppd_schema import AchAddendaPpdSchema
-from chapter10.AchParserV1.ach_processor.schemas.database.ach_batch_control_schema import (
+from chapter10.v1.AchParser.ach_processor.record_parser.exceptions.ach_parsing_validation_error import AchParsingValidationError
+from chapter10.v1.AchParser.ach_processor.schemas.database.ach_addenda_ppd_schema import AchAddendaPpdSchema
+from chapter10.v1.AchParser.ach_processor.schemas.database.ach_batch_control_schema import (
     AchBatchControlSchema,
 )
-from chapter10.AchParserV1.ach_processor.schemas.database.ach_batch_header_schema import AchBatchHeaderSchema
-from chapter10.AchParserV1.ach_processor.schemas.database.ach_entry_ppd_details_schema import (
+from chapter10.v1.AchParser.ach_processor.schemas.database.ach_batch_header_schema import AchBatchHeaderSchema
+from chapter10.v1.AchParser.ach_processor.schemas.database.ach_entry_ppd_details_schema import (
     AchEntryPpdDetailsSchema,
 )
-from chapter10.AchParserV1.ach_processor.schemas.database.ach_file_control_schema import AchFileControlSchema
-from chapter10.AchParserV1.ach_processor.schemas.database.ach_file_header_schema import AchFileHeaderSchema
+from chapter10.v1.AchParser.ach_processor.schemas.database.ach_file_control_schema import AchFileControlSchema
+from chapter10.v1.AchParser.ach_processor.schemas.database.ach_file_header_schema import AchFileHeaderSchema
 
 
 class AchRecordProcessor:

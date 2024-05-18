@@ -2,8 +2,8 @@
 
 from uuid import UUID
 
-from chapter10.AchParserV1.ach_processor.database.db_utils import get_db_connection
-from chapter10.AchParserV1.ach_processor.schemas.database.ach_record.ach_record_type_invalid_schema import AchRecordTypeInvalidSchema
+from chapter10.v1.AchParser.ach_processor.database.db_utils import get_db_connection
+from chapter10.v1.AchParser.ach_processor.schemas.database.ach_record.ach_record_type_invalid_schema import AchRecordTypeInvalidSchema
 
 
 class AchRecordsSqlTypeInvalid:

@@ -2,9 +2,9 @@ from decimal import Decimal
 
 import pytest
 from typing import Dict
-from chapter10.AchParserV1.ach_processor.ach_file_processor import AchFileProcessor
-from chapter10.AchParserV1.ach_processor.database.ach_file_control_sql import AchFileControlSql
-from chapter10.AchParserV1.tests.ach_processor.sql_utils import SqlUtils
+from chapter10.v1.AchParser.ach_processor.ach_file_processor import AchFileProcessor
+from chapter10.v1.AchParser.ach_processor.database.ach_file_control_sql import AchFileControlSql
+from chapter10.v1.AchParser.tests.ach_processor.sql_utils import SqlUtils
 
 TABLE_NAME: str = "ach_file_control_records"
 
