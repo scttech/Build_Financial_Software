@@ -14,7 +14,7 @@ client = TestClient(app)
 # Load scenarios
 scenarios("../features/ach_files_endpoint.feature")
 scenarios("../features/ach_files_exception_endpoint.feature")
-
+scenarios("../features/search_ach_transactions.feature")
 
 @pytest.fixture
 def ach_file_processor() -> AchFileProcessor:
@@ -78,6 +78,13 @@ def request_a_list_of_exceptions_for_all_files(api_response):
     api_response["response"] = response.json()
 
 
+@when(parsers.parse('I search for transactions with search criteria \"{search_criteria}\"'))
+def search_request_for_transactions(api_response, search_criteria):
+    response = client.get(f"/api/v1/files/transactions/search?criteria={search_criteria}")
+    assert response.status_code == 200, response.text
+    api_response["response"] = response.json()
+
+
 @then(parsers.parse('I should have a response that includes the file \"{filename}\"'))
 def response_that_includes_file(filename, api_response):
     assert any(
@@ -136,3 +143,16 @@ def has_exceptions_validation(api_response, expected_value):
     actual_exceptions_flag = api_response["response"][0]["has_exceptions"]
     assert expected_bool_value == actual_exceptions_flag, \
         f"Expected {expected_value} in {api_response['response']}"
+
+
+@then(parsers.parse('I should receive a list of \"{transaction_count}\" transaction with the amount of \"{transaction_amount}\"'))
+def has_expected_transaction_and_amount(api_response, transaction_count, transaction_amount):
+    assert len(api_response["response"]) == 1, f"Expected {transaction_count} transaction, but got {len(api_response['response'])}"
+    response_amount = api_response["response"][0]["amount"]
+    assert response_amount == transaction_amount, f"Expected {transaction_amount} in {response_amount}"
+
+@then(parsers.parse('I should receive a list of \"{transaction_count}\" transaction with the individual name of \"{individual_name}\"'))
+def has_expected_transaction_and_amount(api_response, transaction_count, individual_name):
+    assert len(api_response["response"]) == 1, f"Expected {transaction_count} transaction, but got {len(api_response['response'])}"
+    response_individual_name = api_response["response"][0]["individual_name"]
+    assert response_individual_name == individual_name, f"Expected {individual_name} in {response_individual_name}"

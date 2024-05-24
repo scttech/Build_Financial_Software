@@ -12,9 +12,15 @@ class TestAchBatchesApi:
     client: TestClient = TestClient(app)
     ach_files_id: Optional[str] = None
 
+    # Get the directory of our file
+    current_file_dir = Path(__file__).resolve().parent
+
+    def get_absolute_path(self, relative_path):
+        return self.current_file_dir / relative_path
+
     def setup_method(self, _method: Callable) -> None:
         ach_file = "data/sample.ach"
-        absolute_path = Path("api/data/sample.ach").resolve()
+        absolute_path = self.get_absolute_path(Path(f"data/sample.ach"))
         SqlUtils.truncate_all()
         self.ach_files_id = SqlUtils.create_ach_file_record(
             ach_file, str(randint(1, 99999999))

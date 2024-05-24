@@ -1,6 +1,14 @@
 # ACH Parser V1
 
-This is the first version of the ACH Parser for Chapter 10. It contains the searching enhancements.
+This is the first version of the ACH Parser for Chapter 10.
+
+Enhancements for Chapter 10 include:
+
+[X] - Searching ACH transactions
+
+[ ] - Auditing the dashboard
+
+[ ] - Monitoring with Prometheus
 
 # Running the ACH Parser
 

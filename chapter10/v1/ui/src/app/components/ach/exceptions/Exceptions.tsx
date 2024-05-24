@@ -81,7 +81,7 @@ export default function Exceptions({exceptions}: Readonly<ExceptionsProps>) {
                                 width: '100%'
                             }}
                         >
-                            <DataGrid columns={columns} rows={exceptions}/>
+                            <DataGrid columns={columns} rows={exceptions} />
                         </Paper>
                     </Container>
             </Box>

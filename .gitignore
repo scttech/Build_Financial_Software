@@ -1,2 +1,3 @@
 .idea
 /.idea/.gitignore
+/chapter10/v1/AchParser/tests/playwright/screenshots/

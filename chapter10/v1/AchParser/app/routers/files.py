@@ -9,6 +9,7 @@ from fastapi import (
     HTTPException,
     Depends,
     Security,
+    Query,
 )
 from fastapi.security import (
     HTTPAuthorizationCredentials,
@@ -16,15 +17,39 @@ from fastapi.security import (
 )
 
 from chapter10.v1.AchParser.ach_processor.database.ach_file_sql import AchFileSql
-from chapter10.v1.AchParser.ach_processor.database.ach_combined_records_sql import AchCombinedRecordsSql
-from chapter10.v1.AchParser.ach_processor.database.exception.ach_exceptions_sql import AchExceptionsSql
-from chapter10.v1.AchParser.ach_processor.schemas.api.ach_batch_entries_response import AchBatchEntriesResponse
-from chapter10.v1.AchParser.ach_processor.schemas.api.ach_batches_response import AchBatchesResponse
-from chapter10.v1.AchParser.ach_processor.schemas.api.ach_exception_details_response import AchExceptionDetailsResponse
-from chapter10.v1.AchParser.ach_processor.schemas.api.ach_exceptions_response import AchExceptionsResponse
-from chapter10.v1.AchParser.ach_processor.schemas.api.ach_files_response import AchFilesResponse
-from chapter10.v1.AchParser.ach_processor.schemas.database.ach_file_schema import AchFileSchema
-from chapter10.v1.AchParser.ach_processor.schemas.database.ach_record.ach_record_schema import AchRecordSchema
+from chapter10.v1.AchParser.ach_processor.database.ach_combined_records_sql import (
+    AchCombinedRecordsSql,
+)
+from chapter10.v1.AchParser.ach_processor.database.exception.ach_exceptions_sql import (
+    AchExceptionsSql,
+)
+from chapter10.v1.AchParser.ach_processor.database.search.transaction_search_sql import (
+    TransactionSearchSql,
+)
+from chapter10.v1.AchParser.ach_processor.schemas.api.ach_batch_entries_response import (
+    AchBatchEntriesResponse,
+)
+from chapter10.v1.AchParser.ach_processor.schemas.api.ach_batches_response import (
+    AchBatchesResponse,
+)
+from chapter10.v1.AchParser.ach_processor.schemas.api.ach_exception_details_response import (
+    AchExceptionDetailsResponse,
+)
+from chapter10.v1.AchParser.ach_processor.schemas.api.ach_exceptions_response import (
+    AchExceptionsResponse,
+)
+from chapter10.v1.AchParser.ach_processor.schemas.api.ach_files_response import (
+    AchFilesResponse,
+)
+from chapter10.v1.AchParser.ach_processor.schemas.api.transaction_search_response import (
+    TransactionSearchResponse,
+)
+from chapter10.v1.AchParser.ach_processor.schemas.database.ach_file_schema import (
+    AchFileSchema,
+)
+from chapter10.v1.AchParser.ach_processor.schemas.database.ach_record.ach_record_schema import (
+    AchRecordSchema,
+)
 from chapter10.v1.AchParser.ach_processor.ach_file_processor import AchFileProcessor
 
 router = APIRouter(prefix="/api/v1/files")
@@ -41,6 +66,21 @@ security_scheme_http_bearer = HTTPBearer()
 )
 async def read_files() -> list[AchFilesResponse]:
     return AchFileSql().get_files_response()
+
+
+@router.get(
+    path="/transactions/search",
+    response_model=list[TransactionSearchResponse],
+    summary="Retrieve ACH Transactions",
+    description="Retrieve the transactions matching the specified criteria.",
+    response_description="ACH Transactions.",
+    response_model_exclude_none=True,
+    tags=["ACH Files"],
+)
+async def get_ach_transactions(
+    criteria: str = Query(..., description="Search criteria for transactions")
+) -> list[TransactionSearchResponse]:
+    return TransactionSearchSql().get_transactions(criteria)
 
 
 @router.get(
@@ -83,7 +123,9 @@ async def read_exceptions_for_file(file_id: UUID) -> list[AchExceptionsResponse]
     response_model_exclude_none=True,
     tags=["ACH Files"],
 )
-async def read_exceptions_for_file(file_id: UUID, exception_id: UUID) -> AchExceptionDetailsResponse:
+async def read_exceptions_for_file(
+    file_id: UUID, exception_id: UUID
+) -> AchExceptionDetailsResponse:
     return AchExceptionsSql().get_exception_detail_response(file_id, exception_id)
 
 

@@ -2,7 +2,7 @@ import ListItemButton from "@mui/material/ListItemButton";
 import ListItemIcon from "@mui/material/ListItemIcon";
 import DashboardIcon from "@mui/icons-material/Dashboard";
 import ListItemText from "@mui/material/ListItemText";
-import {CloudUpload, Logout, Error} from "@mui/icons-material";
+import {CloudUpload, Logout, Error, Search} from "@mui/icons-material";
 import * as React from "react";
 import {useRouter} from "next/navigation";
 import {logout} from "@/app/lib/actions";
@@ -30,6 +30,12 @@ export default function MainListItems() {
                     <Error/>
                 </ListItemIcon>
                 <ListItemText primary="Exceptions"/>
+            </ListItemButton>
+            <ListItemButton onClick={() => route.push("/search")}>
+                <ListItemIcon>
+                    <Search/>
+                </ListItemIcon>
+                <ListItemText primary="Search"/>
             </ListItemButton>
             <ListItemButton onClick={() => logout()}>
                 <ListItemIcon>

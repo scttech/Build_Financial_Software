@@ -1,37 +1,43 @@
 'use client';
 import * as React from 'react';
-import {useEffect, useState} from 'react';
+import {useState} from 'react';
 import {createTheme, ThemeProvider} from '@mui/material/styles';
 import CssBaseline from '@mui/material/CssBaseline';
 import Box from '@mui/material/Box';
 import StandardNavigation from "@/app/components/navigation/StandardNavigation";
 import axios from "axios";
-import {AchExceptionsResponse} from "@/app/interfaces/AchExceptionsResponse";
 import Toolbar from "@mui/material/Toolbar"
-import Exceptions from "@/app/components/ach/exceptions/Exceptions";
+import TextField from "@mui/material/TextField";
+import Button from "@mui/material/Button";
+import AchTransactionSearchResults from "@/app/components/ach/search/AchTransactionSearchResults";
+import {AchTransactionSearchResponse} from "@/app/interfaces/AchTransactionSearchResultsResponse";
 
 
 const defaultTheme = createTheme();
 
-export default function ExceptionsPage() {
+export default function SearchPage() {
+    const [searchCriteria, setSearchCriteria] = useState<string>('');
+    const [results, setResults] = useState<AchTransactionSearchResponse[]>([]);
 
-    const [entries, setEntries] = useState<AchExceptionsResponse[]>([]);
+    const handleChange = (event: { target: { value: React.SetStateAction<string>; }; }) => {
+        setSearchCriteria(event.target.value);
+    };
 
-    useEffect(() => {
+    const handleSearch = async () => {
         const apiUrl = process.env.NEXT_PUBLIC_API_URL ?? '';
-        axios.get<AchExceptionsResponse[]>(`${apiUrl}/files/exceptions`, {
+        axios.get<AchTransactionSearchResponse[]>(`${apiUrl}/files/transactions/search?criteria=${searchCriteria}`, {
             headers: {
                 'Content-Type': 'application/json'
             }
         })
             .then(response => {
                 console.log(`Response data ${JSON.stringify(response.data)}`);
-                setEntries(response.data);
+                setResults(response.data);
             })
             .catch(error => {
                 console.log(error);
             });
-    }, []);
+    };
 
     return (
         <ThemeProvider theme={defaultTheme}>
@@ -50,8 +56,14 @@ export default function ExceptionsPage() {
                         overflow: 'auto',
                     }}
                 >
-                    <Toolbar />
-                    <Exceptions exceptions={entries} />
+                    <Toolbar/>
+                    <Box sx={{display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 2}}>
+                        <TextField id="searchinput" label="Search" variant="standard" onChange={handleChange} sx={{ width: '40%' }} />
+                        <Button variant="outlined" id="searchbtn" color="primary" onClick={handleSearch}>
+                            Search
+                        </Button>
+                    </Box>
+                    <AchTransactionSearchResults results={results}/>
                 </Box>
             </Box>
         </ThemeProvider>
