@@ -1,13 +1,12 @@
-# ACH Parser V1
+# ACH Parser V2
 
-This is the first version of the ACH Parser for Chapter 10. This enhancement add search capabilities to the dashboard, 
-allowing users to search for transactions by amount or individual name.
+This is the second version of the ACH Parser for Chapter 10. We will be adding auditing to the dashboard.
 
 Enhancements for Chapter 10 include:
 
 [X] - Searching ACH transactions
 
-[ ] - Auditing the dashboard
+[X] - Auditing the dashboard
 
 [ ] - Monitoring with Prometheus
 
