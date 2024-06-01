@@ -17,7 +17,7 @@ class TestAuditLog:
             user_agent="Mozilla/5.0",
             http_request="GET",
             http_response=200,
-            url="/api/v1/files",
+            url="http://localhost:3000/api/v1/files",
             message="Test audit log insert",
         )
         logger = AuditLog()

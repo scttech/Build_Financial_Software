@@ -16,10 +16,6 @@ Project starts 2024-08-15
 [Add Auditing logic] starts at [Review APIs]'s end and lasts 3 days
 [UI Support for Auditing] starts at [Add Auditing logic]'s end and lasts 3 days
 
--- Prometheus Monitoring --
-[Prometheus Docker Setup] starts at 2024-08-15 and lasts 3 days
-[Prometheus Integration] starts at [Prometheus Docker Setup]'s end and lasts 3 days
-
 [Sprint Complete] happens at 2024-08-28
 
 @endgantt

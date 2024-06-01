@@ -64,6 +64,13 @@ class AuditLogRecord(BaseModel):
     def convert_url_to_str(cls, v: AnyUrl) -> str:
         return str(v)
 
+    def __len__(self):
+        count = 0
+        for var in vars(self).values():
+            if var is not None:
+                count += 1
+        return count
+
     class Config:
         json_schema_extra = {
             "example": {

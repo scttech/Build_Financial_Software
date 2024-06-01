@@ -1,4 +1,4 @@
-from psycopg.rows import class_row
+from psycopg.rows import class_row, dict_row
 
 from chapter10.v2.AchParser.ach_processor.database.db_utils import get_db_connection
 from chapter10.v2.AchParser.app.logging.audit_log_record import AuditLogRecord
@@ -7,7 +7,7 @@ from chapter10.v2.AchParser.app.logging.audit_log_record import AuditLogRecord
 class AuditLog:
     @staticmethod
     def log_record(log_record: AuditLogRecord):
-        with get_db_connection() as conn:
+        with get_db_connection(row_factory=dict_row) as conn:
             log_record_dict = log_record.dict()
             log_record_dict["url"] = str(log_record_dict["url"])
             result = conn.execute(
@@ -26,7 +26,7 @@ class AuditLog:
                 log_record_dict,
             )
 
-        return result.fetchone()[0]
+        return result.fetchone()["audit_log_id"]
 
     @staticmethod
     def get_log_record(audit_log_id: str) -> AuditLogRecord:
