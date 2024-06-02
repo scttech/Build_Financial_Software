@@ -1,12 +1,14 @@
-# ACH Parser V2
+# ACH Parser V1
 
-This is the second version of the ACH Parser for Chapter 10. We will be adding auditing to the dashboard.
+This is the first version of the ACH Parser for Chapter 11. We will be adding company information to the dashboard.
 
-Enhancements for Chapter 10 include:
+Enhancements for Chapter 11 include:
 
-[X] - Searching ACH transactions
+[X] - Company Information
 
-[X] - Auditing the dashboard
+[ ] - Compnay Limits
+
+[ ] - API calls
 
 # Running the ACH Parser
 

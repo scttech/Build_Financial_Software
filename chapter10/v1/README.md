@@ -9,8 +9,6 @@ Enhancements for Chapter 10 include:
 
 [ ] - Auditing the dashboard
 
-[ ] - Monitoring with Prometheus
-
 # Running the ACH Parser
 
 ## FastAPI
