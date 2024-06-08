@@ -205,6 +205,64 @@ CREATE TABLE audit_log (
     message TEXT NOT NULL
 );
 
+-- Create ENUM Type for industry_type
+CREATE TYPE industry_type AS ENUM ('basic materials', 'consumer goods', 'consumer services', 'financials', 'healthcare', 'industrials', 'oil & gas', 'technology', 'telecommunications', 'utilities');
+
+-- Create ENUM Type for tin_type
+CREATE TYPE tin_type AS ENUM ('SSN', 'EIN', 'ITIN', 'ATIN', 'PTIN');
+
+-- Company information table
+CREATE TABLE company (
+    company_id UUID PRIMARY KEY DEFAULT uuid_generate_v4(),
+    name VARCHAR(255) NOT NULL,
+    tax_id_type TIN_TYPE NOT NULL DEFAULT 'EIN',
+    tax_id_number VARCHAR(9) NOT NULL,
+    duns NUMERIC(9) NOT NULL,
+    logo BYTEA DEFAULT NULL,
+    website VARCHAR(255) DEFAULT NULL,
+    industry INDUSTRY_TYPE DEFAULT NULL,
+    created_at TIMESTAMP NOT NULL DEFAULT NOW(),
+    updated_at TIMESTAMP NOT NULL DEFAULT NOW()
+);
+
+-- Create ENUM Type for address_type
+CREATE TYPE address_type AS ENUM ('mailing', 'street');
+
+-- Company address information
+CREATE TABLE company_address (
+    company_address_id UUID DEFAULT uuid_generate_v4(),
+    company_id UUID NOT NULL REFERENCES company(company_id) ON DELETE CASCADE ON UPDATE CASCADE,
+    address_type ADDRESS_TYPE NOT NULL DEFAULT 'mailing',
+    address_line_1 VARCHAR(255) NOT NULL,
+    address_line_2 VARCHAR(255) DEFAULT NULL,
+    address_line_3 VARCHAR(255) DEFAULT NULL,
+    address_line_4 VARCHAR(255) DEFAULT NULL,
+    city VARCHAR(255) NOT NULL,
+    state VARCHAR(2) NOT NULL,
+    zip_code NUMERIC(5) NOT NULL,
+    zip_code_4 NUMERIC(4) DEFAULT NULL,
+    created_at TIMESTAMP NOT NULL DEFAULT NOW(),
+    updated_at TIMESTAMP NOT NULL DEFAULT NOW(),
+    PRIMARY KEY (company_id, address_type)
+);
+
+-- Create ENUM Type for phone_type
+CREATE TYPE phone_type AS ENUM ( 'main', 'direct', 'department', 'fax', 'toll-free', 'mobile', 'home', 'other');
+
+-- Company phone information
+CREATE TABLE company_phone (
+    company_phone_id UUID DEFAULT uuid_generate_v4(),
+    company_id UUID NOT NULL REFERENCES company(company_id) ON DELETE CASCADE ON UPDATE CASCADE,
+    phone_type VARCHAR(25) NOT NULL,
+    phone_number NUMERIC(10) NOT NULL,
+    extension NUMERIC(5) DEFAULT NULL,
+    allow_sms BOOLEAN NOT NULL DEFAULT FALSE,
+    created_at TIMESTAMP NOT NULL DEFAULT NOW(),
+    updated_at TIMESTAMP NOT NULL DEFAULT NOW(),
+    PRIMARY KEY (company_id, phone_type),
+    UNIQUE (phone_number, extension)
+);
+
 -- Create a view
 CREATE VIEW ach_combined_records AS
 SELECT 

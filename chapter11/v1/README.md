@@ -6,7 +6,7 @@ Enhancements for Chapter 11 include:
 
 [X] - Company Information
 
-[ ] - Compnay Limits
+[ ] - Company Limits
 
 [ ] - API calls
 
