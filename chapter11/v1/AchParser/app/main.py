@@ -7,7 +7,7 @@ from pydantic import ValidationError
 
 from chapter11.v1.AchParser.app.logging.audit_log import AuditLog
 from chapter11.v1.AchParser.app.logging.audit_log_record import AuditLogRecord
-from .routers import files, audit
+from .routers import files, audit, companies
 
 origins = ["http://localhost:3000", "http://localhost:4000", "*"]
 
@@ -24,8 +24,9 @@ tags_metadata = [
 
 app = FastAPI()
 
-app.include_router(files.router)
-app.include_router(audit.router)
+routers = [files.router, audit.router, companies.router]
+for router in routers:
+    app.include_router(router)
 
 app.add_middleware(
     CORSMiddleware,

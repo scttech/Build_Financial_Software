@@ -6,6 +6,7 @@ from chapter11.v1.AchParser.tests.ach_processor.sql_utils import SqlUtils
 
 
 class TestAuditLog:
+
     @pytest.fixture(autouse=True)
     def setup_teardown_method(self):
         SqlUtils.truncate_all()

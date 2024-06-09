@@ -4,7 +4,7 @@ This is the first version of the ACH Parser for Chapter 11. We will be adding co
 
 Enhancements for Chapter 11 include:
 
-[X] - Company Information
+[X] - Company Information (v1, only the API to pull all companies)
 
 [ ] - Company Limits
 
