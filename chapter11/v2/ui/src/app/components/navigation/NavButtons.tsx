@@ -1,8 +1,7 @@
 import ListItemButton from "@mui/material/ListItemButton";
 import ListItemIcon from "@mui/material/ListItemIcon";
-import DashboardIcon from "@mui/icons-material/Dashboard";
 import ListItemText from "@mui/material/ListItemText";
-import {CloudUpload, Logout, Error, Search, History} from "@mui/icons-material";
+import {CloudUpload, Logout, Error, Search, History, Store, Dashboard} from "@mui/icons-material";
 import * as React from "react";
 import {useRouter} from "next/navigation";
 import {logout} from "@/app/lib/actions";
@@ -15,9 +14,15 @@ export default function MainListItems() {
         <>
             <ListItemButton onClick={() => route.push("/")}>
                 <ListItemIcon>
-                    <DashboardIcon/>
+                    <Dashboard/>
                 </ListItemIcon>
                 <ListItemText primary="Dashboard"/>
+            </ListItemButton>
+            <ListItemButton onClick={() => route.push("/companies")}>
+                <ListItemIcon>
+                    <Store/>
+                </ListItemIcon>
+                <ListItemText primary="Companies"/>
             </ListItemButton>
             <ListItemButton onClick={() => route.push("/uploads")}>
                 <ListItemIcon>
