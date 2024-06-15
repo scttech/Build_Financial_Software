@@ -34,3 +34,11 @@ class TestCompanyApis:
         response = client.get("/api/v1/companies")
         assert response.status_code == 200, response.text
         assert len(response.json()) == 10
+
+    def test_get_single_company(self, client, docker_compose):
+        overview_response = client.get("/api/v1/companies")
+        assert overview_response.status_code == 200, overview_response.text
+        company_id = overview_response.json()[0]["company_id"]
+        detail_response = client.get(f"/api/v1/companies/{company_id}")
+        assert detail_response.status_code == 200, detail_response.text
+        assert detail_response.json()["company_id"] == company_id

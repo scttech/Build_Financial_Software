@@ -7,7 +7,7 @@ import Box from '@mui/material/Box';
 import StandardNavigation from "@/app/components/navigation/StandardNavigation";
 import axios from "axios";
 import Toolbar from "@mui/material/Toolbar"
-import {CompaniesListingResponse} from "@/app/interfaces/CompaniesListingResponse";
+import {CompaniesListingResponse} from "@/app/interfaces/companies/CompaniesListingResponse";
 import CompaniesListing from "@/app/components/companies/CompaniesListing";
 
 
@@ -15,7 +15,7 @@ const defaultTheme = createTheme();
 
 export default function CompaniesOverviewPage() {
 
-    const [entries, setEntries] = useState<CompaniesListingResponse[]>([]);
+    const [companies, setCompanies] = useState<CompaniesListingResponse[]>([]);
 
     useEffect(() => {
         const apiUrl = process.env.NEXT_PUBLIC_API_URL ?? '';
@@ -26,7 +26,7 @@ export default function CompaniesOverviewPage() {
         })
             .then(response => {
                 console.log(`Response data ${JSON.stringify(response.data)}`);
-                setEntries(response.data);
+                setCompanies(response.data);
             })
             .catch(error => {
                 console.log(error);
@@ -51,7 +51,7 @@ export default function CompaniesOverviewPage() {
                     }}
                 >
                     <Toolbar />
-                    <CompaniesListing records={entries}/>
+                    <CompaniesListing companies={companies}/>
                 </Box>
             </Box>
         </ThemeProvider>

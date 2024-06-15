@@ -1,3 +1,4 @@
+from decimal import Decimal
 from typing import Optional
 
 from pydantic import (
@@ -11,7 +12,7 @@ from chapter11.v2.AchParser.common.address.address import Address
 from chapter11.v2.AchParser.common.phone.phone import Phone
 
 
-class CompanyOverviewRecord(BaseModel):
+class CompanyDetailRecord(BaseModel):
     company_id: Optional[UUID4] = Field(
         None,
         title="Company ID",
@@ -32,4 +33,34 @@ class CompanyOverviewRecord(BaseModel):
         None,
         title="Logo",
         description="Base64 Image of the Logo.",
+    )
+    website: Optional[str] = Field(
+        None,
+        title="Website",
+        description="Company Website URL.",
+    )
+    tax_id_type: Optional[str] = Field(
+        None,
+        title="Tax ID Type",
+        description="Type of Tax ID.",
+    )
+    tax_id_number: Optional[str] = Field(
+        None,
+        title="Tax ID Number",
+        description="Tax ID Number.",
+    )
+    duns: Optional[int] = Field(
+        None,
+        title="DUNS",
+        description="DUNS Number.",
+    )
+    addresses: Optional[list[Address]] = Field(
+        None,
+        title="Addresses",
+        description="List of Addresses.",
+    )
+    phones: Optional[list[Phone]] = Field(
+        None,
+        title="Phones",
+        description="List of Phone Numbers.",
     )

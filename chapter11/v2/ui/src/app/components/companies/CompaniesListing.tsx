@@ -6,18 +6,19 @@ import Box from '@mui/material/Box';
 import {DataGrid, GridColDef} from "@mui/x-data-grid";
 import Container from "@mui/material/Container";
 import Paper from "@mui/material/Paper";
-import {CompaniesListingResponse} from "@/app/interfaces/CompaniesListingResponse";
+import {CompaniesListingResponse} from "@/app/interfaces/companies/CompaniesListingResponse";
 import ImageBase64 from "@/app/components/images/ImageBase64";
-
+import {useRouter} from "next/navigation";
 
 const defaultTheme = createTheme();
 
 interface CompaniesListingProps {
-    records: CompaniesListingResponse[];
+    companies: CompaniesListingResponse[];
 }
 
-export default function CompaniesListing({records}: Readonly<CompaniesListingProps>) {
+export default function CompaniesListing({companies}: Readonly<CompaniesListingProps>) {
 
+    const route = useRouter();
     const columns: GridColDef[] = [
         {field: 'view', headerName: '', sortable: false, width: 100, renderCell: (params) => (
             <ImageBase64 base64={params.row.logo} alt={params.row.name} width="100%" maxWidth="200px" />
@@ -27,9 +28,10 @@ export default function CompaniesListing({records}: Readonly<CompaniesListingPro
     ];
 
     const handleRowClick = (params: { id: any; }) => {
-        const id = params.id;
-        console.log(`Row clicked ${id}`);
-    }
+        const companyId = params.id;
+        console.log(`Row clicked ${companyId}`);
+        route.push(`/companies/${companyId}`);
+    };
 
     return (
         <ThemeProvider theme={defaultTheme}>
@@ -48,7 +50,7 @@ export default function CompaniesListing({records}: Readonly<CompaniesListingPro
                             <DataGrid
                                 rowHeight={100}
                                 columns={columns}
-                                rows={records}
+                                rows={companies}
                                 getRowId={(row) => row.company_id}
                                 onRowClick={handleRowClick}
                             />
