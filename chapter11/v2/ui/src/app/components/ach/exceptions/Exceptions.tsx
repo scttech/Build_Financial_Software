@@ -17,6 +17,7 @@ import InfoIcon from '@mui/icons-material/Info';
 import AlertMessage from "@/app/components/dialogs/AlertMessage";
 import {AchExceptionDetailsResponse} from "@/app/interfaces/AchExceptionDetailsResponse";
 import {AchFiles} from "@/app/interfaces/AchFiles";
+import Title from "@/app/components/Title";
 
 
 const defaultTheme = createTheme();
@@ -81,6 +82,7 @@ export default function Exceptions({exceptions}: Readonly<ExceptionsProps>) {
                                 width: '100%'
                             }}
                         >
+                            <Title>Exceptions</Title>
                             <DataGrid columns={columns} rows={exceptions} />
                         </Paper>
                     </Container>

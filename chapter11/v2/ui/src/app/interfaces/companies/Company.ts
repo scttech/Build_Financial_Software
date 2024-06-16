@@ -7,6 +7,7 @@ export interface Company {
   name: string;
   taxIdType: TinType;
   taxIdNumber: string;
+  achCompanyId: number;
   duns: number;
   logo?: string | null;
   website?: string;

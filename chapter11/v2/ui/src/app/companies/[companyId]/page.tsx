@@ -11,10 +11,10 @@ import CompanyDetailsForm from "@/app/components/companies/CompanyDetailsForm";
 import {CompanyDetailResponse} from "@/app/interfaces/companies/CompanyDetailResponse";
 import {Company} from "@/app/interfaces/companies/Company";
 import {IndustryType} from "@/app/interfaces/common/IndustryType";
-import {AuditResponse} from "@/app/interfaces/AuditResponse";
 
 
 const defaultTheme = createTheme();
+
 
 export default function CompanyDetailsPage({params}: any) {
 
@@ -28,6 +28,7 @@ export default function CompanyDetailsPage({params}: any) {
         taxIdNumber: detailResponse.tax_id_number,
         duns: detailResponse.duns,
         logo: detailResponse.logo,
+        achCompanyId: detailResponse.ach_company_id,
         website: detailResponse.website,
         industry: detailResponse.industry as IndustryType,
         addresses: detailResponse.addresses.map(address => ({

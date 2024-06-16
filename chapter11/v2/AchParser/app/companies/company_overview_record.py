@@ -32,4 +32,5 @@ class CompanyOverviewRecord(BaseModel):
         None,
         title="Logo",
         description="Base64 Image of the Logo.",
+        pattern=r"^data:image\/[a-zA-Z]+;base64,[A-Za-z0-9+/=]+$",
     )

@@ -8,6 +8,7 @@ export interface CompanyDetailResponse {
     company_id: string;
     name: string;
     industry: string;
+    ach_company_id: number;
     logo: string;
     website: string;
     tax_id_type: TinType;

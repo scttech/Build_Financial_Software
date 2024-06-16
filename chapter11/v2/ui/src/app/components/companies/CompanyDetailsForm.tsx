@@ -1,6 +1,6 @@
 // components/CompanyForm.js
 import React, {useLayoutEffect, useState} from 'react';
-import {TextField, MenuItem, Grid, Typography, Paper, Container} from '@mui/material';
+import {Avatar, Button, Container, Grid, MenuItem, Paper, TextField, Typography} from '@mui/material';
 import {TinType} from "@/app/interfaces/common/TinType";
 import {Company} from "@/app/interfaces/companies/Company";
 import {AddressType} from "@/app/interfaces/common/AddressType";
@@ -18,10 +18,11 @@ export default function CompanyDetailsForm(props: Readonly<CompanyDetailsFormPro
         taxIdType: TinType.EIN,
         taxIdNumber: '',
         duns: 0,
+        achCompanyId: 0,
         logo: null,
         website: '',
-        industry: undefined,
-        addresses: [{addressType: AddressType.STREET, addressLine1: '', city: '', state: '', zipCode: ''}],
+        industry: IndustryType.TECHNOLOGY,
+        addresses: [{addressType: AddressType.STREET, addressLine1: '', city: '', state: '', zipCode: '', zipCode4: ''}],
         phones: [{phoneType: PhoneType.MAIN, phoneNumber: '', extension: '', allowSms: false}],
     });
 
@@ -50,6 +51,16 @@ export default function CompanyDetailsForm(props: Readonly<CompanyDetailsFormPro
         setCompanyEntry((prev) => ({...prev, phones}));
     };
 
+    const handleLogoChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+        if (e.target.files && e.target.files[0]) {
+            const reader = new FileReader();
+            reader.onload = (event) => {
+                setCompanyEntry((prev) => ({ ...prev, logo: event.target?.result as string }));
+            };
+            reader.readAsDataURL(e.target.files[0]);
+        }
+    };
+
     const handleSubmit = (e: { preventDefault: () => void; }) => {
         e.preventDefault();
         // Perform form submission logic here (e.g., send data to API)
@@ -71,50 +82,88 @@ export default function CompanyDetailsForm(props: Readonly<CompanyDetailsFormPro
                     <Typography variant="h6" gutterBottom>
                         Company Information
                     </Typography>
+                 <Grid container spacing={3}>
+                        <Grid item xs={12} sm={9}>
+                            <Grid container spacing={3}>
+                                <Grid item xs={12}>
+                                    <TextField
+                                        required
+                                        label="Company Name"
+                                        id="Company Name"
+                                        name="name"
+                                        fullWidth
+                                        value={companyEntry.name}
+                                        onChange={handleChange}
+                                    />
+                                </Grid>
+                                <Grid item xs={6} sm={6}>
+                                    <TextField
+                                        required
+                                        select
+                                        label="Tax ID Type"
+                                        id="Tax ID Type"
+                                        name="taxIdType"
+                                        fullWidth
+                                        value={companyEntry.taxIdType}
+                                        onChange={handleChange}
+                                    >
+                                        {Object.values(TinType).map((type) => (
+                                            <MenuItem key={type} value={type}>
+                                                {type}
+                                            </MenuItem>
+                                        ))}
+                                    </TextField>
+                                </Grid>
+                                <Grid item xs={6} sm={6}>
+                                    <TextField
+                                        required
+                                        label="Tax ID Number"
+                                        name="taxIdNumber"
+                                        fullWidth
+                                        value={companyEntry.taxIdNumber}
+                                        onChange={handleChange}
+                                    />
+                                </Grid>
+                                <Grid item xs={12} sm={12}>
+                                    <TextField
+                                        label="DUNS Number"
+                                        name="duns"
+                                        fullWidth
+                                        value={companyEntry.duns}
+                                        onChange={handleChange}
+                                    />
+                                </Grid>
+                            </Grid>
+                        </Grid>
+                        <Grid item xs={12} sm={3}>
+                            <input
+                                accept="image/*"
+                                style={{ display: 'none' }}
+                                id="logo-upload"
+                                type="file"
+                                onChange={handleLogoChange}
+                            />
+                            <label htmlFor="logo-upload">
+                                <Button variant="contained" component="span" fullWidth>
+                                    Upload Logo
+                                </Button>
+                            </label>
+                            {companyEntry.logo && (
+                                <Avatar
+                                    src={companyEntry.logo}
+                                    variant="square"
+                                    sx={{ width: '100%', height: 'auto', mt: 1 }}
+                                />
+                            )}
+                        </Grid>
+                    </Grid>
                     <Grid container spacing={3}>
                         <Grid item xs={12}>
                             <TextField
-                                required
-                                label="Company Name"
-                                name="name"
+                                label="ACH Company ID"
+                                name="achCompanyId"
                                 fullWidth
-                                value={companyEntry.name}
-                                onChange={handleChange}
-                            />
-                        </Grid>
-                        <Grid item xs={3}>
-                            <TextField
-                                required
-                                select
-                                label="Tax ID Type"
-                                name="taxIdType"
-                                fullWidth
-                                value={companyEntry.taxIdType}
-                                onChange={handleChange}
-                            >
-                                {Object.values(TinType).map((type) => (
-                                    <MenuItem key={type} value={type}>
-                                        {type}
-                                    </MenuItem>
-                                ))}
-                            </TextField>
-                        </Grid>
-                        <Grid item xs={12} sm={6}>
-                            <TextField
-                                required
-                                label="Tax ID Number"
-                                name="taxIdNumber"
-                                fullWidth
-                                value={companyEntry.taxIdNumber}
-                                onChange={handleChange}
-                            />
-                        </Grid>
-                        <Grid item xs={12}>
-                            <TextField
-                                label="DUNS Number"
-                                name="duns"
-                                fullWidth
-                                value={companyEntry.duns}
+                                value={companyEntry.achCompanyId || 0}
                                 onChange={handleChange}
                             />
                         </Grid>
@@ -235,7 +284,7 @@ export default function CompanyDetailsForm(props: Readonly<CompanyDetailsFormPro
                                     label="ZIP Code +4"
                                     name="zipCode4"
                                     fullWidth
-                                    value={address.zipCode4}
+                                    value={address.zipCode4 || ''}
                                     onChange={(e) => handleAddressChange(index, e)}
                                 />
                             </Grid>

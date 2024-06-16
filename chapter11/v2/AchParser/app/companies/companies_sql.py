@@ -32,7 +32,8 @@ class CompaniesSql:
         with get_db_connection(row_factory=dict_row) as conn:
             result = conn.execute(
                 """
-                SELECT c.company_id, c.name, c.tax_id_type, c.tax_id_number, c.duns, c.logo, c.website, c.industry, 
+                SELECT c.company_id, c.ach_company_id, c.name, c.tax_id_type, c.tax_id_number, c.duns, c.logo,
+                       c.website, c.industry, 
                        ca.company_address_id, ca.address_type, ca.address_type, ca.address_line_1, ca.address_line_2, 
                        ca.address_line_3, ca.address_line_4, ca.city, ca.state, ca.zip_code, ca.zip_code_4, 
                        cp.company_phone_id, cp.phone_type, cp.phone_number, cp.extension
@@ -80,6 +81,7 @@ class CompaniesSql:
             "company_id": rows[0]["company_id"],
             "name": rows[0]["name"],
             "tax_id_type": rows[0]["tax_id_type"],
+            "ach_company_id": rows[0]["ach_company_id"],
             "tax_id_number": rows[0]["tax_id_number"],
             "duns": rows[0]["duns"],
             "logo": rows[0]["logo"],

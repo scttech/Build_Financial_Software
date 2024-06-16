@@ -13,6 +13,7 @@ import {AuditResponse} from "@/app/interfaces/AuditResponse";
 import {convertDateFormat} from "@/app/utils/DateUtils";
 import {stripSubnet} from "@/app/utils/StringUtils";
 import AuditModal from "@/app/components/dialogs/AuditModal";
+import Title from "@/app/components/Title";
 
 
 const defaultTheme = createTheme();
@@ -58,6 +59,7 @@ export default function AuditRecords({records}: Readonly<AuditRecordsProps>) {
                                 width: '100%'
                             }}
                         >
+                            <Title>Audit Log</Title>
                             <DataGrid columns={columns} rows={records} getRowId={(row) => row.audit_log_id} />
                         </Paper>
                     </Container>

@@ -29,10 +29,16 @@ class CompanyDetailRecord(BaseModel):
         title="Industry",
         description="Type of industry the company operates in.",
     )
+    ach_company_id: Optional[int] = Field(
+        None,
+        title="ACH Company ID",
+        description="ACH Company ID.",
+    )
     logo: Optional[str] = Field(
         None,
         title="Logo",
         description="Base64 Image of the Logo.",
+        pattern=r"^data:image\/[a-zA-Z]+;base64,[A-Za-z0-9+/=]+$",
     )
     website: Optional[str] = Field(
         None,
