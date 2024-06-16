@@ -1,3 +1,5 @@
 .idea
 /.idea/.gitignore
 /chapter10/v1/AchParser/tests/playwright/screenshots/
+**/.next
+/chapter11/v3/ui/.next/cache/webpack/client-production/0.pack
