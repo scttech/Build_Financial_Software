@@ -30,7 +30,7 @@ export default function CompaniesListing({companies}: Readonly<CompaniesListingP
     const handleRowClick = (params: { id: any; }) => {
         const companyId = params.id;
         console.log(`Row clicked ${companyId}`);
-        route.push(`/companies/${companyId}`);
+        route.push(`/companies/${companyId}/dashboard`);
     };
 
     return (

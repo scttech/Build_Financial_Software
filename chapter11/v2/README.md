@@ -6,6 +6,8 @@ Enhancements for Chapter 11 include:
 
 [X] - Company Information (v1, only the API to pull all companies)
 
+[X] - Recent Company Batches
+
 [ ] - Company Limits
 
 [ ] - API calls
