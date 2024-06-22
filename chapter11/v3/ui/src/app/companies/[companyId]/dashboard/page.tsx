@@ -17,6 +17,7 @@ import {CompanyDetailResponse} from "@/app/interfaces/companies/CompanyDetailRes
 import {IndustryType} from "@/app/interfaces/common/IndustryType";
 import axios from "axios";
 import RecentCompanyBatches from "@/app/components/companies/dashboard/RecentCompanyBatches";
+import ExpectedFiles from "@/app/components/companies/dashboard/ExpectedFiles";
 
 function Copyright(props: any) {
     return (
@@ -105,8 +106,11 @@ export default function CompanyDashboard({params}: any) {
                     <Toolbar />
                     <Container maxWidth="lg" sx={{ mt: 4, mb: 4 }}>
                         <Grid container spacing={3}>
-                            <Grid item xs={12} md={8} lg={9}>
+                            <Grid item xs={12}>
                                 <CompanyInformation companyId={companyId} company={company} />
+                            </Grid>
+                            <Grid item xs={12}>
+                                <ExpectedFiles companyId={companyId} />
                             </Grid>
                             <Grid item xs={12} md={8} lg={9}>
                                 <RecentCompanyBatches companyId={companyId} />

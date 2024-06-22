@@ -1,8 +1,8 @@
 import pytest
 
-from chapter11.v2.AchParser.app.logging.audit_log import AuditLog
-from chapter11.v2.AchParser.app.logging.audit_log_record import AuditLogRecord
-from chapter11.v2.AchParser.tests.ach_processor.sql_utils import SqlUtils
+from chapter11.v3.AchParser.app.logging.audit_log import AuditLog
+from chapter11.v3.AchParser.app.logging.audit_log_record import AuditLogRecord
+from chapter11.v3.AchParser.tests.ach_processor.sql_utils import SqlUtils
 
 
 class TestAuditLog:

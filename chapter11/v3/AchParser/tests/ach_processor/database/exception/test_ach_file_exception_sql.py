@@ -1,16 +1,16 @@
 import pytest
 
-from chapter11.v2.AchParser.ach_processor.database.ach_file_sql import AchFileSql
-from chapter11.v2.AchParser.ach_processor.database.exception.ach_exceptions_sql import (
+from chapter11.v3.AchParser.ach_processor.database.ach_file_sql import AchFileSql
+from chapter11.v3.AchParser.ach_processor.database.exception.ach_exceptions_sql import (
     AchExceptionsSql,
 )
-from chapter11.v2.AchParser.ach_processor.schemas.database.ach_file_schema import (
+from chapter11.v3.AchParser.ach_processor.schemas.database.ach_file_schema import (
     AchFileSchema,
 )
-from chapter11.v2.AchParser.ach_processor.schemas.database.exception.ach_exception_schema import (
+from chapter11.v3.AchParser.ach_processor.schemas.database.exception.ach_exception_schema import (
     AchExceptionSchema,
 )
-from chapter11.v2.AchParser.tests.ach_processor.sql_utils import SqlUtils
+from chapter11.v3.AchParser.tests.ach_processor.sql_utils import SqlUtils
 
 
 class TestAchFileExceptionSql:

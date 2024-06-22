@@ -5,8 +5,8 @@ from fastapi.openapi.utils import get_openapi
 from fastapi.responses import JSONResponse
 from pydantic import ValidationError
 
-from chapter11.v2.AchParser.app.logging.audit_log import AuditLog
-from chapter11.v2.AchParser.app.logging.audit_log_record import AuditLogRecord
+from chapter11.v3.AchParser.app.logging.audit_log import AuditLog
+from chapter11.v3.AchParser.app.logging.audit_log_record import AuditLogRecord
 from .routers import files, audit, companies
 
 origins = ["http://localhost:3000", "http://localhost:4000", "*"]

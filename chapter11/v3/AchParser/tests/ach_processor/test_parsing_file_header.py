@@ -1,10 +1,10 @@
 import pytest
 from typing import Dict
-from chapter11.v2.AchParser.ach_processor.ach_file_processor import AchFileProcessor
-from chapter11.v2.AchParser.ach_processor.database.ach_file_header_sql import (
+from chapter11.v3.AchParser.ach_processor.ach_file_processor import AchFileProcessor
+from chapter11.v3.AchParser.ach_processor.database.ach_file_header_sql import (
     AchFileHeaderSql,
 )
-from chapter11.v2.AchParser.tests.ach_processor.sql_utils import SqlUtils
+from chapter11.v3.AchParser.tests.ach_processor.sql_utils import SqlUtils
 
 
 @pytest.fixture(autouse=True)

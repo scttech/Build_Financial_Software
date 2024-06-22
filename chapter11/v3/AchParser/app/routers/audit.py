@@ -1,8 +1,8 @@
 from fastapi import APIRouter, Request
 
-from chapter11.v2.AchParser.app.decorators.log_message_decorator import log_message
-from chapter11.v2.AchParser.app.logging.audit_log import AuditLog
-from chapter11.v2.AchParser.app.logging.audit_log_record import AuditLogRecord
+from chapter11.v3.AchParser.app.decorators.log_message_decorator import log_message
+from chapter11.v3.AchParser.app.logging.audit_log import AuditLog
+from chapter11.v3.AchParser.app.logging.audit_log_record import AuditLogRecord
 
 router = APIRouter(prefix="/api/v1/audits")
 

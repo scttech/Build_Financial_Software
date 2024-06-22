@@ -2,7 +2,7 @@ from typing import Optional
 
 from pydantic import BaseModel, Field, UUID4, ConfigDict
 
-from chapter11.v2.AchParser.common.address.address_type import AddressType
+from chapter11.v3.AchParser.common.address.address_type import AddressType
 
 
 class Address(BaseModel):

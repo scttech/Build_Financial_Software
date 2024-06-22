@@ -7,9 +7,9 @@ from pydantic import (
     BaseModel,
 )
 
-from chapter11.v2.AchParser.app.companies.industry_type import IndustryType
-from chapter11.v2.AchParser.common.address.address import Address
-from chapter11.v2.AchParser.common.phone.phone import Phone
+from chapter11.v3.AchParser.app.companies.industry_type import IndustryType
+from chapter11.v3.AchParser.common.address.address import Address
+from chapter11.v3.AchParser.common.phone.phone import Phone
 
 
 class CompanyDetailRecord(BaseModel):

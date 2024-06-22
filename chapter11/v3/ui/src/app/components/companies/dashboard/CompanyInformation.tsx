@@ -9,6 +9,7 @@ import {IndustryType} from "@/app/interfaces/common/IndustryType";
 import ImageBase64 from "@/app/components/images/ImageBase64";
 import StandardSubmitButton from "@/app/components/input/buttons/StandardButton";
 import {useRouter} from "next/navigation";
+import Title from "@/app/components/Title";
 
 interface CompanyInformationProps {
     companyId?: string;
@@ -59,7 +60,7 @@ export default function CompanyInformation(props: Readonly<CompanyInformationPro
                 }}
             >
                 <Box sx={{mb: 2}}>
-                    <Typography variant="h6">Company Information</Typography>
+                    <Title>Company Information</Title>
                 </Box>
                 <Grid container>
                     <Grid item xs={8}>
@@ -89,7 +90,7 @@ export default function CompanyInformation(props: Readonly<CompanyInformationPro
                     </Grid>
                 </Grid>
                 <Box sx={{mt: 2, mb: 2}}>
-                    <Typography variant="h6">Address Information</Typography>
+                    <Title>Address Information</Title>
                 </Box>
                 <Grid container>
                     <Grid item xs={4}>
@@ -124,7 +125,7 @@ export default function CompanyInformation(props: Readonly<CompanyInformationPro
                     </Grid>
                 </Grid>
                 <Box sx={{mt: 2, mb: 2}}>
-                    <Typography variant="h6">Contact Information</Typography>
+                    <Title>Contact Information</Title>
                 </Box>
                 <Grid container>
                     <Grid item xs={4}>

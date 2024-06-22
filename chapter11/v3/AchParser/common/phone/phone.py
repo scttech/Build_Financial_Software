@@ -2,7 +2,7 @@ from typing import Optional
 
 from pydantic import BaseModel, Field, UUID4
 
-from chapter11.v2.AchParser.common.phone.phone_type import PhoneType
+from chapter11.v3.AchParser.common.phone.phone_type import PhoneType
 
 
 class Phone(BaseModel):

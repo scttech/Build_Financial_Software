@@ -263,6 +263,21 @@ CREATE TABLE company_phones (
     UNIQUE (phone_number, extension)
 );
 
+-- Create ENUM Type for schedule_type
+CREATE TYPE schedule_type AS ENUM ('daily', 'weekly', 'bi-weekly', 'monthly', 'quarterly', 'semi-annually', 'annually');
+
+-- Create a company expected files table
+CREATE TABLE company_expected_files (
+    company_expected_file_id UUID DEFAULT uuid_generate_v4(),
+    company_id UUID NOT NULL REFERENCES companies(company_id) ON DELETE CASCADE ON UPDATE CASCADE,
+    file_name VARCHAR(255) NOT NULL,
+    schedule SCHEDULE_TYPE NOT NULL DEFAULT 'daily',
+    last_file_date TIMESTAMP DEFAULT NULL,
+    created_at TIMESTAMP NOT NULL DEFAULT NOW(),
+    updated_at TIMESTAMP NOT NULL DEFAULT NOW(),
+    PRIMARY KEY (company_id, file_name)
+);
+
 -- Create a view
 CREATE VIEW ach_combined_records AS
 SELECT

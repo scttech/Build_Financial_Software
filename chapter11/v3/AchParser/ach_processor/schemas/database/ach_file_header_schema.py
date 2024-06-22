@@ -2,7 +2,7 @@ from typing import Annotated
 
 from pydantic import BaseModel, UUID4, StringConstraints, field_validator
 
-from chapter11.v2.AchParser.ach_processor.database.bank.bank_routing_sql import (
+from chapter11.v3.AchParser.ach_processor.database.bank.bank_routing_sql import (
     BankRoutingSql,
 )
 

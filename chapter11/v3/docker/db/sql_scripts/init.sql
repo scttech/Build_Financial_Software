@@ -18,6 +18,9 @@ SET search_path TO public;
 \i /docker-entrypoint-initdb.d/sql/titan_industries_corp.sql
 \i /docker-entrypoint-initdb.d/sql/wellness_health_systems.sql
 
+-- Insert expected files
+\i /docker-entrypoint-initdb.d/sql/create_expected_files.sql
+
 -- Ensure changes are saved
 commit;
 

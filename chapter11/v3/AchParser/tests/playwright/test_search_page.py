@@ -4,8 +4,8 @@ from random import randint
 import pytest
 from playwright.sync_api import Page, expect, sync_playwright
 
-from chapter11.v2.AchParser.ach_processor.ach_file_processor import AchFileProcessor
-from chapter11.v2.AchParser.tests.ach_processor.sql_utils import SqlUtils
+from chapter11.v3.AchParser.ach_processor.ach_file_processor import AchFileProcessor
+from chapter11.v3.AchParser.tests.ach_processor.sql_utils import SqlUtils
 
 # Get the directory of our script
 current_file_dir = Path(__file__).resolve().parent

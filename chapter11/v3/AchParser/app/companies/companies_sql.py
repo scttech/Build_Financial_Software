@@ -1,14 +1,14 @@
 from psycopg.rows import class_row, dict_row
 from uuid import UUID
-from chapter11.v2.AchParser.ach_processor.database.db_utils import get_db_connection
-from chapter11.v2.AchParser.app.companies.company_detail_record import (
+from chapter11.v3.AchParser.ach_processor.database.db_utils import get_db_connection
+from chapter11.v3.AchParser.app.companies.company_detail_record import (
     CompanyDetailRecord,
 )
-from chapter11.v2.AchParser.app.companies.company_overview_record import (
+from chapter11.v3.AchParser.app.companies.company_overview_record import (
     CompanyOverviewRecord,
 )
-from chapter11.v2.AchParser.common.address.address import Address
-from chapter11.v2.AchParser.common.phone.phone import Phone
+from chapter11.v3.AchParser.common.address.address import Address
+from chapter11.v3.AchParser.common.phone.phone import Phone
 
 
 class CompaniesSql:

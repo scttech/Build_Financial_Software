@@ -1,7 +1,7 @@
 from psycopg.rows import class_row, dict_row
 
-from chapter11.v2.AchParser.ach_processor.database.db_utils import get_db_connection
-from chapter11.v2.AchParser.app.logging.audit_log_record import AuditLogRecord
+from chapter11.v3.AchParser.ach_processor.database.db_utils import get_db_connection
+from chapter11.v3.AchParser.app.logging.audit_log_record import AuditLogRecord
 
 
 class AuditLog:

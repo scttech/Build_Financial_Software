@@ -3,17 +3,17 @@ from uuid import UUID
 
 from psycopg.rows import dict_row, class_row
 
-from chapter11.v2.AchParser.ach_processor.database.db_utils import get_db_connection
-from chapter11.v2.AchParser.ach_processor.schemas.api.ach_batch_entries_response import (
+from chapter11.v3.AchParser.ach_processor.database.db_utils import get_db_connection
+from chapter11.v3.AchParser.ach_processor.schemas.api.ach_batch_entries_response import (
     AchBatchEntriesResponse,
 )
-from chapter11.v2.AchParser.ach_processor.schemas.api.ach_batches_response import (
+from chapter11.v3.AchParser.ach_processor.schemas.api.ach_batches_response import (
     AchBatchesResponse,
 )
-from chapter11.v2.AchParser.ach_processor.schemas.api.ach_files_response import (
+from chapter11.v3.AchParser.ach_processor.schemas.api.ach_files_response import (
     AchFilesResponse,
 )
-from chapter11.v2.AchParser.ach_processor.schemas.database.ach_file_schema import (
+from chapter11.v3.AchParser.ach_processor.schemas.database.ach_file_schema import (
     AchFileSchema,
 )
 

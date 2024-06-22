@@ -17,48 +17,51 @@ from fastapi.security import (
     HTTPBearer,
 )
 
-from chapter11.v2.AchParser.ach_processor.database.ach_file_sql import AchFileSql
-from chapter11.v2.AchParser.ach_processor.database.ach_combined_records_sql import (
+from chapter11.v3.AchParser.ach_processor.database.ach_file_sql import AchFileSql
+from chapter11.v3.AchParser.ach_processor.database.ach_combined_records_sql import (
     AchCombinedRecordsSql,
 )
-from chapter11.v2.AchParser.ach_processor.database.exception.ach_exceptions_sql import (
+from chapter11.v3.AchParser.ach_processor.database.exception.ach_exceptions_sql import (
     AchExceptionsSql,
 )
-from chapter11.v2.AchParser.ach_processor.database.search.batch_search_sql import (
+from chapter11.v3.AchParser.ach_processor.database.search.batch_search_sql import (
     BatchSearchSql,
 )
-from chapter11.v2.AchParser.ach_processor.database.search.transaction_search_sql import (
+from chapter11.v3.AchParser.ach_processor.database.search.transaction_search_sql import (
     TransactionSearchSql,
 )
-from chapter11.v2.AchParser.ach_processor.schemas.api.ach_batch_entries_response import (
+from chapter11.v3.AchParser.ach_processor.schemas.api.ach_batch_entries_response import (
     AchBatchEntriesResponse,
 )
-from chapter11.v2.AchParser.ach_processor.schemas.api.ach_batches_response import (
+from chapter11.v3.AchParser.ach_processor.schemas.api.ach_batches_response import (
     AchBatchesResponse,
 )
-from chapter11.v2.AchParser.ach_processor.schemas.api.ach_exception_details_response import (
+from chapter11.v3.AchParser.ach_processor.schemas.api.ach_exception_details_response import (
     AchExceptionDetailsResponse,
 )
-from chapter11.v2.AchParser.ach_processor.schemas.api.ach_exceptions_response import (
+from chapter11.v3.AchParser.ach_processor.schemas.api.ach_exceptions_response import (
     AchExceptionsResponse,
 )
-from chapter11.v2.AchParser.ach_processor.schemas.api.ach_files_response import (
+from chapter11.v3.AchParser.ach_processor.schemas.api.ach_files_response import (
     AchFilesResponse,
 )
-from chapter11.v2.AchParser.ach_processor.schemas.api.batch_search_response import (
+from chapter11.v3.AchParser.ach_processor.schemas.api.batch_search_response import (
     BatchSearchResponse,
 )
-from chapter11.v2.AchParser.ach_processor.schemas.api.transaction_search_response import (
+from chapter11.v3.AchParser.ach_processor.schemas.api.transaction_search_response import (
     TransactionSearchResponse,
 )
-from chapter11.v2.AchParser.ach_processor.schemas.database.ach_file_schema import (
+from chapter11.v3.AchParser.ach_processor.schemas.database.ach_file_schema import (
     AchFileSchema,
 )
-from chapter11.v2.AchParser.ach_processor.schemas.database.ach_record.ach_record_schema import (
+from chapter11.v3.AchParser.ach_processor.schemas.database.ach_record.ach_record_schema import (
     AchRecordSchema,
 )
-from chapter11.v2.AchParser.ach_processor.ach_file_processor import AchFileProcessor
-from chapter11.v2.AchParser.app.decorators.log_message_decorator import log_message
+from chapter11.v3.AchParser.ach_processor.ach_file_processor import AchFileProcessor
+from chapter11.v3.AchParser.app.decorators.log_message_decorator import log_message
+from chapter11.v3.AchParser.common.database.files.expected_files_sql import (
+    ExpectedFilesSql,
+)
 
 router = APIRouter(prefix="/api/v1/files")
 security_scheme_http_bearer = HTTPBearer()
@@ -224,6 +227,7 @@ async def create_file(request: Request, file: UploadFile = File(...)):
     try:
         print(f"Processing file {temp_file.name}")
         seq = parser.parse(ach_files_id, temp_file.name)
+        ExpectedFilesSql().update_last_file_date(file.filename)
     except Exception as e:
         print(e)
         return {"error": "Invalid file"}
