@@ -1,6 +1,6 @@
 'use client';
 import * as React from 'react';
-import { createTheme, ThemeProvider } from '@mui/material/styles';
+import {createTheme, ThemeProvider} from '@mui/material/styles';
 import CssBaseline from '@mui/material/CssBaseline';
 import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
@@ -18,12 +18,13 @@ import {IndustryType} from "@/app/interfaces/common/IndustryType";
 import axios from "axios";
 import RecentCompanyBatches from "@/app/components/companies/dashboard/RecentCompanyBatches";
 import ExpectedFiles from "@/app/components/companies/dashboard/ExpectedFiles";
+import CompanyLimits from "@/app/components/companies/dashboard/CompanyLimits";
 
 function Copyright(props: any) {
     return (
         <Typography variant="body2" color="text.secondary" align="center" {...props}>
             {'Copyright © '}
-            <Link color="inherit" href="https://mui.com/" sx={{ cursor: 'pointer' }}>
+            <Link color="inherit" href="https://mui.com/" sx={{cursor: 'pointer'}}>
                 Full Stack FinTech
             </Link>{' '}
             {new Date().getFullYear()}
@@ -41,34 +42,34 @@ export default function CompanyDashboard({params}: any) {
     const [company, setCompany] = useState<Company | undefined>(undefined);
 
     function convertToCompany(detailResponse: CompanyDetailResponse): Company {
-    return {
-      name: detailResponse.name,
-        taxIdType: detailResponse.tax_id_type,
-        taxIdNumber: detailResponse.tax_id_number,
-        duns: detailResponse.duns,
-        logo: detailResponse.logo,
-        achCompanyId: detailResponse.ach_company_id,
-        website: detailResponse.website,
-        industry: detailResponse.industry as IndustryType,
-        addresses: detailResponse.addresses.map(address => ({
-            addressType: address.address_type,
-            addressLine1: address.address_line_1,
-            addressLine2: address.address_line_2 || '',
-            addressLine3: address.address_line_3 || '',
-            addressLine4: address.address_line_4 || '',
-            city: address.city,
-            state: address.state,
-            zipCode: address.zip_code,
-            zipCode4: address.zip_code_4 || ''
-        })),
-        phones: detailResponse.phones.map(phone => ({
-            phoneType: phone.phone_type,
-            phoneNumber: phone.phone_number,
-            extension: phone.extension || '',
-            allowSms: phone.allow_sms,
-        })),
-    };
-}
+        return {
+            name: detailResponse.name,
+            taxIdType: detailResponse.tax_id_type,
+            taxIdNumber: detailResponse.tax_id_number,
+            duns: detailResponse.duns,
+            logo: detailResponse.logo,
+            achCompanyId: detailResponse.ach_company_id,
+            website: detailResponse.website,
+            industry: detailResponse.industry as IndustryType,
+            addresses: detailResponse.addresses.map(address => ({
+                addressType: address.address_type,
+                addressLine1: address.address_line_1,
+                addressLine2: address.address_line_2 || '',
+                addressLine3: address.address_line_3 || '',
+                addressLine4: address.address_line_4 || '',
+                city: address.city,
+                state: address.state,
+                zipCode: address.zip_code,
+                zipCode4: address.zip_code_4 || ''
+            })),
+            phones: detailResponse.phones.map(phone => ({
+                phoneType: phone.phone_type,
+                phoneNumber: phone.phone_number,
+                extension: phone.extension || '',
+                allowSms: phone.allow_sms,
+            })),
+        };
+    }
 
     useEffect(() => {
         const apiUrl = process.env.NEXT_PUBLIC_API_URL ?? '';
@@ -88,9 +89,9 @@ export default function CompanyDashboard({params}: any) {
 
     return (
         <ThemeProvider theme={defaultTheme}>
-            <Box sx={{ display: 'flex' }}>
-                <CssBaseline />
-                <StandardNavigation />
+            <Box sx={{display: 'flex'}}>
+                <CssBaseline/>
+                <StandardNavigation/>
                 <Box
                     component="main"
                     sx={{
@@ -103,20 +104,23 @@ export default function CompanyDashboard({params}: any) {
                         overflow: 'auto',
                     }}
                 >
-                    <Toolbar />
-                    <Container maxWidth="lg" sx={{ mt: 4, mb: 4 }}>
+                    <Toolbar/>
+                    <Container maxWidth="lg" sx={{mt: 4, mb: 4}}>
                         <Grid container spacing={3}>
                             <Grid item xs={12}>
-                                <CompanyInformation companyId={companyId} company={company} />
+                                <CompanyInformation companyId={companyId} company={company}/>
                             </Grid>
                             <Grid item xs={12}>
-                                <ExpectedFiles companyId={companyId} />
+                                <CompanyLimits companyId={companyId}/>
+                            </Grid>
+                            <Grid item xs={12}>
+                                <ExpectedFiles companyId={companyId}/>
                             </Grid>
                             <Grid item xs={12} md={8} lg={9}>
-                                <RecentCompanyBatches companyId={companyId} />
+                                <RecentCompanyBatches companyId={companyId}/>
                             </Grid>
                         </Grid>
-                        <Copyright sx={{ pt: 4 }} />
+                        <Copyright sx={{pt: 4}}/>
                     </Container>
                 </Box>
             </Box>

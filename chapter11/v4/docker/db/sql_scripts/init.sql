@@ -21,6 +21,9 @@ SET search_path TO public;
 -- Insert expected files
 \i /docker-entrypoint-initdb.d/sql/create_expected_files.sql
 
+-- Insert company limits
+\i /docker-entrypoint-initdb.d/sql/create_company_limits.sql
+
 -- Ensure changes are saved
 commit;
 
