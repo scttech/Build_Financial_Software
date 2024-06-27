@@ -24,7 +24,7 @@ Access the book [here](https://www.manning.com/books/build-financial-software-wi
 
 Examples are in Python. No experience with generative AI or financial services development required.
 
-## About the authros
+## About the authors
 
 Chris Kardell has 20 years of experience working in the Fintech industry. He has Master degrees in both Computer Science and Data Analytics. Over the years he has held various certifications as his roles have required from SAFe Agile, Lean Six Sigma, Cloud Computing, and JavaScript to name a few.
 
