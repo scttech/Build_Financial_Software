@@ -18,6 +18,7 @@ import AlertMessage from "@/app/components/dialogs/AlertMessage";
 import {AchExceptionDetailsResponse} from "@/app/interfaces/AchExceptionDetailsResponse";
 import {AchFiles} from "@/app/interfaces/AchFiles";
 import Title from "@/app/components/Title";
+import ExceptionsModal from "@/app/components/dialogs/ExceptionsModal";
 
 
 const defaultTheme = createTheme();
@@ -29,7 +30,7 @@ interface ExceptionsProps {
 export default function Exceptions({exceptions}: Readonly<ExceptionsProps>) {
 
     const [isOpen, setIsOpen] = useState(false);
-    const [unparsedRecord, setUnparsedRecord] = useState('');
+    const [exceptionData, setExceptionData] = useState<AchExceptionDetailsResponse | null>(null);
     const columns: GridColDef[] = [
         {field: 'view', headerName: 'View', sortable: false, width: 10, renderCell: (params) => (
                 <IconButton
@@ -46,13 +47,11 @@ export default function Exceptions({exceptions}: Readonly<ExceptionsProps>) {
                         })
                             .then(response => {
                                 console.log(`Response data ${JSON.stringify(response.data)}`);
-                                setUnparsedRecord(response.data.unparsed_record);
+                                setExceptionData(response.data);
                                 setIsOpen(true);
                             })
                             .catch(error => {
                                 console.log(error);
-                                setUnparsedRecord(error.message)
-                                setIsOpen(true);
                             });
 
                     }}
@@ -64,7 +63,6 @@ export default function Exceptions({exceptions}: Readonly<ExceptionsProps>) {
         {field: 'file_name', headerName: 'Filename', width: 150},
         {field: 'created_at', headerName: 'Date', width: 150, valueGetter: (params) => convertDateFormat(params.value)},
         {field: 'record_number', headerName: 'Record Number', width: 150},
-        {field: 'exception_code', headerName: 'Code', width: 10},
         {field: 'description', headerName: 'Description', width: 300},
     ];
 
@@ -87,7 +85,7 @@ export default function Exceptions({exceptions}: Readonly<ExceptionsProps>) {
                         </Paper>
                     </Container>
             </Box>
-            <AlertMessage open={isOpen} setOpen={setIsOpen} message={unparsedRecord} title="Unparsed Record" />
+            <ExceptionsModal open={isOpen} onClose={() => setIsOpen(false)} exceptionData={exceptionData} />
         </ThemeProvider>
     );
 }

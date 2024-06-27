@@ -18,14 +18,24 @@ class AchExceptionsSql:
     @staticmethod
     def insert_record(ach_file_exception: AchExceptionSchema) -> UUID:
         with get_db_connection() as conn:
-            result = conn.execute(
-                """
-           INSERT INTO ach_exceptions (ach_files_id, record_number, exception_code)
-           VALUES (%(ach_files_id)s, %(record_number)s, %(exception_code)s)
-           RETURNING ach_exceptions_id
-            """,
-                ach_file_exception.model_dump(),
-            )
+            if ach_file_exception.ach_batch_id is not None:
+                result = conn.execute(
+                    """
+                        INSERT INTO ach_exceptions (ach_files_id, ach_records_type_5_id, ach_records_type_6_id, record_number, exception_code)
+                        VALUES (%(ach_files_id)s, %(ach_batch_id)s, %(ach_entry_id)s, %(record_number)s, %(exception_code)s)
+                        RETURNING ach_exceptions_id
+                    """,
+                    ach_file_exception.model_dump(),
+                )
+            else:
+                result = conn.execute(
+                    """
+                        INSERT INTO ach_exceptions (ach_files_id, record_number, exception_code)
+                        VALUES (%(ach_files_id)s, %(record_number)s, %(exception_code)s)
+                        RETURNING ach_exceptions_id
+                    """,
+                    ach_file_exception.model_dump(),
+                )
 
         return result.fetchone()[0]
 
@@ -84,15 +94,20 @@ class AchExceptionsSql:
                     af.created_at AS created_at,
                     ae.exception_code AS exception_code,
                     aec.exception_description AS description,
-                    acr.unparsed_record AS unparsed_record
+                    acr.unparsed_record AS unparsed_record,
+                    COALESCE(c.name, abh.company_name, '') AS company_name,
+                    aro.recovery_option AS recovery_option
                 FROM ach_exceptions AS ae
                 INNER JOIN ach_exception_codes AS aec USING (exception_code)
                 INNER JOIN ach_files AS af USING (ach_files_id)
-                INNER JOIN ach_combined_records AS acr ON ae.ach_files_id = acr.ach_files_id 
+                INNER JOIN ach_combined_records AS acr ON ae.ach_files_id = acr.ach_files_id
                            AND ae.record_number = acr.sequence_number
+                LEFT JOIN ach_recovery_options AS aro USING (exception_code)
+                LEFT JOIN ach_batch_headers AS abh USING(ach_records_type_5_id)
+                LEFT JOIN companies AS c ON abh.company_identification = c.ach_company_id
                 WHERE ae.ach_files_id = %s 
                   AND ae.ach_exceptions_id = %s               
-        """,
+                """,
                 [file_id, exception_id],
             )
         return result.fetchone()

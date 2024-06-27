@@ -74,6 +74,9 @@ from chapter11.v4.AchParser.ach_processor.schemas.database.ach_record.ach_record
 from chapter11.v4.AchParser.ach_processor.schemas.database.exception.ach_exception_schema import (
     AchExceptionSchema,
 )
+from chapter11.v4.AchParser.common.database.company.company_limits_sql import (
+    CompanyLimitsSql,
+)
 
 
 class AchFileProcessor:
@@ -188,6 +191,15 @@ class AchFileProcessor:
                         ach_record_id = AchRecordsSqlType8().insert_record(ach_record)
                         self.last_trace_number = None
                         self._parse_batch_control(ach_record_id, line)
+                        if CompanyLimitsSql().file_exceeds_company_limits(ach_file_id):
+                            AchExceptionsSql().insert_record(
+                                AchExceptionSchema(
+                                    ach_files_id=ach_file_id,
+                                    ach_batch_id=current_batch_header_id,
+                                    record_number=sequence_number,
+                                    exception_code=AchExceptions.COMPANY_LIMITS_EXCEEDED.value,
+                                )
+                            )
                     case "9":
                         ach_record = AchRecordType9Schema(
                             ach_records_type_1_id=current_file_header_id,

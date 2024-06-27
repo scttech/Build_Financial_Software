@@ -5,11 +5,13 @@ INSERT INTO ach_exception_codes (exception_code, exception_severity, exception_d
 INSERT INTO ach_exception_codes (exception_code, exception_severity, exception_description) VALUES ('003', 'warning', 'Trace number out of order');
 INSERT INTO ach_exception_codes (exception_code, exception_severity, exception_description) VALUES ('004', 'error', 'Invalid File ID Modifier');
 INSERT INTO ach_exception_codes (exception_code, exception_severity, exception_description) VALUES ('005', 'error', 'Invalid Immediate Destination');
+INSERT INTO ach_exception_codes (exception_code, exception_severity, exception_description) VALUES ('006', 'warning', 'Company Limits Exceeded');
 
 -- Insert the ach_recovery_options
 INSERT INTO ach_recovery_options (exception_code, recovery_option) VALUES ('001', 'Request a corrected file from the originator');
 INSERT INTO ach_recovery_options (exception_code, recovery_option) VALUES ('002', 'Request a corrected file from the originator');
 INSERT INTO ach_recovery_options (exception_code, recovery_option) VALUES ('004', 'Specify a new File ID Modifier');
+INSERT INTO ach_recovery_options (exception_code, recovery_option) VALUES ('006', 'Alert company their limit has been exceeded');
 
 -- Insert the bank routing numbers
 INSERT INTO bank_routing_numbers (routing_number, bank_name) VALUES ('990000013', 'Futuristic Fintech');
