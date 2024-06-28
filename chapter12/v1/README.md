@@ -1,18 +1,16 @@
-# ACH Parser V1
+# Chapter 12
 
-This is the first version of the ACH Parser for Chapter 11. We will be adding company information to the dashboard.
+This is the first version of the Chapter 12 project, where we will be adding processing of IAT ACH files.
 
-Enhancements for Chapter 11 include:
+The following enhancements will be made in Chapter 12:
 
-[X] - Company Information (v1, only the API to pull all companies)
+[] - Creating IAT files
 
-[X] - Recent Company Batches
+[] - Updating the database to handle IAT files
 
-[X] - Expected Files
+[] - OFAC Scanning of ACH files
 
-[X] - Company Limits
-
-# Running the ACH Parser
+# Running the ACH Project
 
 ## FastAPI
 
