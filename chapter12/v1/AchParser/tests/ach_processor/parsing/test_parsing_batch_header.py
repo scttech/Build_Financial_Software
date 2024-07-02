@@ -17,7 +17,7 @@ def setup_teardown_method():
 # Define a test function to test parsing an ACH batch header record using AchFileProcessor._parse_batch_header()
 def test_parse_batch_header():
     # Define a sample ACH batch header record
-    sample_batch_header = "5200Company name    DiscretionaryData   Company IDARCComp desc 0216232302160471061000010000001"
+    sample_batch_header = "5200Company name    DiscretionaryData   1234567890ARCComp desc 0216232302160471061000010000001"
 
     # Define the expected result of parsing the sample ACH batch header record
     expected_result = {
@@ -25,7 +25,7 @@ def test_parse_batch_header():
         "service_class_code": "200",
         "company_name": "Company name",
         "company_discretionary_data": "DiscretionaryData",
-        "company_identification": "Company ID",
+        "company_identification": 1234567890,
         "standard_entry_class_code": "ARC",
         "company_entry_description": "Comp desc",
         "company_descriptive_date": "021623",

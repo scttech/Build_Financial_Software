@@ -1,5 +1,6 @@
 from pathlib import Path
 from random import randint
+import socket
 
 import pytest
 from playwright.sync_api import Page, expect, sync_playwright
@@ -17,6 +18,23 @@ def browser():
         browser = p.chromium.launch(headless=True)
         yield browser
         browser.close()
+
+
+def is_port_open(host, port):
+    with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s:
+        try:
+            s.connect((host, port))
+            return True
+        except socket.error:
+            return False
+
+
+@pytest.fixture(scope="session")
+def check_npm_server():
+    host = "localhost"
+    port = 3000  # Replace with your port number
+    if not is_port_open(host, port):
+        pytest.skip("NPM server is not running")
 
 
 @pytest.fixture(scope="function")
@@ -47,7 +65,7 @@ def get_absolute_path(relative_path):
 
 
 @pytest.mark.page
-def test_dashboard(page: Page):
+def test_dashboard(check_npm_server, page: Page):
     # Navigate to the search page and perform a search
     page.goto("http://localhost:3000/search")
     page.expect_navigation(wait_until="load")

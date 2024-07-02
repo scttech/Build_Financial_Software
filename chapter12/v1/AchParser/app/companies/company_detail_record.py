@@ -29,7 +29,7 @@ class CompanyDetailRecord(BaseModel):
         title="Industry",
         description="Type of industry the company operates in.",
     )
-    ach_company_id: Optional[int] = Field(
+    ach_company_id: Optional[str] = Field(
         None,
         title="ACH Company ID",
         description="ACH Company ID.",

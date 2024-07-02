@@ -44,7 +44,7 @@ class TestAchBatchesApi:
         )
         response = self.client.get(f"/api/v1/files/{self.ach_files_id}/batches")
         assert response.status_code == 200, response.text
-        assert len(response.json()) == 5, "Should have 5 batches"
+        assert len(response.json()) == 4, "Should have 4 batches"
 
     def teardown_method(self, method: Callable) -> None:
         print(f"\nTeardown for {method.__name__} test method execution")

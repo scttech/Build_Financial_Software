@@ -159,5 +159,31 @@ Feature: Create ACH files
     And there should be 2 batch in the file
     And there should be 20 entries in the file
 
+  Scenario: Create an ACH for for IAT
+    Given I want to create an ACH file named "iat.ach"
+    And I want to have an immediate destination of "990000013"
+    And I want to have an immediate origin of "987654321"
+    And I want to have 1 batch with ACH credits only and a standard entry class code of "IAT"
+    And I want 1 entries per batch with random amounts between 100 and 100
+    And I want to use individual names of "James Smith, Sarah Johnson, David Williams, Emma Martinez, Olivia Thomas"
+    And I want to have company name "My Company" and company id "1234567890"
+    When my ACH is created
+    Then I should have a file of the same name
+    And there should be 1 batch in the file
+    And there should be 1 entries in the file
+
+  Scenario: Create an ACH for for IAT
+    Given I want to create an ACH file named "iat_multiple.ach"
+    And I want to have an immediate destination of "990000013"
+    And I want to have an immediate origin of "987654321"
+    And I want to have 3 batch with ACH credits only and a standard entry class code of "IAT"
+    And I want 1 entries per batch with random amounts between 100 and 100
+    And I want to use individual names of "James Smith, Sarah Johnson, David Williams, Emma Martinez, Olivia Thomas"
+    And I want to have company name "My Company" and company id "1234567890"
+    When my ACH is created
+    Then I should have a file of the same name
+    And there should be 3 batch in the file
+    And there should be 3 entries in the file
+
 
 

@@ -7,7 +7,7 @@ class AchBatchHeaderSchema(BaseModel):
     service_class_code: str
     company_name: str
     company_discretionary_data: str
-    company_identification: str
+    company_identification: int
     standard_entry_class_code: str
     company_entry_description: str
     company_descriptive_date: str
@@ -16,4 +16,3 @@ class AchBatchHeaderSchema(BaseModel):
     originator_status_code: str
     originating_dfi_identification: str
     batch_number: str
-

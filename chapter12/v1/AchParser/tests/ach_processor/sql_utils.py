@@ -229,7 +229,7 @@ class SqlUtils:
         ach_records_type_5_id = AchRecordsSqlType5().insert_record(
             AchRecordType5Schema(
                 ach_records_type_1_id=ach_records_type_1_id,
-                unparsed_record="5200Company name    DiscretionaryData   Company IDARCComp desc 0216232302160471061000010000001",
+                unparsed_record="5200Company name    DiscretionaryData   1234567890ARCComp desc 0216232302160471061000010000001",
                 sequence_number=2,
             )
         )
@@ -298,7 +298,7 @@ class SqlUtils:
         ach_records_type_5_id = AchRecordsSqlType5().insert_record(
             AchRecordType5Schema(
                 ach_records_type_1_id=ach_records_type_1_id,
-                unparsed_record="5200Company name    DiscretionaryData   Company IDARCComp desc 0216232302160471061000010000001",
+                unparsed_record="5200Company name    DiscretionaryData   1234567890ARCComp desc 0216232302160471061000010000001",
                 sequence_number=2,
             )
         )
@@ -312,6 +312,84 @@ class SqlUtils:
         )
 
         return ach_records_type_5_id, ach_records_type_6_id
+
+    @staticmethod
+    def setup_entry_iat_details_test(sample_ach_entry_iat_details_record):
+        """
+        Creates the following dummy records:
+        ach_file
+        ach_record (file header)
+        ach_record (batch record)
+        ach_record (entry detail record)
+        :return:
+        """
+        # Create the dummy ach_file record to represent the upload
+        ach_file_id = SqlUtils.create_ach_file_record("sample.ach", "123456789")
+        # Create a dummy file header record
+        ach_records_type_1_id = AchRecordsSqlType1().insert_record(
+            AchRecordType1Schema(
+                ach_files_id=ach_file_id,
+                unparsed_record="101 267084131 6910001340402200830A094101DEST NAME              ORIGIN NAME            XXXXXXXX",
+                sequence_number=1,
+            )
+        )
+        # Create a dummy batch header record
+        ach_records_type_5_id = AchRecordsSqlType5().insert_record(
+            AchRecordType5Schema(
+                ach_records_type_1_id=ach_records_type_1_id,
+                unparsed_record="5220                FF3               US1234567890IATGIFT      USDUSD2406291811061000010000001",
+                sequence_number=2,
+            )
+        )
+        # Create a entry details record
+        ach_records_type_6_id = AchRecordsSqlType6().insert_record(
+            AchRecordType6Schema(
+                ach_records_type_5_id=ach_records_type_5_id,
+                unparsed_record=sample_ach_entry_iat_details_record,
+                sequence_number=3,
+            )
+        )
+
+        return ach_file_id, ach_records_type_5_id, ach_records_type_6_id
+
+    @staticmethod
+    def setup_iat_addenda_test(sample_addenda_record):
+        # Create the dummy ach_file record to represent the upload
+        ach_file_id = SqlUtils.create_ach_file_record("sample.ach", "123456789")
+        # Create a dummy file header record
+        ach_records_type_1_id = AchRecordsSqlType1().insert_record(
+            AchRecordType1Schema(
+                ach_files_id=ach_file_id,
+                unparsed_record="101 267084131 6910001340402200830A094101DEST NAME              ORIGIN NAME            XXXXXXXX",
+                sequence_number=1,
+            )
+        )
+        # Create a dummy batch header record
+        ach_records_type_5_id = AchRecordsSqlType5().insert_record(
+            AchRecordType5Schema(
+                ach_records_type_1_id=ach_records_type_1_id,
+                unparsed_record="5220                FF3               US1234567890IATGIFT      USDUSD2406291811061000010000001",
+                sequence_number=2,
+            )
+        )
+        # Create a dummy entry details record
+        ach_records_type_6_id = AchRecordsSqlType6().insert_record(
+            AchRecordType6Schema(
+                ach_records_type_5_id=ach_records_type_5_id,
+                unparsed_record="6222670841310007             0000000100123                                    1000000100000001",
+                sequence_number=3,
+            )
+        )
+        # Create a dummy addenda ppd record
+        ach_records_type_7_id = AchRecordsSqlType7().insert_record(
+            AchRecordType7Schema(
+                ach_records_type_6_id=ach_records_type_6_id,
+                unparsed_record=sample_addenda_record,
+                sequence_number=4,
+            )
+        )
+
+        return ach_records_type_6_id, ach_records_type_7_id
 
     @staticmethod
     def setup_addenda_ppd_test(sample_ach_addenda_ppd_record):
@@ -329,7 +407,7 @@ class SqlUtils:
         ach_records_type_5_id = AchRecordsSqlType5().insert_record(
             AchRecordType5Schema(
                 ach_records_type_1_id=ach_records_type_1_id,
-                unparsed_record="5200Company name    DiscretionaryData   Company IDARCComp desc 0216232302160471061000010000001",
+                unparsed_record="5200Company name    DiscretionaryData   1234567890ARCComp desc 0216232302160471061000010000001",
                 sequence_number=2,
             )
         )

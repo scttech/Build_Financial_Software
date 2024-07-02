@@ -12,7 +12,8 @@ from chapter12.v1.AchParser.common.database.search.company_search_sql import (
 
 @pytest.fixture(scope="module")
 def docker_compose():
-    absolute_path = Path("../../../../../docker/db").resolve()
+    absolute_path = Path("../../docker").resolve()
+    print(f"absolute_path: {absolute_path}")
     with DockerCompose(absolute_path, build=True, services=["postgres"]) as compose:
         compose.start()
         yield compose

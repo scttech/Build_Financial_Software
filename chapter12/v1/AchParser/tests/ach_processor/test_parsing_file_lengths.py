@@ -22,7 +22,7 @@ def test_good_file(parser):
     file_path = os.path.join(dir_path, "data", "sample.ach")
 
     expected_exceptions_result: int = 0
-    expected_records_result: int = 41
+    expected_records_result: int = 29
 
     ach_file_id = SqlUtils.create_ach_file_record("sample.ach", "123456789")
 

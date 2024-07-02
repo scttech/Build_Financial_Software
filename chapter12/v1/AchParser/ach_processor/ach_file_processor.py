@@ -2,6 +2,33 @@ from typing import List
 from uuid import UUID
 
 from chapter12.v1.AchParser.ach_processor.ach_exceptions import AchExceptions
+from chapter12.v1.AchParser.ach_processor.database.ach.iat.ach_iat_710_addenda_sql import (
+    AchIat710AddendaSql,
+)
+from chapter12.v1.AchParser.ach_processor.database.ach.iat.ach_iat_711_addenda_sql import (
+    AchIat711AddendaSql,
+)
+from chapter12.v1.AchParser.ach_processor.database.ach.iat.ach_iat_712_addenda_sql import (
+    AchIat712AddendaSql,
+)
+from chapter12.v1.AchParser.ach_processor.database.ach.iat.ach_iat_713_addenda_sql import (
+    AchIat713AddendaSql,
+)
+from chapter12.v1.AchParser.ach_processor.database.ach.iat.ach_iat_714_addenda_sql import (
+    AchIat714AddendaSql,
+)
+from chapter12.v1.AchParser.ach_processor.database.ach.iat.ach_iat_715_addenda_sql import (
+    AchIat715AddendaSql,
+)
+from chapter12.v1.AchParser.ach_processor.database.ach.iat.ach_iat_716_addenda_sql import (
+    AchIat716AddendaSql,
+)
+from chapter12.v1.AchParser.ach_processor.database.ach.iat.ach_iat_batch_header_sql import (
+    AchIatBatchHeaderSql,
+)
+from chapter12.v1.AchParser.ach_processor.database.ach.iat.ach_iat_entry_details_sql import (
+    AchIatEntryDetailsSql,
+)
 from chapter12.v1.AchParser.ach_processor.database.ach_addenda_ppd_sql import (
     AchAddendaPpdSql,
 )
@@ -236,6 +263,14 @@ class AchFileProcessor:
         )
         AchBatchHeaderSql().insert_record(ach_batch_header)
 
+    def _parse_iat_batch_header(self, ach_records_type_5_id: UUID, line: str):
+        self.expected_record_types = ["6"]
+
+        ach_iat_batch_header = AchRecordProcessor().parse_iat_batch_header(
+            ach_records_type_5_id, line
+        )
+        AchIatBatchHeaderSql().insert_record(ach_iat_batch_header)
+
     def _parse_entry_ppd_detail(
         self,
         ach_file_id: UUID,
@@ -278,6 +313,62 @@ class AchFileProcessor:
         )
         AchAddendaPpdSql().insert_record(addenda_ppd_record)
 
+    def _parse_iat_addenda_710(self, ach_records_type_7_id: UUID, line: str):
+        self.expected_record_types = ["7"]
+
+        ach_iat_addenda_record = AchRecordProcessor().parse_iat_addenda_710(
+            ach_records_type_7_id, line
+        )
+        AchIat710AddendaSql().insert_record(ach_iat_addenda_record)
+
+    def _parse_iat_addenda_711(self, ach_records_type_7_id: UUID, line: str):
+        self.expected_record_types = ["7"]
+
+        ach_iat_addenda_record = AchRecordProcessor().parse_iat_addenda_711(
+            ach_records_type_7_id, line
+        )
+        AchIat711AddendaSql().insert_record(ach_iat_addenda_record)
+
+    def _parse_iat_addenda_712(self, ach_records_type_7_id: UUID, line: str):
+        self.expected_record_types = ["7"]
+
+        ach_iat_addenda_record = AchRecordProcessor().parse_iat_addenda_712(
+            ach_records_type_7_id, line
+        )
+        AchIat712AddendaSql().insert_record(ach_iat_addenda_record)
+
+    def _parse_iat_addenda_713(self, ach_records_type_7_id: UUID, line: str):
+        self.expected_record_types = ["7"]
+
+        ach_iat_addenda_record = AchRecordProcessor().parse_iat_addenda_713(
+            ach_records_type_7_id, line
+        )
+        AchIat713AddendaSql().insert_record(ach_iat_addenda_record)
+
+    def _parse_iat_addenda_714(self, ach_records_type_7_id: UUID, line: str):
+        self.expected_record_types = ["7"]
+
+        ach_iat_addenda_record = AchRecordProcessor().parse_iat_addenda_714(
+            ach_records_type_7_id, line
+        )
+        AchIat714AddendaSql().insert_record(ach_iat_addenda_record)
+
+    def _parse_iat_addenda_715(self, ach_records_type_7_id: UUID, line: str):
+        self.expected_record_types = ["7"]
+
+        ach_iat_addenda_record = AchRecordProcessor().parse_iat_addenda_715(
+            ach_records_type_7_id, line
+        )
+        AchIat715AddendaSql().insert_record(ach_iat_addenda_record)
+
+    def _parse_iat_addenda_716(self, ach_records_type_7_id: UUID, line: str):
+        self.expected_record_types = ["7"]
+
+        ach_iat_addenda_record = AchRecordProcessor().parse_iat_addenda_716(
+            ach_records_type_7_id, line
+        )
+        AchIat716AddendaSql().insert_record(ach_iat_addenda_record)
+
     def _parse_batch_control(self, ach_records_type_8_id: UUID, line: str):
         self.expected_record_types = ["5", "9"]
 
@@ -305,5 +396,39 @@ class AchFileProcessor:
                     ach_files_id=exception.ach_files_id,
                     unparsed_record=line,
                     sequence_number=exception.record_number,
+                )
+            )
+
+    def _parse_iat_entry_detail(
+        self,
+        ach_file_id: UUID,
+        current_batch_header_id: UUID,
+        ach_records_type_6_id: UUID,
+        sequence_number: int,
+        line: str,
+    ):
+        ach_iat_entry_detail_record = AchRecordProcessor().parse_iat_entry_detail(
+            ach_records_type_6_id, line
+        )
+        AchIatEntryDetailsSql().insert_record(ach_iat_entry_detail_record)
+
+        if ach_iat_entry_detail_record.addenda_record_indicator == "1":
+            self.expected_record_types = ["7"]
+        else:
+            self.expected_record_types = ["6", "8"]
+
+        if (
+            self.last_trace_number is None
+            or ach_iat_entry_detail_record.trace_number > self.last_trace_number
+        ):
+            self.last_trace_number = ach_iat_entry_detail_record.trace_number
+        else:
+            self._add_exception(
+                AchExceptionSchema(
+                    ach_files_id=ach_file_id,
+                    ach_batch_id=current_batch_header_id,
+                    ach_entry_id=ach_records_type_6_id,
+                    record_number=sequence_number,
+                    exception_code=AchExceptions.TRACE_NUMBER_OUT_OF_ORDER.value,
                 )
             )

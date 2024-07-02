@@ -102,7 +102,7 @@ CREATE TABLE ach_batch_headers
     service_class_code             VARCHAR(3)  NOT NULL,
     company_name                   VARCHAR(16) NOT NULL,
     company_discretionary_data     VARCHAR(20) NOT NULL,
-    company_identification         NUMERIC(10) NOT NULL,
+    company_identification         VARCHAR(10) NOT NULL,
     standard_entry_class_code      VARCHAR(3)  NOT NULL,
     company_entry_description      VARCHAR(10) NOT NULL,
     company_descriptive_date       VARCHAR(6)  NOT NULL,
@@ -111,6 +111,132 @@ CREATE TABLE ach_batch_headers
     originator_status_code         VARCHAR(1)  NOT NULL,
     originating_dfi_identification VARCHAR(8)  NOT NULL,
     batch_number                   VARCHAR(7)  NOT NULL
+);
+
+-- Create the ach_iat_batch_headers table
+CREATE TABLE ach_iat_batch_headers
+(
+    ach_records_type_5_id          UUID UNIQUE NOT NULL REFERENCES ach_records_type_5 (ach_records_type_5_id) ON DELETE CASCADE ON UPDATE CASCADE,
+    record_type_code               VARCHAR(1)  NOT NULL,
+    service_class_code             VARCHAR(3)  NOT NULL,
+    iat_indicator                  VARCHAR(16) NOT NULL,
+    foreign_exchange_indicator     VARCHAR(2)  NOT NULL,
+    foreign_exchange_ref_indicator VARCHAR(1)  NOT NULL,
+    foreign_exchange_reference     VARCHAR(15) NOT NULL,
+    iso_destination_country_code   VARCHAR(2)  NOT NULL,
+    originator_id                  VARCHAR(10) NOT NULL,
+    standard_entry_class_code      VARCHAR(3)  NOT NULL,
+    company_entry_description      VARCHAR(10) NOT NULL,
+    iso_originating_currency_code  VARCHAR(3)  NOT NULL,
+    iso_destination_currency_code  VARCHAR(3)  NOT NULL,
+    effective_entry_date           VARCHAR(6)  NOT NULL,
+    settlement_date                VARCHAR(3)  NOT NULL,
+    originator_status_code         VARCHAR(1)  NOT NULL,
+    originating_dfi_identification VARCHAR(8)  NOT NULL,
+    batch_number                   NUMERIC(7)  NOT NULL
+);
+
+-- Create the ach_iat_entry_details table
+CREATE TABLE ach_iat_entry_details
+(
+    ach_records_type_6_id            UUID UNIQUE    NOT NULL REFERENCES ach_records_type_6 (ach_records_type_6_id) ON DELETE CASCADE ON UPDATE CASCADE,
+    record_type_code                 VARCHAR(1)     NOT NULL,
+    transaction_code                 NUMERIC(2)     NOT NULL,
+    receiving_dfi_identification     VARCHAR(9)     NOT NULL,
+    number_of_addenda                NUMERIC(4)     NOT NULL,
+    amount                           NUMERIC(10, 2) NOT NULL,
+    foreign_receivers_account_number VARCHAR(35)    NOT NULL,
+    gateway_ofac_screening           BOOLEAN        NOT NULL DEFAULT FALSE,
+    secondary_ofac_screening         BOOLEAN        NOT NULL DEFAULT FALSE,
+    addenda_record_indicator         VARCHAR(1)     NOT NULL DEFAULT '1',
+    trace_number                     NUMERIC(15)    NOT NULL
+);
+
+-- Create the ach_iat_addenda_710_records table
+CREATE TABLE ach_iat_addenda_710_records
+(
+    ach_records_type_7_id        UUID UNIQUE    NOT NULL REFERENCES ach_records_type_7 (ach_records_type_7_id) ON DELETE CASCADE ON UPDATE CASCADE,
+    record_type_code                 VARCHAR(1)     NOT NULL,
+    addenda_type_code            NUMERIC(2)     NOT NULL DEFAULT 10,
+    transaction_type_code        VARCHAR(3)     NOT NULL,
+    foreign_payment_amount       NUMERIC(18, 2) NOT NULL,
+    foreign_trace_number         VARCHAR(22)    NOT NULL DEFAULT '',
+    receiving_name               VARCHAR(35)    NOT NULL,
+    entry_detail_sequence_number NUMERIC(7)     NOT NULL
+);
+
+-- Create the ach_iat_addenda_711_records
+CREATE TABLE ach_iat_addenda_711_records
+(
+    ach_records_type_7_id        UUID UNIQUE NOT NULL REFERENCES ach_records_type_7 (ach_records_type_7_id) ON DELETE CASCADE ON UPDATE CASCADE,
+        record_type_code                 VARCHAR(1)     NOT NULL,
+    addenda_type_code            NUMERIC(2)  NOT NULL DEFAULT 11,
+    originator_name              VARCHAR(35) NOT NULL,
+    originator_street_address    VARCHAR(35) NOT NULL,
+    entry_detail_sequence_number NUMERIC(7)  NOT NULL
+);
+
+-- Create the ach_iat_addenda_712_records
+CREATE TABLE ach_iat_addenda_712_records
+(
+    ach_records_type_7_id        UUID UNIQUE NOT NULL REFERENCES ach_records_type_7 (ach_records_type_7_id) ON DELETE CASCADE ON UPDATE CASCADE,
+        record_type_code                 VARCHAR(1)     NOT NULL,
+    addenda_type_code            NUMERIC(2)  NOT NULL DEFAULT 12,
+    originator_city              VARCHAR(35),
+    originator_state             VARCHAR(35),
+    originator_country           VARCHAR(35),
+    originator_postal_code       VARCHAR(35),
+    entry_detail_sequence_number NUMERIC(7)  NOT NULL
+);
+
+-- Create the ach_iat_addenda_713_records
+CREATE TABLE ach_iat_addenda_713_records
+(
+    ach_records_type_7_id                    UUID UNIQUE NOT NULL REFERENCES ach_records_type_7 (ach_records_type_7_id) ON DELETE CASCADE ON UPDATE CASCADE,
+        record_type_code                 VARCHAR(1)     NOT NULL,
+    addenda_type_code                        NUMERIC(2)  NOT NULL DEFAULT 13,
+    originating_dfi_name                     VARCHAR(35) NOT NULL,
+    originating_dfi_identification_qualifier VARCHAR(2)  NOT NULL,
+    originating_dfi_identification           VARCHAR(34) NOT NULL,
+    originating_dfi_branch_country_code      VARCHAR(3)  NOT NULL,
+    entry_detail_sequence_number             NUMERIC(7)  NOT NULL
+);
+
+-- Create the ach_iat_addenda_714_records
+CREATE TABLE ach_iat_addenda_714_records
+(
+    ach_records_type_7_id                  UUID UNIQUE NOT NULL REFERENCES ach_records_type_7 (ach_records_type_7_id) ON DELETE CASCADE ON UPDATE CASCADE,
+    record_type_code                 VARCHAR(1)     NOT NULL,
+    addenda_type_code                      NUMERIC(2)  NOT NULL DEFAULT 14,
+    receiving_dfi_name                     VARCHAR(35) NOT NULL,
+    receiving_dfi_identification_qualifier VARCHAR(2)  NOT NULL,
+    receiving_dfi_identification           VARCHAR(34) NOT NULL,
+    receiving_dfi_branch_country_code      VARCHAR(3)  NOT NULL,
+    entry_detail_sequence_number           NUMERIC(7)  NOT NULL
+);
+
+-- Create the ach_iat_addenda_715_records
+CREATE TABLE ach_iat_addenda_715_records
+(
+    ach_records_type_7_id          UUID UNIQUE NOT NULL REFERENCES ach_records_type_7 (ach_records_type_7_id) ON DELETE CASCADE ON UPDATE CASCADE,
+    record_type_code                 VARCHAR(1)     NOT NULL,
+    addenda_type_code              NUMERIC(2)  NOT NULL DEFAULT 15,
+    receiver_identification_number VARCHAR(15) NOT NULL,
+    receiver_street_address        VARCHAR(35) NOT NULL,
+    entry_detail_sequence_number   NUMERIC(7)  NOT NULL
+);
+
+-- Create the ach_iat_addenda_716_records
+CREATE TABLE ach_iat_addenda_716_records
+(
+    ach_records_type_7_id        UUID UNIQUE NOT NULL REFERENCES ach_records_type_7 (ach_records_type_7_id) ON DELETE CASCADE ON UPDATE CASCADE,
+    record_type_code                 VARCHAR(1)     NOT NULL,
+    addenda_type_code            NUMERIC(2)  NOT NULL DEFAULT 16,
+    receiver_city                VARCHAR(35) NOT NULL,
+    receiver_state               VARCHAR(35) NOT NULL,
+    receiver_country             VARCHAR(35) NOT NULL,
+    receiver_postal_code         VARCHAR(35) NOT NULL,
+    entry_detail_sequence_number NUMERIC(7)  NOT NULL
 );
 
 -- Create the ach_entry_ppd_details table
@@ -237,7 +363,7 @@ CREATE TABLE companies
     name           VARCHAR(255) NOT NULL,
     tax_id_type    TIN_TYPE     NOT NULL DEFAULT 'EIN',
     tax_id_number  VARCHAR(9)   NOT NULL,
-    ach_company_id NUMERIC(10)           DEFAULT NULL,
+    ach_company_id VARCHAR(10)           DEFAULT NULL,
     duns           NUMERIC(9)   NOT NULL,
     logo           BYTEA                 DEFAULT NULL,
     website        VARCHAR(255)          DEFAULT NULL,
@@ -252,19 +378,19 @@ CREATE TYPE address_type AS ENUM ('mailing', 'street');
 -- Company address information
 CREATE TABLE company_addresses
 (
-    company_address_id UUID                  DEFAULT uuid_generate_v4(),
+    company_address_id UUID         NOT NULL UNIQUE DEFAULT uuid_generate_v4(),
     company_id         UUID         NOT NULL REFERENCES companies (company_id) ON DELETE CASCADE ON UPDATE CASCADE,
-    address_type       ADDRESS_TYPE NOT NULL DEFAULT 'mailing',
+    address_type       ADDRESS_TYPE NOT NULL        DEFAULT 'mailing',
     address_line_1     VARCHAR(255) NOT NULL,
-    address_line_2     VARCHAR(255)          DEFAULT NULL,
-    address_line_3     VARCHAR(255)          DEFAULT NULL,
-    address_line_4     VARCHAR(255)          DEFAULT NULL,
+    address_line_2     VARCHAR(255)                 DEFAULT NULL,
+    address_line_3     VARCHAR(255)                 DEFAULT NULL,
+    address_line_4     VARCHAR(255)                 DEFAULT NULL,
     city               VARCHAR(255) NOT NULL,
     state              VARCHAR(2)   NOT NULL,
     zip_code           NUMERIC(5)   NOT NULL,
-    zip_code_4         NUMERIC(4)            DEFAULT NULL,
-    created_at         TIMESTAMP    NOT NULL DEFAULT NOW(),
-    updated_at         TIMESTAMP    NOT NULL DEFAULT NOW(),
+    zip_code_4         NUMERIC(4)                   DEFAULT NULL,
+    created_at         TIMESTAMP    NOT NULL        DEFAULT NOW(),
+    updated_at         TIMESTAMP    NOT NULL        DEFAULT NOW(),
     PRIMARY KEY (company_id, address_type)
 );
 

@@ -13,12 +13,13 @@ class TestAchBatchHeaderSql:
     @pytest.fixture(autouse=True)
     def setup_teardown_method(self):
         print("\nsetup test\n")
+        SqlUtils.truncate_all()
         yield
         SqlUtils.truncate_all()
 
     def test_insert_record(self):
 
-        sample_batch_header = "5200Company name    DiscretionaryData   Company IDARCComp desc 0216232302160471061000010000001"
+        sample_batch_header = "5200Company name    DiscretionaryData   1234567890ARCComp desc 0216232302160471061000010000001"
         ach_records_type_1_id, ach_records_type_5_id = SqlUtils.setup_batch_header_test(
             sample_batch_header
         )
@@ -29,7 +30,7 @@ class TestAchBatchHeaderSql:
             service_class_code="200",
             company_name="Company name",
             company_discretionary_data="DiscretionaryData",
-            company_identification="Company ID",
+            company_identification="1234567890",
             standard_entry_class_code="ARC",
             company_entry_description="Comp desc",
             company_descriptive_date="021623",

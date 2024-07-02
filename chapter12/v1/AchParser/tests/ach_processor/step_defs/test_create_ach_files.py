@@ -27,20 +27,41 @@ def create_batch_header(setup_info, batch_number):
     today_yymmdd = str(datetime.today().strftime("%y%m%d"))
     day_of_year = str(datetime.today().timetuple().tm_yday).rjust(3, "0")
     batch_number = str(batch_number).rjust(7, "0")
-    return (
-        f"5{setup_info['service_class_code']}"
-        f"{setup_info['company_name']}"
-        f"{setup_info.get('company_discretionary_data','DiscretionaryData   ')}"
-        f"{setup_info['company_id']}"
-        f"{setup_info['standard_entry_class']}"
-        f"{setup_info.get('company_entry_description','Comp desc ')}"
-        f"{setup_info.get('company_descriptive_date',today_yymmdd)}"
-        f"{setup_info.get('effective_entry_date',today_yymmdd)}"
-        f"{setup_info.get('settlement_date',day_of_year)}"
-        f"{setup_info.get('originator_status_code','1')}"
-        f"{setup_info.get('odfi','06100001')}"
-        f"{setup_info.get('batch_number', batch_number)}\n"
-    )
+    if setup_info["standard_entry_class"] == "IAT":
+        batch_header = (
+            f"5{setup_info['service_class_code']}"
+            f"                "  # IAT Indicator
+            f"FF"  # Foreign Exchange Indicator
+            f"3"  # Foreign Exchange Reference Indicator
+            "               "  # Foreign Exchange Reference
+            "US"  # ISO Destination Country Code
+            f"{setup_info['company_id']}"  # Originator Identification
+            f"{setup_info["standard_entry_class"]}"  # Standard Entry Class Code
+            "GIFT      "  # Company Entry Description
+            "USD"  # ISO Originating Currency Code
+            "USD"  # ISO Destination Currency Code
+            f"{setup_info.get('effective_entry_date',today_yymmdd)}"  # Effective Entry Date
+            f"{setup_info.get('settlement_date',day_of_year)}"  # Settlement Date
+            f"{setup_info.get('originator_status_code','1')}"  # Originator Status Code
+            f"{setup_info.get('odfi','06100001')}"  # Originating DFI Identification
+            f"{setup_info.get('batch_number', batch_number)}\n"
+        )
+    else:
+        batch_header = (
+            f"5{setup_info['service_class_code']}"
+            f"{setup_info['company_name']}"
+            f"{setup_info.get('company_discretionary_data','DiscretionaryData   ')}"
+            f"{setup_info['company_id']}"
+            f"{setup_info['standard_entry_class']}"
+            f"{setup_info.get('company_entry_description','Comp desc ')}"
+            f"{setup_info.get('company_descriptive_date',today_yymmdd)}"
+            f"{setup_info.get('effective_entry_date',today_yymmdd)}"
+            f"{setup_info.get('settlement_date',day_of_year)}"
+            f"{setup_info.get('originator_status_code','1')}"
+            f"{setup_info.get('odfi','06100001')}"
+            f"{setup_info.get('batch_number', batch_number)}\n"
+        )
+    return batch_header
 
 
 def create_file_control(
@@ -90,6 +111,104 @@ def calculate_routing_number_check_digit(routing_number: str):
     return check_digit
 
 
+def create_iat_entries_and_addenda(
+    setup_info, tran_code, rdfi, check_digit, amount, individual_name, trace_number
+):
+    # Create the IAT entry
+    entries = (
+        "6"  # Record Type Code
+        f"{tran_code}"  # Transaction Code
+        f"{setup_info.get('rdfi', rdfi)}{setup_info.get('check_digit', check_digit)}"
+        f"{setup_info.get('iat_number_of_addenda', '0007')}"
+        "             "  # Reserved
+        f"{setup_info.get('amount', amount)}"
+        f"{setup_info.get('account_number', '123'.ljust(35, ' '))}"
+        "  "  # Reserved
+        " "  # Gateway Operator OFAC Screening Indicator
+        " "  # Secondary OFAC Screening Indicator
+        "1"  # Addenda Record Indicator
+        f"{setup_info.get('trace_number', trace_number)}\n"
+    )
+    # Create Addenda 710
+    entries += (
+        "7"  # Record Type Code
+        "10"  # Addenda Type Code
+        "WEB"  # Transaction Type Code
+        f"{setup_info.get('amount', amount).rjust(18, '0')}"
+        "                      "  # Foreign Trace Number
+        f"{individual_name.ljust(35, ' ')}"  # Receiving Company Name/Individual Name
+        "      "  # Reserved
+        f"{setup_info.get('trace_number', trace_number)[-7:]}\n"  # Right most 7 digits of trace number
+    )
+    # Create Addenda 711
+    entries += (
+        "7"  # Record Type Code
+        "11"  # Addenda Type Code
+        "ELENA SANTIAGO                     "  # Originator Name
+        "CALLE FICTICIA 123                 "  # Originator Address
+        "              "  # Reserved
+        f"{setup_info.get('trace_number', trace_number)[-7:]}\n"  # Right most 7 digits of trace number
+    )
+    # Create Addenda 712
+    entries += (
+        "7"  # Record Type Code
+        "12"  # Addenda Type Code
+        "BILBAO*BIZKAIA\\                    "  # Originator City & State/Province
+        "ES*48001\\                          "  # Originator Country and Postal Code
+        "              "  # Reserved
+        f"{setup_info.get('trace_number', trace_number)[-7:]}\n"  # Right most 7 digits of trace number
+    )
+    # Create Addenda 713
+    # 713IBERIA GLOBAL BANK                 011234567890                        US           3172961
+    entries += (
+        "7"  # Record Type Code
+        "13"  # Addenda Type Code
+        "IBERIA GLOBAL BANK                 "  # Originating DFI Name
+        "01"  # Originating DFI Identification Number Qualifier
+        "1234567890                        "  # Originating DFI Identification
+        "US "  # Originating DFI Country Code
+        "          "  # Reserved
+        f"{setup_info.get('trace_number', trace_number)[-7:]}\n"  # Right most 7 digits of trace number
+    )
+
+    # Create Addenda 714
+    # 714METROPOLIS TRUST BANK              01247611456
+    entries += (
+        "7"  # Record Type Code
+        "14"  # Addenda Type Code
+        "METROPOLIS TRUST BANK              "  # Receiving DFI Name
+        "01"  # Receiving DFI Identification Number Qualifier
+        "247611456                         "  # Receiving DFI Identification
+        "US "  # Receiving DFI Branch Country Code
+        "          "  # Reserved
+        f"{setup_info.get('trace_number', trace_number)[-7:]}\n"  # Right most 7 digits of trace number
+    )
+
+    # Create Addenda 715
+    # 715               9999 NORTH BROADWAY                                                  3172961
+    entries += (
+        "7"  # Record Type Code
+        "15"  # Addenda Type Code
+        "               "  # Receiver Identification Number
+        "9999 NORTH BROADWAY                "  # Receiver Street Address
+        "                                  "  # Reserved
+        f"{setup_info.get('trace_number', trace_number)[-7:]}\n"  # Right most 7 digits of trace number
+    )
+
+    # Create Addenda 716
+    # 716NEW YORK*NY\                       US*10001\                                        3172961
+    entries += (
+        "7"  # Record Type Code
+        "16"  # Addenda Type Code
+        "NEW YORK*NY\                       "  # Receiver City & State/Province
+        "US*10001\                          "  # Receiver Country and Postal Code
+        "              "  # Reserved
+        f"{setup_info.get('trace_number', trace_number)[-7:]}\n"  # Right most 7 digits of trace number
+    )
+
+    return entries
+
+
 def create_entries(setup_info, batch_number):
     entries = ""
     total_credit_amount = 0
@@ -111,17 +230,28 @@ def create_entries(setup_info, batch_number):
             total_credit_amount += int(amount)
         else:
             total_debit_amount += int(amount)
-        entries += (
-            f"6{tran_code}"
-            f"{setup_info.get('rdfi', rdfi)}{setup_info.get('check_digit', check_digit)}"
-            f"{setup_info.get('account_number', '123              ')}"
-            f"{setup_info.get('amount', amount)}"
-            f"{setup_info.get('individual_identification_number', '01223344       ')}"
-            f"{setup_info.get('individual_name', individual_name)}"
-            f"{setup_info.get('discretionary_data', 'LC')}"
-            f"{setup_info.get('addenda_record_indicator', addenda_indicator)}"
-            f"{setup_info.get('trace_number', trace_number)}\n"
-        )
+        if setup_info["standard_entry_class"] == "IAT":
+            entries += create_iat_entries_and_addenda(
+                setup_info,
+                tran_code,
+                rdfi,
+                check_digit,
+                amount,
+                individual_name,
+                trace_number,
+            )
+        else:
+            entries += (
+                f"6{tran_code}"
+                f"{setup_info.get('rdfi', rdfi)}{setup_info.get('check_digit', check_digit)}"
+                f"{setup_info.get('account_number', '123              ')}"
+                f"{setup_info.get('amount', amount)}"
+                f"{setup_info.get('individual_identification_number', '01223344       ')}"
+                f"{setup_info.get('individual_name', individual_name)}"
+                f"{setup_info.get('discretionary_data', 'LC')}"
+                f"{setup_info.get('addenda_record_indicator', addenda_indicator)}"
+                f"{setup_info.get('trace_number', trace_number)}\n"
+            )
 
     return {
         "total_credit_amount": total_credit_amount,
@@ -262,6 +392,7 @@ def create_ach_file(setup_info):
                     entry_results["total_credit_amount"],
                 )
             )
+        # Write the final record out
         f.write(
             create_file_control(
                 setup_info,

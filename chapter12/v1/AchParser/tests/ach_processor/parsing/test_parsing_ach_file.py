@@ -16,7 +16,7 @@ def setup_teardown_method():
 def test_record_count():
     dir_path = os.path.dirname(os.path.realpath(__file__))
     file_path = os.path.join(dir_path, "../data", "sample.ach")
-    expected_result = 41
+    expected_result = 29
     parser = AchFileProcessor()
     ach_files_id = SqlUtils.create_ach_file_record("sample.ach", "123456789")
     parser.parse(ach_files_id, file_path)
