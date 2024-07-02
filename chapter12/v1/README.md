@@ -1,14 +1,12 @@
-# Chapter 12
+# Chapter 12: IAT Processing
 
-This is the first version of the Chapter 12 project, where we will be adding processing of IAT ACH files.
+In v1 of the application, we setup:
 
-The following enhancements will be made in Chapter 12:
+[X] ACH file creation for IAT batches
 
-[] - Creating IAT files
+[X] Database storage of IAT batches, entries, and addenda
 
-[] - Updating the database to handle IAT files
-
-[] - OFAC Scanning of ACH files
+[X] Unit tests for initial IAT processing (SQL and Schema validation)
 
 # Running the ACH Project
 
