@@ -161,25 +161,27 @@ Feature: Create ACH files
 
   Scenario: Create an ACH for for IAT
     Given I want to create an ACH file named "iat.ach"
-    And I want to have an immediate destination of "990000013"
-    And I want to have an immediate origin of "987654321"
+    And I want to have an immediate destination of "990000013" with a destination name of "Metropolis Trust Bank"
+    And I want to have an immediate origin of "691000134" with an origin name of "ASF APPLICATION SUPERVI"
     And I want to have 1 batch with ACH credits only and a standard entry class code of "IAT"
     And I want 1 entries per batch with random amounts between 100 and 100
     And I want to use individual names of "James Smith, Sarah Johnson, David Williams, Emma Martinez, Olivia Thomas"
     And I want to have company name "My Company" and company id "1234567890"
+    And I want to override the field "odfi" to be "12345678"
     When my ACH is created
     Then I should have a file of the same name
     And there should be 1 batch in the file
     And there should be 1 entries in the file
 
-  Scenario: Create an ACH for for IAT
+  Scenario: Create an ACH for for IAT with multiple batches
     Given I want to create an ACH file named "iat_multiple.ach"
-    And I want to have an immediate destination of "990000013"
-    And I want to have an immediate origin of "987654321"
+    And I want to have an immediate destination of "990000013" with a destination name of "Metropolis Trust Bank"
+    And I want to have an immediate origin of "691000134" with an origin name of "ASF APPLICATION SUPERVI"
     And I want to have 3 batch with ACH credits only and a standard entry class code of "IAT"
     And I want 1 entries per batch with random amounts between 100 and 100
     And I want to use individual names of "James Smith, Sarah Johnson, David Williams, Emma Martinez, Olivia Thomas"
     And I want to have company name "My Company" and company id "1234567890"
+    And I want to override the field "odfi" to be "12345678"
     When my ACH is created
     Then I should have a file of the same name
     And there should be 3 batch in the file

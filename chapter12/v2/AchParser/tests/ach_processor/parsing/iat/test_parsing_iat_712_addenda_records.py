@@ -1,20 +1,8 @@
-from decimal import Decimal
 from typing import Literal
-
-from chapter12.v2.AchParser.ach_processor.ach_file_processor import AchFileProcessor
 import pytest
-
-from chapter12.v2.AchParser.ach_processor.database.ach.iat.ach_iat_710_addenda_sql import (
-    AchIat710AddendaSql,
-)
-from chapter12.v2.AchParser.ach_processor.database.ach.iat.ach_iat_711_addenda_sql import (
-    AchIat711AddendaSql,
-)
+from chapter12.v2.AchParser.ach_processor.ach_file_processor import AchFileProcessor
 from chapter12.v2.AchParser.ach_processor.database.ach.iat.ach_iat_712_addenda_sql import (
     AchIat712AddendaSql,
-)
-from chapter12.v2.AchParser.ach_processor.database.ach_addenda_ppd_sql import (
-    AchAddendaPpdSql,
 )
 from chapter12.v2.AchParser.tests.ach_processor.sql_utils import SqlUtils
 
@@ -34,7 +22,7 @@ class TestParsingIat712AddendaRecords:
 
         # Define the expected result of parsing the sample ACH entry detail record
         expected_result = {
-            "record_type_code": Literal["7"],
+            "record_type_code": "7",
             "addenda_type_code": 12,
             "originator_city": "BILBAO",
             "originator_state": "BIZKAIA",

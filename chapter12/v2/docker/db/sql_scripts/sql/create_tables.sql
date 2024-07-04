@@ -156,7 +156,7 @@ CREATE TABLE ach_iat_entry_details
 CREATE TABLE ach_iat_addenda_710_records
 (
     ach_records_type_7_id        UUID UNIQUE    NOT NULL REFERENCES ach_records_type_7 (ach_records_type_7_id) ON DELETE CASCADE ON UPDATE CASCADE,
-    record_type_code                 VARCHAR(1)     NOT NULL,
+    record_type_code             VARCHAR(1)     NOT NULL,
     addenda_type_code            NUMERIC(2)     NOT NULL DEFAULT 10,
     transaction_type_code        VARCHAR(3)     NOT NULL,
     foreign_payment_amount       NUMERIC(18, 2) NOT NULL,
@@ -169,7 +169,7 @@ CREATE TABLE ach_iat_addenda_710_records
 CREATE TABLE ach_iat_addenda_711_records
 (
     ach_records_type_7_id        UUID UNIQUE NOT NULL REFERENCES ach_records_type_7 (ach_records_type_7_id) ON DELETE CASCADE ON UPDATE CASCADE,
-        record_type_code                 VARCHAR(1)     NOT NULL,
+    record_type_code             VARCHAR(1)  NOT NULL,
     addenda_type_code            NUMERIC(2)  NOT NULL DEFAULT 11,
     originator_name              VARCHAR(35) NOT NULL,
     originator_street_address    VARCHAR(35) NOT NULL,
@@ -180,7 +180,7 @@ CREATE TABLE ach_iat_addenda_711_records
 CREATE TABLE ach_iat_addenda_712_records
 (
     ach_records_type_7_id        UUID UNIQUE NOT NULL REFERENCES ach_records_type_7 (ach_records_type_7_id) ON DELETE CASCADE ON UPDATE CASCADE,
-        record_type_code                 VARCHAR(1)     NOT NULL,
+    record_type_code             VARCHAR(1)  NOT NULL,
     addenda_type_code            NUMERIC(2)  NOT NULL DEFAULT 12,
     originator_city              VARCHAR(35),
     originator_state             VARCHAR(35),
@@ -193,7 +193,7 @@ CREATE TABLE ach_iat_addenda_712_records
 CREATE TABLE ach_iat_addenda_713_records
 (
     ach_records_type_7_id                    UUID UNIQUE NOT NULL REFERENCES ach_records_type_7 (ach_records_type_7_id) ON DELETE CASCADE ON UPDATE CASCADE,
-        record_type_code                 VARCHAR(1)     NOT NULL,
+    record_type_code                         VARCHAR(1)  NOT NULL,
     addenda_type_code                        NUMERIC(2)  NOT NULL DEFAULT 13,
     originating_dfi_name                     VARCHAR(35) NOT NULL,
     originating_dfi_identification_qualifier VARCHAR(2)  NOT NULL,
@@ -206,7 +206,7 @@ CREATE TABLE ach_iat_addenda_713_records
 CREATE TABLE ach_iat_addenda_714_records
 (
     ach_records_type_7_id                  UUID UNIQUE NOT NULL REFERENCES ach_records_type_7 (ach_records_type_7_id) ON DELETE CASCADE ON UPDATE CASCADE,
-    record_type_code                 VARCHAR(1)     NOT NULL,
+    record_type_code                       VARCHAR(1)  NOT NULL,
     addenda_type_code                      NUMERIC(2)  NOT NULL DEFAULT 14,
     receiving_dfi_name                     VARCHAR(35) NOT NULL,
     receiving_dfi_identification_qualifier VARCHAR(2)  NOT NULL,
@@ -219,7 +219,7 @@ CREATE TABLE ach_iat_addenda_714_records
 CREATE TABLE ach_iat_addenda_715_records
 (
     ach_records_type_7_id          UUID UNIQUE NOT NULL REFERENCES ach_records_type_7 (ach_records_type_7_id) ON DELETE CASCADE ON UPDATE CASCADE,
-    record_type_code                 VARCHAR(1)     NOT NULL,
+    record_type_code               VARCHAR(1)  NOT NULL,
     addenda_type_code              NUMERIC(2)  NOT NULL DEFAULT 15,
     receiver_identification_number VARCHAR(15) NOT NULL,
     receiver_street_address        VARCHAR(35) NOT NULL,
@@ -230,7 +230,7 @@ CREATE TABLE ach_iat_addenda_715_records
 CREATE TABLE ach_iat_addenda_716_records
 (
     ach_records_type_7_id        UUID UNIQUE NOT NULL REFERENCES ach_records_type_7 (ach_records_type_7_id) ON DELETE CASCADE ON UPDATE CASCADE,
-    record_type_code                 VARCHAR(1)     NOT NULL,
+    record_type_code             VARCHAR(1)  NOT NULL,
     addenda_type_code            NUMERIC(2)  NOT NULL DEFAULT 16,
     receiver_city                VARCHAR(35) NOT NULL,
     receiver_state               VARCHAR(35) NOT NULL,

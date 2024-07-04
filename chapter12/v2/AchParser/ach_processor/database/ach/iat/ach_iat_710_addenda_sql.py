@@ -22,6 +22,7 @@ class AchIat710AddendaSql:
                 """
   INSERT INTO ach_iat_addenda_710_records (
         ach_records_type_7_id,
+        record_type_code,
         addenda_type_code,
         transaction_type_code,
         foreign_payment_amount,
@@ -30,6 +31,7 @@ class AchIat710AddendaSql:
         entry_detail_sequence_number
     ) VALUES (
         %(ach_records_type_7_id)s,
+        %(record_type_code)s,
         %(addenda_type_code)s,
         %(transaction_type_code)s,
         %(foreign_payment_amount)s,

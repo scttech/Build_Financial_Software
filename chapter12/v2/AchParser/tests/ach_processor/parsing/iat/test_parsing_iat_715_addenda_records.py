@@ -43,7 +43,7 @@ class TestParsingIat715AddendaRecords:
 
         # Define the expected result of parsing the sample ACH entry detail record
         expected_result = {
-            "record_type_code": Literal["7"],
+            "record_type_code": "7",
             "addenda_type_code": 15,
             "receiver_identification_number": "",
             "receiver_street_address": "9999 NORTH BROADWAY",

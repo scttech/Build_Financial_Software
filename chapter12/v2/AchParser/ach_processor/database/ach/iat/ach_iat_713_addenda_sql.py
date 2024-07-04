@@ -31,6 +31,7 @@ class AchIat713AddendaSql:
                 """
   INSERT INTO ach_iat_addenda_713_records (
         ach_records_type_7_id,
+        record_type_code,
         addenda_type_code,
         originating_dfi_name,
         originating_dfi_identification_qualifier,
@@ -39,6 +40,7 @@ class AchIat713AddendaSql:
         entry_detail_sequence_number
     ) VALUES (
         %(ach_records_type_7_id)s,
+        %(record_type_code)s,
         %(addenda_type_code)s,
         %(originating_dfi_name)s,
         %(originating_dfi_identification_qualifier)s,

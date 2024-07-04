@@ -37,12 +37,14 @@ class AchIat715AddendaSql:
                 """
   INSERT INTO ach_iat_addenda_715_records (
         ach_records_type_7_id,
+        record_type_code,
         addenda_type_code,
         receiver_identification_number,
         receiver_street_address,
         entry_detail_sequence_number
     ) VALUES (
         %(ach_records_type_7_id)s,
+        %(record_type_code)s,
         %(addenda_type_code)s,
         %(receiver_identification_number)s,
         %(receiver_street_address)s,

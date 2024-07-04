@@ -25,12 +25,14 @@ class AchIat711AddendaSql:
                 """
   INSERT INTO ach_iat_addenda_711_records (
         ach_records_type_7_id,
+        record_type_code,
         addenda_type_code,
         originator_name,
         originator_street_address,
         entry_detail_sequence_number
     ) VALUES (
         %(ach_records_type_7_id)s,
+        %(record_type_code)s,
         %(addenda_type_code)s,
         %(originator_name)s,
         %(originator_street_address)s,

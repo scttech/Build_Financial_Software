@@ -20,7 +20,7 @@ def get_absolute_path(relative_path):
 def create_file_header(setup_info):
     yymmdd = datetime.now().strftime("%y%m%d")
     hhmm = datetime.now().strftime("%H%M")
-    return f"101{setup_info['immediate_destination']}{setup_info['immediate_origin']}{yymmdd}{hhmm}{setup_info['file_id']}{setup_info.get('record_size', '094')}{setup_info.get('blocking_factor', '10')}1DEST NAME              ORIGIN NAME            XXXXXXXX\n"
+    return f"101{setup_info['immediate_destination']}{setup_info['immediate_origin']}{yymmdd}{hhmm}{setup_info['file_id']}{setup_info.get('record_size', '094')}{setup_info.get('blocking_factor', '10')}1{setup_info.get('DEST_NAME','DEST NAME              ')}{setup_info.get('ORIGIN_NAME','ORIGIN NAME            ')}XXXXXXXX\n"
 
 
 def create_batch_header(setup_info, batch_number):
@@ -165,7 +165,7 @@ def create_iat_entries_and_addenda(
         "13"  # Addenda Type Code
         "IBERIA GLOBAL BANK                 "  # Originating DFI Name
         "01"  # Originating DFI Identification Number Qualifier
-        "1234567890                        "  # Originating DFI Identification
+        f"{setup_info.get('odfi','06100001').ljust(34, ' ')}"  # Originating DFI Identification
         "US "  # Originating DFI Country Code
         "          "  # Reserved
         f"{setup_info.get('trace_number', trace_number)[-7:]}\n"  # Right most 7 digits of trace number
@@ -176,7 +176,7 @@ def create_iat_entries_and_addenda(
     entries += (
         "7"  # Record Type Code
         "14"  # Addenda Type Code
-        "METROPOLIS TRUST BANK              "  # Receiving DFI Name
+        f"{setup_info.get('DEST_NAME', 'DEST NAME').ljust(35, ' ')}"  # Receiving DFI Name
         "01"  # Receiving DFI Identification Number Qualifier
         "247611456                         "  # Receiving DFI Identification
         "US "  # Receiving DFI Branch Country Code
@@ -215,7 +215,10 @@ def create_entries(setup_info, batch_number):
     total_debit_amount = 0
     batch_entry_hash = 0
     for i in range(setup_info["entry_count"]):
-        trace_number = str(batch_number).rjust(7, "0") + str(i + 1).rjust(8, "0")
+        setup_info["FILE_ENTRY_COUNT"] += 1
+        trace_number = str(batch_number).rjust(8, "0") + str(
+            setup_info["FILE_ENTRY_COUNT"]
+        ).rjust(7, "0")
         amount = str(
             randint(setup_info["low_amount"], setup_info["high_amount"])
         ).rjust(10, "0")
@@ -264,7 +267,7 @@ def create_entries(setup_info, batch_number):
 def create_batch_trailer(
     setup_info, batch_number, total_debit_amount, total_credit_amount
 ):
-    return f"8{setup_info['service_class_code']}{str(setup_info['entry_count']).rjust(6, '0')}0033003300{str(total_debit_amount).rjust(12, '0')}{str(total_credit_amount).rjust(12, '0')}{setup_info['company_id']}                         06100001{str(batch_number).rjust(7, '0')}\n"
+    return f"8{setup_info['service_class_code']}{str(setup_info['entry_count']).rjust(6, '0')}0033003300{str(total_debit_amount).rjust(12, '0')}{str(total_credit_amount).rjust(12, '0')}{setup_info['company_id']}                         {setup_info.get('odfi','06100001')}{str(batch_number).rjust(7, '0')}\n"
 
 
 @pytest.fixture
@@ -297,9 +300,31 @@ def set_immediate_destination(setup_info, immediate_destination):
     setup_info["immediate_destination"] = immediate_destination.rjust(10, " ")
 
 
+@given(
+    parsers.parse(
+        'I want to have an immediate destination of "{immediate_destination}" with a destination name of "{destination_name}"'
+    )
+)
+def set_immediate_destination_and_name(
+    setup_info, immediate_destination, destination_name
+):
+    setup_info["immediate_destination"] = immediate_destination.rjust(10, " ")
+    setup_info["DEST_NAME"] = destination_name.ljust(23, " ")
+
+
 @given(parsers.parse('I want to have an immediate origin of "{immediate_origin}"'))
 def set_immediate_origin(setup_info, immediate_origin):
     setup_info["immediate_origin"] = immediate_origin.rjust(10, " ")
+
+
+@given(
+    parsers.parse(
+        'I want to have an immediate origin of "{immediate_origin}" with an origin name of "{origin_name}"'
+    )
+)
+def set_immediate_origin(setup_info, immediate_origin, origin_name):
+    setup_info["immediate_origin"] = immediate_origin.rjust(10, " ")
+    setup_info["ORIGIN_NAME"] = origin_name.ljust(23, " ")
 
 
 @given(
@@ -373,6 +398,7 @@ def create_ach_file(setup_info):
     total_debits_in_file = 0
     total_credits_in_file = 0
     file_control_entry_hash = 0
+    setup_info["FILE_ENTRY_COUNT"] = 0
     absolute_path = get_absolute_path(Path(f"../output/{setup_info['filename']}"))
     with open(absolute_path, "w", encoding="utf8") as f:
         f.write(create_file_header(setup_info))

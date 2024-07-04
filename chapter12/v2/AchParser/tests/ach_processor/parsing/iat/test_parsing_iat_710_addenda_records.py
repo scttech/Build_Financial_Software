@@ -28,7 +28,7 @@ class TestParsingIat710AddendaRecords:
 
         # Define the expected result of parsing the sample ACH entry detail record
         expected_result = {
-            "record_type_code": Literal["7"],
+            "record_type_code": "7",
             "addenda_type_code": 10,
             "transaction_type_code": "WEB",
             "foreign_payment_amount": Decimal("1.00"),

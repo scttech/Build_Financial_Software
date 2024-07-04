@@ -28,6 +28,7 @@ class AchIat712AddendaSql:
                 """
   INSERT INTO ach_iat_addenda_712_records (
         ach_records_type_7_id,
+        record_type_code,
         addenda_type_code,
         originator_city,
         originator_state,
@@ -36,6 +37,7 @@ class AchIat712AddendaSql:
         entry_detail_sequence_number
     ) VALUES (
         %(ach_records_type_7_id)s,
+        %(record_type_code)s,
         %(addenda_type_code)s,
         %(originator_city)s,
         %(originator_state)s,

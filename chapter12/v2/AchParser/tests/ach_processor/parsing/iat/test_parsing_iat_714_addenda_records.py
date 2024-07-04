@@ -40,7 +40,7 @@ class TestParsingIat714AddendaRecords:
 
         # Define the expected result of parsing the sample ACH entry detail record
         expected_result = {
-            "record_type_code": Literal["7"],
+            "record_type_code": "7",
             "addenda_type_code": 14,
             "receiving_dfi_name": "METROPOLIS TRUST BANK",
             "receiving_dfi_identification_qualifier": "01",
