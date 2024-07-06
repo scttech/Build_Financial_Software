@@ -1,10 +1,10 @@
 # Chapter 12: IAT Processing
 
-In v2 of the application, we setup:
+In v3 of the application, we setup:
 
-[X] Parsing of IAT files through the Dashboard
+[X] Renaming tables for better alignment and consistency
 
-[X] Adding exceptions to the database
+[X] Updating APIs to support PPD and IAT batches
 
 # Running the ACH Project
 

@@ -160,10 +160,10 @@ class TestLoadingPpdFiles:
                        SELECT
                                (SELECT COUNT(*) FROM ach_file_headers) AS record_count_type1,
                                (SELECT COUNT(*) FROM ach_batch_headers) AS record_count_type5,
-                               (SELECT COUNT(*) FROM ach_entry_ppd_details) AS record_count_type6,
-                               (SELECT COUNT(*) FROM ach_addenda_ppd_records) AS record_count_type7,
-                               (SELECT COUNT(*) FROM ach_batch_control_records) AS record_count_type8,
-                               (SELECT COUNT(*) FROM ach_file_control_records) AS record_count_type9
+                               (SELECT COUNT(*) FROM ach_ppd_entry_details) AS record_count_type6,
+                               (SELECT COUNT(*) FROM ach_ppd_addenda_details) AS record_count_type7,
+                               (SELECT COUNT(*) FROM ach_batch_control_details) AS record_count_type8,
+                               (SELECT COUNT(*) FROM ach_file_control_details) AS record_count_type9
                        ) AS counts
                 """
             ).fetchone()

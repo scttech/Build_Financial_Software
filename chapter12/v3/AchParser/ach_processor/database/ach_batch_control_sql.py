@@ -14,7 +14,7 @@ class AchBatchControlSql:
         with get_db_connection() as conn:
             conn.execute(
                 """
-           INSERT INTO ach_batch_control_records (ach_records_type_8_id, record_type_code,
+           INSERT INTO ach_batch_control_details (ach_records_type_8_id, record_type_code,
             service_class_code, entry_addenda_count, entry_hash, total_debit_entry_dollar_amount,
             total_credit_entry_dollar_amount, company_identification, message_authentication_code,
             reserved, originating_dfi_identification, batch_number)
@@ -30,7 +30,7 @@ class AchBatchControlSql:
         with get_db_connection(row_factory=class_row(AchBatchControlSchema)) as conn:
             result = conn.execute(
                 """
-                SELECT * FROM ach_batch_control_records WHERE ach_records_type_8_id = %s
+                SELECT * FROM ach_batch_control_details WHERE ach_records_type_8_id = %s
                 """,
                 [ach_records_id.hex],
             )

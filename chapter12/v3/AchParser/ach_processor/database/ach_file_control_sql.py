@@ -14,7 +14,7 @@ class AchFileControlSql:
         with get_db_connection() as conn:
             conn.execute(
                 """
-            INSERT INTO ach_file_control_records (ach_records_type_9_id, record_type_code, batch_count, 
+            INSERT INTO ach_file_control_details (ach_records_type_9_id, record_type_code, batch_count, 
             block_count, entry_addenda_count, entry_hash, total_debit_entry_dollar_amount,
             total_credit_entry_dollar_amount, reserved)
             VALUES (%(ach_records_type_9_id)s, %(record_type_code)s, %(batch_count)s, %(block_count)s,
@@ -28,7 +28,7 @@ class AchFileControlSql:
         with get_db_connection(row_factory=class_row(AchFileControlSchema)) as conn:
             result = conn.execute(
                 """
-                SELECT * FROM ach_file_control_records WHERE ach_records_type_9_id = %s
+                SELECT * FROM ach_file_control_details WHERE ach_records_type_9_id = %s
                 """,
                 [ach_records_id.hex],
             )

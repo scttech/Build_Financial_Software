@@ -110,7 +110,7 @@ CREATE TABLE ach_batch_headers
     settlement_date                VARCHAR(3)  NOT NULL,
     originator_status_code         VARCHAR(1)  NOT NULL,
     originating_dfi_identification VARCHAR(8)  NOT NULL,
-    batch_number                   VARCHAR(7)  NOT NULL
+    batch_number                   NUMERIC(7)  NOT NULL
 );
 
 -- Create the ach_iat_batch_headers table
@@ -256,7 +256,7 @@ CREATE TABLE ach_ppd_entry_details
     trace_number                     VARCHAR(15)    NOT NULL
 );
 
--- Create the ach_ppd_addenda_records table
+-- Create the ach_ppd_addenda_details table
 CREATE TABLE ach_ppd_addenda_details
 (
     ach_records_type_7_id        UUID UNIQUE NOT NULL REFERENCES ach_records_type_7 (ach_records_type_7_id) ON DELETE CASCADE ON UPDATE CASCADE,
@@ -268,7 +268,7 @@ CREATE TABLE ach_ppd_addenda_details
 );
 
 -- Create the ach_batch_control table
-CREATE TABLE ach_batch_control_records
+CREATE TABLE ach_batch_control_details
 (
     ach_records_type_8_id            UUID UNIQUE    NOT NULL REFERENCES ach_records_type_8 (ach_records_type_8_id) ON DELETE CASCADE ON UPDATE CASCADE,
     record_type_code                 VARCHAR(1)     NOT NULL DEFAULT 8,
@@ -285,7 +285,7 @@ CREATE TABLE ach_batch_control_records
 );
 
 -- Create the ach_file_control table
-CREATE TABLE ach_file_control_records
+CREATE TABLE ach_file_control_details
 (
     ach_records_type_9_id            UUID UNIQUE    NOT NULL REFERENCES ach_records_type_9 (ach_records_type_9_id) ON DELETE CASCADE ON UPDATE CASCADE,
     record_type_code                 VARCHAR(1)     NOT NULL DEFAULT 9,

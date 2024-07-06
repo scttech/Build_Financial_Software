@@ -133,9 +133,11 @@ class TestLoadingIatFiles:
                         (SELECT COUNT(*) FROM ach_iat_addenda_14_details) AS record_count_type714,
                         (SELECT COUNT(*) FROM ach_iat_addenda_15_details) AS record_count_type715,
                         (SELECT COUNT(*) FROM ach_iat_addenda_16_details) AS record_count_type716,
-                        (SELECT COUNT(*) FROM ach_batch_control_records) AS record_count_type8,
-                        (SELECT COUNT(*) FROM ach_file_control_records) AS record_count_type9
+                        (SELECT COUNT(*) FROM ach_batch_control_details) AS record_count_type8,
+                        (SELECT COUNT(*) FROM ach_file_control_details) AS record_count_type9
                 ) AS record_counts
                 """
             ).fetchone()
             record_counts["exception_count"] = len(exceptions)
+
+        assert record_counts == expected_results
