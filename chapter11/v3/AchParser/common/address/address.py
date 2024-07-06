@@ -1,6 +1,6 @@
 from typing import Optional
 
-from pydantic import BaseModel, Field, UUID4, ConfigDict
+from pydantic import BaseModel, Field, UUID4
 
 from chapter11.v3.AchParser.common.address.address_type import AddressType
 

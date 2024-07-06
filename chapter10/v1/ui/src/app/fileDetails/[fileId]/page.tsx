@@ -1,6 +1,7 @@
 'use client';
 import * as React from 'react';
-import { createTheme, ThemeProvider } from '@mui/material/styles';
+import {useEffect, useState} from 'react';
+import {createTheme, ThemeProvider} from '@mui/material/styles';
 import CssBaseline from '@mui/material/CssBaseline';
 import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
@@ -9,7 +10,6 @@ import Container from '@mui/material/Container';
 import Link from '@mui/material/Link';
 import StandardNavigation from "@/app/components/navigation/StandardNavigation";
 import AchBatchesScatterPlot from "@/app/components/charts/scatter/AchBatchesScatterPlot";
-import {useEffect, useState} from "react";
 import axios from "axios";
 import Paper from "@mui/material/Paper";
 import {Accordion, AccordionDetails, AccordionSummary, Divider} from "@mui/material";

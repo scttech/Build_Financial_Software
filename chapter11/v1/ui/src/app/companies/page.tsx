@@ -1,12 +1,12 @@
 'use client';
 import * as React from 'react';
-import { createTheme, ThemeProvider } from '@mui/material/styles';
+import {useState} from 'react';
+import {createTheme, ThemeProvider} from '@mui/material/styles';
 import CssBaseline from '@mui/material/CssBaseline';
 import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
 import TopMenuBar from "@/app/components/navigation/TopMenuBar";
 import SideBarNav from "@/app/components/navigation/SideBarNav";
-import {useState} from "react";
 import Container from '@mui/material/Container';
 
 // TODO remove, this demo shouldn't need to reset the theme.

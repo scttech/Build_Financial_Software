@@ -1,7 +1,8 @@
 import hashlib
 
-from chapter6.AchFileApis.app.database import DbUtils
 from fastapi import APIRouter, status, File, UploadFile
+
+from chapter6.AchFileApis.app.database import DbUtils
 
 router = APIRouter(prefix="/api/v1/files")
 

@@ -1,4 +1,5 @@
 from uuid import UUID
+
 from psycopg.rows import class_row
 
 from chapter11.v1.AchParser.ach_processor.database.db_utils import get_db_connection

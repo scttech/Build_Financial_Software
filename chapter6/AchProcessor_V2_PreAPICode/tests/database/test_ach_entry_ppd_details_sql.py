@@ -1,7 +1,8 @@
 import pytest
 
 from chapter6.AchProcessor_V2_PreAPICode.ach_processor.database.ach_entry_ppd_details_sql import AchEntryPpdDetailsSql
-from chapter6.AchProcessor_V2_PreAPICode.ach_processor.schemas.ach_entry_ppd_details_schema import AchEntryPpdDetailsSchema
+from chapter6.AchProcessor_V2_PreAPICode.ach_processor.schemas.ach_entry_ppd_details_schema import \
+    AchEntryPpdDetailsSchema
 from chapter6.AchProcessor_V2_PreAPICode.tests.sql_utils import SqlUtils
 
 

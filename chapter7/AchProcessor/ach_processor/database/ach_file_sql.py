@@ -1,9 +1,10 @@
 from typing import Optional
 from uuid import UUID
 
+from psycopg.rows import class_row
+
 from chapter7.AchProcessor.ach_processor.database.db_utils import get_db_connection
 from chapter7.AchProcessor.ach_processor.schemas.ach_file_schema import AchFileSchema
-from psycopg.rows import class_row
 
 
 class AchFileSql:

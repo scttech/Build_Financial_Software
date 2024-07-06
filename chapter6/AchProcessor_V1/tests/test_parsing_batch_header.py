@@ -1,7 +1,9 @@
-from chapter6.AchProcessor_V1.ach_processor.AchFileProcessor import AchFileProcessor
 import pytest
-from chapter6.AchProcessor_V1.tests.SqlUtils import SqlUtils
 from psycopg.rows import dict_row
+
+from chapter6.AchProcessor_V1.ach_processor.AchFileProcessor import AchFileProcessor
+from chapter6.AchProcessor_V1.tests.SqlUtils import SqlUtils
+
 
 @pytest.fixture
 def setup_teardown_method():

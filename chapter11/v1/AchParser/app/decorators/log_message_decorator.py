@@ -1,5 +1,6 @@
-from fastapi import Request
 from functools import wraps
+
+from fastapi import Request
 
 
 def log_message(message: str):

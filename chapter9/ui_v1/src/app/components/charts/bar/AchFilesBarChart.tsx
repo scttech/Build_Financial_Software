@@ -1,21 +1,7 @@
 import * as React from 'react';
-import {
-    ScatterChart,
-    Scatter,
-    XAxis,
-    YAxis,
-    CartesianGrid,
-    Tooltip,
-    Cell,
-    ResponsiveContainer,
-    Legend,
-    BarChart, Bar
-} from 'recharts';
+import {Bar, BarChart, CartesianGrid, Legend, ResponsiveContainer, Tooltip, XAxis, YAxis} from 'recharts';
 import Title from "@/app/components/Title";
-import {AchBatchInfo, AchCompanyBatchInfo} from "@/app/fileDetails/[fileId]/page";
 import {CurrencyTick} from "@/app/components/charts/CurrencyTick";
-import {AchBatchesScatterTooltip} from "@/app/components/charts/scatter/AchBatchesScatterTooltip";
-import {stringToColor} from "@/app/utils/ColorUtils";
 import {AchFiles} from "@/app/interfaces/AchFiles";
 import {AchFilesBarChartToolTip} from "@/app/components/charts/bar/AchFilesBarChartTooltip";
 import {determineScaleAndLabel, getMaxForYAxis} from "@/app/utils/ChartUtils";

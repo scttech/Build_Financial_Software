@@ -4,10 +4,10 @@ import ChevronLeftIcon from "@mui/icons-material/ChevronLeft";
 import Divider from "@mui/material/Divider";
 import List from "@mui/material/List";
 import * as React from "react";
+import {useEffect, useState} from "react";
 import {styled} from "@mui/material/styles";
 import MuiDrawer from "@mui/material/Drawer";
 import {DRAWER_WIDTH} from "@/app/constants/Constants";
-import {useEffect, useState} from "react";
 import MainListItems from "@/app/components/navigation/NavButtons";
 
 interface SideBarNavProps {

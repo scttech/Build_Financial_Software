@@ -1,7 +1,8 @@
-from fastapi.testclient import TestClient
-from chapter6.AchFileApis.tests.SqlUtils import SqlUtils
 import pytest
+from fastapi.testclient import TestClient
+
 from chapter6.AchFileApis.app.main import app
+from chapter6.AchFileApis.tests.SqlUtils import SqlUtils
 
 client = TestClient(app)
 

@@ -1,4 +1,5 @@
 import os
+
 import psycopg
 
 POSTGRES_USER = os.getenv("POSTGRES_USER") or "postgres"

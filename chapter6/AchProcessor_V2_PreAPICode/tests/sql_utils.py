@@ -14,12 +14,18 @@ from chapter6.AchProcessor_V2_PreAPICode.ach_processor.database.ach_records_sql_
 from chapter6.AchProcessor_V2_PreAPICode.ach_processor.database.ach_records_sql_type_9 import AchRecordsSqlType9
 from chapter6.AchProcessor_V2_PreAPICode.ach_processor.schemas.ach_file_header_schema import AchFileHeaderSchema
 from chapter6.AchProcessor_V2_PreAPICode.ach_processor.schemas.ach_file_schema import AchFileSchema
-from chapter6.AchProcessor_V2_PreAPICode.ach_processor.schemas.ach_record.ach_record_type_1_schema import AchRecordType1Schema
-from chapter6.AchProcessor_V2_PreAPICode.ach_processor.schemas.ach_record.ach_record_type_5_schema import AchRecordType5Schema
-from chapter6.AchProcessor_V2_PreAPICode.ach_processor.schemas.ach_record.ach_record_type_6_schema import AchRecordType6Schema
-from chapter6.AchProcessor_V2_PreAPICode.ach_processor.schemas.ach_record.ach_record_type_7_schema import AchRecordType7Schema
-from chapter6.AchProcessor_V2_PreAPICode.ach_processor.schemas.ach_record.ach_record_type_8_schema import AchRecordType8Schema
-from chapter6.AchProcessor_V2_PreAPICode.ach_processor.schemas.ach_record.ach_record_type_9_schema import AchRecordType9Schema
+from chapter6.AchProcessor_V2_PreAPICode.ach_processor.schemas.ach_record.ach_record_type_1_schema import \
+    AchRecordType1Schema
+from chapter6.AchProcessor_V2_PreAPICode.ach_processor.schemas.ach_record.ach_record_type_5_schema import \
+    AchRecordType5Schema
+from chapter6.AchProcessor_V2_PreAPICode.ach_processor.schemas.ach_record.ach_record_type_6_schema import \
+    AchRecordType6Schema
+from chapter6.AchProcessor_V2_PreAPICode.ach_processor.schemas.ach_record.ach_record_type_7_schema import \
+    AchRecordType7Schema
+from chapter6.AchProcessor_V2_PreAPICode.ach_processor.schemas.ach_record.ach_record_type_8_schema import \
+    AchRecordType8Schema
+from chapter6.AchProcessor_V2_PreAPICode.ach_processor.schemas.ach_record.ach_record_type_9_schema import \
+    AchRecordType9Schema
 
 POSTGRES_USER = "someuser"
 POSTGRES_PASSWORD = "supersecret"

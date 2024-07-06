@@ -1,5 +1,5 @@
 import React, {useEffect, useState} from 'react';
-import {Container, Paper, Box} from '@mui/material';
+import {Box, Container, Paper} from '@mui/material';
 import axios from "axios";
 import {DataGrid, GridColDef} from "@mui/x-data-grid";
 import Title from "@/app/components/Title";

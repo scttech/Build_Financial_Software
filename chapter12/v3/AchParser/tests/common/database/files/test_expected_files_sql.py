@@ -1,6 +1,7 @@
+from pathlib import Path
+
 import pytest
 from testcontainers.compose import DockerCompose
-from pathlib import Path
 
 from chapter12.v3.AchParser.common.database.files.expected_files_sql import (
     ExpectedFilesSql,

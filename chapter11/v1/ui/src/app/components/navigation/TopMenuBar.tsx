@@ -4,12 +4,12 @@ import MenuIcon from "@mui/icons-material/Menu";
 import Typography from "@mui/material/Typography";
 import Badge from "@mui/material/Badge";
 import NotificationsIcon from "@mui/icons-material/Notifications";
-import MuiAppBar, { AppBarProps as MuiAppBarProps } from '@mui/material/AppBar';
+import MuiAppBar, {AppBarProps as MuiAppBarProps} from '@mui/material/AppBar';
 
 import * as React from "react";
+import {useEffect, useState} from "react";
 import {styled} from "@mui/material/styles";
 import {DRAWER_WIDTH} from "@/app/constants/Constants";
-import {useEffect, useState} from "react";
 
 interface AppBarProps extends MuiAppBarProps {
     open?: boolean;

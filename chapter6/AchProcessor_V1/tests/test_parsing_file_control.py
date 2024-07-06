@@ -1,8 +1,9 @@
 from typing import Dict
 
 import pytest
-from chapter6.AchProcessor_V1.ach_processor.AchFileProcessor import AchFileProcessor
 from psycopg.rows import dict_row
+
+from chapter6.AchProcessor_V1.ach_processor.AchFileProcessor import AchFileProcessor
 from chapter6.AchProcessor_V1.tests.SqlUtils import SqlUtils
 
 TABLE_NAME: str = "ach_file_control_records"

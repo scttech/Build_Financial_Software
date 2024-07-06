@@ -1,17 +1,10 @@
-from decimal import Decimal
 from typing import Literal
 
-from chapter12.v1.AchParser.ach_processor.ach_file_processor import AchFileProcessor
 import pytest
 
-from chapter12.v1.AchParser.ach_processor.database.ach.iat.ach_iat_710_addenda_sql import (
-    AchIat710AddendaSql,
-)
+from chapter12.v1.AchParser.ach_processor.ach_file_processor import AchFileProcessor
 from chapter12.v1.AchParser.ach_processor.database.ach.iat.ach_iat_711_addenda_sql import (
     AchIat711AddendaSql,
-)
-from chapter12.v1.AchParser.ach_processor.database.ach_addenda_ppd_sql import (
-    AchAddendaPpdSql,
 )
 from chapter12.v1.AchParser.tests.ach_processor.sql_utils import SqlUtils
 

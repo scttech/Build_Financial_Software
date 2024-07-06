@@ -1,5 +1,7 @@
-import pytest
 from typing import Dict
+
+import pytest
+
 from chapter12.v3.AchParser.ach_processor.ach_file_processor import AchFileProcessor
 from chapter12.v3.AchParser.ach_processor.database.ach_file_header_sql import (
     AchFileHeaderSql,

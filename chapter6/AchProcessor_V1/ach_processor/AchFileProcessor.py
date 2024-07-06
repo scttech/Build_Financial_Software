@@ -1,5 +1,6 @@
-from typing import Dict, List, Any
 import os
+from typing import Dict, List, Any
+
 import psycopg
 from psycopg import Connection
 

@@ -1,6 +1,6 @@
-from chapter6.AchProcessor_V2_PreAPICode.ach_processor.ach_file_processor import AchFileProcessor
 import pytest
 
+from chapter6.AchProcessor_V2_PreAPICode.ach_processor.ach_file_processor import AchFileProcessor
 from chapter6.AchProcessor_V2_PreAPICode.ach_processor.database.ach_batch_header_sql import AchBatchHeaderSql
 from chapter6.AchProcessor_V2_PreAPICode.tests.sql_utils import SqlUtils
 

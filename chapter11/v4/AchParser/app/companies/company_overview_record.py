@@ -7,8 +7,6 @@ from pydantic import (
 )
 
 from chapter11.v4.AchParser.app.companies.industry_type import IndustryType
-from chapter11.v4.AchParser.common.address.address import Address
-from chapter11.v4.AchParser.common.phone.phone import Phone
 
 
 class CompanyOverviewRecord(BaseModel):

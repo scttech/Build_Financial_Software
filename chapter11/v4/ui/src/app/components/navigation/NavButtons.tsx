@@ -1,7 +1,7 @@
 import ListItemButton from "@mui/material/ListItemButton";
 import ListItemIcon from "@mui/material/ListItemIcon";
 import ListItemText from "@mui/material/ListItemText";
-import {CloudUpload, Logout, Error, Search, History, Store, Dashboard} from "@mui/icons-material";
+import {CloudUpload, Dashboard, Error, History, Logout, Search, Store} from "@mui/icons-material";
 import * as React from "react";
 import {useRouter} from "next/navigation";
 import {logout} from "@/app/lib/actions";

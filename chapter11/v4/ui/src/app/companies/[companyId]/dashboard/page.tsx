@@ -1,5 +1,6 @@
 'use client';
 import * as React from 'react';
+import {useEffect, useState} from 'react';
 import {createTheme, ThemeProvider} from '@mui/material/styles';
 import CssBaseline from '@mui/material/CssBaseline';
 import Box from '@mui/material/Box';
@@ -7,11 +8,9 @@ import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
 import Grid from '@mui/material/Grid';
-import Paper from '@mui/material/Paper';
 import Link from '@mui/material/Link';
 import StandardNavigation from "@/app/components/navigation/StandardNavigation";
 import CompanyInformation from "@/app/components/companies/dashboard/CompanyInformation";
-import {useEffect, useState} from "react";
 import {Company} from "@/app/interfaces/companies/Company";
 import {CompanyDetailResponse} from "@/app/interfaces/companies/CompanyDetailResponse";
 import {IndustryType} from "@/app/interfaces/common/IndustryType";

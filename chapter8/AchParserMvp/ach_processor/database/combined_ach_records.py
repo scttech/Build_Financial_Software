@@ -1,6 +1,7 @@
 """AchRecordsSql is a class that handles the sql queries for ach_records"""
 
 from uuid import UUID
+
 from psycopg.rows import class_row
 
 from chapter8.AchParserMvp.ach_processor.database.db_utils import get_db_connection

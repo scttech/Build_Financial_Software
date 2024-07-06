@@ -1,6 +1,8 @@
 import os
-import pytest
 from typing import Generator
+
+import pytest
+
 from chapter12.v2.AchParser.ach_processor.ach_file_processor import AchFileProcessor
 from chapter12.v2.AchParser.tests.ach_processor.sql_utils import SqlUtils
 

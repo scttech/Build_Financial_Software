@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { createTheme, ThemeProvider } from '@mui/material/styles';
+import {createTheme, ThemeProvider} from '@mui/material/styles';
 import CssBaseline from '@mui/material/CssBaseline';
 import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
@@ -11,8 +11,6 @@ import Link from '@mui/material/Link';
 import Chart from './Chart';
 import Deposits from './Deposits';
 import Orders from './RecentAchUploads';
-import TopMenuBar from "@/app/components/navigation/TopMenuBar";
-import SideBarNav from "@/app/components/navigation/SideBarNav";
 import StandardNavigation from "@/app/components/navigation/StandardNavigation";
 
 function Copyright(props: any) {

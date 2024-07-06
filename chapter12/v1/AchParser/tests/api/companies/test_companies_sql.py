@@ -1,7 +1,9 @@
-import pytest
-from chapter12.v1.AchParser.app.companies.companies_sql import CompaniesSql
-from testcontainers.compose import DockerCompose
 from pathlib import Path
+
+import pytest
+from testcontainers.compose import DockerCompose
+
+from chapter12.v1.AchParser.app.companies.companies_sql import CompaniesSql
 
 
 @pytest.fixture(scope="module")

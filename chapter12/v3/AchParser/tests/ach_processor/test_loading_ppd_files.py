@@ -1,7 +1,7 @@
 import os
-import pytest
 from typing import Generator
 
+import pytest
 from psycopg.rows import dict_row
 
 from chapter12.v3.AchParser.ach_processor.ach_file_processor import AchFileProcessor

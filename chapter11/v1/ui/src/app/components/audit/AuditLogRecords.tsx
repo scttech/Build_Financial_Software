@@ -7,7 +7,7 @@ import Box from '@mui/material/Box';
 import {DataGrid, GridColDef} from "@mui/x-data-grid";
 import Container from "@mui/material/Container";
 import Paper from "@mui/material/Paper";
-import { IconButton } from '@mui/material';
+import {IconButton} from '@mui/material';
 import InfoIcon from '@mui/icons-material/Info';
 import {AuditResponse} from "@/app/interfaces/AuditResponse";
 import {convertDateFormat} from "@/app/utils/DateUtils";

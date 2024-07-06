@@ -1,11 +1,9 @@
-from unittest.mock import patch
+from pathlib import Path
+
 import pytest
-from starlette.testclient import TestClient
+from testcontainers.compose import DockerCompose
 
 from chapter11.v2.AchParser.app.companies.companies_sql import CompaniesSql
-from chapter11.v2.AchParser.app.main import app
-from testcontainers.compose import DockerCompose
-from pathlib import Path
 
 
 @pytest.fixture(scope="module")

@@ -1,12 +1,10 @@
 'use client';
 import * as React from 'react';
-import { createTheme, ThemeProvider } from '@mui/material/styles';
+import {DragEvent, useCallback, useState} from 'react';
+import {createTheme, ThemeProvider} from '@mui/material/styles';
 import CssBaseline from '@mui/material/CssBaseline';
 import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
-import TopMenuBar from "@/app/components/navigation/TopMenuBar";
-import SideBarNav from "@/app/components/navigation/SideBarNav";
-import {useCallback, useState, DragEvent} from "react";
 import Paper from '@mui/material/Paper';
 import Button from '@mui/material/Button';
 import {CloudUpload} from "@mui/icons-material";

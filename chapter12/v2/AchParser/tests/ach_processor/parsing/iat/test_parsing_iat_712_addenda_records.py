@@ -1,5 +1,5 @@
-from typing import Literal
 import pytest
+
 from chapter12.v2.AchParser.ach_processor.ach_file_processor import AchFileProcessor
 from chapter12.v2.AchParser.ach_processor.database.ach.iat.ach_iat_712_addenda_sql import (
     AchIat712AddendaSql,

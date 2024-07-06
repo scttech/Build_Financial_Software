@@ -1,5 +1,5 @@
 import React from 'react';
-import { Paper, Typography } from '@mui/material';
+import {Paper, Typography} from '@mui/material';
 import Grid from '@mui/material/Unstable_Grid2';
 
 

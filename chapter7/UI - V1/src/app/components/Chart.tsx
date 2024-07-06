@@ -1,6 +1,6 @@
 import * as React from 'react';
-import { useTheme } from '@mui/material/styles';
-import {LineChart, Line, XAxis, YAxis, Label, ResponsiveContainer, Legend, Tooltip} from 'recharts';
+import {useTheme} from '@mui/material/styles';
+import {Label, Legend, Line, LineChart, ResponsiveContainer, Tooltip, XAxis, YAxis} from 'recharts';
 import Title from './Title';
 
 // Generate Sales Data

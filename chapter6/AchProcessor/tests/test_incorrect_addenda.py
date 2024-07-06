@@ -5,6 +5,7 @@ import pytest
 from chapter6.AchProcessor.ach_processor.AchFileProcessor import AchFileProcessor
 from chapter6.AchProcessor.tests.SqlUtils import SqlUtils
 
+
 @pytest.fixture()
 def parser() -> AchFileProcessor:
     parser = AchFileProcessor()

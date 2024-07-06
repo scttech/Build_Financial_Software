@@ -1,13 +1,5 @@
 import * as React from 'react';
-import {
-    XAxis,
-    YAxis,
-    CartesianGrid,
-    Tooltip,
-    ResponsiveContainer,
-    Legend,
-    BarChart, Bar
-} from 'recharts';
+import {Bar, BarChart, CartesianGrid, Legend, ResponsiveContainer, Tooltip, XAxis, YAxis} from 'recharts';
 import Title from "@/app/components/Title";
 import {CurrencyTick} from "@/app/components/charts/CurrencyTick";
 import {AchFiles} from "@/app/interfaces/AchFiles";

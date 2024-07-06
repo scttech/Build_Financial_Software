@@ -1,7 +1,8 @@
 from decimal import Decimal
+from typing import Dict
 
 import pytest
-from typing import Dict
+
 from chapter11.v3.AchParser.ach_processor.ach_file_processor import AchFileProcessor
 from chapter11.v3.AchParser.ach_processor.database.ach_file_control_sql import (
     AchFileControlSql,

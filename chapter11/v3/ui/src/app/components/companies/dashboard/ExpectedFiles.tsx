@@ -1,14 +1,9 @@
 import React, {useEffect, useState} from 'react';
-import {Container, Paper, Typography, Box} from '@mui/material';
-import {useRouter} from "next/navigation";
+import {Box, Container, Paper} from '@mui/material';
 import axios from "axios";
-import {AchBatchSearchResponse} from "@/app/interfaces/AchBatchSearchResponse";
 import {DataGrid, GridColDef} from "@mui/x-data-grid";
-import Link from "@mui/material/Link";
-import {formatCurrency} from "@/app/utils/CurrencyUtils";
 import Title from "@/app/components/Title";
 import {CompanyExpectedFilesResponse} from "@/app/interfaces/companies/CompanyExpectedFilesResponse";
-import InfoIcon from "@mui/icons-material/Info";
 import {RadioButtonUnchecked, TaskAlt} from "@mui/icons-material";
 
 interface ExpectedFilesProps {

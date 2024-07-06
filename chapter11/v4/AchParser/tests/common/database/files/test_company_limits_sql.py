@@ -1,8 +1,7 @@
-from decimal import Decimal
+from pathlib import Path
 
 import pytest
 from testcontainers.compose import DockerCompose
-from pathlib import Path
 
 from chapter11.v4.AchParser.common.database.company.company_limits_sql import (
     CompanyLimitsSql,

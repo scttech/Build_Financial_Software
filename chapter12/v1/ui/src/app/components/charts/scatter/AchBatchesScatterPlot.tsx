@@ -1,5 +1,5 @@
 import * as React from 'react';
-import {ScatterChart, Scatter, XAxis, YAxis, CartesianGrid, Tooltip, Cell, ResponsiveContainer, Legend} from 'recharts';
+import {CartesianGrid, Cell, Legend, ResponsiveContainer, Scatter, ScatterChart, Tooltip, XAxis, YAxis} from 'recharts';
 import Title from "@/app/components/Title";
 import {AchBatchInfo, AchCompanyBatchInfo} from "@/app/fileDetails/[fileId]/page";
 import {CurrencyTick} from "@/app/components/charts/CurrencyTick";

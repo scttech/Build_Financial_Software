@@ -1,7 +1,8 @@
 import pytest
 
 from chapter8.AchParserMvpNoSignOnScreen.ach_processor.database.ach_addenda_ppd_sql import AchAddendaPpdSql
-from chapter8.AchParserMvpNoSignOnScreen.ach_processor.schemas.database.ach_addenda_ppd_schema import AchAddendaPpdSchema
+from chapter8.AchParserMvpNoSignOnScreen.ach_processor.schemas.database.ach_addenda_ppd_schema import \
+    AchAddendaPpdSchema
 from chapter8.AchParserMvpNoSignOnScreen.tests.ach_processor.sql_utils import SqlUtils
 
 

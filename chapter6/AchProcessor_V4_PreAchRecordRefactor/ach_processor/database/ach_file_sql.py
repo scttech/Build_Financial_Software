@@ -1,8 +1,13 @@
 from uuid import UUID
 
-from chapter6.AchProcessor_V4_PreAchRecordRefactor.ach_processor.database.db_utils import get_db_connection
-from chapter6.AchProcessor_V4_PreAchRecordRefactor.ach_processor.schemas.ach_file_schema import AchFileSchema
 from psycopg.rows import class_row
+
+from chapter6.AchProcessor_V4_PreAchRecordRefactor.ach_processor.database.db_utils import (
+    get_db_connection,
+)
+from chapter6.AchProcessor_V4_PreAchRecordRefactor.ach_processor.schemas.ach_file_schema import (
+    AchFileSchema,
+)
 
 
 class AchFileSql:
@@ -13,7 +18,9 @@ class AchFileSql:
                 INSERT INTO ach_files(ach_files_id, file_name, file_hash, created_at)
                                VALUES (DEFAULT, %(file_name)s, %(file_hash)s, DEFAULT)
                                RETURNING ach_files_id
-                                """, ach_file.model_dump())
+                                """,
+                ach_file.model_dump(),
+            )
 
         return result.fetchone()[0]
 
@@ -22,7 +29,9 @@ class AchFileSql:
             result = conn.execute(
                 """
                 SELECT * FROM ach_files WHERE ach_files_id = %s
-                """, [ach_file_id.hex])
+                """,
+                [ach_file_id.hex],
+            )
 
             record = result.fetchone()
 
@@ -30,4 +39,3 @@ class AchFileSql:
                 raise KeyError(f"Record with id {ach_file_id} not found")
 
             return record
-

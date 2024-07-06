@@ -3,7 +3,8 @@ from uuid import UUID
 from psycopg.rows import class_row
 
 from chapter8.AchParserMvpNoSignOnScreen.ach_processor.database.db_utils import get_db_connection
-from chapter8.AchParserMvpNoSignOnScreen.ach_processor.schemas.database.ach_addenda_ppd_schema import AchAddendaPpdSchema
+from chapter8.AchParserMvpNoSignOnScreen.ach_processor.schemas.database.ach_addenda_ppd_schema import \
+    AchAddendaPpdSchema
 
 
 class AchAddendaPpdSql:

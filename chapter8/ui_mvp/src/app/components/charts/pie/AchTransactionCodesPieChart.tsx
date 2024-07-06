@@ -1,25 +1,8 @@
 import * as React from 'react';
-import {
-    ScatterChart,
-    Scatter,
-    XAxis,
-    YAxis,
-    CartesianGrid,
-    Tooltip,
-    Cell,
-    ResponsiveContainer,
-    Legend,
-    BarChart, Bar, Sector, PieChart, Pie
-} from 'recharts';
+import {useState} from 'react';
+import {Cell, Pie, PieChart, ResponsiveContainer, Sector} from 'recharts';
 import Title from "@/app/components/Title";
-import {AchBatchInfo, AchCompanyBatchInfo} from "@/app/fileDetails/[fileId]/page";
-import {CurrencyTick} from "@/app/components/charts/CurrencyTick";
-import {AchBatchesScatterTooltip} from "@/app/components/charts/scatter/AchBatchesScatterTooltip";
-import {stringToColor} from "@/app/utils/ColorUtils";
-import {AchFiles} from "@/app/interfaces/AchFiles";
-import {AchFilesBarChartToolTip} from "@/app/components/charts/bar/AchFilesBarChartTooltip";
 import {AchBatchEntriesResponse} from "@/app/fileDetails/[fileId]/batchDetails/[batchId]/page";
-import {useState} from "react";
 
 interface AchTransactionCodesPieChartProps {
     entries: AchBatchEntriesResponse[];

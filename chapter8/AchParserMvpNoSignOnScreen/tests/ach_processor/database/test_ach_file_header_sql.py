@@ -1,7 +1,8 @@
 import pytest
 
 from chapter8.AchParserMvpNoSignOnScreen.ach_processor.database.ach_file_header_sql import AchFileHeaderSql
-from chapter8.AchParserMvpNoSignOnScreen.ach_processor.schemas.database.ach_file_header_schema import AchFileHeaderSchema
+from chapter8.AchParserMvpNoSignOnScreen.ach_processor.schemas.database.ach_file_header_schema import \
+    AchFileHeaderSchema
 from chapter8.AchParserMvpNoSignOnScreen.tests.ach_processor.sql_utils import SqlUtils
 
 

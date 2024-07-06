@@ -1,5 +1,4 @@
 import {Box} from '@mui/material';
-import {createTheme, ThemeProvider} from "@mui/material/styles";
 
 interface ImageProps {
     base64: string;

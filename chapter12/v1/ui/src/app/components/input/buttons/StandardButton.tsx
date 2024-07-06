@@ -1,6 +1,6 @@
 // components/StyledButton.tsx
-import { Button } from '@mui/material';
-import { styled } from '@mui/system';
+import {Button} from '@mui/material';
+import {styled} from '@mui/system';
 
 const StyledButton = styled(Button)({
   marginTop: '20px',

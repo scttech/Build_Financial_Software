@@ -1,8 +1,9 @@
 from uuid import UUID
 
+from psycopg.rows import class_row
+
 from chapter6.AchProcessor_V3.ach_processor.database.db_utils import get_db_connection
 from chapter6.AchProcessor_V3.ach_processor.schemas.ach_file_schema import AchFileSchema
-from psycopg.rows import class_row
 
 
 class AchFileSql:

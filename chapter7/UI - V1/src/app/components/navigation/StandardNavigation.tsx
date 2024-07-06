@@ -1,4 +1,3 @@
-import {useEffect, useState} from "react";
 import * as React from "react";
 import TopMenuBar from "@/app/components/navigation/TopMenuBar";
 import SideBarNav from "@/app/components/navigation/SideBarNav";

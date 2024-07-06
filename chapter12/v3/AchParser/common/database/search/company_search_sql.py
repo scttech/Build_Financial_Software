@@ -1,6 +1,8 @@
 import re
 from uuid import UUID
+
 from psycopg.rows import dict_row
+
 from chapter12.v3.AchParser.ach_processor.database.db_utils import get_db_connection
 from chapter12.v3.AchParser.app.companies.companies_sql import CompaniesSql
 from chapter12.v3.AchParser.app.companies.company_detail_record import (

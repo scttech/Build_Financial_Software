@@ -2,7 +2,7 @@
 import * as React from "react";
 import TopMenuBar from "@/app/components/navigation/TopMenuBar";
 import SideBarNav from "@/app/components/navigation/SideBarNav";
-import { Box, Toolbar } from "@mui/material";
+import {Box} from "@mui/material";
 
 export default function StandardNavigation() {
 

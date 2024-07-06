@@ -1,5 +1,7 @@
-from psycopg.rows import class_row, dict_row
 from uuid import UUID
+
+from psycopg.rows import class_row, dict_row
+
 from chapter11.v4.AchParser.ach_processor.database.db_utils import get_db_connection
 from chapter11.v4.AchParser.app.companies.company_detail_record import (
     CompanyDetailRecord,

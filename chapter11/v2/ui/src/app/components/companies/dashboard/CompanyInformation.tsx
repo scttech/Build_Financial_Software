@@ -1,6 +1,6 @@
 // components/CompanyInformation.js
 import React, {useLayoutEffect, useState} from 'react';
-import {Container, Grid, Paper, Typography, Box} from '@mui/material';
+import {Box, Container, Grid, Paper, Typography} from '@mui/material';
 import {TinType} from "@/app/interfaces/common/TinType";
 import {Company} from "@/app/interfaces/companies/Company";
 import {AddressType} from "@/app/interfaces/common/AddressType";

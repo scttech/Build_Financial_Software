@@ -1,5 +1,5 @@
 import React, {useEffect, useState} from 'react';
-import {Container, Paper, Typography, Box} from '@mui/material';
+import {Box, Container, Paper} from '@mui/material';
 import {useRouter} from "next/navigation";
 import axios from "axios";
 import {AchBatchSearchResponse} from "@/app/interfaces/AchBatchSearchResponse";

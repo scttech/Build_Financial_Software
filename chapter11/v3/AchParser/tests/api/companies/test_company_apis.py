@@ -1,9 +1,11 @@
+from pathlib import Path
 from unittest.mock import patch
+
 import pytest
 from starlette.testclient import TestClient
-from chapter11.v3.AchParser.app.main import app
 from testcontainers.compose import DockerCompose
-from pathlib import Path
+
+from chapter11.v3.AchParser.app.main import app
 
 
 @pytest.fixture(scope="class", autouse=True)

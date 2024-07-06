@@ -1,6 +1,7 @@
 import pytest
-from pytest_bdd import scenarios, when, then, parsers
 from fastapi.testclient import TestClient
+from pytest_bdd import scenarios, when, then, parsers
+
 from chapter5.APISample_Final.app.main import app
 
 client = TestClient(app)
@@ -8,17 +9,15 @@ client = TestClient(app)
 # Load scenarios
 scenarios("../features/files.feature")
 
+
 @pytest.fixture
 def api_response():
     # Store response from API
     return {}
 
-@when(parsers.parse('I make a {http_request_type} request to the endpoint {endpoint}'))
-def when_http_request_to_endpoint(
-    api_response,
-    http_request_type,
-    endpoint
-):
+
+@when(parsers.parse("I make a {http_request_type} request to the endpoint {endpoint}"))
+def when_http_request_to_endpoint(api_response, http_request_type, endpoint):
     if http_request_type == "GET":
         response = client.get(endpoint)
     elif http_request_type == "POST":

@@ -1,5 +1,6 @@
-from decimal import Decimal
 from datetime import datetime
+from decimal import Decimal
+
 from pydantic import BaseModel, UUID4, Field
 from typing_extensions import Annotated
 

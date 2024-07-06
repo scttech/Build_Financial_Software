@@ -23,6 +23,7 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
+
 def get_db():
     conn = psycopg.connect(DATABASE_URL)
     return conn

@@ -1,7 +1,8 @@
 import pytest
 from pytest_bdd import scenarios, when, then, parsers
-from chapter6.AchProcessor.tests.SqlUtils import SqlUtils
+
 from chapter6.AchProcessor.ach_processor.AchFileProcessor import AchFileProcessor
+from chapter6.AchProcessor.tests.SqlUtils import SqlUtils
 
 # Load scenarios
 scenarios("../features/batch_header.feature")

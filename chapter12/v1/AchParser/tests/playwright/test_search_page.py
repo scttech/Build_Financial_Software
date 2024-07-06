@@ -1,6 +1,6 @@
+import socket
 from pathlib import Path
 from random import randint
-import socket
 
 import pytest
 from playwright.sync_api import Page, expect, sync_playwright

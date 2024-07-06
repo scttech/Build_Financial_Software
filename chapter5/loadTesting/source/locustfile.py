@@ -2,6 +2,7 @@ import random
 
 from locust import HttpUser, task, between
 
+
 class FileUser(HttpUser):
     # Specifies the wait time for a user between executing tasks
     wait_time = between(1, 2.5)
@@ -17,7 +18,9 @@ class FileUser(HttpUser):
         """
         # Sending GET request to the "/files" endpoint
         response = self.client.get("/files")
-        assert response.status_code == 200, f"Unexpected status code: {response.status_code}"
+        assert (
+            response.status_code == 200
+        ), f"Unexpected status code: {response.status_code}"
 
     @task
     def get_file(self):
@@ -27,7 +30,9 @@ class FileUser(HttpUser):
         file_id = random.randrange(1, 10)
         # Sending GET request to the "/files" endpoint
         response = self.client.get(f"/files/{file_id}")
-        assert response.status_code == 200, f"Unexpected status code: {response.status_code}"
+        assert (
+            response.status_code == 200
+        ), f"Unexpected status code: {response.status_code}"
 
     @task
     def post_file(self):
@@ -37,20 +42,27 @@ class FileUser(HttpUser):
         file_id = random.randrange(1, 10)
         # Sending POST request to the "/files" endpoint
         response = self.client.post("/files", json={"file_id": file_id})
-        assert response.status_code == 201, f"Unexpected status code: {response.status_code}"
+        assert (
+            response.status_code == 201
+        ), f"Unexpected status code: {response.status_code}"
 
     @task
     def get_records(self):
         file_id = random.randrange(1, 10)
         response = self.client.get(f"/files/{file_id}/records")
-        assert response.status_code == 200, f"Unexpected status code: {response.status_code}"
+        assert (
+            response.status_code == 200
+        ), f"Unexpected status code: {response.status_code}"
 
     @task
     def get_record(self):
         file_id = random.randrange(1, 10)
         record_id = random.randrange(1, 20)
         response = self.client.get(f"/files/{file_id}/records/{record_id}")
-        assert response.status_code == 200, f"Unexpected status code: {response.status_code}"
+        assert (
+            response.status_code == 200
+        ), f"Unexpected status code: {response.status_code}"
+
 
 # Optional setup for running with command-line flags
 # You could customize these values by passing them as arguments on the command line

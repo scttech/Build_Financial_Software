@@ -3,11 +3,8 @@ import ListItemIcon from "@mui/material/ListItemIcon";
 import DashboardIcon from "@mui/icons-material/Dashboard";
 import ListItemText from "@mui/material/ListItemText";
 import {CloudUpload, Logout} from "@mui/icons-material";
-import PeopleIcon from "@mui/icons-material/People";
-import BarChartIcon from "@mui/icons-material/BarChart";
 import * as React from "react";
 import {useRouter} from "next/navigation";
-import {signOut} from "@/auth";
 import {logout} from "@/app/lib/actions";
 
 export default function MainListItems() {

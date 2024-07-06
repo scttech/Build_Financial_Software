@@ -2,15 +2,20 @@ from uuid import UUID
 
 from psycopg.rows import class_row
 
-from chapter6.AchProcessor_V4_PreAchRecordRefactor.ach_processor.database.db_utils import get_db_connection
-from chapter6.AchProcessor_V4_PreAchRecordRefactor.ach_processor.schemas.ach_batch_control_schema import AchBatchControlSchema
+from chapter6.AchProcessor_V4_PreAchRecordRefactor.ach_processor.database.db_utils import (
+    get_db_connection,
+)
+from chapter6.AchProcessor_V4_PreAchRecordRefactor.ach_processor.schemas.ach_batch_control_schema import (
+    AchBatchControlSchema,
+)
 
 
 class AchBatchControlSql:
 
     def insert_record(self, ach_batch_header: AchBatchControlSchema) -> UUID:
         with get_db_connection() as conn:
-            conn.execute("""
+            conn.execute(
+                """
            INSERT INTO ach_batch_control_records (ach_batch_headers_id, ach_records_id, record_type_code,
             service_class_code, entry_addenda_count, entry_hash, total_debit_entry_dollar_amount,
             total_credit_entry_dollar_amount, company_identification, message_authentication_code,
@@ -19,14 +24,18 @@ class AchBatchControlSql:
             %(entry_hash)s, %(total_debit_entry_dollar_amount)s, %(total_credit_entry_dollar_amount)s,
             %(company_identification)s, %(message_authentication_code)s, %(reserved)s,
             %(originating_dfi_identification)s, %(batch_number)s)
-            """, ach_batch_header.model_dump())
+            """,
+                ach_batch_header.model_dump(),
+            )
 
     def get_record(self, ach_records_id: UUID) -> AchBatchControlSchema:
-        with get_db_connection(row_factory = class_row(AchBatchControlSchema)) as conn:
+        with get_db_connection(row_factory=class_row(AchBatchControlSchema)) as conn:
             result = conn.execute(
                 """
                 SELECT * FROM ach_batch_control_records WHERE ach_records_id = %s
-                """, [ach_records_id.hex])
+                """,
+                [ach_records_id.hex],
+            )
 
         record = result.fetchone()
 
@@ -34,4 +43,3 @@ class AchBatchControlSql:
             raise KeyError(f"Record with id {ach_records_id} not found")
 
         return record
-

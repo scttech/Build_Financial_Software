@@ -1,4 +1,5 @@
 import os
+
 from pylint.checkers import BaseChecker
 
 ALLOWED_MODULES = ["ach_file_sql"]
