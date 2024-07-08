@@ -270,8 +270,8 @@ def create_batch_trailer(
     return f"8{setup_info['service_class_code']}{str(setup_info['entry_count']).rjust(6, '0')}0033003300{str(total_debit_amount).rjust(12, '0')}{str(total_credit_amount).rjust(12, '0')}{setup_info['company_id']}                         {setup_info.get('odfi','06100001')}{str(batch_number).rjust(7, '0')}\n"
 
 
-@pytest.fixture
-def setup_info():
+@pytest.fixture(name="setup_info")
+def fixture_setup_info():
     return {}
 
 

@@ -440,7 +440,7 @@ class SqlUtils:
                 r RECORD;
             BEGIN
                 -- Disable triggers and collect table names
-                FOR r IN SELECT table_name FROM information_schema.tables WHERE table_schema = 'public' AND table_type = 'BASE TABLE' AND table_name NOT IN ('ach_exception_codes', 'ach_recovery_options', 'bank_routing_numbers')
+                FOR r IN SELECT table_name FROM information_schema.tables WHERE table_schema = 'public' AND table_type = 'BASE TABLE' AND table_name NOT IN ('ach_exception_codes', 'ach_recovery_options', 'bank_routing_numbers', 'sdn_list', 'sanctioned_countries')
                 LOOP
                     EXECUTE 'ALTER TABLE ' || quote_ident(r.table_name) || ' DISABLE TRIGGER ALL';
                 END LOOP;
@@ -451,11 +451,11 @@ class SqlUtils:
                     FROM information_schema.tables
                     WHERE table_schema = 'public'
                     AND table_type = 'BASE TABLE'
-                    AND table_name NOT IN ('ach_exception_codes', 'ach_recovery_options', 'bank_routing_numbers')                    
+                    AND table_name NOT IN ('ach_exception_codes', 'ach_recovery_options', 'bank_routing_numbers', 'sdn_list', 'sanctioned_countries')                    
                 );
 
                 -- Re-enable triggers
-                FOR r IN SELECT table_name FROM information_schema.tables WHERE table_schema = 'public' AND table_type = 'BASE TABLE' AND table_name NOT IN ('ach_exception_codes', 'ach_recovery_options', 'bank_routing_numbers')
+                FOR r IN SELECT table_name FROM information_schema.tables WHERE table_schema = 'public' AND table_type = 'BASE TABLE' AND table_name NOT IN ('ach_exception_codes', 'ach_recovery_options', 'bank_routing_numbers', 'sdn_list', 'sanctioned_countries')
                 LOOP
                     EXECUTE 'ALTER TABLE ' || quote_ident(r.table_name) || ' ENABLE TRIGGER ALL';
                 END LOOP;

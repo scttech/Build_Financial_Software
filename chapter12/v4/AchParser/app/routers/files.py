@@ -62,6 +62,8 @@ from chapter12.v4.AchParser.app.decorators.log_message_decorator import log_mess
 from chapter12.v4.AchParser.common.database.files.expected_files_sql import (
     ExpectedFilesSql,
 )
+from chapter12.v4.AchParser.ofac.results.ofac_scan_results import OfacScanResults
+from chapter12.v4.AchParser.ofac.sql.ofac_sql import OfacSql
 
 router = APIRouter(prefix="/api/v1/files")
 security_scheme_http_bearer = HTTPBearer()
@@ -78,6 +80,19 @@ security_scheme_http_bearer = HTTPBearer()
 @log_message("Retrieving ACH files")
 async def read_files(request: Request) -> list[AchFilesResponse]:
     return AchFileSql().get_files_response()
+
+
+@router.get(
+    path="/ofac",
+    response_model=list[OfacScanResults],
+    summary="Scan for OFAC issues in loaded ACH Files",
+    description="Perform an OFAC scan and return the results",
+    response_description="Results of OFAC scan.",
+    tags=["OFAC"],
+)
+@log_message("Performed OFAC Scan on loaded ACH files")
+async def read_files(request: Request) -> list[OfacScanResults]:
+    return OfacSql().get_scan_results()
 
 
 @router.get(

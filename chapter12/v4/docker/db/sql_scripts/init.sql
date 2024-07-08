@@ -24,6 +24,9 @@ SET search_path TO public;
 -- Insert company limits
 \i /docker-entrypoint-initdb.d/sql/create_company_limits.sql
 
+-- Sanctioned data
+\i /docker-entrypoint-initdb.d/sql/create_ofac_data.sql
+
 -- Ensure changes are saved
 commit;
 

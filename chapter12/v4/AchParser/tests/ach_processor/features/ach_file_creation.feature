@@ -187,5 +187,32 @@ Feature: Create ACH files
     And there should be 3 batch in the file
     And there should be 3 entries in the file
 
+  Scenario: Create a file for "Elemental Resources Inc" with OFAC suspects
+    Given I want to create an ACH file named "ofac_elemental_resources.ach"
+    And I want to have an immediate destination of "990000013"
+    And I want to have an immediate origin of "987654321"
+    And I want to have 1 batch with ACH credits and debits and a standard entry class code of "PPD"
+    And I want 10 entries per batch with random amounts between 100 and 5000
+    And I want to use individual names of "Lou Pol, Lou Polle, Loo Pole, Will Chatham, Will Cheatam, Cash Stiller, Cash Steelor, Dusty Boulderson, Shelly Shale"
+    And I want to have company name "ElementalResourcesInc" and company id "459876543"
+    When my ACH is created
+    Then I should have a file of the same name
+    And there should be 1 batch in the file
+    And there should be 10 entries in the file
+
+  Scenario: Create an IAT file with OFAC suspects
+    Given I want to create an ACH file named "ofac_iat.ach"
+    And I want to have an immediate destination of "990000013" with a destination name of "Metropolis Trust Bank"
+    And I want to have an immediate origin of "691000134" with an origin name of "ASF APPLICATION SUPERVI"
+    And I want to have 1 batch with ACH credits only and a standard entry class code of "IAT"
+    And I want 1 entries per batch with random amounts between 100 and 100
+    And I want to use individual names of "Lou Pol"
+    And I want to have company name "My Company" and company id "1234567890"
+    And I want to override the field "odfi" to be "12345678"
+    When my ACH is created
+    Then I should have a file of the same name
+    And there should be 1 batch in the file
+    And there should be 1 entries in the file
+
 
 

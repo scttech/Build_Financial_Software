@@ -1,7 +1,7 @@
 import ListItemButton from "@mui/material/ListItemButton";
 import ListItemIcon from "@mui/material/ListItemIcon";
 import ListItemText from "@mui/material/ListItemText";
-import {CloudUpload, Logout, Error, Search, History, Store, Dashboard} from "@mui/icons-material";
+import {CloudUpload, Logout, Error, Search, History, Store, Dashboard, Face} from "@mui/icons-material";
 import * as React from "react";
 import {useRouter} from "next/navigation";
 import {logout} from "@/app/lib/actions";
@@ -47,6 +47,12 @@ export default function MainListItems() {
                     <History/>
                 </ListItemIcon>
                 <ListItemText primary="Audit Log"/>
+            </ListItemButton>
+            <ListItemButton onClick={() => route.push("/ofac")}>
+                <ListItemIcon>
+                    <Face/>
+                </ListItemIcon>
+                <ListItemText primary="OFAC Report"/>
             </ListItemButton>
             <ListItemButton onClick={() => logout()}>
                 <ListItemIcon>

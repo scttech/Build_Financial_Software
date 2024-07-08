@@ -3,6 +3,9 @@ SET search_path TO public;
 -- Create the uuid extension
 CREATE EXTENSION IF NOT EXISTS "uuid-ossp";
 
+-- Create fuzzystrmatch extension
+CREATE EXTENSION IF NOT EXISTS "fuzzystrmatch";
+
 -- Create the ach_files table
 CREATE TABLE ach_files
 (
@@ -436,6 +439,28 @@ CREATE TABLE company_limits
     daily_credit_limit NUMERIC(12, 2)     DEFAULT NULL,
     created_at         TIMESTAMP NOT NULL DEFAULT NOW(),
     updated_at         TIMESTAMP NOT NULL DEFAULT NOW()
+);
+
+-- Create a SDN table
+CREATE TABLE sdn_list
+(
+    sdn_id          UUID PRIMARY KEY DEFAULT uuid_generate_v4(),
+    first_name      VARCHAR(255) NOT NULL,
+    middle_name     VARCHAR(255) DEFAULT NULL,
+    last_name       VARCHAR(255) NOT NULL,
+    alias           VARCHAR(255) DEFAULT NULL,
+    created_at      TIMESTAMP    NOT NULL DEFAULT NOW(),
+    updated_at      TIMESTAMP    NOT NULL DEFAULT NOW()
+);
+
+-- Create a sanctioned countries table
+CREATE TABLE sanctioned_countries
+(
+    sanctioned_country_id UUID PRIMARY KEY DEFAULT uuid_generate_v4(),
+    country_name          VARCHAR(255) NOT NULL,
+    country_code          VARCHAR(2)   NOT NULL,
+    created_at            TIMESTAMP    NOT NULL DEFAULT NOW(),
+    updated_at            TIMESTAMP    NOT NULL DEFAULT NOW()
 );
 
 -- Create a view

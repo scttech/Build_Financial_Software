@@ -1,10 +1,10 @@
 # Chapter 12: IAT Processing
 
-In v3 of the application, we setup:
+In v4 of the application, we setup:
 
-[X] Renaming tables for better alignment and consistency
+[X] Database changes to support OFAC Scanning
 
-[X] Updating APIs to support PPD and IAT batches
+[X] UI Changes for OFAC Scanning
 
 # Running the ACH Project
 
