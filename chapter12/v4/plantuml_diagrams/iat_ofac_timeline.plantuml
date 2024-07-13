@@ -1,0 +1,24 @@
+@startgantt
+saturday are closed
+sunday are closed
+
+header ACH Dashboard Enhancements - Round 4
+
+Project starts 2024-09-11
+
+-- Database Design --
+[IAT Database Design] starts 2024-08-15 and lasts 4 days
+
+-- IAT Processing --
+[IAT Processing] starts at [IAT Database Design]'s end and lasts 5 days
+
+-- OFAC API and SQL Design --
+[OFAC API Design] starts at [IAT Database Design]'s end and lasts 2 days
+[OFAC SQL Design] starts at [IAT Database Design]'s end and lasts 4 days
+
+-- OFAC Dashboard UI --
+[OFAC Dashboard UI] starts at [OFAC API Design]'s end and lasts 5 days
+
+[Sprint Complete] happens at 2024-09-25
+
+@endgantt

@@ -19,7 +19,7 @@ WITH ach_ppd_collected_names AS (
     INNER JOIN ach_records_type_5 AS art5 USING (ach_records_type_1_id)
     INNER JOIN ach_records_type_6 AS art6 USING (ach_records_type_5_id)
     INNER JOIN ach_ppd_entry_details AS aped USING (ach_records_type_6_id)
-    group by art1.ach_files_id, art5.ach_records_type_5_id, individual_name, cleaned_individual_name
+    GROUP BY art1.ach_files_id, art5.ach_records_type_5_id, individual_name, cleaned_individual_name
 ), ach_iat_collected_names AS (
     SELECT DISTINCT aia10d.receiving_name AS individual_name,
                     REPLACE(aia10d.receiving_name, ' ', '') as cleaned_individual_name,
@@ -31,14 +31,11 @@ WITH ach_ppd_collected_names AS (
     INNER JOIN ach_records_type_6 AS art6 USING (ach_records_type_5_id)
     INNER JOIN ach_records_type_7 AS art7 USING (ach_records_type_6_id)
     INNER JOIN ach_iat_addenda_10_details AS aia10d USING (ach_records_type_7_id)
-    group by art1.ach_files_id, art5.ach_records_type_5_id, individual_name, cleaned_individual_name
+    GROUP BY art1.ach_files_id, art5.ach_records_type_5_id, individual_name, cleaned_individual_name
 ), 
 sdn_names AS (
     SELECT
-        CASE
-            WHEN middle_name IS NULL THEN CONCAT(first_name, ' ', last_name)
-            ELSE CONCAT(first_name, ' ', middle_name, ' ', last_name)
-            END AS sdn_name,
+        CONCAT_WS(' ', first_name, middle_name, last_name) AS sdn_name,
         REPLACE(CONCAT(first_name, middle_name, last_name), ' ', '') as cleaned_sdn_name,
         alias,
         REPLACE(alias, ' ', '') as cleaned_sdn_alias

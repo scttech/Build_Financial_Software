@@ -112,13 +112,13 @@ def calculate_routing_number_check_digit(routing_number: str):
 
 
 def create_iat_entries_and_addenda(
-    setup_info, tran_code, rdfi, check_digit, amount, individual_name, trace_number
+    setup_info, tran_code, amount, individual_name, trace_number
 ):
     # Create the IAT entry
     entries = (
         "6"  # Record Type Code
         f"{tran_code}"  # Transaction Code
-        f"{setup_info.get('rdfi', rdfi)}{setup_info.get('check_digit', check_digit)}"
+        f"{setup_info['immediate_destination'].strip()}"
         f"{setup_info.get('iat_number_of_addenda', '0007')}"
         "             "  # Reserved
         f"{setup_info.get('amount', amount)}"
@@ -216,7 +216,7 @@ def create_entries(setup_info, batch_number):
     batch_entry_hash = 0
     for i in range(setup_info["entry_count"]):
         setup_info["FILE_ENTRY_COUNT"] += 1
-        trace_number = str(batch_number).rjust(8, "0") + str(
+        trace_number = setup_info.get("odfi", "06100001") + str(
             setup_info["FILE_ENTRY_COUNT"]
         ).rjust(7, "0")
         amount = str(
@@ -237,8 +237,6 @@ def create_entries(setup_info, batch_number):
             entries += create_iat_entries_and_addenda(
                 setup_info,
                 tran_code,
-                rdfi,
-                check_digit,
                 amount,
                 individual_name,
                 trace_number,
@@ -267,6 +265,7 @@ def create_entries(setup_info, batch_number):
 def create_batch_trailer(
     setup_info, batch_number, total_debit_amount, total_credit_amount
 ):
+    setup_info["FILE_ENTRY_COUNT"] += 1
     return f"8{setup_info['service_class_code']}{str(setup_info['entry_count']).rjust(6, '0')}0033003300{str(total_debit_amount).rjust(12, '0')}{str(total_credit_amount).rjust(12, '0')}{setup_info['company_id']}                         {setup_info.get('odfi','06100001')}{str(batch_number).rjust(7, '0')}\n"
 
 

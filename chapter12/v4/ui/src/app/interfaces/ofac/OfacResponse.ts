@@ -1,5 +1,6 @@
 
 export interface OfacResponse {
+  id: number;
   ach_files_id: string;
   ach_batch_id: string;
   sdn_name: string;
