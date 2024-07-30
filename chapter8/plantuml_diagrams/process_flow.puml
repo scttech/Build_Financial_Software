@@ -1,0 +1,10 @@
+@startuml
+skinparam monochrome true
+skinparam componentStyle rectangle
+
+[Identify functionality] -right-> [Define API]
+[Define API] -down-> [Add Backend code]
+[Add Backend code] -left-> [Add UI code to present data]
+[Add UI code to present data] -up-> [Identify functionality]: Repeat
+
+@enduml

@@ -1,0 +1,25 @@
+@startmindmap
+title Where to go from here?
+
+* ACH
+** Backend
+*** Asynchronous\nProcessing
+*** ORM Frameworks
+*** APIs
+** UI
+*** Configurable\nDashboards
+*** Forms
+*** Charts
+
+-- Finance
+--- Accounts
+--- Statements
+--- ACH\nOrigination
+--- ACH\nReturns
+--- Positive Pay
+-- Infrastructure
+--- Multi-tenant
+--- CI/CD
+--- Load/UI Testing
+
+@endmindmap

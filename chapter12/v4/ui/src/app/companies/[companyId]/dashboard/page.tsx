@@ -7,7 +7,6 @@ import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
 import Grid from '@mui/material/Grid';
-import Paper from '@mui/material/Paper';
 import Link from '@mui/material/Link';
 import StandardNavigation from "@/app/components/navigation/StandardNavigation";
 import CompanyInformation from "@/app/components/companies/dashboard/CompanyInformation";

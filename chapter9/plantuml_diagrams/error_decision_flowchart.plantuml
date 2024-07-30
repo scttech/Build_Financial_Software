@@ -1,0 +1,28 @@
+@startuml
+
+skinparam componentStyle rectangle
+
+start
+if (Is this a critical error?) then (yes)
+  :Halt processing;
+    note right
+    Critical errors may be required fields missing
+    or invalid data in a field.
+    Something we cannot recover from.
+  end note
+  stop
+else (no)
+  if (Does the user need to know about it now?) then (yes)
+    :Alert user;
+    note right
+    Warnings for users such as approaching
+    daily limits or a discrepancy in control fields
+    such as a balance being incorrect when
+    compared to computed totals.
+    end note
+  else (no)
+    :Log error;
+    :Produce error report;
+endif
+stop
+@enduml
