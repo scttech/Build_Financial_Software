@@ -1,0 +1,33 @@
+@startuml
+start
+:Read ACH Record;
+if (Type 1 - File Header Record) then (yes)
+    repeat
+        :Read ACH Record;
+        if(Type 5 - Batch Header Record) then (yes)
+            :Process Batch;
+            repeat
+                :Process Type 6 - Entry Detail Record;
+                if(Is Addenda Record indicator 1) then (yes)
+                    while (More Addenda Records?) is (yes)
+                        :Process Addenda;
+                    endwhile
+                endif                
+            repeat while (Type 8 - Batch Control Record) is (no)
+        elseif (Type 9 - File Control Record) then (yes)
+        else (no)
+            :Reject;
+            end
+        endif
+    repeat while (More ACH records?) is (yes)
+    ->no;
+    :Processing Complete;
+    stop
+else (no)
+    :Reject;
+    end
+endif
+
+
+
+@enduml

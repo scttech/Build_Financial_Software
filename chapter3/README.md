@@ -1,30 +1,11 @@
-# Project Contents
+# Overview
 
-The following projects exist in this folder
+Chapter 3 discusses how we process and parse payments from an ACH file.
 
-## ACH Parser v1
+The versions of the ACH Processor in this chapter increase the functionality of the processor iteratively.
 
-A simple parser that includes a single unit test to help get you started
+We also incorporate unit tests for all the functionality introduced.
 
-## ACH Parser v2
-
-An updated version of the parser that includes unit tests for all record types
-
-## ACH Parser v3
-
-A version that contains empty unit tests for the challenges introduced in the chapter
-
-* File Rejection
-    * Ensuring the file records are 94 bytes in length
-* Batch Rejection
-    * Ensuring the trace numbers are ascending
-* File Rejection 
-    * Ensuring the addenda flag is correct
-
-## ACH Parser v4
-
-The final version of our ACH Parser for this chapter
-
-# Additional Files
-
-The following additional files are contained in here
+* `v1` is a great place to start to see a sample of the structure
+* `v2` expands on the functionality of parsing each ACH record type
+* `v3` addresses some of the challenges in the chapter 
