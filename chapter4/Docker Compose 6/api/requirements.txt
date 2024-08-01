@@ -1,4 +1,0 @@
-psycopg[c]
-fastapi
-pydantic
-uvicorn

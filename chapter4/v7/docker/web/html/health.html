@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en"> <!-- The language of the page -->
+
+<head>
+    <meta charset="UTF-8"> <!-- This is for the browser to know what character set to use -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- This is for mobile devices -->
+    <title>Health Check</title> <!-- The title of the page -->
+    <script src="https://d3js.org/d3.v7.min.js"></script> <!-- D3.js library -->
+</head>
+
+<body>
+    <h2>Health Check</h2>
+    <ul id="healthStatus"></ul> <!-- The list where we will populate the data -->
+
+    <script>
+        // The URL for the API endpoint
+        const apiUrl = 'http://localhost:8000/healths/status';
+
+        // Use D3 to fetch the data from the API
+        d3.json(apiUrl).then(data => {
+            // Once data is fetched, populate the list
+            d3.select("#healthStatus") // Select the list using the ID
+                .selectAll("li")    // Select all list items
+                .data(data)        // Bind the data to the list items
+                .enter()        // For each data item we will perform the following actions
+                .append("li")   // Add a list item
+                .text(d => `${d.id} (${d.status})`); // Set the text of the list item
+        });
+    </script>
+</body>
+
+</html>

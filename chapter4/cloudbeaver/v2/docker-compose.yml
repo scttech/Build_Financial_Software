@@ -1,0 +1,28 @@
+version: '3.8'
+services:
+  cloudbeaver:
+    image: dbeaver/cloudbeaver:latest
+    container_name: cloudbeaver
+    depends_on:
+      - postgres
+    ports:
+      - "8080:8978"
+    environment:
+      - CB_DATABASE_URL=jdbc:postgresql://postgres:5432/postgres
+      - CB_DATABASE_USERNAME=postgres
+      - CB_DATABASE_PASSWORD=postgrespwd
+
+  postgres:
+    image: postgres:latest
+    container_name: postgres
+    environment:
+      POSTGRES_DB: postgres
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgrespwd
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    ports:
+      - "5432:5432"
+
+volumes:
+  postgres_data:

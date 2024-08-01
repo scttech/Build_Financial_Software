@@ -1,0 +1,13 @@
+version: '3.8'
+
+services:
+  cloudbeaver:
+    image: cloudbeaver:latest
+    ports:
+      - 8082:8978
+  
+  postgres:
+    image: postgres:latest
+    environment:
+      POSTGRES_USER: admin
+      POSTGRES_PASSWORD: secret

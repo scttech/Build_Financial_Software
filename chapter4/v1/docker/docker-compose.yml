@@ -1,0 +1,7 @@
+version: '3.8'
+
+services:
+  cloudbeaver:
+    image: cloudbeaver:latest
+    ports:
+      - 8082:8978
