@@ -1,0 +1,16 @@
+@startuml
+skinparam monochrome true
+skinparam componentStyle rectangle
+
+[<b>Creating a unit test</b>\nListing 6.17\nListing 6.19] as A
+[<b>Updating the API</b>\nListing 6.20] as B
+[<b>Updating the database</b>\nListing 6.21] as C
+[<b>Refactoring code</b>\nListing 6.22\nListing 6.23] as D
+[<b>Finishing the unit tests</b>\nListing 6.24] as E
+
+A -> B
+B -> C
+C -> D
+D -> E
+
+@enduml

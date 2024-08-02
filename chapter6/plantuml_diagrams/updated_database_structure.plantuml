@@ -1,0 +1,46 @@
+@startuml
+
+object ach_files {
+   ach_files_id: uuid
+}
+
+object ach_addenda_ppd_records
+object ach_batch_control_records
+object ach_batch_headers
+object ach_entry_ppd_details
+object ach_file_control_records
+object ach_file_headers
+
+
+object ach_records_type_1 {
+   ach_records_type_1_id: uuid
+}
+object ach_records_type_5 {
+   ach_records_type_5_id: uuid
+}
+object ach_records_type_6 {
+   ach_records_type_6_id: uuid
+}
+object ach_records_type_7 {
+   ach_records_type_7_id: uuid
+}
+object ach_records_type_8 {
+   ach_records_type_8_id: uuid
+}
+object ach_records_type_9 {
+   ach_records_type_9_id: uuid
+}
+
+ach_records_type_1         -down->  ach_files
+ach_addenda_ppd_records    ->  ach_records_type_7
+ach_batch_control_records  ->  ach_records_type_8
+ach_batch_headers          -left->  ach_records_type_5
+ach_entry_ppd_details      -left->  ach_records_type_6
+ach_file_control_records   ->  ach_records_type_9
+ach_file_headers           ->  ach_records_type_1
+ach_records_type_5         -->  ach_records_type_1
+ach_records_type_6         -->  ach_records_type_5
+ach_records_type_7         -->  ach_records_type_6
+ach_records_type_8         -->  ach_records_type_5
+ach_records_type_9         -->  ach_records_type_1
+@enduml
