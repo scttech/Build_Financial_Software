@@ -1,0 +1,107 @@
+{
+    "batches" : [
+        {
+            "companyName": "Foodyum",
+            "companyBatches": [
+                {
+                    "batchId": "de444a20-d303-4b72-8d8d-48af7a58630d",        
+                    "batchNumber": "1",
+                    "recordCount": 680,
+                    "totalDebitAmount": 500.00,
+                    "totalCreditAmount": 1000.25
+                },
+                {
+                    "batchId": "57e38258-b0d9-414a-80ff-8c59f2a4a357",        
+                    "batchNumber": "2",
+                    "recordCount": 120,
+                    "totalDebitAmount": 500.00,
+                    "totalCreditAmount": 500.25
+                }
+            ]
+        },
+        {
+            "companyName": "Feedio",
+            "companyBatches": [
+                {
+                    "batchId": "43c33d2a-47a6-4476-900d-83bdfee0b594",
+                    "batchNumber": "3",
+                    "recordCount": 613,
+                    "totalDebitAmount": 89200.72,
+                    "totalCreditAmount": 48595.38
+                }
+            ]
+        },
+        {
+            "companyName": "Zafeat",
+            "companyBatches": [
+                {
+                    "batchId": "b8a9e1e1-af4c-4d3b-99ab-bbe086db6375",
+                    "batchNumber": "4",
+                    "recordCount": 26,
+                    "totalDebitAmount": 64340.11,
+                    "totalCreditAmount": 24565.25
+                }
+            ]
+        },
+        {
+            "companyName": "Thrifood",
+            "companyBatches": [
+                {
+                    "batchId": "f31da928-d93d-405c-99ef-b040409b98c2",
+                    "batchNumber": "5",
+                    "recordCount": 157,
+                    "totalDebitAmount": 13943.00,
+                    "totalCreditAmount": 46032.84
+                }
+            ]
+        },
+        {
+            "companyName": "Scrumunch",
+            "companyBatches": [
+                {
+                    "batchId": "95fdc0a2-6e3d-4559-9e7b-4da201142132",
+                    "batchNumber": "6",
+                    "recordCount": 405,
+                    "totalDebitAmount": 98659.76,
+                    "totalCreditAmount": 88957.46
+                }
+            ]
+        },            
+        {
+            "companyName": "Healthrive",
+            "companyBatches": [
+                {
+                    "batchId": "9f966054-3f73-41e5-bfcd-e3baf77126ff",
+                    "batchNumber": "7",
+                    "recordCount": 84,
+                    "totalDebitAmount": 96533.47,
+                    "totalCreditAmount": 23519.74
+                }
+            ]
+        },
+        {
+            "companyName": "Tomatool",
+            "companyBatches": [
+                {
+                    "batchId": "7fa29d4d-35dd-4753-bda8-717a56e94e7a",
+                    "batchNumber": "8",
+                    "recordCount": 162,
+                    "totalDebitAmount": 65123.15,
+                    "totalCreditAmount": 45516.98
+                }
+            ]
+        },
+        {
+            "companyName": "Snacker",
+            "companyBatches": [
+                {
+                    "batchId": "b8a9e1e1-af4c-4d3b-99ab-bbe086db6375",
+                    "batchNumber": "9",
+                    "recordCount": 26,
+                    "totalDebitAmount": 64340.11,
+                    "totalCreditAmount": 24565.25
+                }
+            ]
+        }                                
+    ]
+}

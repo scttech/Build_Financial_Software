@@ -1,0 +1,13 @@
+@startuml
+actor       User       as user
+queue       Wiremock       as wm
+collections __mappings as mappings
+collections __files as files
+
+user -> wm : Request /api/v1/45bc2000-0a14-4c0a-ae7f-938b3fdab575/batches
+wm -> mappings : Wiremock matches against /api/v1/files/{fileId}/batches
+note over wm, files: The //urlPathTemplate// in the request and\n //--global-response-templating// CLI parameter enable this
+wm -> files : Wiremock finds the response body
+note over wm, files: The //bodyFileName// and //{{request.path.fileId}}// in the response\nreturn the contents of //ach_files_batches_45bc2000-0a14-4c0a-ae7f-938b3fdab575.json//
+wm -> user : Response ach_files_batches_45bc2000-0a14-4c0a-ae7f-938b3fdab575.json
+@enduml
