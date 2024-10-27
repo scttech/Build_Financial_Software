@@ -1,0 +1,31 @@
+@startuml
+'https://plantuml.com/use-case-diagram
+left to right direction
+
+usecase (<u>Chapter #</u>\n<i>Chapter Title</i>\nChapter Tasks) as example
+
+usecase (<b><size:16>ACH Dashboard</size></b>\n<b><size:16></size></b>) as dashboard
+usecase (<u>Chapter 2</u>\n<i>Parsing ACH Files</i>\nProcessing and parsing payments\nmade through the ACH system) as parsing
+usecase (<u>Chapter 3</u>\n<i>Docker</i>\nSetting up containers to run\nour ACH Dashboard components) as docker
+usecase (<u>Chapter 4</u>\n<i>FastAPI</i>\nA Python framework for working\nwith RESTful APIs) as apis
+usecase (<u>Chapter 5</u>\n<i>Postgres</i>\nA powerful RDBMS for storing data) as db
+usecase (<u>Chapter 6</u>\n<i>Next.js</i>\nProduction ready React framework\npowering the UI) as ui
+usecase (<u>Chapter 7</u>\n<i>MVP</i>\nPut it all together in a\nMinimum Viable Product) as mvp
+usecase (<u>Chapter 11</u>\n<i>IAT and OFAC</i>\nExpanding the Dashboard capabilities\nwith International ACH Transactions) as iat
+usecase (<u>Chapter 10</u>\n<i>Companies</i>\nEnhancing the Dashboard with\ncompany information) as companies
+usecase (<u>Chapter 9</u>\n<i>Searching and Auditing</i>\nSearching for ACH transaction) as searching
+usecase (<u>Chapter 8</u>\n<i>Exception Handling</i>\nHandling and recovering\nfrom typical errors) as exceptions
+
+parsing -right-> dashboard
+docker -down-> dashboard
+apis -down-> dashboard
+db -down-> dashboard
+ui -down-> dashboard
+mvp -left-> dashboard
+companies -up-> dashboard
+iat -up-> dashboard
+searching -up-> dashboard
+exceptions -up-> dashboard
+
+
+@enduml

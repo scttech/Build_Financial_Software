@@ -1,0 +1,18 @@
+@startuml
+
+usecase (<b><size:16>Minimum Viable</size></b>\n<b><size:16>Product</size></b>) as mvp
+usecase (Pydantic Models) as pydantic
+usecase (API) as api
+usecase (UX) as ui
+usecase (Test Scenarios) as bdd
+usecase (Playwright) as playwright
+usecase (Security) as security
+
+api -> mvp: Finalized
+pydantic --> mvp: Validation
+mvp <- ui: Cleanup
+bdd --> mvp: Behavior Driven Development
+mvp <-- playwright: Integration Testing
+mvp <-- security: User authentication
+
+@enduml

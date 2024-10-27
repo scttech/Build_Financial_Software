@@ -1,0 +1,20 @@
+@startuml
+skinparam ConditionEndStyle hline
+title Automated Clearing House (ACH) File Processing
+start
+:Process File Header;
+repeat
+    :Process Batch Header;
+    repeat
+        :Process Entry Detail;
+        if (Has Addenda?) then (yes)
+            repeat
+                :Process Addenda;
+            repeat while (More Addenda?) is (yes) not (no)
+        else (no)
+        endif
+    repeat while (More Entries?) is (yes) not (no)
+repeat while (More Batches?) is (yes) not (no)
+:Process File Control;
+stop
+@enduml

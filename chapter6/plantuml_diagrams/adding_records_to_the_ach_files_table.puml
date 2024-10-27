@@ -1,0 +1,14 @@
+@startuml
+skinparam monochrome true
+skinparam componentStyle rectangle
+
+[<b>Create database table</b>\nListing 5.3] as A
+[<b>Testing connectivity</b>\nListing 5.4\nListing 5.5] as B
+[<b>Updating the parse routine</b>\nListing 5.6] as C
+[<b>Testing with pytest</b>\nListing 5.7\nListing 5.8] as D
+
+A -> B
+B -> C
+C -> D
+
+@enduml

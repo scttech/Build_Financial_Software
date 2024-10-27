@@ -1,0 +1,12 @@
+@startuml
+skinparam monochrome true
+skinparam componentStyle rectangle
+
+[<b>Create database table</b>\nListing 5.14] as A
+[<b>Code for working with exceptions</b>\nListing 5.15\nListing 5.16] as B
+[<b>Code for clearing the database</b>\nListing 5.17] as C
+
+A -> B
+B -> C
+
+@enduml

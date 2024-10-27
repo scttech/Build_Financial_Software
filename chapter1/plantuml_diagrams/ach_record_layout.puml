@@ -1,0 +1,33 @@
+@startuml
+skinparam rectangle {
+  BorderColor black
+}
+
+title ACH File Structure
+
+  rectangle "File Header Record" as fileHeader
+  rectangle "Batch Header Record" as batchHeader
+  rectangle "Entry Detail Record" as entryDetail
+  rectangle "Addenda Record (Optional)" as addenda
+  rectangle "Batch Control Record" as batchControl
+  rectangle "File Control Record" as fileControl
+
+fileHeader -down-> batchHeader
+batchHeader -down-> entryDetail
+entryDetail -right-> addenda
+entryDetail -down-> batchControl
+batchControl -down-> fileControl
+
+note left of entryDetail
+    Multiple Entry Detail Records per Batch
+end note
+
+note bottom of addenda
+    Multiple Addenda Records per Entry Detail Record
+end note
+
+note right of batchHeader
+    Multiple Batches per ACH File
+end note
+
+@enduml

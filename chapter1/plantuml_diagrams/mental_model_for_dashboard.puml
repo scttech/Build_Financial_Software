@@ -1,0 +1,27 @@
+@startuml
+'https://plantuml.com/use-case-diagram
+
+usecase (<b><size:16>ACH Dashboard</size></b>\n<b><size:16></size></b>) as dashboard
+usecase (Chapter 2\n<i>Parsing ACH</i>\n<i>Files</i>) as parsing
+usecase (Chapter 3\n<i>Docker</i>) as docker
+usecase (Chapter 4\n<i>FastAPI</i>) as apis
+usecase (Chapter 5\n<i>Postgres</i>) as db
+usecase (Chapter 6\n<i>Next.js</i>) as ui
+usecase (Chapter 7\n<i>MVP</i>) as mvp
+usecase (Chapter 8\n<i>Exception Handling</i>) as exceptions
+usecase (Chapter 9\n<i>Searching and Auditing</i>) as searching
+usecase (Chapter 10\n<i>Companies</i>) as companies
+usecase (Chapter 11\n<i>IAT and OFAC</i>) as iat
+
+parsing -right-> dashboard
+docker -down-> dashboard
+apis -down-> dashboard
+db -down-> dashboard
+ui -down-> dashboard
+mvp -left-> dashboard
+iat -up-> dashboard
+companies -up-> dashboard
+searching -up-> dashboard
+exceptions -up-> dashboard
+
+@enduml

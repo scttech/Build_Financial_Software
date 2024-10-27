@@ -1,0 +1,30 @@
+@startuml
+'usecase diagram
+title Building Financial Software with\nGenerative AI Roadmap
+
+usecase (Chapter 1\n<i>Introducing Fintech</i>\n<i>Files</i>) as into
+usecase (Chapter 2\n<i>Parsing ACH</i>\n<i>Files</i>) as parsing
+usecase (Chapter 3\n<i>Docker</i>) as docker
+usecase (Chapter 4\n<i>FastAPI</i>) as apis
+usecase (Chapter 5\n<i>Postgres</i>) as db
+usecase (Chapter 6\n<i>Next.js</i>) as ui
+usecase (Chapter 7\n<i>MVP</i>) as mvp
+usecase (Chapter 8\n<i>Exception Handling</i>) as exceptions
+usecase (Chapter 9\n<i>Searching and Auditing</i>) as searching
+usecase (Chapter 10\n<i>Companies</i>) as companies
+usecase (Chapter 11\n<i>IAT and OFAC</i>) as iat
+usecase (Chapter 12\n<i>Wrap up</i>) as end
+
+into -right-> parsing
+parsing -right-> docker
+docker -right-> apis
+apis -down-> db
+db -left-> ui
+ui -left-> mvp
+mvp -left-> exceptions
+exceptions -down-> searching
+searching -right-> companies
+companies -right-> iat
+iat -right-> end
+
+@enduml

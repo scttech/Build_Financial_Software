@@ -1,0 +1,19 @@
+@startuml
+skinparam componentStyle rectangle
+
+package "ACH Dashboard" {
+    cloud Docker {
+    [PostgreSQL] as postgres
+    [Next.js UI] as nextjs
+    [Python] as python
+    [FastAPI] as fastapi
+    [OpenAPI\nDocumentation] as openapi
+    }
+}
+
+python -down-> fastapi: Implements
+fastapi -left-> openapi: Generates
+nextjs -left-> fastapi: Interface
+fastapi -down-> postgres: Queries
+
+@enduml

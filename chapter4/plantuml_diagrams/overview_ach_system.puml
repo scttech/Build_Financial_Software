@@ -1,0 +1,45 @@
+@startuml
+skinparam componentStyle rectangle
+skinparam packagePadding 5
+skinparam componentPadding 5
+skinparam componentSpacing 10
+skinparam nodeSpacing 10
+
+actor "User" as user
+cloud "Docker" {
+
+    package "Postgres" {
+        database "Postgres" as postgres {
+            [ACH Tables]
+        }
+    }
+
+    together {
+        package "Python" {
+            node "FastAPI" {
+                [Python API]
+                [OpenAPI]
+            }
+        }
+
+        package "Node" {
+            node "Next.js" {
+                [Dashboard]
+                [Rechart]
+            }
+        }
+    }
+
+    note as DockerNote
+       Folder names of <b>Node</b>, <b>Python</b>, <b>Postgres</b>, etc. are
+       the base images used by the containers
+    end note
+}
+
+[user] -down-> [Dashboard] : Interfaces with ACH Dashboard\n
+[Dashboard] -right-> [Rechart]: Visualize Data
+[Dashboard] --> [Python API]: " Interacts"
+[Python API] -left-> [ACH Tables]: "       Query        "
+[Python API] -right-> [OpenAPI]: "Document"
+
+@enduml

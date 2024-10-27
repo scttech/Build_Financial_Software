@@ -1,0 +1,23 @@
+ach_flow_diagram.puml@startuml
+
+actor       User        as user
+box "Docker" #fafafa
+participant Next.js     as ui
+participant FastAPI     as api
+participant "ACH Processor" as processor
+database    Postgres    as db
+end box
+
+user -> ui: Loads ACH file
+ui -> api: POST the ACH file
+api -> processor: Process ACH file
+processor -> db: Store ACH data
+processor -> processor: Validate file
+processor -> db: Store Exceptions
+processor -> processor: OFAC Scanning
+processor -> db: Store OFAC Results
+processor -> api: Return success
+api -> ui: Return success
+ui -> user: Display ACH statistics
+
+@enduml
