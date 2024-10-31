@@ -2,7 +2,7 @@ import pytest
 from fastapi.testclient import TestClient
 from pytest_bdd import scenarios, when, then, parsers
 
-from chapter5.APISample_Final.app.main import app
+from chapter4.APISample_Final.app.main import app
 
 client = TestClient(app)
 
