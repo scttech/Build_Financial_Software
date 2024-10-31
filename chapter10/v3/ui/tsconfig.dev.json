@@ -1,0 +1,8 @@
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "sourceMap": true,
+    "strict": true,
+    "types": ["jest", "@testing-library/jest-dom"]
+  }
+}
