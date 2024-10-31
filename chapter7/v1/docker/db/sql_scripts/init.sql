@@ -99,11 +99,11 @@ CREATE TABLE ach_batch_headers (
 CREATE TABLE ach_entry_ppd_details (
     ach_records_type_6_id UUID UNIQUE NOT NULL REFERENCES ach_records_type_6(ach_records_type_6_id) ON DELETE CASCADE ON UPDATE CASCADE,
     record_type_code VARCHAR(1) NOT NULL,
-    transaction_code VARCHAR(2) NOT NULL,
+    transaction_code NUMERIC(2) NOT NULL,
     receiving_dfi_identification VARCHAR(8) NOT NULL,
     check_digit VARCHAR(1) NOT NULL,
     dfi_account_number VARCHAR(17) NOT NULL,
-    amount VARCHAR(10) NOT NULL,
+    amount NUMERIC(10,2) NOT NULL,
     individual_identification_number VARCHAR(15) NOT NULL,
     individual_name VARCHAR(22) NOT NULL,
     discretionary_data VARCHAR(2) NOT NULL,
@@ -125,16 +125,16 @@ CREATE TABLE ach_addenda_ppd_records (
 CREATE TABLE ach_batch_control_records (
     ach_records_type_8_id UUID UNIQUE NOT NULL REFERENCES ach_records_type_8(ach_records_type_8_id) ON DELETE CASCADE ON UPDATE CASCADE,
     record_type_code VARCHAR(1) NOT NULL,
-    service_class_code VARCHAR(3) NOT NULL,
-    entry_addenda_count VARCHAR(6) NOT NULL,
-    entry_hash VARCHAR(10) NOT NULL,
-    total_debit_entry_dollar_amount VARCHAR(12) NOT NULL,
-    total_credit_entry_dollar_amount VARCHAR(12) NOT NULL,
+    service_class_code NUMERIC(3) NOT NULL,
+    entry_addenda_count NUMERIC(6) NOT NULL,
+    entry_hash NUMERIC(10) NOT NULL,
+    total_debit_entry_dollar_amount NUMERIC(12,2) NOT NULL,
+    total_credit_entry_dollar_amount NUMERIC(12,2) NOT NULL,
     company_identification VARCHAR(10) NOT NULL,
     message_authentication_code VARCHAR(19) NOT NULL,
     reserved VARCHAR(6) NOT NULL,
     originating_dfi_identification VARCHAR(8) NOT NULL,
-    batch_number VARCHAR(7) NOT NULL
+    batch_number NUMERIC(7) NOT NULL
 );
 
 -- Create the ach_file_control table
@@ -143,10 +143,10 @@ CREATE TABLE ach_file_control_records (
     record_type_code VARCHAR(1) NOT NULL,
     batch_count VARCHAR(6) NOT NULL,
     block_count VARCHAR(6) NOT NULL,
-    entry_addenda_count VARCHAR(8) NOT NULL,
+    entry_addenda_count NUMERIC(8) NOT NULL,
     entry_hash VARCHAR(10) NOT NULL,
-    total_debit_entry_dollar_amount VARCHAR(12) NOT NULL,
-    total_credit_entry_dollar_amount VARCHAR(12) NOT NULL,
+    total_debit_entry_dollar_amount NUMERIC(12, 2) NOT NULL,
+    total_credit_entry_dollar_amount NUMERIC(12, 2) NOT NULL,
     reserved VARCHAR(39) NOT NULL
 );
 

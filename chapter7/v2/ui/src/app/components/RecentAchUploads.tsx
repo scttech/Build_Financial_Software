@@ -1,5 +1,4 @@
 import * as React from 'react';
-import {useEffect, useState} from 'react';
 import Link from '@mui/material/Link';
 import Table from '@mui/material/Table';
 import TableBody from '@mui/material/TableBody';
@@ -8,37 +7,22 @@ import TableHead from '@mui/material/TableHead';
 import TableRow from '@mui/material/TableRow';
 import Title from './Title';
 import {formatCurrency} from "@/app/utils/CurrencyUtils";
-import axios from 'axios';
 import {convertDateFormat} from "@/app/utils/DateUtils";
+import {useRouter} from "next/navigation";
+import {AchFiles} from "@/app/interfaces/AchFiles";
 
 
 function preventDefault(event: React.MouseEvent) {
     event.preventDefault();
 }
 
-interface AchUpload {
-    id: number;
-    date: string;
-    filename: string;
-    creditTotal: number;
-    debitTotal: number;
+interface RecentAchUploadsProps {
+    files: AchFiles[];
 }
 
-export default function RecentAchUploads() {
+export default function RecentAchUploads({files}: Readonly<RecentAchUploadsProps>) {
 
-    const [rows, setRows] = useState<AchUpload[]>([]);
-
-    useEffect(() => {
-        const apiUrl = process.env.NEXT_PUBLIC_API_URL ?? '';
-        axios.get(`${apiUrl}/files`)
-            .then(response => {
-                console.log(`Response data ${JSON.stringify(response.data)}`);
-                setRows(response.data);
-            })
-            .catch(error => {
-                console.log(error);
-            });
-    }, []);
+    const route = useRouter();
 
     return (
         <>
@@ -48,17 +32,21 @@ export default function RecentAchUploads() {
                     <TableRow>
                         <TableCell>Date</TableCell>
                         <TableCell>Filename</TableCell>
+                        <TableCell>Originator</TableCell>
                         <TableCell align="right">Credit Total</TableCell>
                         <TableCell align="right">Debit Total</TableCell>
                     </TableRow>
                 </TableHead>
                 <TableBody>
-                    {rows.map((row) => (
-                        <TableRow key={row.id}>
-                            <TableCell>{convertDateFormat(row.date)}</TableCell>
-                            <TableCell>{row.filename}</TableCell>
-                            <TableCell align="right">{formatCurrency(row.creditTotal)}</TableCell>
-                            <TableCell align="right">{formatCurrency(row.debitTotal)}</TableCell>
+                    {files.map((file) => (
+                        <TableRow key={file.id}>
+                            <TableCell>{convertDateFormat(file.date)}</TableCell>
+                            <TableCell>
+                                <Link onClick={() => route.push(`/fileDetails/${file.id}`)} sx={{ cursor: 'pointer' }}>{file.filename}</Link>
+                            </TableCell>
+                            <TableCell>{file.originator}</TableCell>
+                            <TableCell align="right">{formatCurrency(file.creditTotal)}</TableCell>
+                            <TableCell align="right">{formatCurrency(file.debitTotal)}</TableCell>
                         </TableRow>
                     ))}
                 </TableBody>

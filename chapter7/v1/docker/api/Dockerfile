@@ -5,7 +5,7 @@ FROM python:alpine
 WORKDIR /code
 
 # Copy the requirements.txt file to the working directory
-COPY ./requirements.txt /code/requirements.txt
+COPY requirements.txt /code/requirements.txt
 
 # Install any needed packages specified in requirements.txt
 RUN apk -U upgrade

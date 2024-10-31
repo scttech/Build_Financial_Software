@@ -1,41 +1,51 @@
 @startuml
 skinparam componentStyle rectangle
 
+actor user
 cloud "Docker" {
 
-    package "Python" {
+    package "Python: Port 8000" {
         node "FastAPI" {
             [Python API]
             [Swagger]
         }
     }
 
-    package "Node" as ui_container {
+    package "Node: Port 4000" as ui_container {
         node "Next.js" as nextjs {
             [Dashboard] as UI
             [Rechart]
         }
     }
 
-    package "Postgres" as postgres_docker {
+    package "Postgres: Port 5432" as postgres_docker {
         database "Postgres" as postgres_db {
             [ACH Tables]
         }
     }
-    
-note as n1
-Folder names of Node, Python, Postgres, etc are the
-base images used by the containers
-end note
+
+    package "CloudBeaver: Port 8082" as cloudbeaver {
+        [CloudBeaver]
+        note left of [CloudBeaver]
+        Used to view tables and
+        run queries outside of the application
+        end note
+    }
+
+    note as n1
+    Folder names of Node, Python, Postgres, etc are the
+    base images used by the containers
+    Ports are the ports exposed by the containers
+    end note
 
 }
 
 [user] --> [UI] : Interfaces with ACH Dashboard
 [UI] -> [Rechart] : Visualize Data
 [Python API] -> [ACH Tables]: Query
+[CloudBeaver] -> [ACH Tables]: Query
 [UI] --> [Python API]: Interface
 [Swagger] --> [Python API]: Document
-
 
 
 @enduml

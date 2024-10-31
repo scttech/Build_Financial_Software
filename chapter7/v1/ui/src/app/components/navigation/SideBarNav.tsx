@@ -3,7 +3,6 @@ import IconButton from "@mui/material/IconButton";
 import ChevronLeftIcon from "@mui/icons-material/ChevronLeft";
 import Divider from "@mui/material/Divider";
 import List from "@mui/material/List";
-import {secondaryListItems} from "@/app/components/navigation/listItems";
 import * as React from "react";
 import {useEffect, useState} from "react";
 import {styled} from "@mui/material/styles";
@@ -42,7 +41,7 @@ const Drawer = styled(MuiDrawer, { shouldForwardProp: (prop) => prop !== 'open' 
     }),
 );
 
-export default function SideBarNav({toggleDrawer, drawerOpen}: SideBarNavProps) {
+export default function SideBarNav({toggleDrawer, drawerOpen}: Readonly<SideBarNavProps>) {
 
     const [open, setOpen] = useState(drawerOpen);
 
@@ -67,8 +66,6 @@ export default function SideBarNav({toggleDrawer, drawerOpen}: SideBarNavProps) 
         <Divider />
         <List component="nav">
             <MainListItems />
-            <Divider sx={{ my: 1 }} />
-            {secondaryListItems}
         </List>
     </Drawer>
     );

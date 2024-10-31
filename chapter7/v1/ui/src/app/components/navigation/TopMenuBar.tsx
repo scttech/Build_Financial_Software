@@ -38,7 +38,7 @@ const AppBar = styled(MuiAppBar, {
     }),
 }));
 
-export default function TopMenuBar({toggleDrawer, drawerOpen}: TopMenuBarProps) {
+export default function TopMenuBar({toggleDrawer, drawerOpen}: Readonly<TopMenuBarProps>) {
 
     const [open, setOpen] = useState(drawerOpen);
 
@@ -63,7 +63,7 @@ export default function TopMenuBar({toggleDrawer, drawerOpen}: TopMenuBarProps) 
                 Dashboard
             </Typography>
             <IconButton color="inherit">
-                <Badge badgeContent={4} color="secondary">
+                <Badge badgeContent={0} color="secondary">
                     <NotificationsIcon />
                 </Badge>
             </IconButton>

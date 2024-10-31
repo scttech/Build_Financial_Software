@@ -1,9 +1,10 @@
 # Overview
 
-In this chapter, we work on building out the UI for our application.
+Chapter 8 puts together the Minimum Viable Product (MVP) for our project. 
 
-* `v1` - The starting point of a basic Next.js application
-* `v2` - Enhancing the UI
+* `v1` - The minimum viable product, pulling together all the components we built so far
+* `v2` - The minimum viable product, but exploring authentication and authorization
 
 Additional folders:
-* `plantuml_diagrams` - PlantUML diagrams for the chapter
+
+* `plantuml_diagrams` - Contains the PlantUML diagrams for the chapter

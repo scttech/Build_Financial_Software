@@ -16,6 +16,9 @@ RUN npm install
 # Bundle app source inside Docker image
 COPY app/. .
 
+# Replace the production TypeScript configuration
+COPY app/tsconfig.prod.json ./tsconfig.json
+
 # Build the Next.js app
 RUN npm run build
 

@@ -2,11 +2,10 @@ import ListItemButton from "@mui/material/ListItemButton";
 import ListItemIcon from "@mui/material/ListItemIcon";
 import DashboardIcon from "@mui/icons-material/Dashboard";
 import ListItemText from "@mui/material/ListItemText";
-import {CloudUpload} from "@mui/icons-material";
-import PeopleIcon from "@mui/icons-material/People";
-import BarChartIcon from "@mui/icons-material/BarChart";
+import {CloudUpload, Logout} from "@mui/icons-material";
 import * as React from "react";
 import {useRouter} from "next/navigation";
+import {logout} from "@/app/lib/actions";
 
 export default function MainListItems() {
 
@@ -26,18 +25,12 @@ export default function MainListItems() {
                 </ListItemIcon>
                 <ListItemText primary="Uploads" />
             </ListItemButton>
-            <ListItemButton onClick={() => route.push("/companies")}>
+            <ListItemButton onClick={() => logout()}>
                 <ListItemIcon>
-                    <PeopleIcon />
+                    <Logout />
                 </ListItemIcon>
-                <ListItemText primary="Companies" />
-            </ListItemButton>
-            <ListItemButton onClick={() => route.push("/reports")}>
-                <ListItemIcon>
-                    <BarChartIcon />
-                </ListItemIcon>
-                <ListItemText primary="Reports" />
-            </ListItemButton>
+                <ListItemText primary="Signout" />
+                </ListItemButton>
         </>
     );
 }
