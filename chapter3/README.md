@@ -1,6 +1,6 @@
 # Overview
 
-Chapter 4 discusses an overview of using Docker for our project. We experiment with setting up a basic container and then
+Chapter 3 discusses an overview of using Docker for our project. We experiment with setting up a basic container and then
 starting to build out progressively more complex containers.
 
 * `v1` Simple container with CloudBeaver
