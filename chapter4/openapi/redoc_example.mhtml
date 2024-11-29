@@ -1,0 +1,1501 @@
+From: <Saved by Blink>
+Snapshot-Content-Location: http://127.0.0.1:8000/redoc
+Subject: FastAPI - ReDoc
+Date: Fri, 29 Nov 2024 06:22:04 -0500
+MIME-Version: 1.0
+Content-Type: multipart/related;
+	type="text/html";
+	boundary="----MultipartBoundary--BtLBMNQk02lTSJ5anq5EvWt7Cl5fN4Ytj5LAmtdx5I----"
+
+
+------MultipartBoundary--BtLBMNQk02lTSJ5anq5EvWt7Cl5fN4Ytj5LAmtdx5I----
+Content-Type: text/html
+Content-ID: <frame-E17080A8D8FF5225343377A9B4504833@mhtml.blink>
+Content-Transfer-Encoding: quoted-printable
+Content-Location: http://127.0.0.1:8000/redoc
+
+<!DOCTYPE html><html><head><meta http-equiv=3D"Content-Type" content=3D"tex=
+t/html; charset=3DUTF-8"><link rel=3D"stylesheet" type=3D"text/css" href=3D=
+"cid:css-5358df7b-9225-4b81-987c-c0d2a2b526f9@mhtml.blink" /><link rel=3D"s=
+tylesheet" type=3D"text/css" href=3D"cid:css-8e25ffd3-dff1-4288-b850-b09929=
+69f12d@mhtml.blink" /><link rel=3D"stylesheet" type=3D"text/css" href=3D"ci=
+d:css-316fca76-a8ae-4b8c-81f5-52b7d8558e94@mhtml.blink" />
+    <title>FastAPI - ReDoc</title>
+    <!-- needed for adaptive design -->
+   =20
+    <meta name=3D"viewport" content=3D"width=3Ddevice-width, initial-scale=
+=3D1">
+   =20
+    <link href=3D"https://fonts.googleapis.com/css?family=3DMontserrat:300,=
+400,700|Roboto:300,400,700" rel=3D"stylesheet">
+   =20
+    <link rel=3D"shortcut icon" href=3D"https://fastapi.tiangolo.com/img/fa=
+vicon.png">
+    <!--
+    ReDoc doesn't change outer page styles
+    -->
+   =20
+    </head>
+    <body>
+   =20
+    <redoc spec-url=3D"/openapi.json"><div class=3D"sc-dvUynV fgRoXk redoc-=
+wrap"><div class=3D"sc-eWnToP hqgvLZ menu-content" style=3D"top: 0px; heigh=
+t: calc(0px + 100vh);"><div role=3D"search" class=3D"sc-kizEQm irzWzB"><svg=
+ class=3D"sc-iIgjPs ertKPV search-icon" version=3D"1.1" viewBox=3D"0 0 1000=
+ 1000" x=3D"0px" xmlns=3D"http://www.w3.org/2000/svg" y=3D"0px"><path d=3D"=
+M968.2,849.4L667.3,549c83.9-136.5,66.7-317.4-51.7-435.6C477.1-25,252.5-25,1=
+13.9,113.4c-138.5,138.3-138.5,362.6,0,501C219.2,730.1,413.2,743,547.6,666.5=
+l301.9,301.4c43.6,43.6,76.9,14.9,104.2-12.4C981,928.3,1011.8,893,968.2,849.=
+4z M524.5,522c-88.9,88.7-233,88.7-321.8,0c-88.9-88.7-88.9-232.6,0-321.3c88.=
+9-88.7,233-88.7,321.8,0C613.4,289.4,613.4,433.3,524.5,522z"></path></svg><i=
+nput placeholder=3D"Search..." aria-label=3D"Search" type=3D"text" class=3D=
+"sc-cKRKFl eNrAZv search-input" value=3D""></div><div class=3D"sc-iklJeh hb=
+usih scrollbar-container undefined ps"><ul class=3D"sc-uxdHp ZHquE" role=3D=
+"menu"><li data-item-id=3D"operation/read_files_api_v1_files_get" class=3D"=
+sc-biJonm huvfwk"><label role=3D"menuitem" class=3D"sc-eHEENL emrRcd -depth=
+2"><span type=3D"get" class=3D"sc-ikXwFM eXTKuo operation-type get">get</sp=
+an><span width=3D"calc(100% - 38px)" class=3D"sc-hzUIXc klzczi">Read Files<=
+/span></label></li><li data-item-id=3D"operation/create_file_api_v1_files_p=
+ost" class=3D"sc-biJonm huvfwk"><label role=3D"menuitem" class=3D"sc-eHEENL=
+ emrRcd -depth2"><span type=3D"post" class=3D"sc-ikXwFM eXTKuo operation-ty=
+pe post">post</span><span width=3D"calc(100% - 38px)" class=3D"sc-hzUIXc kl=
+zczi">Create File</span></label></li><li data-item-id=3D"operation/read_fil=
+e_api_v1_files__file_id__get" class=3D"sc-biJonm huvfwk"><label role=3D"men=
+uitem" class=3D"sc-eHEENL emrRcd -depth2"><span type=3D"get" class=3D"sc-ik=
+XwFM eXTKuo operation-type get">get</span><span width=3D"calc(100% - 38px)"=
+ class=3D"sc-hzUIXc klzczi">Read File</span></label></li><li data-item-id=
+=3D"operation/read_file_records_api_v1_files__file_id__records_get" class=
+=3D"sc-biJonm huvfwk"><label role=3D"menuitem" class=3D"sc-eHEENL emrRcd -d=
+epth2"><span type=3D"get" class=3D"sc-ikXwFM eXTKuo operation-type get">get=
+</span><span width=3D"calc(100% - 38px)" class=3D"sc-hzUIXc klzczi">Read Fi=
+le Records</span></label></li><li data-item-id=3D"operation/read_file_recor=
+d_api_v1_files__file_id__records__record_id__get" class=3D"sc-biJonm huvfwk=
+"><label role=3D"menuitem" class=3D"sc-eHEENL emrRcd -depth2"><span type=3D=
+"get" class=3D"sc-ikXwFM eXTKuo operation-type get">get</span><span width=
+=3D"calc(100% - 38px)" class=3D"sc-hzUIXc klzczi">Read File Record</span></=
+label></li></ul><div class=3D"sc-kYPZxB hEydLL"><a target=3D"_blank" rel=3D=
+"noopener noreferrer" href=3D"https://redocly.com/redoc/"><img alt=3D"redoc=
+ly logo" src=3D"https://cdn.redoc.ly/redoc/logo-mini.svg">API docs by Redoc=
+ly</a></div><div class=3D"ps__rail-x" style=3D"left: 0px; bottom: 0px;"><di=
+v class=3D"ps__thumb-x" tabindex=3D"0" style=3D"left: 0px; width: 0px;"></d=
+iv></div><div class=3D"ps__rail-y" style=3D"top: 0px; right: 0px;"><div cla=
+ss=3D"ps__thumb-y" tabindex=3D"0" style=3D"top: 0px; height: 0px;"></div></=
+div></div></div><div class=3D"sc-kTCsyW bArwVC"><div class=3D"sc-irKDMX bQk=
+XvU"><svg class=3D"" viewBox=3D"0 0 926.23699 573.74994" version=3D"1.1" x=
+=3D"0px" y=3D"0px" width=3D"15" height=3D"15" style=3D"transform: translate=
+(2px, -4px) rotate(180deg); transition: transform 0.2s;"><g transform=3D"tr=
+anslate(904.92214,-879.1482)"><path d=3D"
+          m -673.67664,1221.6502 -231.2455,-231.24803 55.6165,
+          -55.627 c 30.5891,-30.59485 56.1806,-55.627 56.8701,-55.627 0.689=
+4,
+          0 79.8637,78.60862 175.9427,174.68583 l 174.6892,174.6858 174.689=
+2,
+          -174.6858 c 96.079,-96.07721 175.253196,-174.68583 175.942696,
+          -174.68583 0.6895,0 26.281,25.03215 56.8701,
+          55.627 l 55.6165,55.627 -231.245496,231.24803 c -127.185,127.1864
+          -231.5279,231.248 -231.873,231.248 -0.3451,0 -104.688,
+          -104.0616 -231.873,-231.248 z
+        " fill=3D"currentColor"></path></g></svg><svg class=3D"" viewBox=3D=
+"0 0 926.23699 573.74994" version=3D"1.1" x=3D"0px" y=3D"0px" width=3D"15" =
+height=3D"15" style=3D"transform: translate(2px, 4px); transition: transfor=
+m 0.2s;"><g transform=3D"translate(904.92214,-879.1482)"><path d=3D"
+          m -673.67664,1221.6502 -231.2455,-231.24803 55.6165,
+          -55.627 c 30.5891,-30.59485 56.1806,-55.627 56.8701,-55.627 0.689=
+4,
+          0 79.8637,78.60862 175.9427,174.68583 l 174.6892,174.6858 174.689=
+2,
+          -174.6858 c 96.079,-96.07721 175.253196,-174.68583 175.942696,
+          -174.68583 0.6895,0 26.281,25.03215 56.8701,
+          55.627 l 55.6165,55.627 -231.245496,231.24803 c -127.185,127.1864
+          -231.5279,231.248 -231.873,231.248 -0.3451,0 -104.688,
+          -104.0616 -231.873,-231.248 z
+        " fill=3D"currentColor"></path></g></svg></div></div><div class=3D"=
+sc-jtiXyc bBXGSV api-content"><div class=3D"sc-eCApnc chOOHy"><div class=3D=
+"sc-iCoGMd dolNKP"><div class=3D"sc-hKFxyN hutltu api-info"><h1 class=3D"sc=
+-fujyAs sc-dFRpbK kudwlS hDxFjs">File API <span>(0.0.1)</span></h1><p>Downl=
+oad OpenAPI specification:<a download=3D"" target=3D"_blank" href=3D"http:/=
+/127.0.0.1:8000/openapi.json" class=3D"sc-bsatvv bpmBWn">Download</a></p><d=
+iv class=3D"sc-iJCRrE sc-ciSkZP ifDxYI dYAYxd"></div><div class=3D"sc-iJCRr=
+E sc-ciSkZP ifDxYI dYAYxd" data-role=3D"redoc-summary"></div><div class=3D"=
+sc-iJCRrE sc-ciSkZP ifDxYI dYAYxd" data-role=3D"redoc-description"></div></=
+div></div></div><div id=3D"operation/read_files_api_v1_files_get" data-sect=
+ion-id=3D"operation/read_files_api_v1_files_get" class=3D"sc-eCApnc kzhJjR"=
+><div data-section-id=3D"operation/read_files_api_v1_files_get" id=3D"opera=
+tion/read_files_api_v1_files_get" class=3D"sc-iCoGMd dolNKP"><div class=3D"=
+sc-hKFxyN hutltu"><h2 class=3D"sc-pNWdM kfOTos"><a class=3D"sc-crzoAE DykGo=
+" href=3D"http://127.0.0.1:8000/redoc#operation/read_files_api_v1_files_get=
+" aria-label=3D"operation/read_files_api_v1_files_get"></a>Read Files </h2>=
+<div><h3 class=3D"sc-fIxmyt jVZBMd">Responses</h3><div><button class=3D"sc-=
+htmcrh khIKSp"><svg class=3D"sc-dIsUp pxYkf" version=3D"1.1" viewBox=3D"0 0=
+ 24 24" x=3D"0" xmlns=3D"http://www.w3.org/2000/svg" y=3D"0" aria-hidden=3D=
+"true"><polygon points=3D"17.3 8.3 12 13.6 6.7 8.3 5.3 9.7 12 16.4 18.7 9.7=
+ "></polygon></svg><strong class=3D"sc-fWWYYk fepHIR">200 </strong><span cl=
+ass=3D"sc-jcwpoC DVwyR"><p>Successful Response</p>
+</span></button></div></div></div><div class=3D"sc-jSFjdj sc-gKAaRy dYGhuI =
+fTsuzH"><div class=3D"sc-EZqKI iONckA"><button class=3D"sc-eEVmNe gXhEov"><=
+span type=3D"get" class=3D"sc-fmdNqN izOCLq http-verb get">get</span><span =
+class=3D"sc-jXcxbT hVdkvA">/api/v1/files</span><svg class=3D"sc-dIsUp bGRTX=
+n" version=3D"1.1" viewBox=3D"0 0 24 24" x=3D"0" xmlns=3D"http://www.w3.org=
+/2000/svg" y=3D"0" aria-hidden=3D"true" style=3D"margin-right: -25px;"><pol=
+ygon points=3D"17.3 8.3 12 13.6 6.7 8.3 5.3 9.7 12 16.4 18.7 9.7 "></polygo=
+n></svg></button><div aria-hidden=3D"true" class=3D"sc-ljsmAU IXrMk"><div c=
+lass=3D"sc-jlZJtj QgNfY"><div class=3D"sc-iJCRrE sc-ciSkZP ifDxYI wfptf"></=
+div><div tabindex=3D"0" role=3D"button"><div class=3D"sc-dTSzeu hyeqlU"><sp=
+an>http://127.0.0.1:8000</span>/api/v1/files</div></div></div></div></div><=
+div><h3 class=3D"sc-kEqXSa cAMyfw"> Response samples </h3><div class=3D"sc-=
+cxNHIi jdxQrI" data-tabs=3D"true"><ul class=3D"react-tabs__tab-list" role=
+=3D"tablist"><li class=3D"tab-success react-tabs__tab--selected" role=3D"ta=
+b" id=3D"react-tabs-0" aria-selected=3D"true" aria-disabled=3D"false" aria-=
+controls=3D"react-tabs-1" tabindex=3D"0">200</li></ul><div class=3D"react-t=
+abs__tab-panel react-tabs__tab-panel--selected" role=3D"tabpanel" id=3D"rea=
+ct-tabs-1" aria-labelledby=3D"react-tabs-0"><div><div class=3D"sc-Arkif eJD=
+RKz"><span class=3D"sc-cOifOu bFIVui">Content type</span><div class=3D"sc-b=
+BjRSN iPPdF">application/json</div></div><div class=3D"sc-jgPyTC fuJtcf"><d=
+iv class=3D"sc-jNnpgg jIfccS"><div class=3D"sc-giAqHp hIuvjA"><button><div =
+class=3D"sc-carFqZ hBWCUB">Copy</div></button></div><div class=3D"sc-iJCRrE=
+ ifDxYI sc-dPaNzc gKPxXE"><div class=3D"redoc-json"><code><span class=3D"to=
+ken keyword">null</span></code></div></div></div></div></div></div></div></=
+div></div></div></div><div id=3D"operation/create_file_api_v1_files_post" d=
+ata-section-id=3D"operation/create_file_api_v1_files_post" class=3D"sc-eCAp=
+nc kzhJjR"><div data-section-id=3D"operation/create_file_api_v1_files_post"=
+ id=3D"operation/create_file_api_v1_files_post" class=3D"sc-iCoGMd dolNKP">=
+<div class=3D"sc-hKFxyN hutltu"><h2 class=3D"sc-pNWdM kfOTos"><a class=3D"s=
+c-crzoAE DykGo" href=3D"http://127.0.0.1:8000/redoc#operation/create_file_a=
+pi_v1_files_post" aria-label=3D"operation/create_file_api_v1_files_post"></=
+a>Create File </h2><div><h3 class=3D"sc-fIxmyt jVZBMd">Responses</h3><div><=
+button class=3D"sc-htmcrh khIKSp"><svg class=3D"sc-dIsUp pxYkf" version=3D"=
+1.1" viewBox=3D"0 0 24 24" x=3D"0" xmlns=3D"http://www.w3.org/2000/svg" y=
+=3D"0" aria-hidden=3D"true"><polygon points=3D"17.3 8.3 12 13.6 6.7 8.3 5.3=
+ 9.7 12 16.4 18.7 9.7 "></polygon></svg><strong class=3D"sc-fWWYYk fepHIR">=
+201 </strong><span class=3D"sc-jcwpoC DVwyR"><p>Successful Response</p>
+</span></button></div></div></div><div class=3D"sc-jSFjdj sc-gKAaRy dYGhuI =
+fTsuzH"><div class=3D"sc-EZqKI iONckA"><button class=3D"sc-eEVmNe gXhEov"><=
+span type=3D"post" class=3D"sc-fmdNqN iwuDdk http-verb post">post</span><sp=
+an class=3D"sc-jXcxbT hVdkvA">/api/v1/files</span><svg class=3D"sc-dIsUp bG=
+RTXn" version=3D"1.1" viewBox=3D"0 0 24 24" x=3D"0" xmlns=3D"http://www.w3.=
+org/2000/svg" y=3D"0" aria-hidden=3D"true" style=3D"margin-right: -25px;"><=
+polygon points=3D"17.3 8.3 12 13.6 6.7 8.3 5.3 9.7 12 16.4 18.7 9.7 "></pol=
+ygon></svg></button><div aria-hidden=3D"true" class=3D"sc-ljsmAU IXrMk"><di=
+v class=3D"sc-jlZJtj QgNfY"><div class=3D"sc-iJCRrE sc-ciSkZP ifDxYI wfptf"=
+></div><div tabindex=3D"0" role=3D"button"><div class=3D"sc-dTSzeu hyeqlU">=
+<span>http://127.0.0.1:8000</span>/api/v1/files</div></div></div></div></di=
+v><div><h3 class=3D"sc-kEqXSa cAMyfw"> Response samples </h3><div class=3D"=
+sc-cxNHIi jdxQrI" data-tabs=3D"true"><ul class=3D"react-tabs__tab-list" rol=
+e=3D"tablist"><li class=3D"tab-success react-tabs__tab--selected" role=3D"t=
+ab" id=3D"react-tabs-2" aria-selected=3D"true" aria-disabled=3D"false" aria=
+-controls=3D"react-tabs-3" tabindex=3D"0">201</li></ul><div class=3D"react-=
+tabs__tab-panel react-tabs__tab-panel--selected" role=3D"tabpanel" id=3D"re=
+act-tabs-3" aria-labelledby=3D"react-tabs-2"><div><div class=3D"sc-Arkif eJ=
+DRKz"><span class=3D"sc-cOifOu bFIVui">Content type</span><div class=3D"sc-=
+bBjRSN iPPdF">application/json</div></div><div class=3D"sc-jgPyTC fuJtcf"><=
+div class=3D"sc-jNnpgg jIfccS"><div class=3D"sc-giAqHp hIuvjA"><button><div=
+ class=3D"sc-carFqZ hBWCUB">Copy</div></button></div><div class=3D"sc-iJCRr=
+E ifDxYI sc-dPaNzc gKPxXE"><div class=3D"redoc-json"><code><span class=3D"t=
+oken keyword">null</span></code></div></div></div></div></div></div></div><=
+/div></div></div></div><div id=3D"operation/read_file_api_v1_files__file_id=
+__get" data-section-id=3D"operation/read_file_api_v1_files__file_id__get" c=
+lass=3D"sc-eCApnc kzhJjR"><div data-section-id=3D"operation/read_file_api_v=
+1_files__file_id__get" id=3D"operation/read_file_api_v1_files__file_id__get=
+" class=3D"sc-iCoGMd dolNKP"><div class=3D"sc-hKFxyN hutltu"><h2 class=3D"s=
+c-pNWdM kfOTos"><a class=3D"sc-crzoAE DykGo" href=3D"http://127.0.0.1:8000/=
+redoc#operation/read_file_api_v1_files__file_id__get" aria-label=3D"operati=
+on/read_file_api_v1_files__file_id__get"></a>Read File </h2><div><h5 class=
+=3D"sc-iqAclL iupIzr">path Parameters</h5><table class=3D"sc-hHEiqL iZJLLY"=
+><tbody><tr class=3D"last "><td class=3D"sc-hBMUJo sc-fFSPTT eJvdeH dLEyPf"=
+ kind=3D"field" title=3D"file_id"><span class=3D"sc-iemWCZ kMjgQu"></span><=
+span class=3D"property-name">file_id</span><div class=3D"sc-oeezt sc-hhIiOg=
+ bkbCTW kXduun">required</div></td><td class=3D"sc-bkbkJK gaTxIt"><div><div=
+><span class=3D"sc-laZMeE sc-iNiQyp dmLkmF isTLDY"></span><span class=3D"sc=
+-laZMeE sc-jffHpj dmLkmF lVyis">string</span><span class=3D"sc-laZMeE sc-eJ=
+ocfa dmLkmF NHbWE"> (File Id) </span></div> <div><div class=3D"sc-iJCRrE sc=
+-ciSkZP ifDxYI wfptf"></div></div></div></td></tr></tbody></table></div><di=
+v><h3 class=3D"sc-fIxmyt jVZBMd">Responses</h3><div><button class=3D"sc-htm=
+crh khIKSp"><svg class=3D"sc-dIsUp pxYkf" version=3D"1.1" viewBox=3D"0 0 24=
+ 24" x=3D"0" xmlns=3D"http://www.w3.org/2000/svg" y=3D"0" aria-hidden=3D"tr=
+ue"><polygon points=3D"17.3 8.3 12 13.6 6.7 8.3 5.3 9.7 12 16.4 18.7 9.7 ">=
+</polygon></svg><strong class=3D"sc-fWWYYk fepHIR">200 </strong><span class=
+=3D"sc-jcwpoC DVwyR"><p>Successful Response</p>
+</span></button></div><div><button class=3D"sc-htmcrh jcAmZH"><svg class=3D=
+"sc-dIsUp fHkVIP" version=3D"1.1" viewBox=3D"0 0 24 24" x=3D"0" xmlns=3D"ht=
+tp://www.w3.org/2000/svg" y=3D"0" aria-hidden=3D"true"><polygon points=3D"1=
+7.3 8.3 12 13.6 6.7 8.3 5.3 9.7 12 16.4 18.7 9.7 "></polygon></svg><strong =
+class=3D"sc-fWWYYk fepHIR">422 </strong><span class=3D"sc-jcwpoC DVwyR"><p>=
+Validation Error</p>
+</span></button></div></div></div><div class=3D"sc-jSFjdj sc-gKAaRy dYGhuI =
+fTsuzH"><div class=3D"sc-EZqKI iONckA"><button class=3D"sc-eEVmNe gXhEov"><=
+span type=3D"get" class=3D"sc-fmdNqN izOCLq http-verb get">get</span><span =
+class=3D"sc-jXcxbT hVdkvA">/api/v1/files/{file_id}</span><svg class=3D"sc-d=
+IsUp bGRTXn" version=3D"1.1" viewBox=3D"0 0 24 24" x=3D"0" xmlns=3D"http://=
+www.w3.org/2000/svg" y=3D"0" aria-hidden=3D"true" style=3D"margin-right: -2=
+5px;"><polygon points=3D"17.3 8.3 12 13.6 6.7 8.3 5.3 9.7 12 16.4 18.7 9.7 =
+"></polygon></svg></button><div aria-hidden=3D"true" class=3D"sc-ljsmAU IXr=
+Mk"><div class=3D"sc-jlZJtj QgNfY"><div class=3D"sc-iJCRrE sc-ciSkZP ifDxYI=
+ wfptf"></div><div tabindex=3D"0" role=3D"button"><div class=3D"sc-dTSzeu h=
+yeqlU"><span>http://127.0.0.1:8000</span>/api/v1/files/{file_id}</div></div=
+></div></div></div><div><h3 class=3D"sc-kEqXSa cAMyfw"> Response samples </=
+h3><div class=3D"sc-cxNHIi jdxQrI" data-tabs=3D"true"><ul class=3D"react-ta=
+bs__tab-list" role=3D"tablist"><li class=3D"tab-success react-tabs__tab--se=
+lected" role=3D"tab" id=3D"react-tabs-4" aria-selected=3D"true" aria-disabl=
+ed=3D"false" aria-controls=3D"react-tabs-5" tabindex=3D"0">200</li><li clas=
+s=3D"tab-error" role=3D"tab" id=3D"react-tabs-6" aria-selected=3D"false" ar=
+ia-disabled=3D"false" aria-controls=3D"react-tabs-7">422</li></ul><div clas=
+s=3D"react-tabs__tab-panel react-tabs__tab-panel--selected" role=3D"tabpane=
+l" id=3D"react-tabs-5" aria-labelledby=3D"react-tabs-4"><div><div class=3D"=
+sc-Arkif eJDRKz"><span class=3D"sc-cOifOu bFIVui">Content type</span><div c=
+lass=3D"sc-bBjRSN iPPdF">application/json</div></div><div class=3D"sc-jgPyT=
+C fuJtcf"><div class=3D"sc-jNnpgg jIfccS"><div class=3D"sc-giAqHp hIuvjA"><=
+button><div class=3D"sc-carFqZ hBWCUB">Copy</div></button></div><div class=
+=3D"sc-iJCRrE ifDxYI sc-dPaNzc gKPxXE"><div class=3D"redoc-json"><code><but=
+ton class=3D"collapser" aria-label=3D"collapse"></button><span class=3D"tok=
+en punctuation">{</span><span class=3D"ellipsis"></span><ul class=3D"obj co=
+llapsible"><li><div class=3D"hoverable "><span class=3D"property token stri=
+ng">"file_id"</span>: <span class=3D"token string">"1"</span></div></li></u=
+l><span class=3D"token punctuation">}</span></code></div></div></div></div>=
+</div></div><div class=3D"react-tabs__tab-panel" role=3D"tabpanel" id=3D"re=
+act-tabs-7" aria-labelledby=3D"react-tabs-6"></div></div></div></div></div>=
+</div><div id=3D"operation/read_file_records_api_v1_files__file_id__records=
+_get" data-section-id=3D"operation/read_file_records_api_v1_files__file_id_=
+_records_get" class=3D"sc-eCApnc kzhJjR"><div data-section-id=3D"operation/=
+read_file_records_api_v1_files__file_id__records_get" id=3D"operation/read_=
+file_records_api_v1_files__file_id__records_get" class=3D"sc-iCoGMd dolNKP"=
+><div class=3D"sc-hKFxyN hutltu"><h2 class=3D"sc-pNWdM kfOTos"><a class=3D"=
+sc-crzoAE DykGo" href=3D"http://127.0.0.1:8000/redoc#operation/read_file_re=
+cords_api_v1_files__file_id__records_get" aria-label=3D"operation/read_file=
+_records_api_v1_files__file_id__records_get"></a>Read File Records </h2><di=
+v><h5 class=3D"sc-iqAclL iupIzr">path Parameters</h5><table class=3D"sc-hHE=
+iqL iZJLLY"><tbody><tr class=3D"last "><td class=3D"sc-hBMUJo sc-fFSPTT eJv=
+deH dLEyPf" kind=3D"field" title=3D"file_id"><span class=3D"sc-iemWCZ kMjgQ=
+u"></span><span class=3D"property-name">file_id</span><div class=3D"sc-oeez=
+t sc-hhIiOg bkbCTW kXduun">required</div></td><td class=3D"sc-bkbkJK gaTxIt=
+"><div><div><span class=3D"sc-laZMeE sc-iNiQyp dmLkmF isTLDY"></span><span =
+class=3D"sc-laZMeE sc-jffHpj dmLkmF lVyis">string</span><span class=3D"sc-l=
+aZMeE sc-eJocfa dmLkmF NHbWE"> (File Id) </span></div> <div><div class=3D"s=
+c-iJCRrE sc-ciSkZP ifDxYI wfptf"></div></div></div></td></tr></tbody></tabl=
+e></div><div><h3 class=3D"sc-fIxmyt jVZBMd">Responses</h3><div><button clas=
+s=3D"sc-htmcrh khIKSp"><svg class=3D"sc-dIsUp pxYkf" version=3D"1.1" viewBo=
+x=3D"0 0 24 24" x=3D"0" xmlns=3D"http://www.w3.org/2000/svg" y=3D"0" aria-h=
+idden=3D"true"><polygon points=3D"17.3 8.3 12 13.6 6.7 8.3 5.3 9.7 12 16.4 =
+18.7 9.7 "></polygon></svg><strong class=3D"sc-fWWYYk fepHIR">200 </strong>=
+<span class=3D"sc-jcwpoC DVwyR"><p>Successful Response</p>
+</span></button></div><div><button class=3D"sc-htmcrh jcAmZH"><svg class=3D=
+"sc-dIsUp fHkVIP" version=3D"1.1" viewBox=3D"0 0 24 24" x=3D"0" xmlns=3D"ht=
+tp://www.w3.org/2000/svg" y=3D"0" aria-hidden=3D"true"><polygon points=3D"1=
+7.3 8.3 12 13.6 6.7 8.3 5.3 9.7 12 16.4 18.7 9.7 "></polygon></svg><strong =
+class=3D"sc-fWWYYk fepHIR">422 </strong><span class=3D"sc-jcwpoC DVwyR"><p>=
+Validation Error</p>
+</span></button></div></div></div><div class=3D"sc-jSFjdj sc-gKAaRy dYGhuI =
+fTsuzH"><div class=3D"sc-EZqKI iONckA"><button class=3D"sc-eEVmNe gXhEov"><=
+span type=3D"get" class=3D"sc-fmdNqN izOCLq http-verb get">get</span><span =
+class=3D"sc-jXcxbT hVdkvA">/api/v1/files/{file_id}/records</span><svg class=
+=3D"sc-dIsUp bGRTXn" version=3D"1.1" viewBox=3D"0 0 24 24" x=3D"0" xmlns=3D=
+"http://www.w3.org/2000/svg" y=3D"0" aria-hidden=3D"true" style=3D"margin-r=
+ight: -25px;"><polygon points=3D"17.3 8.3 12 13.6 6.7 8.3 5.3 9.7 12 16.4 1=
+8.7 9.7 "></polygon></svg></button><div aria-hidden=3D"true" class=3D"sc-lj=
+smAU IXrMk"><div class=3D"sc-jlZJtj QgNfY"><div class=3D"sc-iJCRrE sc-ciSkZ=
+P ifDxYI wfptf"></div><div tabindex=3D"0" role=3D"button"><div class=3D"sc-=
+dTSzeu hyeqlU"><span>http://127.0.0.1:8000</span>/api/v1/files/{file_id}/re=
+cords</div></div></div></div></div><div><h3 class=3D"sc-kEqXSa cAMyfw"> Res=
+ponse samples </h3><div class=3D"sc-cxNHIi jdxQrI" data-tabs=3D"true"><ul c=
+lass=3D"react-tabs__tab-list" role=3D"tablist"><li class=3D"tab-success rea=
+ct-tabs__tab--selected" role=3D"tab" id=3D"react-tabs-8" aria-selected=3D"t=
+rue" aria-disabled=3D"false" aria-controls=3D"react-tabs-9" tabindex=3D"0">=
+200</li><li class=3D"tab-error" role=3D"tab" id=3D"react-tabs-10" aria-sele=
+cted=3D"false" aria-disabled=3D"false" aria-controls=3D"react-tabs-11">422<=
+/li></ul><div class=3D"react-tabs__tab-panel react-tabs__tab-panel--selecte=
+d" role=3D"tabpanel" id=3D"react-tabs-9" aria-labelledby=3D"react-tabs-8"><=
+div><div class=3D"sc-Arkif eJDRKz"><span class=3D"sc-cOifOu bFIVui">Content=
+ type</span><div class=3D"sc-bBjRSN iPPdF">application/json</div></div><div=
+ class=3D"sc-jgPyTC fuJtcf"><div class=3D"sc-jNnpgg jIfccS"><div class=3D"s=
+c-giAqHp hIuvjA"><button><div class=3D"sc-carFqZ hBWCUB">Copy</div></button=
+></div><div class=3D"sc-iJCRrE ifDxYI sc-dPaNzc gKPxXE"><div class=3D"redoc=
+-json"><code><span class=3D"token keyword">null</span></code></div></div></=
+div></div></div></div><div class=3D"react-tabs__tab-panel" role=3D"tabpanel=
+" id=3D"react-tabs-11" aria-labelledby=3D"react-tabs-10"></div></div></div>=
+</div></div></div><div id=3D"operation/read_file_record_api_v1_files__file_=
+id__records__record_id__get" data-section-id=3D"operation/read_file_record_=
+api_v1_files__file_id__records__record_id__get" class=3D"sc-eCApnc kzhJjR">=
+<div data-section-id=3D"operation/read_file_record_api_v1_files__file_id__r=
+ecords__record_id__get" id=3D"operation/read_file_record_api_v1_files__file=
+_id__records__record_id__get" class=3D"sc-iCoGMd dolNKP"><div class=3D"sc-h=
+KFxyN hutltu"><h2 class=3D"sc-pNWdM kfOTos"><a class=3D"sc-crzoAE DykGo" hr=
+ef=3D"http://127.0.0.1:8000/redoc#operation/read_file_record_api_v1_files__=
+file_id__records__record_id__get" aria-label=3D"operation/read_file_record_=
+api_v1_files__file_id__records__record_id__get"></a>Read File Record </h2><=
+div><h5 class=3D"sc-iqAclL iupIzr">path Parameters</h5><table class=3D"sc-h=
+HEiqL iZJLLY"><tbody><tr class=3D""><td class=3D"sc-hBMUJo sc-fFSPTT eJvdeH=
+ dLEyPf" kind=3D"field" title=3D"file_id"><span class=3D"sc-iemWCZ kMjgQu">=
+</span><span class=3D"property-name">file_id</span><div class=3D"sc-oeezt s=
+c-hhIiOg bkbCTW kXduun">required</div></td><td class=3D"sc-bkbkJK gaTxIt"><=
+div><div><span class=3D"sc-laZMeE sc-iNiQyp dmLkmF isTLDY"></span><span cla=
+ss=3D"sc-laZMeE sc-jffHpj dmLkmF lVyis">string</span><span class=3D"sc-laZM=
+eE sc-eJocfa dmLkmF NHbWE"> (File Id) </span></div> <div><div class=3D"sc-i=
+JCRrE sc-ciSkZP ifDxYI wfptf"></div></div></div></td></tr><tr class=3D"last=
+ "><td class=3D"sc-hBMUJo sc-fFSPTT eJvdeH dLEyPf" kind=3D"field" title=3D"=
+record_id"><span class=3D"sc-iemWCZ kMjgQu"></span><span class=3D"property-=
+name">record_id</span><div class=3D"sc-oeezt sc-hhIiOg bkbCTW kXduun">requi=
+red</div></td><td class=3D"sc-bkbkJK gaTxIt"><div><div><span class=3D"sc-la=
+ZMeE sc-iNiQyp dmLkmF isTLDY"></span><span class=3D"sc-laZMeE sc-jffHpj dmL=
+kmF lVyis">string</span><span class=3D"sc-laZMeE sc-eJocfa dmLkmF NHbWE"> (=
+Record Id) </span></div> <div><div class=3D"sc-iJCRrE sc-ciSkZP ifDxYI wfpt=
+f"></div></div></div></td></tr></tbody></table></div><div><h3 class=3D"sc-f=
+Ixmyt jVZBMd">Responses</h3><div><button class=3D"sc-htmcrh khIKSp"><svg cl=
+ass=3D"sc-dIsUp pxYkf" version=3D"1.1" viewBox=3D"0 0 24 24" x=3D"0" xmlns=
+=3D"http://www.w3.org/2000/svg" y=3D"0" aria-hidden=3D"true"><polygon point=
+s=3D"17.3 8.3 12 13.6 6.7 8.3 5.3 9.7 12 16.4 18.7 9.7 "></polygon></svg><s=
+trong class=3D"sc-fWWYYk fepHIR">200 </strong><span class=3D"sc-jcwpoC DVwy=
+R"><p>Successful Response</p>
+</span></button></div><div><button class=3D"sc-htmcrh jcAmZH"><svg class=3D=
+"sc-dIsUp fHkVIP" version=3D"1.1" viewBox=3D"0 0 24 24" x=3D"0" xmlns=3D"ht=
+tp://www.w3.org/2000/svg" y=3D"0" aria-hidden=3D"true"><polygon points=3D"1=
+7.3 8.3 12 13.6 6.7 8.3 5.3 9.7 12 16.4 18.7 9.7 "></polygon></svg><strong =
+class=3D"sc-fWWYYk fepHIR">422 </strong><span class=3D"sc-jcwpoC DVwyR"><p>=
+Validation Error</p>
+</span></button></div></div></div><div class=3D"sc-jSFjdj sc-gKAaRy dYGhuI =
+fTsuzH"><div class=3D"sc-EZqKI iONckA"><button class=3D"sc-eEVmNe gXhEov"><=
+span type=3D"get" class=3D"sc-fmdNqN izOCLq http-verb get">get</span><span =
+class=3D"sc-jXcxbT hVdkvA">/api/v1/files/{file_id}/records/{record_id}</spa=
+n><svg class=3D"sc-dIsUp bGRTXn" version=3D"1.1" viewBox=3D"0 0 24 24" x=3D=
+"0" xmlns=3D"http://www.w3.org/2000/svg" y=3D"0" aria-hidden=3D"true" style=
+=3D"margin-right: -25px;"><polygon points=3D"17.3 8.3 12 13.6 6.7 8.3 5.3 9=
+.7 12 16.4 18.7 9.7 "></polygon></svg></button><div aria-hidden=3D"true" cl=
+ass=3D"sc-ljsmAU IXrMk"><div class=3D"sc-jlZJtj QgNfY"><div class=3D"sc-iJC=
+RrE sc-ciSkZP ifDxYI wfptf"></div><div tabindex=3D"0" role=3D"button"><div =
+class=3D"sc-dTSzeu hyeqlU"><span>http://127.0.0.1:8000</span>/api/v1/files/=
+{file_id}/records/{record_id}</div></div></div></div></div><div><h3 class=
+=3D"sc-kEqXSa cAMyfw"> Response samples </h3><div class=3D"sc-cxNHIi jdxQrI=
+" data-tabs=3D"true"><ul class=3D"react-tabs__tab-list" role=3D"tablist"><l=
+i class=3D"tab-success react-tabs__tab--selected" role=3D"tab" id=3D"react-=
+tabs-12" aria-selected=3D"true" aria-disabled=3D"false" aria-controls=3D"re=
+act-tabs-13" tabindex=3D"0">200</li><li class=3D"tab-error" role=3D"tab" id=
+=3D"react-tabs-14" aria-selected=3D"false" aria-disabled=3D"false" aria-con=
+trols=3D"react-tabs-15">422</li></ul><div class=3D"react-tabs__tab-panel re=
+act-tabs__tab-panel--selected" role=3D"tabpanel" id=3D"react-tabs-13" aria-=
+labelledby=3D"react-tabs-12"><div><div class=3D"sc-Arkif eJDRKz"><span clas=
+s=3D"sc-cOifOu bFIVui">Content type</span><div class=3D"sc-bBjRSN iPPdF">ap=
+plication/json</div></div><div class=3D"sc-jgPyTC fuJtcf"><div class=3D"sc-=
+jNnpgg jIfccS"><div class=3D"sc-giAqHp hIuvjA"><button><div class=3D"sc-car=
+FqZ hBWCUB">Copy</div></button></div><div class=3D"sc-iJCRrE ifDxYI sc-dPaN=
+zc gKPxXE"><div class=3D"redoc-json"><code><span class=3D"token keyword">nu=
+ll</span></code></div></div></div></div></div></div><div class=3D"react-tab=
+s__tab-panel" role=3D"tabpanel" id=3D"react-tabs-15" aria-labelledby=3D"rea=
+ct-tabs-14"></div></div></div></div></div></div></div><div class=3D"sc-ellf=
+Gf bCOLCR"></div></div></redoc>
+   =20
+   =20
+   =20
+    </body></html>
+------MultipartBoundary--BtLBMNQk02lTSJ5anq5EvWt7Cl5fN4Ytj5LAmtdx5I----
+Content-Type: text/css
+Content-Transfer-Encoding: quoted-printable
+Content-Location: cid:css-5358df7b-9225-4b81-987c-c0d2a2b526f9@mhtml.blink
+
+@charset "utf-8";
+
+body { margin: 0px; padding: 0px; }
+------MultipartBoundary--BtLBMNQk02lTSJ5anq5EvWt7Cl5fN4Ytj5LAmtdx5I----
+Content-Type: text/css
+Content-Transfer-Encoding: quoted-printable
+Content-Location: cid:css-8e25ffd3-dff1-4288-b850-b0992969f12d@mhtml.blink
+
+@charset "utf-8";
+
+.ps { overflow-anchor: none; touch-action: auto; overflow: hidden !importan=
+t; }
+
+.ps__rail-x { display: none; opacity: 0; transition: background-color 0.2s =
+linear, opacity 0.2s linear; height: 15px; bottom: 0px; position: absolute;=
+ }
+
+.ps__rail-y { display: none; opacity: 0; transition: background-color 0.2s =
+linear, opacity 0.2s linear; width: 15px; right: 0px; position: absolute; }
+
+.ps--active-x > .ps__rail-x, .ps--active-y > .ps__rail-y { display: block; =
+background-color: transparent; }
+
+.ps:hover > .ps__rail-x, .ps:hover > .ps__rail-y, .ps--focus > .ps__rail-x,=
+ .ps--focus > .ps__rail-y, .ps--scrolling-x > .ps__rail-x, .ps--scrolling-y=
+ > .ps__rail-y { opacity: 0.6; }
+
+.ps .ps__rail-x:hover, .ps .ps__rail-y:hover, .ps .ps__rail-x:focus, .ps .p=
+s__rail-y:focus, .ps .ps__rail-x.ps--clicking, .ps .ps__rail-y.ps--clicking=
+ { background-color: rgb(238, 238, 238); opacity: 0.9; }
+
+.ps__thumb-x { background-color: rgb(170, 170, 170); border-radius: 6px; tr=
+ansition: background-color 0.2s linear, height 0.2s ease-in-out; height: 6p=
+x; bottom: 2px; position: absolute; }
+
+.ps__thumb-y { background-color: rgb(170, 170, 170); border-radius: 6px; tr=
+ansition: background-color 0.2s linear, width 0.2s ease-in-out; width: 6px;=
+ right: 2px; position: absolute; }
+
+.ps__rail-x:hover > .ps__thumb-x, .ps__rail-x:focus > .ps__thumb-x, .ps__ra=
+il-x.ps--clicking .ps__thumb-x { background-color: rgb(153, 153, 153); heig=
+ht: 11px; }
+
+.ps__rail-y:hover > .ps__thumb-y, .ps__rail-y:focus > .ps__thumb-y, .ps__ra=
+il-y.ps--clicking .ps__thumb-y { background-color: rgb(153, 153, 153); widt=
+h: 11px; }
+
+@supports (-ms-overflow-style: none) {
+  .ps { overflow: auto !important; }
+}
+
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+  .ps { overflow: auto !important; }
+}
+------MultipartBoundary--BtLBMNQk02lTSJ5anq5EvWt7Cl5fN4Ytj5LAmtdx5I----
+Content-Type: text/css
+Content-Transfer-Encoding: quoted-printable
+Content-Location: cid:css-316fca76-a8ae-4b8c-81f5-52b7d8558e94@mhtml.blink
+
+@charset "utf-8";
+
+.gdZoGt { animation: 2s linear 0s infinite normal none running gtRCGH; widt=
+h: 50px; height: 50px; content: ""; display: inline-block; margin-left: -25=
+px; }
+
+.gdZoGt path { fill: rgb(50, 50, 159); }
+
+.eprxZf { font-family: helvetica, sans; width: 100%; text-align: center; fo=
+nt-size: 25px; margin: 30px 0px 20px; color: rgb(50, 50, 159); }
+
+.hutltu { width: calc(60%); padding: 0px 40px; }
+
+@media print, screen and (max-width: 75rem) {
+  .hutltu { width: 100%; padding: 40px; }
+}
+
+.chOOHy { padding: 40px 0px; }
+
+.chOOHy:last-child { min-height: calc(1px + 100vh); }
+
+.sc-eCApnc > .sc-eCApnc:last-child { min-height: initial; }
+
+@media print, screen and (max-width: 75rem) {
+  .chOOHy { padding: 0px; }
+}
+
+.kzhJjR { padding: 40px 0px; position: relative; }
+
+.kzhJjR:last-child { min-height: calc(1px + 100vh); }
+
+.sc-eCApnc > .sc-eCApnc:last-child { min-height: initial; }
+
+@media print, screen and (max-width: 75rem) {
+  .kzhJjR { padding: 0px; }
+}
+
+.kzhJjR:not(:last-of-type)::after { position: absolute; bottom: 0px; width:=
+ 100%; display: block; content: ""; border-bottom: 1px solid rgba(0, 0, 0, =
+0.2); }
+
+.dYGhuI { width: 40%; color: rgb(255, 255, 255); background-color: rgb(38, =
+50, 56); padding: 0px 40px; }
+
+@media print, screen and (max-width: 75rem) {
+  .dYGhuI { width: 100%; padding: 40px; }
+}
+
+.fTsuzH { background-color: rgb(38, 50, 56); }
+
+.dolNKP { display: flex; width: 100%; padding: 0px; }
+
+@media print, screen and (max-width: 75rem) {
+  .dolNKP { flex-direction: column; }
+}
+
+.kudwlS { font-family: Montserrat, sans-serif; font-weight: 400; font-size:=
+ 1.85714em; line-height: 1.6em; color: rgb(51, 51, 51); }
+
+.kfOTos { font-family: Montserrat, sans-serif; font-weight: 400; font-size:=
+ 1.57143em; line-height: 1.6em; color: rgb(51, 51, 51); margin: 0px 0px 20p=
+x; }
+
+.cAMyfw { color: rgb(255, 255, 255); }
+
+.iupIzr { border-bottom: 1px solid rgba(38, 50, 56, 0.3); margin: 1em 0px; =
+color: rgba(38, 50, 56, 0.5); font-weight: normal; text-transform: uppercas=
+e; font-size: 0.929em; line-height: 20px; }
+
+.DykGo { cursor: pointer; margin-left: -20px; padding: 0px; line-height: 1;=
+ width: 20px; display: inline-block; outline: 0px; }
+
+.DykGo::before { content: ""; width: 15px; height: 15px; background-size: c=
+ontain; background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaH=
+R0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZlcnNpb249IjEuMSIgeD0iMCIgeT0iMCIgd2lkd=
+Gg9IjUxMiIgaGVpZ2h0PSI1MTIiIHZpZXdCb3g9IjAgMCA1MTIgNTEyIiBlbmFibGUtYmFja2dy=
+b3VuZD0ibmV3IDAgMCA1MTIgNTEyIiB4bWw6c3BhY2U9InByZXNlcnZlIj48cGF0aCBmaWxsPSI=
+jMDEwMTAxIiBkPSJNNDU5LjcgMjMzLjRsLTkwLjUgOTAuNWMtNTAgNTAtMTMxIDUwLTE4MSAwIC=
+03LjktNy44LTE0LTE2LjctMTkuNC0yNS44bDQyLjEtNDIuMWMyLTIgNC41LTMuMiA2LjgtNC41I=
+DIuOSA5LjkgOCAxOS4zIDE1LjggMjcuMiAyNSAyNSA2NS42IDI0LjkgOTAuNSAwbDkwLjUtOTAu=
+NWMyNS0yNSAyNS02NS42IDAtOTAuNSAtMjQuOS0yNS02NS41LTI1LTkwLjUgMGwtMzIuMiAzMi4=
+yYy0yNi4xLTEwLjItNTQuMi0xMi45LTgxLjYtOC45bDY4LjYtNjguNmM1MC01MCAxMzEtNTAgMT=
+gxIDBDNTA5LjYgMTAyLjMgNTA5LjYgMTgzLjQgNDU5LjcgMjMzLjR6TTIyMC4zIDM4Mi4ybC0zM=
+i4yIDMyLjJjLTI1IDI0LjktNjUuNiAyNC45LTkwLjUgMCAtMjUtMjUtMjUtNjUuNiAwLTkwLjVs=
+OTAuNS05MC41YzI1LTI1IDY1LjUtMjUgOTAuNSAwIDcuOCA3LjggMTIuOSAxNy4yIDE1LjggMjc=
+uMSAyLjQtMS40IDQuOC0yLjUgNi44LTQuNWw0Mi4xLTQyYy01LjQtOS4yLTExLjYtMTgtMTkuNC=
+0yNS44IC01MC01MC0xMzEtNTAtMTgxIDBsLTkwLjUgOTAuNWMtNTAgNTAtNTAgMTMxIDAgMTgxI=
+DUwIDUwIDEzMSA1MCAxODEgMGw2OC42LTY4LjZDMjc0LjYgMzk1LjEgMjQ2LjQgMzkyLjMgMjIw=
+LjMgMzgyLjJ6Ii8+PC9zdmc+Cg=3D=3D"); opacity: 0.5; visibility: hidden; displ=
+ay: inline-block; vertical-align: middle; }
+
+h1:hover > .sc-crzoAE::before, h2:hover > .DykGo::before, .DykGo:hover::bef=
+ore { visibility: visible; }
+
+.pxYkf { height: 1.5em; width: 1.5em; min-width: 1.5em; vertical-align: mid=
+dle; float: left; transition: transform 0.2s ease-out; transform: rotateZ(-=
+90deg); }
+
+.pxYkf polygon { fill: rgb(29, 129, 39); }
+
+.bGRTXn { height: 20px; width: 20px; min-width: 20px; vertical-align: middl=
+e; float: right; transition: transform 0.2s ease-out; transform: rotateZ(0d=
+eg); }
+
+.bGRTXn polygon { fill: white; }
+
+.fHkVIP { height: 1.5em; width: 1.5em; min-width: 1.5em; vertical-align: mi=
+ddle; float: left; transition: transform 0.2s ease-out; transform: rotateZ(=
+-90deg); }
+
+.fHkVIP polygon { fill: rgb(212, 31, 28); }
+
+.eJvdeH { border-left: 1px solid rgb(124, 124, 187); box-sizing: border-box=
+; position: relative; padding: 10px 10px 10px 0px; }
+
+@media screen and (max-width: 50rem) {
+  .eJvdeH { display: block; overflow: hidden; }
+}
+
+tr:first-of-type > .sc-hBMUJo, tr.last > .eJvdeH { border-left-width: 0px; =
+background-position: left top; background-repeat: no-repeat; background-siz=
+e: 1px 100%; }
+
+tr:first-of-type > .sc-hBMUJo { background-image: linear-gradient(transpare=
+nt 0%, transparent 22px, rgb(124, 124, 187) 22px, rgb(124, 124, 187) 100%);=
+ }
+
+tr.last > .sc-hBMUJo { background-image: linear-gradient(rgb(124, 124, 187)=
+ 0%, rgb(124, 124, 187) 22px, transparent 22px, transparent 100%); }
+
+tr.last + tr > .sc-hBMUJo { border-left-color: transparent; }
+
+tr.last:first-child > .sc-hBMUJo { background: none; border-left-color: tra=
+nsparent; }
+
+.dLEyPf { vertical-align: top; line-height: 20px; white-space: nowrap; font=
+-size: 13px; font-family: Courier, monospace; }
+
+.dLEyPf.deprecated { text-decoration: line-through; color: rgb(112, 112, 11=
+2); }
+
+.gaTxIt { border-bottom: 1px solid rgb(159, 180, 190); padding: 10px 0px; w=
+idth: 75%; box-sizing: border-box; }
+
+tr.expanded .sc-bkbkJK { border-bottom: none; }
+
+@media screen and (max-width: 50rem) {
+  .gaTxIt { padding: 0px 20px; border-bottom: none; border-left: 1px solid =
+rgb(124, 124, 187); }
+  tr.last > .sc-bkbkJK { border-left: none; }
+}
+
+.kMjgQu { color: rgb(124, 124, 187); font-family: Courier, monospace; margi=
+n-right: 10px; }
+
+.kMjgQu::before { content: ""; display: inline-block; vertical-align: middl=
+e; width: 10px; height: 1px; background: rgb(124, 124, 187); }
+
+.kMjgQu::after { content: ""; display: inline-block; vertical-align: middle=
+; width: 1px; background: rgb(124, 124, 187); height: 7px; }
+
+.iZJLLY { border-collapse: separate; border-radius: 3px; font-size: 14px; b=
+order-spacing: 0px; width: 100%; }
+
+.iZJLLY > tr { vertical-align: middle; }
+
+@media screen and (max-width: 50rem) {
+  .iZJLLY { display: block; }
+  .iZJLLY > tr, .iZJLLY > tbody > tr { display: block; }
+}
+
+@media screen and (max-width: 50rem) and (-ms-high-contrast:none) {
+  .iZJLLY td { float: left; width: 100%; }
+}
+
+.iZJLLY .sc-dIvrsQ, .iZJLLY .sc-dIvrsQ .sc-dIvrsQ .sc-dIvrsQ, .iZJLLY .sc-d=
+IvrsQ .sc-dIvrsQ .sc-dIvrsQ .sc-dIvrsQ .sc-dIvrsQ { margin: 1em 0px 1em 1em=
+; background: rgb(250, 250, 250); }
+
+.iZJLLY .sc-dIvrsQ .sc-dIvrsQ, .iZJLLY .sc-dIvrsQ .sc-dIvrsQ .sc-dIvrsQ .sc=
+-dIvrsQ, .iZJLLY .sc-dIvrsQ .sc-dIvrsQ .sc-dIvrsQ .sc-dIvrsQ .sc-dIvrsQ .sc=
+-dIvrsQ { background: rgb(255, 255, 255); }
+
+.jdxQrI > ul { list-style: none; padding: 0px; margin: 0px -5px; }
+
+.jdxQrI > ul > li { padding: 5px 10px; display: inline-block; background-co=
+lor: rgb(17, 23, 26); cursor: pointer; text-align: center; outline: none; c=
+olor: rgb(204, 204, 204); margin: 0px 5px 5px; border: 1px solid rgb(7, 9, =
+11); border-radius: 5px; min-width: 60px; font-size: 0.9em; font-weight: bo=
+ld; }
+
+.jdxQrI > ul > li.react-tabs__tab--selected { color: rgb(51, 51, 51); backg=
+round: rgb(255, 255, 255); }
+
+.jdxQrI > ul > li.react-tabs__tab--selected:focus { outline: auto; }
+
+.jdxQrI > ul > li:only-child { flex: 0 0 auto; min-width: 100px; }
+
+.jdxQrI > ul > li.tab-success { color: rgb(29, 129, 39); }
+
+.jdxQrI > ul > li.tab-redirect { color: rgb(255, 165, 0); }
+
+.jdxQrI > ul > li.tab-info { color: rgb(135, 206, 235); }
+
+.jdxQrI > ul > li.tab-error { color: rgb(212, 31, 28); }
+
+.jdxQrI > .react-tabs__tab-panel { background: rgb(17, 23, 26); }
+
+.jdxQrI > .react-tabs__tab-panel > div, .jdxQrI > .react-tabs__tab-panel > =
+pre { padding: 20px; margin: 0px; }
+
+.jdxQrI > .react-tabs__tab-panel > div > pre { padding: 0px; }
+
+.ifDxYI code[class*=3D"language-"], .ifDxYI pre[class*=3D"language-"] { tex=
+t-shadow: black 0px -0.1em 0.2em; text-align: left; white-space: pre; word-=
+spacing: normal; word-break: normal; overflow-wrap: normal; line-height: 1.=
+5; tab-size: 4; hyphens: none; }
+
+@media print {
+  .ifDxYI code[class*=3D"language-"], .ifDxYI pre[class*=3D"language-"] { t=
+ext-shadow: none; }
+}
+
+.ifDxYI pre[class*=3D"language-"] { padding: 1em; margin: 0.5em 0px; overfl=
+ow: auto; }
+
+.ifDxYI .token.comment, .ifDxYI .token.prolog, .ifDxYI .token.doctype, .ifD=
+xYI .token.cdata { color: rgb(153, 128, 102); }
+
+.ifDxYI .token.punctuation { opacity: 0.7; }
+
+.ifDxYI .namespace { opacity: 0.7; }
+
+.ifDxYI .token.property, .ifDxYI .token.tag, .ifDxYI .token.number, .ifDxYI=
+ .token.constant, .ifDxYI .token.symbol { color: rgb(74, 139, 179); }
+
+.ifDxYI .token.boolean { color: rgb(230, 68, 65); }
+
+.ifDxYI .token.selector, .ifDxYI .token.attr-name, .ifDxYI .token.string, .=
+ifDxYI .token.char, .ifDxYI .token.builtin, .ifDxYI .token.inserted { color=
+: rgb(160, 251, 170); }
+
+.ifDxYI .token.selector + a, .ifDxYI .token.attr-name + a, .ifDxYI .token.s=
+tring + a, .ifDxYI .token.char + a, .ifDxYI .token.builtin + a, .ifDxYI .to=
+ken.inserted + a, .ifDxYI .token.selector + a:visited, .ifDxYI .token.attr-=
+name + a:visited, .ifDxYI .token.string + a:visited, .ifDxYI .token.char + =
+a:visited, .ifDxYI .token.builtin + a:visited, .ifDxYI .token.inserted + a:=
+visited { color: rgb(78, 210, 186); text-decoration: underline; }
+
+.ifDxYI .token.property.string { color: white; }
+
+.ifDxYI .token.operator, .ifDxYI .token.entity, .ifDxYI .token.url, .ifDxYI=
+ .token.variable { color: rgb(245, 184, 61); }
+
+.ifDxYI .token.atrule, .ifDxYI .token.attr-value, .ifDxYI .token.keyword { =
+color: rgb(209, 148, 158); }
+
+.ifDxYI .token.regex, .ifDxYI .token.important { color: rgb(238, 153, 0); }
+
+.ifDxYI .token.important, .ifDxYI .token.bold { font-weight: bold; }
+
+.ifDxYI .token.italic { font-style: italic; }
+
+.ifDxYI .token.entity { cursor: help; }
+
+.ifDxYI .token.deleted { color: red; }
+
+.hIuvjA { opacity: 0.7; transition: opacity 0.3s; text-align: right; }
+
+.hIuvjA:focus-within { opacity: 1; }
+
+.hIuvjA > button { background-color: transparent; border: 0px; color: inher=
+it; padding: 2px 10px; font-family: Roboto, sans-serif; font-size: 14px; li=
+ne-height: 1.5em; cursor: pointer; outline: 0px; }
+
+.hIuvjA > button:hover, .hIuvjA > button:focus { background: rgba(255, 255,=
+ 255, 0.1); }
+
+.hbusih { position: relative; }
+
+.dYAYxd { font-family: Roboto, sans-serif; font-weight: 400; line-height: 1=
+.5em; }
+
+.dYAYxd p:last-child { margin-bottom: 0px; }
+
+.dYAYxd h1 { font-family: Montserrat, sans-serif; font-weight: 400; font-si=
+ze: 1.85714em; line-height: 1.6em; color: rgb(50, 50, 159); margin-top: 0px=
+; }
+
+.dYAYxd h2 { font-family: Montserrat, sans-serif; font-weight: 400; font-si=
+ze: 1.57143em; line-height: 1.6em; color: rgb(51, 51, 51); }
+
+.dYAYxd code { color: rgb(229, 57, 53); background-color: rgba(38, 50, 56, =
+0.05); font-family: Courier, monospace; border-radius: 2px; border: 1px sol=
+id rgba(38, 50, 56, 0.1); padding: 0px 5px; font-size: 13px; font-weight: 4=
+00; word-break: break-word; }
+
+.dYAYxd pre { font-family: Courier, monospace; white-space: pre; background=
+-color: rgb(17, 23, 26); color: white; padding: 20px; overflow-x: auto; lin=
+e-height: normal; border-radius: 0px; border: 1px solid rgba(38, 50, 56, 0.=
+1); }
+
+.dYAYxd pre code { background-color: transparent; color: white; padding: 0p=
+x; }
+
+.dYAYxd pre code::before, .dYAYxd pre code::after { content: none; }
+
+.dYAYxd blockquote { margin: 0px 0px 1em; padding: 0px 15px; color: rgb(119=
+, 119, 119); border-left: 4px solid rgb(221, 221, 221); }
+
+.dYAYxd img { max-width: 100%; box-sizing: content-box; }
+
+.dYAYxd ul, .dYAYxd ol { padding-left: 2em; margin: 0px 0px 1em; }
+
+.dYAYxd ul ul, .dYAYxd ol ul, .dYAYxd ul ol, .dYAYxd ol ol { margin-bottom:=
+ 0px; margin-top: 0px; }
+
+.dYAYxd table { display: block; width: 100%; overflow: auto; word-break: ke=
+ep-all; border-collapse: collapse; border-spacing: 0px; margin-top: 1.5em; =
+margin-bottom: 1.5em; }
+
+.dYAYxd table tr { background-color: rgb(255, 255, 255); border-top: 1px so=
+lid rgb(204, 204, 204); }
+
+.dYAYxd table tr:nth-child(2n) { background-color: rgb(250, 250, 250); }
+
+.dYAYxd table th, .dYAYxd table td { padding: 6px 13px; border: 1px solid r=
+gb(221, 221, 221); }
+
+.dYAYxd table th { text-align: left; font-weight: bold; }
+
+.dYAYxd .share-link { cursor: pointer; margin-left: -20px; padding: 0px; li=
+ne-height: 1; width: 20px; display: inline-block; outline: 0px; }
+
+.dYAYxd .share-link::before { content: ""; width: 15px; height: 15px; backg=
+round-size: contain; background-image: url("data:image/svg+xml;base64,PHN2Z=
+yB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZlcnNpb249IjEuMSIgeD0iMCIg=
+eT0iMCIgd2lkdGg9IjUxMiIgaGVpZ2h0PSI1MTIiIHZpZXdCb3g9IjAgMCA1MTIgNTEyIiBlbmF=
+ibGUtYmFja2dyb3VuZD0ibmV3IDAgMCA1MTIgNTEyIiB4bWw6c3BhY2U9InByZXNlcnZlIj48cG=
+F0aCBmaWxsPSIjMDEwMTAxIiBkPSJNNDU5LjcgMjMzLjRsLTkwLjUgOTAuNWMtNTAgNTAtMTMxI=
+DUwLTE4MSAwIC03LjktNy44LTE0LTE2LjctMTkuNC0yNS44bDQyLjEtNDIuMWMyLTIgNC41LTMu=
+MiA2LjgtNC41IDIuOSA5LjkgOCAxOS4zIDE1LjggMjcuMiAyNSAyNSA2NS42IDI0LjkgOTAuNSA=
+wbDkwLjUtOTAuNWMyNS0yNSAyNS02NS42IDAtOTAuNSAtMjQuOS0yNS02NS41LTI1LTkwLjUgMG=
+wtMzIuMiAzMi4yYy0yNi4xLTEwLjItNTQuMi0xMi45LTgxLjYtOC45bDY4LjYtNjguNmM1MC01M=
+CAxMzEtNTAgMTgxIDBDNTA5LjYgMTAyLjMgNTA5LjYgMTgzLjQgNDU5LjcgMjMzLjR6TTIyMC4z=
+IDM4Mi4ybC0zMi4yIDMyLjJjLTI1IDI0LjktNjUuNiAyNC45LTkwLjUgMCAtMjUtMjUtMjUtNjU=
+uNiAwLTkwLjVsOTAuNS05MC41YzI1LTI1IDY1LjUtMjUgOTAuNSAwIDcuOCA3LjggMTIuOSAxNy=
+4yIDE1LjggMjcuMSAyLjQtMS40IDQuOC0yLjUgNi44LTQuNWw0Mi4xLTQyYy01LjQtOS4yLTExL=
+jYtMTgtMTkuNC0yNS44IC01MC01MC0xMzEtNTAtMTgxIDBsLTkwLjUgOTAuNWMtNTAgNTAtNTAg=
+MTMxIDAgMTgxIDUwIDUwIDEzMSA1MCAxODEgMGw2OC42LTY4LjZDMjc0LjYgMzk1LjEgMjQ2LjQ=
+gMzkyLjMgMjIwLjMgMzgyLjJ6Ii8+PC9zdmc+Cg=3D=3D"); opacity: 0.5; visibility: =
+hidden; display: inline-block; vertical-align: middle; }
+
+.dYAYxd h1:hover > .share-link::before, .dYAYxd h2:hover > .share-link::bef=
+ore, .dYAYxd .share-link:hover::before { visibility: visible; }
+
+.dYAYxd a { text-decoration: none; color: rgb(50, 50, 159); }
+
+.dYAYxd a:visited { color: rgb(50, 50, 159); }
+
+.dYAYxd a:hover { color: rgb(104, 104, 207); text-decoration: none; }
+
+.wfptf { font-family: Roboto, sans-serif; font-weight: 400; line-height: 1.=
+5em; }
+
+.wfptf p:last-child { margin-bottom: 0px; }
+
+.wfptf p:first-child { margin-top: 0px; }
+
+.wfptf p:last-child { margin-bottom: 0px; }
+
+.wfptf h1 { font-family: Montserrat, sans-serif; font-weight: 400; font-siz=
+e: 1.85714em; line-height: 1.6em; color: rgb(50, 50, 159); margin-top: 0px;=
+ }
+
+.wfptf h2 { font-family: Montserrat, sans-serif; font-weight: 400; font-siz=
+e: 1.57143em; line-height: 1.6em; color: rgb(51, 51, 51); }
+
+.wfptf code { color: rgb(229, 57, 53); background-color: rgba(38, 50, 56, 0=
+.05); font-family: Courier, monospace; border-radius: 2px; border: 1px soli=
+d rgba(38, 50, 56, 0.1); padding: 0px 5px; font-size: 13px; font-weight: 40=
+0; word-break: break-word; }
+
+.wfptf pre { font-family: Courier, monospace; white-space: pre; background-=
+color: rgb(17, 23, 26); color: white; padding: 20px; overflow-x: auto; line=
+-height: normal; border-radius: 0px; border: 1px solid rgba(38, 50, 56, 0.1=
+); }
+
+.wfptf pre code { background-color: transparent; color: white; padding: 0px=
+; }
+
+.wfptf pre code::before, .wfptf pre code::after { content: none; }
+
+.wfptf blockquote { margin: 0px 0px 1em; padding: 0px 15px; color: rgb(119,=
+ 119, 119); border-left: 4px solid rgb(221, 221, 221); }
+
+.wfptf img { max-width: 100%; box-sizing: content-box; }
+
+.wfptf ul, .wfptf ol { padding-left: 2em; margin: 0px 0px 1em; }
+
+.wfptf ul ul, .wfptf ol ul, .wfptf ul ol, .wfptf ol ol { margin-bottom: 0px=
+; margin-top: 0px; }
+
+.wfptf table { display: block; width: 100%; overflow: auto; word-break: kee=
+p-all; border-collapse: collapse; border-spacing: 0px; margin-top: 1.5em; m=
+argin-bottom: 1.5em; }
+
+.wfptf table tr { background-color: rgb(255, 255, 255); border-top: 1px sol=
+id rgb(204, 204, 204); }
+
+.wfptf table tr:nth-child(2n) { background-color: rgb(250, 250, 250); }
+
+.wfptf table th, .wfptf table td { padding: 6px 13px; border: 1px solid rgb=
+(221, 221, 221); }
+
+.wfptf table th { text-align: left; font-weight: bold; }
+
+.wfptf .share-link { cursor: pointer; margin-left: -20px; padding: 0px; lin=
+e-height: 1; width: 20px; display: inline-block; outline: 0px; }
+
+.wfptf .share-link::before { content: ""; width: 15px; height: 15px; backgr=
+ound-size: contain; background-image: url("data:image/svg+xml;base64,PHN2Zy=
+B4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZlcnNpb249IjEuMSIgeD0iMCIge=
+T0iMCIgd2lkdGg9IjUxMiIgaGVpZ2h0PSI1MTIiIHZpZXdCb3g9IjAgMCA1MTIgNTEyIiBlbmFi=
+bGUtYmFja2dyb3VuZD0ibmV3IDAgMCA1MTIgNTEyIiB4bWw6c3BhY2U9InByZXNlcnZlIj48cGF=
+0aCBmaWxsPSIjMDEwMTAxIiBkPSJNNDU5LjcgMjMzLjRsLTkwLjUgOTAuNWMtNTAgNTAtMTMxID=
+UwLTE4MSAwIC03LjktNy44LTE0LTE2LjctMTkuNC0yNS44bDQyLjEtNDIuMWMyLTIgNC41LTMuM=
+iA2LjgtNC41IDIuOSA5LjkgOCAxOS4zIDE1LjggMjcuMiAyNSAyNSA2NS42IDI0LjkgOTAuNSAw=
+bDkwLjUtOTAuNWMyNS0yNSAyNS02NS42IDAtOTAuNSAtMjQuOS0yNS02NS41LTI1LTkwLjUgMGw=
+tMzIuMiAzMi4yYy0yNi4xLTEwLjItNTQuMi0xMi45LTgxLjYtOC45bDY4LjYtNjguNmM1MC01MC=
+AxMzEtNTAgMTgxIDBDNTA5LjYgMTAyLjMgNTA5LjYgMTgzLjQgNDU5LjcgMjMzLjR6TTIyMC4zI=
+DM4Mi4ybC0zMi4yIDMyLjJjLTI1IDI0LjktNjUuNiAyNC45LTkwLjUgMCAtMjUtMjUtMjUtNjUu=
+NiAwLTkwLjVsOTAuNS05MC41YzI1LTI1IDY1LjUtMjUgOTAuNSAwIDcuOCA3LjggMTIuOSAxNy4=
+yIDE1LjggMjcuMSAyLjQtMS40IDQuOC0yLjUgNi44LTQuNWw0Mi4xLTQyYy01LjQtOS4yLTExLj=
+YtMTgtMTkuNC0yNS44IC01MC01MC0xMzEtNTAtMTgxIDBsLTkwLjUgOTAuNWMtNTAgNTAtNTAgM=
+TMxIDAgMTgxIDUwIDUwIDEzMSA1MCAxODEgMGw2OC42LTY4LjZDMjc0LjYgMzk1LjEgMjQ2LjQg=
+MzkyLjMgMjIwLjMgMzgyLjJ6Ii8+PC9zdmc+Cg=3D=3D"); opacity: 0.5; visibility: h=
+idden; display: inline-block; vertical-align: middle; }
+
+.wfptf h1:hover > .share-link::before, .wfptf h2:hover > .share-link::befor=
+e, .wfptf .share-link:hover::before { visibility: visible; }
+
+.wfptf a { text-decoration: none; color: rgb(50, 50, 159); }
+
+.wfptf a:visited { color: rgb(50, 50, 159); }
+
+.wfptf a:hover { color: rgb(104, 104, 207); text-decoration: none; }
+
+.DVwyR { font-family: Roboto, sans-serif; font-weight: 400; line-height: 1.=
+5em; }
+
+.DVwyR p:last-child { margin-bottom: 0px; }
+
+.DVwyR p:first-child { margin-top: 0px; }
+
+.DVwyR p:last-child { margin-bottom: 0px; }
+
+.DVwyR p { display: inline-block; }
+
+.DVwyR h1 { font-family: Montserrat, sans-serif; font-weight: 400; font-siz=
+e: 1.85714em; line-height: 1.6em; color: rgb(50, 50, 159); margin-top: 0px;=
+ }
+
+.DVwyR h2 { font-family: Montserrat, sans-serif; font-weight: 400; font-siz=
+e: 1.57143em; line-height: 1.6em; color: rgb(51, 51, 51); }
+
+.DVwyR code { color: rgb(229, 57, 53); background-color: rgba(38, 50, 56, 0=
+.05); font-family: Courier, monospace; border-radius: 2px; border: 1px soli=
+d rgba(38, 50, 56, 0.1); padding: 0px 5px; font-size: 13px; font-weight: 40=
+0; word-break: break-word; }
+
+.DVwyR pre { font-family: Courier, monospace; white-space: pre; background-=
+color: rgb(17, 23, 26); color: white; padding: 20px; overflow-x: auto; line=
+-height: normal; border-radius: 0px; border: 1px solid rgba(38, 50, 56, 0.1=
+); }
+
+.DVwyR pre code { background-color: transparent; color: white; padding: 0px=
+; }
+
+.DVwyR pre code::before, .DVwyR pre code::after { content: none; }
+
+.DVwyR blockquote { margin: 0px 0px 1em; padding: 0px 15px; color: rgb(119,=
+ 119, 119); border-left: 4px solid rgb(221, 221, 221); }
+
+.DVwyR img { max-width: 100%; box-sizing: content-box; }
+
+.DVwyR ul, .DVwyR ol { padding-left: 2em; margin: 0px 0px 1em; }
+
+.DVwyR ul ul, .DVwyR ol ul, .DVwyR ul ol, .DVwyR ol ol { margin-bottom: 0px=
+; margin-top: 0px; }
+
+.DVwyR table { display: block; width: 100%; overflow: auto; word-break: kee=
+p-all; border-collapse: collapse; border-spacing: 0px; margin-top: 1.5em; m=
+argin-bottom: 1.5em; }
+
+.DVwyR table tr { background-color: rgb(255, 255, 255); border-top: 1px sol=
+id rgb(204, 204, 204); }
+
+.DVwyR table tr:nth-child(2n) { background-color: rgb(250, 250, 250); }
+
+.DVwyR table th, .DVwyR table td { padding: 6px 13px; border: 1px solid rgb=
+(221, 221, 221); }
+
+.DVwyR table th { text-align: left; font-weight: bold; }
+
+.DVwyR .share-link { cursor: pointer; margin-left: -20px; padding: 0px; lin=
+e-height: 1; width: 20px; display: inline-block; outline: 0px; }
+
+.DVwyR .share-link::before { content: ""; width: 15px; height: 15px; backgr=
+ound-size: contain; background-image: url("data:image/svg+xml;base64,PHN2Zy=
+B4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZlcnNpb249IjEuMSIgeD0iMCIge=
+T0iMCIgd2lkdGg9IjUxMiIgaGVpZ2h0PSI1MTIiIHZpZXdCb3g9IjAgMCA1MTIgNTEyIiBlbmFi=
+bGUtYmFja2dyb3VuZD0ibmV3IDAgMCA1MTIgNTEyIiB4bWw6c3BhY2U9InByZXNlcnZlIj48cGF=
+0aCBmaWxsPSIjMDEwMTAxIiBkPSJNNDU5LjcgMjMzLjRsLTkwLjUgOTAuNWMtNTAgNTAtMTMxID=
+UwLTE4MSAwIC03LjktNy44LTE0LTE2LjctMTkuNC0yNS44bDQyLjEtNDIuMWMyLTIgNC41LTMuM=
+iA2LjgtNC41IDIuOSA5LjkgOCAxOS4zIDE1LjggMjcuMiAyNSAyNSA2NS42IDI0LjkgOTAuNSAw=
+bDkwLjUtOTAuNWMyNS0yNSAyNS02NS42IDAtOTAuNSAtMjQuOS0yNS02NS41LTI1LTkwLjUgMGw=
+tMzIuMiAzMi4yYy0yNi4xLTEwLjItNTQuMi0xMi45LTgxLjYtOC45bDY4LjYtNjguNmM1MC01MC=
+AxMzEtNTAgMTgxIDBDNTA5LjYgMTAyLjMgNTA5LjYgMTgzLjQgNDU5LjcgMjMzLjR6TTIyMC4zI=
+DM4Mi4ybC0zMi4yIDMyLjJjLTI1IDI0LjktNjUuNiAyNC45LTkwLjUgMCAtMjUtMjUtMjUtNjUu=
+NiAwLTkwLjVsOTAuNS05MC41YzI1LTI1IDY1LjUtMjUgOTAuNSAwIDcuOCA3LjggMTIuOSAxNy4=
+yIDE1LjggMjcuMSAyLjQtMS40IDQuOC0yLjUgNi44LTQuNWw0Mi4xLTQyYy01LjQtOS4yLTExLj=
+YtMTgtMTkuNC0yNS44IC01MC01MC0xMzEtNTAtMTgxIDBsLTkwLjUgOTAuNWMtNTAgNTAtNTAgM=
+TMxIDAgMTgxIDUwIDUwIDEzMSA1MCAxODEgMGw2OC42LTY4LjZDMjc0LjYgMzk1LjEgMjQ2LjQg=
+MzkyLjMgMjIwLjMgMzgyLjJ6Ii8+PC9zdmc+Cg=3D=3D"); opacity: 0.5; visibility: h=
+idden; display: inline-block; vertical-align: middle; }
+
+.DVwyR h1:hover > .share-link::before, .DVwyR h2:hover > .share-link::befor=
+e, .DVwyR .share-link:hover::before { visibility: visible; }
+
+.DVwyR a { text-decoration: none; color: rgb(50, 50, 159); }
+
+.DVwyR a:visited { color: rgb(50, 50, 159); }
+
+.DVwyR a:hover { color: rgb(104, 104, 207); text-decoration: none; }
+
+.hBWCUB { position: relative; }
+
+.jIfccS:hover > .sc-giAqHp { opacity: 1; }
+
+.gKPxXE { font-family: Courier, monospace; font-size: 13px; white-space: pr=
+e; contain: content; overflow-x: auto; }
+
+.gKPxXE .redoc-json code > .collapser { display: none; pointer-events: none=
+; }
+
+.gKPxXE .callback-function { color: gray; }
+
+.gKPxXE .collapser::after { content: "-"; cursor: pointer; }
+
+.gKPxXE .collapsed > .collapser::after { content: "+"; cursor: pointer; }
+
+.gKPxXE .ellipsis::after { content: " =E2=80=A6 "; }
+
+.gKPxXE .collapsible { margin-left: 2em; }
+
+.gKPxXE .hoverable { padding: 1px 2px; border-radius: 2px; }
+
+.gKPxXE .hovered { background-color: rgb(235, 238, 249); }
+
+.gKPxXE .collapser { background-color: transparent; border: 0px; color: rgb=
+(255, 255, 255); font-family: Courier, monospace; font-size: 13px; display:=
+ flex; -webkit-box-align: center; align-items: center; -webkit-box-pack: ce=
+nter; justify-content: center; width: 15px; height: 15px; position: absolut=
+e; top: 4px; left: -1.5em; cursor: default; user-select: none; padding: 2px=
+; }
+
+.gKPxXE .collapser:focus { outline: rgb(255, 255, 255) dotted 1px; }
+
+.gKPxXE ul { list-style-type: none; padding: 0px; margin: 0px 0px 0px 26px;=
+ }
+
+.gKPxXE li { position: relative; display: block; }
+
+.gKPxXE .hoverable { display: inline-block; }
+
+.gKPxXE .selected { outline-width: 1px; outline-style: dotted; }
+
+.gKPxXE .collapsed > .collapsible { display: none; }
+
+.gKPxXE .ellipsis { display: none; }
+
+.gKPxXE .collapsed > .ellipsis { display: inherit; }
+
+.iPPdF { padding: 0.9em; background-color: rgba(38, 50, 56, 0.4); margin: 0=
+px 0px 10px; display: block; font-family: Montserrat, sans-serif; font-size=
+: 0.929em; line-height: 1.5em; }
+
+.bFIVui { font-family: Montserrat, sans-serif; font-size: 12px; position: a=
+bsolute; z-index: 1; top: -11px; left: 12px; font-weight: 600; color: rgba(=
+255, 255, 255, 0.7); }
+
+.eJDRKz { position: relative; }
+
+.fuJtcf { margin-top: 15px; }
+
+.dmLkmF { vertical-align: middle; font-size: 13px; line-height: 20px; }
+
+.isTLDY { color: rgba(102, 102, 102, 0.9); }
+
+.lVyis { color: rgb(102, 102, 102); }
+
+.NHbWE { color: rgb(102, 102, 102); word-break: break-word; }
+
+.bkbCTW { vertical-align: middle; font-size: 13px; line-height: 20px; }
+
+.kXduun { color: rgb(212, 31, 28); font-size: 0.9em; font-weight: normal; m=
+argin-left: 20px; line-height: 1; }
+
+.hDxFjs { margin-top: 0px; margin-bottom: 0.5em; }
+
+.bpmBWn { border: 1px solid rgb(50, 50, 159); color: rgb(50, 50, 159); font=
+-weight: normal; margin-left: 0.5em; padding: 4px 8px; display: inline-bloc=
+k; text-decoration: none; cursor: pointer; }
+
+.eXTKuo { width: 9ex; display: inline-block; height: 13px; line-height: 13p=
+x; background-color: rgb(51, 51, 51); border-radius: 3px; background-repeat=
+: no-repeat; background-position: 6px 4px; font-size: 7px; font-family: Ver=
+dana, sans-serif; color: white; text-transform: uppercase; text-align: cent=
+er; font-weight: bold; vertical-align: middle; margin-right: 6px; margin-to=
+p: 2px; }
+
+.eXTKuo.get { background-color: rgb(47, 129, 50); }
+
+.eXTKuo.post { background-color: rgb(24, 111, 175); }
+
+.eXTKuo.put { background-color: rgb(149, 80, 124); }
+
+.eXTKuo.options { background-color: rgb(148, 112, 20); }
+
+.eXTKuo.patch { background-color: rgb(191, 88, 29); }
+
+.eXTKuo.delete { background-color: rgb(204, 51, 51); }
+
+.eXTKuo.basic { background-color: rgb(112, 112, 112); }
+
+.eXTKuo.link { background-color: rgb(7, 129, 143); }
+
+.eXTKuo.head { background-color: rgb(162, 61, 173); }
+
+.eXTKuo.hook { background-color: rgb(50, 50, 159); }
+
+.ZHquE { margin: 0px; padding: 0px; }
+
+.sc-uxdHp .sc-uxdHp { font-size: 0.929em; }
+
+.huvfwk { list-style: inside none none; overflow: hidden; text-overflow: el=
+lipsis; padding: 0px; }
+
+.emrRcd { cursor: pointer; color: rgb(51, 51, 51); margin: 0px; padding: 12=
+.5px 20px; display: flex; -webkit-box-pack: justify; justify-content: space=
+-between; font-family: Montserrat, sans-serif; background-color: rgb(250, 2=
+50, 250); }
+
+.emrRcd:hover { color: rgb(50, 50, 159); background-color: rgb(237, 237, 23=
+7); }
+
+.emrRcd .sc-dIsUp { height: 1.5em; width: 1.5em; }
+
+.emrRcd .sc-dIsUp polygon { fill: rgb(51, 51, 51); }
+
+.eCnHhM { cursor: pointer; color: rgb(50, 50, 159); margin: 0px; padding: 1=
+2.5px 20px; display: flex; -webkit-box-pack: justify; justify-content: spac=
+e-between; font-family: Montserrat, sans-serif; background-color: rgb(237, =
+237, 237); }
+
+.eCnHhM:hover { color: rgb(50, 50, 159); background-color: rgb(237, 237, 23=
+7); }
+
+.eCnHhM .sc-dIsUp { height: 1.5em; width: 1.5em; }
+
+.eCnHhM .sc-dIsUp polygon { fill: rgb(51, 51, 51); }
+
+.klzczi { display: inline-block; vertical-align: middle; width: calc(100% -=
+ 38px); overflow: hidden; text-overflow: ellipsis; }
+
+.hEydLL { font-size: 0.8em; margin-top: 10px; text-align: center; position:=
+ fixed; width: 260px; bottom: 0px; background: rgb(250, 250, 250); }
+
+.hEydLL a, .hEydLL a:visited, .hEydLL a:hover { padding: 5px 0px; border-to=
+p: 1px solid rgb(225, 225, 225); text-decoration: none; display: flex; -web=
+kit-box-align: center; align-items: center; -webkit-box-pack: center; justi=
+fy-content: center; color: rgb(51, 51, 51) !important; }
+
+.hEydLL img { width: 15px; margin-right: 5px; }
+
+@media screen and (max-width: 50rem) {
+  .hEydLL { width: 100%; }
+}
+
+.iONckA { cursor: pointer; position: relative; margin-bottom: 5px; }
+
+.hVdkvA { font-family: Courier, monospace; margin-left: 10px; flex: 1 1 0%;=
+ overflow-x: hidden; text-overflow: ellipsis; }
+
+.gXhEov { outline: 0px; color: inherit; width: 100%; text-align: left; curs=
+or: pointer; padding: 10px 30px 10px 20px; border-radius: 4px 4px 0px 0px; =
+background-color: rgb(17, 23, 26); display: flex; white-space: nowrap; -web=
+kit-box-align: center; align-items: center; border-width: 1px 1px 0px; bord=
+er-top-style: solid; border-right-style: solid; border-left-style: solid; b=
+order-top-color: transparent; border-right-color: transparent; border-left-=
+color: transparent; border-image: initial; border-bottom-style: initial; bo=
+rder-bottom-color: initial; transition: border-color 0.25s; }
+
+.gXhEov:focus { box-shadow: rgba(0, 0, 0, 0.45) 0px 2px 2px inset, rgba(128=
+, 128, 128, 0.25) 0px 2px 0px; }
+
+.izOCLq { font-size: 0.929em; line-height: 20px; background-color: rgb(47, =
+129, 50); color: rgb(255, 255, 255); padding: 3px 10px; text-transform: upp=
+ercase; font-family: Montserrat, sans-serif; margin: 0px; }
+
+.iwuDdk { font-size: 0.929em; line-height: 20px; background-color: rgb(24, =
+111, 175); color: rgb(255, 255, 255); padding: 3px 10px; text-transform: up=
+percase; font-family: Montserrat, sans-serif; margin: 0px; }
+
+.IXrMk { position: absolute; width: 100%; z-index: 100; background: rgb(250=
+, 250, 250); color: rgb(38, 50, 56); box-sizing: border-box; box-shadow: rg=
+ba(0, 0, 0, 0.33) 0px 0px 6px; overflow: hidden; border-bottom-left-radius:=
+ 4px; border-bottom-right-radius: 4px; transition: 0.25s; visibility: hidde=
+n; transform: translateY(-50%) scaleY(0); }
+
+.QgNfY { padding: 10px; }
+
+.hyeqlU { padding: 5px; border: 1px solid rgb(204, 204, 204); background: r=
+gb(255, 255, 255); word-break: break-all; color: rgb(50, 50, 159); }
+
+.hyeqlU > span { color: rgb(51, 51, 51); }
+
+.khIKSp { display: block; border: 0px; width: 100%; text-align: left; paddi=
+ng: 10px; border-radius: 2px; margin-bottom: 4px; line-height: 1.5em; curso=
+r: pointer; color: rgb(29, 129, 39); background-color: rgba(29, 129, 39, 0.=
+07); }
+
+.khIKSp:focus { outline: rgb(29, 129, 39) auto; }
+
+.jcAmZH { display: block; border: 0px; width: 100%; text-align: left; paddi=
+ng: 10px; border-radius: 2px; margin-bottom: 4px; line-height: 1.5em; curso=
+r: pointer; color: rgb(212, 31, 28); background-color: rgba(212, 31, 28, 0.=
+07); }
+
+.jcAmZH:focus { outline: rgb(212, 31, 28) auto; }
+
+.fepHIR { vertical-align: top; }
+
+.jVZBMd { font-size: 1.3em; padding: 0.2em 0px; margin: 3em 0px 1.1em; colo=
+r: rgb(51, 51, 51); font-weight: normal; }
+
+.bQkXvU { user-select: none; width: 20px; height: 20px; align-self: center;=
+ display: flex; flex-direction: column; color: rgb(50, 50, 159); }
+
+.hqgvLZ { width: 260px; background-color: rgb(250, 250, 250); overflow: hid=
+den; display: flex; flex-direction: column; backface-visibility: hidden; he=
+ight: 100vh; position: sticky; top: 0px; }
+
+@media screen and (max-width: 50rem) {
+  .hqgvLZ { position: fixed; z-index: 20; width: 100%; background: rgb(250,=
+ 250, 250); display: none; }
+}
+
+@media print {
+  .hqgvLZ { display: none; }
+}
+
+.bArwVC { outline: none; user-select: none; background-color: rgb(242, 242,=
+ 242); color: rgb(50, 50, 159); display: none; cursor: pointer; position: f=
+ixed; right: 20px; z-index: 100; border-radius: 50%; box-shadow: rgba(0, 0,=
+ 0, 0.3) 0px 0px 20px; bottom: 44px; width: 60px; height: 60px; padding: 0p=
+x 20px; }
+
+@media screen and (max-width: 50rem) {
+  .bArwVC { display: flex; }
+}
+
+.bArwVC svg { color: rgb(0, 101, 251); }
+
+@media print {
+  .bArwVC { display: none; }
+}
+
+.fgRoXk { font-family: Roboto, sans-serif; font-size: 14px; font-weight: 40=
+0; line-height: 1.5em; color: rgb(51, 51, 51); display: flex; position: rel=
+ative; text-align: left; -webkit-font-smoothing: antialiased; text-size-adj=
+ust: 100%; text-rendering: optimizespeed !important; }
+
+.fgRoXk * { box-sizing: border-box; -webkit-tap-highlight-color: rgba(255, =
+255, 255, 0); }
+
+.bBXGSV { z-index: 1; position: relative; overflow: hidden; width: calc(100=
+% - 260px); contain: layout; }
+
+@media print, screen and (max-width: 50rem) {
+  .bBXGSV { width: 100%; }
+}
+
+.bCOLCR { background: rgb(38, 50, 56); position: absolute; top: 0px; bottom=
+: 0px; right: 0px; width: calc(40% - 104px); }
+
+@media print, screen and (max-width: 75rem) {
+  .bCOLCR { display: none; }
+}
+
+.irzWzB { padding: 5px 0px; }
+
+.eNrAZv { width: calc(100% - 40px); box-sizing: border-box; margin: 0px 20p=
+x; padding: 5px 10px 5px 20px; border-width: 0px 0px 1px; border-top-style:=
+ initial; border-right-style: initial; border-left-style: initial; border-t=
+op-color: initial; border-right-color: initial; border-left-color: initial;=
+ border-image: initial; border-bottom-style: solid; border-bottom-color: rg=
+b(225, 225, 225); font-family: Roboto, sans-serif; font-weight: bold; font-=
+size: 13px; color: rgb(51, 51, 51); background-color: transparent; outline:=
+ none; }
+
+.ertKPV { position: absolute; left: 20px; height: 1.8em; width: 0.9em; }
+
+.ertKPV path { fill: rgb(51, 51, 51); }
+
+@-webkit-keyframes gtRCGH {=20
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+@keyframes gtRCGH {=20
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+------MultipartBoundary--BtLBMNQk02lTSJ5anq5EvWt7Cl5fN4Ytj5LAmtdx5I----
+Content-Type: text/css
+Content-Transfer-Encoding: quoted-printable
+Content-Location: https://fonts.googleapis.com/css?family=Montserrat:300,400,700|Roboto:300,400,700
+
+@charset "utf-8";
+
+@font-face { font-family: Montserrat; font-style: normal; font-weight: 300;=
+ src: url("https://fonts.gstatic.com/s/montserrat/v29/JTUSjIg1_i6t8kCHKm459=
+WRhyzbi.woff2") format("woff2"); unicode-range: U+460-52F, U+1C80-1C8A, U+2=
+0B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F; }
+
+@font-face { font-family: Montserrat; font-style: normal; font-weight: 300;=
+ src: url("https://fonts.gstatic.com/s/montserrat/v29/JTUSjIg1_i6t8kCHKm459=
+W1hyzbi.woff2") format("woff2"); unicode-range: U+301, U+400-45F, U+490-491=
+, U+4B0-4B1, U+2116; }
+
+@font-face { font-family: Montserrat; font-style: normal; font-weight: 300;=
+ src: url("https://fonts.gstatic.com/s/montserrat/v29/JTUSjIg1_i6t8kCHKm459=
+WZhyzbi.woff2") format("woff2"); unicode-range: U+102-103, U+110-111, U+128=
+-129, U+168-169, U+1A0-1A1, U+1AF-1B0, U+300-301, U+303-304, U+308-309, U+3=
+23, U+329, U+1EA0-1EF9, U+20AB; }
+
+@font-face { font-family: Montserrat; font-style: normal; font-weight: 300;=
+ src: url("https://fonts.gstatic.com/s/montserrat/v29/JTUSjIg1_i6t8kCHKm459=
+Wdhyzbi.woff2") format("woff2"); unicode-range: U+100-2BA, U+2BD-2C5, U+2C7=
+-2CC, U+2CE-2D7, U+2DD-2FF, U+304, U+308, U+329, U+1D00-1DBF, U+1E00-1E9F, =
+U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-=
+A7FF; }
+
+@font-face { font-family: Montserrat; font-style: normal; font-weight: 300;=
+ src: url("https://fonts.gstatic.com/s/montserrat/v29/JTUSjIg1_i6t8kCHKm459=
+Wlhyw.woff2") format("woff2"); unicode-range: U+0-FF, U+131, U+152-153, U+2=
+BB-2BC, U+2C6, U+2DA, U+2DC, U+304, U+308, U+329, U+2000-206F, U+20AC, U+21=
+22, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+
+@font-face { font-family: Montserrat; font-style: normal; font-weight: 400;=
+ src: url("https://fonts.gstatic.com/s/montserrat/v29/JTUSjIg1_i6t8kCHKm459=
+WRhyzbi.woff2") format("woff2"); unicode-range: U+460-52F, U+1C80-1C8A, U+2=
+0B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F; }
+
+@font-face { font-family: Montserrat; font-style: normal; font-weight: 400;=
+ src: url("https://fonts.gstatic.com/s/montserrat/v29/JTUSjIg1_i6t8kCHKm459=
+W1hyzbi.woff2") format("woff2"); unicode-range: U+301, U+400-45F, U+490-491=
+, U+4B0-4B1, U+2116; }
+
+@font-face { font-family: Montserrat; font-style: normal; font-weight: 400;=
+ src: url("https://fonts.gstatic.com/s/montserrat/v29/JTUSjIg1_i6t8kCHKm459=
+WZhyzbi.woff2") format("woff2"); unicode-range: U+102-103, U+110-111, U+128=
+-129, U+168-169, U+1A0-1A1, U+1AF-1B0, U+300-301, U+303-304, U+308-309, U+3=
+23, U+329, U+1EA0-1EF9, U+20AB; }
+
+@font-face { font-family: Montserrat; font-style: normal; font-weight: 400;=
+ src: url("https://fonts.gstatic.com/s/montserrat/v29/JTUSjIg1_i6t8kCHKm459=
+Wdhyzbi.woff2") format("woff2"); unicode-range: U+100-2BA, U+2BD-2C5, U+2C7=
+-2CC, U+2CE-2D7, U+2DD-2FF, U+304, U+308, U+329, U+1D00-1DBF, U+1E00-1E9F, =
+U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-=
+A7FF; }
+
+@font-face { font-family: Montserrat; font-style: normal; font-weight: 400;=
+ src: url("https://fonts.gstatic.com/s/montserrat/v29/JTUSjIg1_i6t8kCHKm459=
+Wlhyw.woff2") format("woff2"); unicode-range: U+0-FF, U+131, U+152-153, U+2=
+BB-2BC, U+2C6, U+2DA, U+2DC, U+304, U+308, U+329, U+2000-206F, U+20AC, U+21=
+22, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+
+@font-face { font-family: Montserrat; font-style: normal; font-weight: 700;=
+ src: url("https://fonts.gstatic.com/s/montserrat/v29/JTUSjIg1_i6t8kCHKm459=
+WRhyzbi.woff2") format("woff2"); unicode-range: U+460-52F, U+1C80-1C8A, U+2=
+0B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F; }
+
+@font-face { font-family: Montserrat; font-style: normal; font-weight: 700;=
+ src: url("https://fonts.gstatic.com/s/montserrat/v29/JTUSjIg1_i6t8kCHKm459=
+W1hyzbi.woff2") format("woff2"); unicode-range: U+301, U+400-45F, U+490-491=
+, U+4B0-4B1, U+2116; }
+
+@font-face { font-family: Montserrat; font-style: normal; font-weight: 700;=
+ src: url("https://fonts.gstatic.com/s/montserrat/v29/JTUSjIg1_i6t8kCHKm459=
+WZhyzbi.woff2") format("woff2"); unicode-range: U+102-103, U+110-111, U+128=
+-129, U+168-169, U+1A0-1A1, U+1AF-1B0, U+300-301, U+303-304, U+308-309, U+3=
+23, U+329, U+1EA0-1EF9, U+20AB; }
+
+@font-face { font-family: Montserrat; font-style: normal; font-weight: 700;=
+ src: url("https://fonts.gstatic.com/s/montserrat/v29/JTUSjIg1_i6t8kCHKm459=
+Wdhyzbi.woff2") format("woff2"); unicode-range: U+100-2BA, U+2BD-2C5, U+2C7=
+-2CC, U+2CE-2D7, U+2DD-2FF, U+304, U+308, U+329, U+1D00-1DBF, U+1E00-1E9F, =
+U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-=
+A7FF; }
+
+@font-face { font-family: Montserrat; font-style: normal; font-weight: 700;=
+ src: url("https://fonts.gstatic.com/s/montserrat/v29/JTUSjIg1_i6t8kCHKm459=
+Wlhyw.woff2") format("woff2"); unicode-range: U+0-FF, U+131, U+152-153, U+2=
+BB-2BC, U+2C6, U+2DA, U+2DC, U+304, U+308, U+329, U+2000-206F, U+20AC, U+21=
+22, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+
+@font-face { font-family: Roboto; font-style: normal; font-weight: 300; src=
+: url("https://fonts.gstatic.com/s/roboto/v32/KFOlCnqEu92Fr1MmSU5fCRc4EsA.w=
+off2") format("woff2"); unicode-range: U+460-52F, U+1C80-1C8A, U+20B4, U+2D=
+E0-2DFF, U+A640-A69F, U+FE2E-FE2F; }
+
+@font-face { font-family: Roboto; font-style: normal; font-weight: 300; src=
+: url("https://fonts.gstatic.com/s/roboto/v32/KFOlCnqEu92Fr1MmSU5fABc4EsA.w=
+off2") format("woff2"); unicode-range: U+301, U+400-45F, U+490-491, U+4B0-4=
+B1, U+2116; }
+
+@font-face { font-family: Roboto; font-style: normal; font-weight: 300; src=
+: url("https://fonts.gstatic.com/s/roboto/v32/KFOlCnqEu92Fr1MmSU5fCBc4EsA.w=
+off2") format("woff2"); unicode-range: U+1F00-1FFF; }
+
+@font-face { font-family: Roboto; font-style: normal; font-weight: 300; src=
+: url("https://fonts.gstatic.com/s/roboto/v32/KFOlCnqEu92Fr1MmSU5fBxc4EsA.w=
+off2") format("woff2"); unicode-range: U+370-377, U+37A-37F, U+384-38A, U+3=
+8C, U+38E-3A1, U+3A3-3FF; }
+
+@font-face { font-family: Roboto; font-style: normal; font-weight: 300; src=
+: url("https://fonts.gstatic.com/s/roboto/v32/KFOlCnqEu92Fr1MmSU5fCxc4EsA.w=
+off2") format("woff2"); unicode-range: U+102-103, U+110-111, U+128-129, U+1=
+68-169, U+1A0-1A1, U+1AF-1B0, U+300-301, U+303-304, U+308-309, U+323, U+329=
+, U+1EA0-1EF9, U+20AB; }
+
+@font-face { font-family: Roboto; font-style: normal; font-weight: 300; src=
+: url("https://fonts.gstatic.com/s/roboto/v32/KFOlCnqEu92Fr1MmSU5fChc4EsA.w=
+off2") format("woff2"); unicode-range: U+100-2BA, U+2BD-2C5, U+2C7-2CC, U+2=
+CE-2D7, U+2DD-2FF, U+304, U+308, U+329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1E=
+FF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF; }
+
+@font-face { font-family: Roboto; font-style: normal; font-weight: 300; src=
+: url("https://fonts.gstatic.com/s/roboto/v32/KFOlCnqEu92Fr1MmSU5fBBc4.woff=
+2") format("woff2"); unicode-range: U+0-FF, U+131, U+152-153, U+2BB-2BC, U+=
+2C6, U+2DA, U+2DC, U+304, U+308, U+329, U+2000-206F, U+20AC, U+2122, U+2191=
+, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+
+@font-face { font-family: Roboto; font-style: normal; font-weight: 400; src=
+: url("https://fonts.gstatic.com/s/roboto/v32/KFOmCnqEu92Fr1Mu72xKOzY.woff2=
+") format("woff2"); unicode-range: U+460-52F, U+1C80-1C8A, U+20B4, U+2DE0-2=
+DFF, U+A640-A69F, U+FE2E-FE2F; }
+
+@font-face { font-family: Roboto; font-style: normal; font-weight: 400; src=
+: url("https://fonts.gstatic.com/s/roboto/v32/KFOmCnqEu92Fr1Mu5mxKOzY.woff2=
+") format("woff2"); unicode-range: U+301, U+400-45F, U+490-491, U+4B0-4B1, =
+U+2116; }
+
+@font-face { font-family: Roboto; font-style: normal; font-weight: 400; src=
+: url("https://fonts.gstatic.com/s/roboto/v32/KFOmCnqEu92Fr1Mu7mxKOzY.woff2=
+") format("woff2"); unicode-range: U+1F00-1FFF; }
+
+@font-face { font-family: Roboto; font-style: normal; font-weight: 400; src=
+: url("https://fonts.gstatic.com/s/roboto/v32/KFOmCnqEu92Fr1Mu4WxKOzY.woff2=
+") format("woff2"); unicode-range: U+370-377, U+37A-37F, U+384-38A, U+38C, =
+U+38E-3A1, U+3A3-3FF; }
+
+@font-face { font-family: Roboto; font-style: normal; font-weight: 400; src=
+: url("https://fonts.gstatic.com/s/roboto/v32/KFOmCnqEu92Fr1Mu7WxKOzY.woff2=
+") format("woff2"); unicode-range: U+102-103, U+110-111, U+128-129, U+168-1=
+69, U+1A0-1A1, U+1AF-1B0, U+300-301, U+303-304, U+308-309, U+323, U+329, U+=
+1EA0-1EF9, U+20AB; }
+
+@font-face { font-family: Roboto; font-style: normal; font-weight: 400; src=
+: url("https://fonts.gstatic.com/s/roboto/v32/KFOmCnqEu92Fr1Mu7GxKOzY.woff2=
+") format("woff2"); unicode-range: U+100-2BA, U+2BD-2C5, U+2C7-2CC, U+2CE-2=
+D7, U+2DD-2FF, U+304, U+308, U+329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, =
+U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF; }
+
+@font-face { font-family: Roboto; font-style: normal; font-weight: 400; src=
+: url("https://fonts.gstatic.com/s/roboto/v32/KFOmCnqEu92Fr1Mu4mxK.woff2") =
+format("woff2"); unicode-range: U+0-FF, U+131, U+152-153, U+2BB-2BC, U+2C6,=
+ U+2DA, U+2DC, U+304, U+308, U+329, U+2000-206F, U+20AC, U+2122, U+2191, U+=
+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+
+@font-face { font-family: Roboto; font-style: normal; font-weight: 700; src=
+: url("https://fonts.gstatic.com/s/roboto/v32/KFOlCnqEu92Fr1MmWUlfCRc4EsA.w=
+off2") format("woff2"); unicode-range: U+460-52F, U+1C80-1C8A, U+20B4, U+2D=
+E0-2DFF, U+A640-A69F, U+FE2E-FE2F; }
+
+@font-face { font-family: Roboto; font-style: normal; font-weight: 700; src=
+: url("https://fonts.gstatic.com/s/roboto/v32/KFOlCnqEu92Fr1MmWUlfABc4EsA.w=
+off2") format("woff2"); unicode-range: U+301, U+400-45F, U+490-491, U+4B0-4=
+B1, U+2116; }
+
+@font-face { font-family: Roboto; font-style: normal; font-weight: 700; src=
+: url("https://fonts.gstatic.com/s/roboto/v32/KFOlCnqEu92Fr1MmWUlfCBc4EsA.w=
+off2") format("woff2"); unicode-range: U+1F00-1FFF; }
+
+@font-face { font-family: Roboto; font-style: normal; font-weight: 700; src=
+: url("https://fonts.gstatic.com/s/roboto/v32/KFOlCnqEu92Fr1MmWUlfBxc4EsA.w=
+off2") format("woff2"); unicode-range: U+370-377, U+37A-37F, U+384-38A, U+3=
+8C, U+38E-3A1, U+3A3-3FF; }
+
+@font-face { font-family: Roboto; font-style: normal; font-weight: 700; src=
+: url("https://fonts.gstatic.com/s/roboto/v32/KFOlCnqEu92Fr1MmWUlfCxc4EsA.w=
+off2") format("woff2"); unicode-range: U+102-103, U+110-111, U+128-129, U+1=
+68-169, U+1A0-1A1, U+1AF-1B0, U+300-301, U+303-304, U+308-309, U+323, U+329=
+, U+1EA0-1EF9, U+20AB; }
+
+@font-face { font-family: Roboto; font-style: normal; font-weight: 700; src=
+: url("https://fonts.gstatic.com/s/roboto/v32/KFOlCnqEu92Fr1MmWUlfChc4EsA.w=
+off2") format("woff2"); unicode-range: U+100-2BA, U+2BD-2C5, U+2C7-2CC, U+2=
+CE-2D7, U+2DD-2FF, U+304, U+308, U+329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1E=
+FF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF; }
+
+@font-face { font-family: Roboto; font-style: normal; font-weight: 700; src=
+: url("https://fonts.gstatic.com/s/roboto/v32/KFOlCnqEu92Fr1MmWUlfBBc4.woff=
+2") format("woff2"); unicode-range: U+0-FF, U+131, U+152-153, U+2BB-2BC, U+=
+2C6, U+2DA, U+2DC, U+304, U+308, U+329, U+2000-206F, U+20AC, U+2122, U+2191=
+, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+------MultipartBoundary--BtLBMNQk02lTSJ5anq5EvWt7Cl5fN4Ytj5LAmtdx5I----
+Content-Type: image/svg+xml
+Content-Transfer-Encoding: quoted-printable
+Content-Location: https://cdn.redoc.ly/redoc/logo-mini.svg
+
+<svg width=3D"300" height=3D"300" xmlns=3D"http://www.w3.org/2000/svg"><pat=
+h fill=3D"#0044d4" d=3D"M249.488 231.49a123.68 123.68 0 0 0-22.86-12.66 111=
+.55 111.55 0 0 0-42.12-214.75h-171.8a8.18 8.18 0 0 0-5.78 14 7.48 7.48 0 0 =
+0 5.78 2.48 95 95 0 1 1 0 190c-.83 0-1.38.27-2.21.27a8 8 0 0 0-6.33 7.71v1.=
+11a7.69 7.69 0 0 0 7.71 7.7h5.52a92.93 92.93 0 0 1 50.66 17.62 95.33 95.33 =
+0 0 1 34.14 45.43 8.27 8.27 0 0 0 7.7 5.52h171.8a7.76 7.76 0 0 0 6.61-3.58 =
+8 8 0 0 0 1.09-7.42 109.06 109.06 0 0 0-39.91-53.43zm-158-37.16a111.62 111.=
+62 0 0 0 32.76-78.75 110 110 0 0 0-32.76-78.74 105.91 105.91 0 0 0-20.37-16=
+.24h113.39a95 95 0 1 1 0 190 3.55 3.55 0 0 0-1.65.27H70.798a109.06 109.06 0=
+ 0 0 20.65-16.54h.04zm-13.77 37.16c-1.92-1.37-4.13-2.75-6.33-4.13h117.8a94.=
+79 94.79 0 0 1 80.12 52h-153.63a112 112 0 0 0-38-47.87h.04z" class=3D"cls-1=
+"/><path fill=3D"#0044d4" d=3D"M158.398 115.58a8.11 8.11 0 0 0 8.26 8.26h82=
+.6a8.26 8.26 0 0 0 0-16.52h-82.6a8.29 8.29 0 0 0-8.26 8.26zM152.298 156.92h=
+82.59a8.26 8.26 0 0 0 0-16.52h-82.59a8.11 8.11 0 0 0-8.26 8.26 8.28 8.28 0 =
+0 0 8.26 8.26zM152.298 90.8h82.59a8.26 8.26 0 0 0 0-16.52h-82.59a8.11 8.11 =
+0 0 0-8.26 8.26 8.46 8.46 0 0 0 8.26 8.26z" class=3D"cls-1"/></svg>
+------MultipartBoundary--BtLBMNQk02lTSJ5anq5EvWt7Cl5fN4Ytj5LAmtdx5I------

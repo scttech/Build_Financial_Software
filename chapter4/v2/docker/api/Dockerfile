@@ -9,7 +9,7 @@ COPY ./requirements.txt /code/requirements.txt
 
 # Install any needed packages specified in requirements.txt
 RUN apk -U upgrade
-RUN apk add --no-cache libpq-dev python3-dev gcc musl-dev
+RUN apk add --no-cache libpq-dev python3-dev gcc musl-dev rust cargo
 RUN pip install --upgrade pip
 RUN pip install --no-cache-dir --upgrade -r requirements.txt
 

@@ -90,5 +90,8 @@ plt.xticks(ticks=range(2000, 2022, 1), rotation=45)
 plt.legend(title="Payment Type")
 plt.tight_layout()
 
+# Save the plot as an SVG file
+plt.savefig("trends_in_noncash_payments.svg")
+
 # Show the plot
 plt.show()

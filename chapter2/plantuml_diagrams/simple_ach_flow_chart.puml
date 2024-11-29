@@ -7,7 +7,7 @@ repeat
         :Process File Header;
         (no) elseif (Type 5\nBatch Header Record) then (yes)
         :Process Batch Header;
-        (no) elseif (Type 6\Entry Detail Record) then (yes)
+        (no) elseif (Type 6\nEntry Detail Record) then (yes)
         :Process Entry Detail;
         (no) elseif (Type 7\nAddenda Record) then (yes)
         :Process Addenda;
