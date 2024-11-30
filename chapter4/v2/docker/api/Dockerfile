@@ -9,7 +9,7 @@ COPY ./requirements.txt /code/requirements.txt
 
 # Install any needed packages specified in requirements.txt
 RUN apk -U upgrade
-RUN apk add --no-cache libpq-dev python3-dev gcc musl-dev rust cargo
+RUN apk add --no-cache cargo gcc libpq-dev linux-headers musl-dev python3-dev rust
 RUN pip install --upgrade pip
 RUN pip install --no-cache-dir --upgrade -r requirements.txt
 
@@ -20,4 +20,5 @@ COPY ./ach /code/ach
 ENV PYTHONPATH /code
 
 # Star the application using uvicorn
-CMD ["uvicorn", "app.main:app", "--host", "0.0.0.0", "--port", "8000"]
+#CMD ["uvicorn", "app.main:app", "--host", "0.0.0.0", "--port", "8000"]
+CMD ["tail", "-f", "/dev/null"]

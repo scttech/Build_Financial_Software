@@ -5,9 +5,9 @@ from fastapi.responses import JSONResponse
 from pydantic import ValidationError
 
 # Use the following import statement to import the routers module for the IDE
+# from chapter4.v2.api.app.routers import files
 # or within Docker use
-# from .routers import files
-from chapter4.v2.api.app.routers import files
+from .routers import files
 
 
 origins = [

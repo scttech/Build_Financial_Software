@@ -1,0 +1,16 @@
+psycopg~=3.2.3
+pydantic~=2.10.2
+uvicorn~=0.32.1
+fastapi~=0.115.5
+starlette~=0.41.3
+pytest~=8.3.3
+testcontainers~=4.8.2
+pytest-bdd~=8.0.0
+playwright~=1.49.0
+typing_extensions~=4.12.2
+pandas~=2.2.3
+seaborn~=0.13.2
+matplotlib~=3.10.0rc1
+locust~=2.32.4.dev7
+setuptools~=75.6.0
+pylint~=3.3.1

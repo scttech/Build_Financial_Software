@@ -1,5 +1,3 @@
-version: '3.8'
-
 services:
   api:
     build: 
@@ -15,4 +13,3 @@ services:
       - 9443:9443 # Management Console
       - 8243:8243 # HTTPS Requests
       - 8280:8280 # HTTP Requests
-   

@@ -1,5 +1,10 @@
 from fastapi import APIRouter, Request, status
-from chapter4.v2.api.ach.AchFile import AchFile
+
+# For our Docker setup use
+from ach.AchFile import AchFile
+
+# For the IDE use
+# from chapter4.v2.docker.api.ach.AchFile import AchFile
 
 router = APIRouter(prefix="/api/v1/files")
 
