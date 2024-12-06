@@ -3,8 +3,8 @@ from typing import Generator
 
 import pytest
 
-from chapter6.AchProcessor.ach_processor.ach_file_processor import AchFileProcessor
-from chapter6.AchProcessor.tests.ach_processor.sql_utils import SqlUtils
+from chapter6.v2.AchProcessor.ach_processor.ach_file_processor import AchFileProcessor
+from chapter6.v2.AchProcessor.tests.ach_processor.sql_utils import SqlUtils
 
 
 @pytest.fixture()

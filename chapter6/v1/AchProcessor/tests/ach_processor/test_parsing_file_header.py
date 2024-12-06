@@ -2,11 +2,11 @@ from typing import Dict
 
 import pytest
 
-from chapter6.AchProcessor.ach_processor.ach_file_processor import AchFileProcessor
-from chapter6.AchProcessor.ach_processor.database.ach_file_header_sql import (
+from chapter6.v1.AchProcessor.ach_processor.ach_file_processor import AchFileProcessor
+from chapter6.v1.AchProcessor.ach_processor.database.ach_file_header_sql import (
     AchFileHeaderSql,
 )
-from chapter6.AchProcessor.tests.ach_processor.sql_utils import SqlUtils
+from chapter6.v1.AchProcessor.tests.ach_processor.sql_utils import SqlUtils
 
 
 @pytest.fixture(autouse=True)

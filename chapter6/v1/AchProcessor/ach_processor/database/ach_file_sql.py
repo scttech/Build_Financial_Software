@@ -3,8 +3,8 @@ from uuid import UUID
 
 from psycopg.rows import class_row
 
-from chapter6.AchProcessor.ach_processor.database.db_utils import get_db_connection
-from chapter6.AchProcessor.ach_processor.schemas.ach_file_schema import AchFileSchema
+from chapter6.v1.AchProcessor.ach_processor.database.db_utils import get_db_connection
+from chapter6.v1.AchProcessor.ach_processor.schemas.ach_file_schema import AchFileSchema
 
 
 class AchFileSql:

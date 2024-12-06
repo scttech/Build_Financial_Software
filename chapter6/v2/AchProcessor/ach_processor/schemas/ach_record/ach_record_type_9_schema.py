@@ -2,7 +2,7 @@ from typing import Optional
 
 from pydantic import UUID4
 
-from chapter6.AchProcessor.ach_processor.schemas.ach_record.ach_record_base_schema import (
+from chapter6.v2.AchProcessor.ach_processor.schemas.ach_record.ach_record_base_schema import (
     AchRecordBaseSchema,
 )
 

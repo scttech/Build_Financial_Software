@@ -1,21 +1,21 @@
 from uuid import UUID
 
-from chapter6.AchProcessor.ach_processor.schemas.ach_addenda_ppd_schema import (
+from chapter6.v2.AchProcessor.ach_processor.schemas.ach_addenda_ppd_schema import (
     AchAddendaPpdSchema,
 )
-from chapter6.AchProcessor.ach_processor.schemas.ach_batch_control_schema import (
+from chapter6.v2.AchProcessor.ach_processor.schemas.ach_batch_control_schema import (
     AchBatchControlSchema,
 )
-from chapter6.AchProcessor.ach_processor.schemas.ach_batch_header_schema import (
+from chapter6.v2.AchProcessor.ach_processor.schemas.ach_batch_header_schema import (
     AchBatchHeaderSchema,
 )
-from chapter6.AchProcessor.ach_processor.schemas.ach_entry_ppd_details_schema import (
+from chapter6.v2.AchProcessor.ach_processor.schemas.ach_entry_ppd_details_schema import (
     AchEntryPpdDetailsSchema,
 )
-from chapter6.AchProcessor.ach_processor.schemas.ach_file_control_schema import (
+from chapter6.v2.AchProcessor.ach_processor.schemas.ach_file_control_schema import (
     AchFileControlSchema,
 )
-from chapter6.AchProcessor.ach_processor.schemas.ach_file_header_schema import (
+from chapter6.v2.AchProcessor.ach_processor.schemas.ach_file_header_schema import (
     AchFileHeaderSchema,
 )
 

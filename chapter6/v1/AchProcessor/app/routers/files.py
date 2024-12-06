@@ -3,13 +3,13 @@ from uuid import UUID
 
 from fastapi import APIRouter, status, UploadFile, File
 
-from chapter6.AchProcessor.ach_processor.ach_file_processor import AchFileProcessor
-from chapter6.AchProcessor.ach_processor.database.ach_file_sql import AchFileSql
-from chapter6.AchProcessor.ach_processor.database.combined_ach_records import (
+from chapter6.v1.AchProcessor.ach_processor.ach_file_processor import AchFileProcessor
+from chapter6.v1.AchProcessor.ach_processor.database.ach_file_sql import AchFileSql
+from chapter6.v1.AchProcessor.ach_processor.database.combined_ach_records import (
     CombinedAchRecordsSql,
 )
-from chapter6.AchProcessor.ach_processor.schemas.ach_file_schema import AchFileSchema
-from chapter6.AchProcessor.ach_processor.schemas.ach_record.ach_record_schema import (
+from chapter6.v1.AchProcessor.ach_processor.schemas.ach_file_schema import AchFileSchema
+from chapter6.v1.AchProcessor.ach_processor.schemas.ach_record.ach_record_schema import (
     AchRecordSchema,
 )
 

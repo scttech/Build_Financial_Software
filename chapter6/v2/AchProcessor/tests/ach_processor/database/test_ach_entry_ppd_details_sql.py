@@ -1,12 +1,12 @@
 import pytest
 
-from chapter6.AchProcessor.ach_processor.database.ach_entry_ppd_details_sql import (
+from chapter6.v2.AchProcessor.ach_processor.database.ach_entry_ppd_details_sql import (
     AchEntryPpdDetailsSql,
 )
-from chapter6.AchProcessor.ach_processor.schemas.ach_entry_ppd_details_schema import (
+from chapter6.v2.AchProcessor.ach_processor.schemas.ach_entry_ppd_details_schema import (
     AchEntryPpdDetailsSchema,
 )
-from chapter6.AchProcessor.tests.ach_processor.sql_utils import SqlUtils
+from chapter6.v2.AchProcessor.tests.ach_processor.sql_utils import SqlUtils
 
 
 class TestAchEntryPpdDetailsSql:

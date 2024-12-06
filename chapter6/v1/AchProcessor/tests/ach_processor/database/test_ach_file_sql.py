@@ -1,8 +1,8 @@
 import pytest
 
-from chapter6.AchProcessor.ach_processor.database.ach_file_sql import AchFileSql
-from chapter6.AchProcessor.ach_processor.schemas.ach_file_schema import AchFileSchema
-from chapter6.AchProcessor.tests.ach_processor.sql_utils import SqlUtils
+from chapter6.v1.AchProcessor.ach_processor.database.ach_file_sql import AchFileSql
+from chapter6.v1.AchProcessor.ach_processor.schemas.ach_file_schema import AchFileSchema
+from chapter6.v1.AchProcessor.tests.ach_processor.sql_utils import SqlUtils
 
 
 class TestAchFileSql:

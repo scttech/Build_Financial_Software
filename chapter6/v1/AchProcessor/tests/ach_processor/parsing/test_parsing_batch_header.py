@@ -1,10 +1,10 @@
 import pytest
 
-from chapter6.AchProcessor.ach_processor.ach_file_processor import AchFileProcessor
-from chapter6.AchProcessor.ach_processor.database.ach_batch_header_sql import (
+from chapter6.v1.AchProcessor.ach_processor.ach_file_processor import AchFileProcessor
+from chapter6.v1.AchProcessor.ach_processor.database.ach_batch_header_sql import (
     AchBatchHeaderSql,
 )
-from chapter6.AchProcessor.tests.ach_processor.sql_utils import SqlUtils
+from chapter6.v1.AchProcessor.tests.ach_processor.sql_utils import SqlUtils
 
 TABLE_NAME: str = "ach_batch_headers"
 
