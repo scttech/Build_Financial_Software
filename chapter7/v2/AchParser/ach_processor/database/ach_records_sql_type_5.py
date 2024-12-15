@@ -2,8 +2,8 @@
 
 from uuid import UUID
 
-from chapter7.AchParserMvp.ach_processor.database.db_utils import get_db_connection
-from chapter7.AchParserMvp.ach_processor.schemas.database.ach_record.ach_record_type_5_schema import (
+from chapter7.v2.AchParser.ach_processor.database.db_utils import get_db_connection
+from chapter7.v2.AchParser.ach_processor.schemas.database.ach_record.ach_record_type_5_schema import (
     AchRecordType5Schema,
 )
 

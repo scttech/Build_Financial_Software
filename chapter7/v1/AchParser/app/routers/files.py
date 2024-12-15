@@ -3,28 +3,26 @@ from uuid import UUID
 
 from fastapi import APIRouter, status, UploadFile, File
 
-from chapter7.AchParserMvpNoSignOnScreen.ach_processor.ach_file_processor import (
-    AchFileProcessor,
-)
-from chapter7.AchParserMvpNoSignOnScreen.ach_processor.database.ach_file_sql import (
+from chapter7.v1.AchParser.ach_processor.ach_file_processor import AchFileProcessor
+from chapter7.v1.AchParser.ach_processor.database.ach_file_sql import (
     AchFileSql,
 )
-from chapter7.AchParserMvpNoSignOnScreen.ach_processor.database.combined_ach_records import (
+from chapter7.v1.AchParser.ach_processor.database.combined_ach_records import (
     CombinedAchRecordsSql,
 )
-from chapter7.AchParserMvpNoSignOnScreen.ach_processor.schemas.api.ach_batch_entries_response import (
+from chapter7.v1.AchParser.ach_processor.schemas.api.ach_batch_entries_response import (
     AchBatchEntriesResponse,
 )
-from chapter7.AchParserMvpNoSignOnScreen.ach_processor.schemas.api.ach_batches_response import (
+from chapter7.v1.AchParser.ach_processor.schemas.api.ach_batches_response import (
     AchBatchesResponse,
 )
-from chapter7.AchParserMvpNoSignOnScreen.ach_processor.schemas.api.ach_files_response import (
+from chapter7.v1.AchParser.ach_processor.schemas.api.ach_files_response import (
     AchFilesResponse,
 )
-from chapter7.AchParserMvpNoSignOnScreen.ach_processor.schemas.database.ach_file_schema import (
+from chapter7.v1.AchParser.ach_processor.schemas.database.ach_file_schema import (
     AchFileSchema,
 )
-from chapter7.AchParserMvpNoSignOnScreen.ach_processor.schemas.database.ach_record.ach_record_schema import (
+from chapter7.v1.AchParser.ach_processor.schemas.database.ach_record.ach_record_schema import (
     AchRecordSchema,
 )
 

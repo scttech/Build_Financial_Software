@@ -5,7 +5,7 @@ import pytest
 from pytest_bdd import given, scenarios, parsers, when, then
 from starlette.testclient import TestClient
 
-from chapter7.AchParserMvp.ach_processor.ach_file_processor import AchFileProcessor
+from chapter7.v2.AchParser.ach_processor.ach_file_processor import AchFileProcessor
 from chapter7.AchParserMvp.app.main import app
 from chapter7.AchParserMvp.tests.ach_processor.sql_utils import SqlUtils
 

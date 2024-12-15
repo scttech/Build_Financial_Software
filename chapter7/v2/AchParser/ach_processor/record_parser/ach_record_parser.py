@@ -1,22 +1,22 @@
 from decimal import Decimal
 from uuid import UUID
 
-from chapter7.AchParserMvp.ach_processor.schemas.database.ach_addenda_ppd_schema import (
+from chapter7.v2.AchParser.ach_processor.schemas.database.ach_addenda_ppd_schema import (
     AchAddendaPpdSchema,
 )
-from chapter7.AchParserMvp.ach_processor.schemas.database.ach_batch_control_schema import (
+from chapter7.v2.AchParser.ach_processor.schemas.database.ach_batch_control_schema import (
     AchBatchControlSchema,
 )
-from chapter7.AchParserMvp.ach_processor.schemas.database.ach_batch_header_schema import (
+from chapter7.v2.AchParser.ach_processor.schemas.database.ach_batch_header_schema import (
     AchBatchHeaderSchema,
 )
-from chapter7.AchParserMvp.ach_processor.schemas.database.ach_entry_ppd_details_schema import (
+from chapter7.v2.AchParser.ach_processor.schemas.database.ach_entry_ppd_details_schema import (
     AchEntryPpdDetailsSchema,
 )
-from chapter7.AchParserMvp.ach_processor.schemas.database.ach_file_control_schema import (
+from chapter7.v2.AchParser.ach_processor.schemas.database.ach_file_control_schema import (
     AchFileControlSchema,
 )
-from chapter7.AchParserMvp.ach_processor.schemas.database.ach_file_header_schema import (
+from chapter7.v2.AchParser.ach_processor.schemas.database.ach_file_header_schema import (
     AchFileHeaderSchema,
 )
 

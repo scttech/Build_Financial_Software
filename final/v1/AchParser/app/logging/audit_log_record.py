@@ -53,7 +53,7 @@ class AuditLogRecord(BaseModel):
         le=599,
     )
     url: Optional[AnyUrl] = Field(
-        None, title="URL", description="URL accessed by the request.", max_length=255
+        None, title="URL", description="URL accessed by the request."
     )
     message: str = Field(
         ..., title="Message", description="Description of the audit log event."

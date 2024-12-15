@@ -2,7 +2,7 @@ import os
 
 import pytest
 
-from chapter7.AchParserMvp.ach_processor.ach_file_processor import AchFileProcessor
+from chapter7.v2.AchParser.ach_processor.ach_file_processor import AchFileProcessor
 from chapter7.AchParserMvp.tests.ach_processor.sql_utils import SqlUtils
 
 

@@ -2,10 +2,10 @@
 
 from uuid import UUID
 
-from chapter7.AchParserMvpNoSignOnScreen.ach_processor.database.db_utils import (
+from chapter7.v1.AchParser.ach_processor.database.db_utils import (
     get_db_connection,
 )
-from chapter7.AchParserMvpNoSignOnScreen.ach_processor.schemas.database.ach_record.ach_record_type_6_schema import (
+from chapter7.v1.AchParser.ach_processor.schemas.database.ach_record.ach_record_type_6_schema import (
     AchRecordType6Schema,
 )
 

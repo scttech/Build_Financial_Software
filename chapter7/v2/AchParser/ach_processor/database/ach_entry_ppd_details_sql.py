@@ -2,8 +2,8 @@ from uuid import UUID
 
 from psycopg.rows import class_row
 
-from chapter7.AchParserMvp.ach_processor.database.db_utils import get_db_connection
-from chapter7.AchParserMvp.ach_processor.schemas.database.ach_entry_ppd_details_schema import (
+from chapter7.v2.AchParser.ach_processor.database.db_utils import get_db_connection
+from chapter7.v2.AchParser.ach_processor.schemas.database.ach_entry_ppd_details_schema import (
     AchEntryPpdDetailsSchema,
 )
 

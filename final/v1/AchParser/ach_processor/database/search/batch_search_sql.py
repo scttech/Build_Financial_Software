@@ -17,15 +17,15 @@ class BatchSearchSql:
                       af.file_name AS filename,
                       COALESCE(c.name, abh.company_name, '') AS company_name,
                       abh.company_identification AS company_identification,
-                      abcr.total_credit_entry_dollar_amount AS total_credit_entry_dollar_amount,
-                      abcr.total_debit_entry_dollar_amount AS total_debit_entry_dollar_amount,
-                      abcr.entry_addenda_count AS entry_addenda_count
+                      abcd.total_credit_entry_dollar_amount AS total_credit_entry_dollar_amount,
+                      abcd.total_debit_entry_dollar_amount AS total_debit_entry_dollar_amount,
+                      abcd.entry_addenda_count AS entry_addenda_count
                  FROM ach_files af
            INNER JOIN ach_records_type_1 art1 USING ( ach_files_id )
            INNER JOIN ach_records_type_5 art5 USING ( ach_records_type_1_id )
            INNER JOIN ach_records_type_8 art8 USING ( ach_records_type_5_id )
            INNER JOIN ach_batch_headers abh USING ( ach_records_type_5_id )
-           INNER JOIN ach_batch_control_records abcr USING ( ach_records_type_8_id )    
+           INNER JOIN ach_batch_control_details abcd USING ( ach_records_type_8_id )    
             LEFT JOIN companies c ON abh.company_identification = c.ach_company_id    
         """
 

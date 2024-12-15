@@ -8,7 +8,7 @@ class AuditLog:
     @staticmethod
     def log_record(log_record: AuditLogRecord):
         with get_db_connection(row_factory=dict_row) as conn:
-            log_record_dict = log_record.dict()
+            log_record_dict = log_record.model_dump()
             log_record_dict["url"] = str(log_record_dict["url"])
             result = conn.execute(
                 """

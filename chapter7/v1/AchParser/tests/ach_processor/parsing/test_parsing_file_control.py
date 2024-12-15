@@ -3,10 +3,10 @@ from typing import Dict
 
 import pytest
 
-from chapter7.AchParserMvpNoSignOnScreen.ach_processor.ach_file_processor import (
+from chapter7.v1.AchParser.ach_processor.ach_file_processor import (
     AchFileProcessor,
 )
-from chapter7.AchParserMvpNoSignOnScreen.ach_processor.database.ach_file_control_sql import (
+from chapter7.v1.AchParser.ach_processor.database.ach_file_control_sql import (
     AchFileControlSql,
 )
 from chapter7.AchParserMvpNoSignOnScreen.tests.ach_processor.sql_utils import SqlUtils

@@ -1,9 +1,9 @@
 import pytest
 
-from chapter7.AchParserMvp.ach_processor.database.ach_batch_header_sql import (
+from chapter7.v2.AchParser.ach_processor.database.ach_batch_header_sql import (
     AchBatchHeaderSql,
 )
-from chapter7.AchParserMvp.ach_processor.schemas.database.ach_batch_header_schema import (
+from chapter7.v2.AchParser.ach_processor.schemas.database.ach_batch_header_schema import (
     AchBatchHeaderSchema,
 )
 from chapter7.AchParserMvp.tests.ach_processor.sql_utils import SqlUtils

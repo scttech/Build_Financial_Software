@@ -15,12 +15,12 @@ class CompanyLimitsSql:
                 WITH ach_batch_totals AS (
     SELECT
         c.company_id,
-        SUM(abcr.total_credit_entry_dollar_amount) AS current_credit_total,
-        SUM(abcr.total_debit_entry_dollar_amount) AS current_debit_total
+        SUM(abcd.total_credit_entry_dollar_amount) AS current_credit_total,
+        SUM(abcd.total_debit_entry_dollar_amount) AS current_debit_total
     FROM ach_records_type_5 AS art5
     INNER JOIN ach_records_type_8 AS art8 USING (ach_records_type_5_id)
     INNER JOIN ach_batch_headers AS abh USING (ach_records_type_5_id)
-    INNER JOIN ach_batch_control_records AS abcr USING (ach_records_type_8_id)
+    INNER JOIN ach_batch_control_details AS abcd USING (ach_records_type_8_id)
     INNER JOIN companies AS c ON c.ach_company_id = abh.company_identification AND c.company_id = %s
     GROUP BY c.company_id
 )

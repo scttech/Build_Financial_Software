@@ -1,11 +1,11 @@
 import pytest
 from pytest_bdd import scenarios, when, then, parsers
 
-from chapter7.AchParserMvpNoSignOnScreen.ach_processor.database.ach_batch_header_sql import (
+from chapter7.v1.AchParser.ach_processor.database.ach_batch_header_sql import (
     AchBatchHeaderSql,
 )
 from chapter7.AchParserMvpNoSignOnScreen.tests.ach_processor.sql_utils import SqlUtils
-from chapter7.AchParserMvpNoSignOnScreen.ach_processor.ach_file_processor import (
+from chapter7.v1.AchParser.ach_processor.ach_file_processor import (
     AchFileProcessor,
 )
 

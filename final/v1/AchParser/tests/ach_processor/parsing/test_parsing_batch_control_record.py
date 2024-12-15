@@ -8,7 +8,7 @@ from final.v1.AchParser.ach_processor.database.ach_batch_control_sql import (
 )
 from final.v1.AchParser.tests.ach_processor.sql_utils import SqlUtils
 
-TABLE_NAME: str = "ach_batch_control_records"
+TABLE_NAME: str = "ach_batch_control_details"
 
 
 @pytest.fixture(autouse=True)
@@ -37,16 +37,16 @@ def test_parse_batch_control():
     }
 
     parser = AchFileProcessor()
-    ach_batch_header_record_id, ach_batch_control_record_id = (
+    ach_batch_header_record_id, ach_batch_control_detail_id = (
         SqlUtils.setup_batch_control_test(sample_batch_control_record)
     )
 
     parser._parse_batch_control(
-        ach_batch_control_record_id, sample_batch_control_record
+        ach_batch_control_detail_id, sample_batch_control_record
     )
 
     sql = AchBatchControlSql()
-    retrieved_record = sql.get_record(ach_batch_control_record_id).model_dump()
+    retrieved_record = sql.get_record(ach_batch_control_detail_id).model_dump()
     del retrieved_record["ach_records_type_8_id"]
 
     assert SqlUtils.get_row_count_of_1(TABLE_NAME), f"Expected 1 row in {TABLE_NAME}"
