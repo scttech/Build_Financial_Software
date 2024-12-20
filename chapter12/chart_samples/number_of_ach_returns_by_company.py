@@ -85,5 +85,8 @@ plt.xticks(rotation=45)
 plt.legend(title="Company")
 plt.tight_layout()
 
+# Save the plot as an SVG file
+plt.savefig("number_of_ach_returns_by_company.svg")
+
 # Show the plot
 plt.show()

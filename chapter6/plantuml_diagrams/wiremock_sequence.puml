@@ -1,4 +1,4 @@
-@startuml
+wiremock_sequence.puml@startuml
 actor       User       as user
 queue       Wiremock       as wm
 collections __mappings as mappings

@@ -41,5 +41,8 @@ for index, row in df.iterrows():
         index, row["Payroll"] + 100, f"${row['Payroll']}", color="black", ha="center"
     )
 
+# Save the plot as an SVG file
+plt.savefig("payroll_by_month.svg")
+
 # Show the plot
 plt.show()
